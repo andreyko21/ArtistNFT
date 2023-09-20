@@ -1,0 +1,23 @@
+@use 'sass:math';
+@import 'config/vars';
+
+@import 'config/functions';
+@import 'config/mixins';
+@import 'config/patternSelectors';
+
+@import 'config/reset';
+
+//@import 'libs/swiper';
+
+@import 'config/scrollbar';
+
+/**
+* Общие параметры, шаблоны(заготовки) и вспомогательные классы
+*/
+@import 'config/base';
+
+/**
+* Подключение стилей отдельных блоков и секций
+*/
+@import 'components/header';
+@import 'components/footer';
