@@ -1,0 +1,164 @@
+.header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    padding: 8px;
+  }
+  &__menu {
+  }
+  &__language-dropdown {
+    margin-left: auto;
+    width: 74px;
+    height: 35px;
+    background: $darkGray;
+    border-radius: 7px;
+    color: $secondary;
+    @media (max-width: 400px) {
+        display: none;
+    }
+  }
+  &__authorization-button {
+    margin-left: 8px;
+    @media (max-width: 700px) {
+        display: none;
+    }
+  }
+  &__premium-access-button {
+    margin-left: 8px;
+    width: 147px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        display: none;
+    }
+    &::before{
+        content: "Premium access";
+    }
+    @media (max-width: 700px) {
+        width: auto;
+        height: auto;
+        padding: 7px;
+        border-radius: 9px;
+        &::before{
+            content: none;
+        }
+        img{
+            display: block;
+        }
+    }
+  }
+  &__burger-menu-button{
+    display: none;
+    background: none;
+    @media (max-width: 1110px) {
+        display: block;
+        margin-right: 10px;
+    }
+    @media (max-width: 700px) {
+        order: 1;
+        justify-self: end;
+        margin-right: 0;
+        margin-left: 10px;
+    }
+  }
+}
+
+.menu {
+  flex: 1;
+  margin-left: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__list {
+    display: flex;
+    align-items: center;
+    @media (max-width: 1110px) {
+        display: none;
+    }
+  }
+  &__icon {
+    max-width: 14px;
+    max-height: 14px;
+    margin-right: 8px;
+    fill: $secondary;
+  }
+  &__item {
+    padding: 8px 12px;
+    &:not(:first-child) {
+      margin-left: 2px;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    color: $secondary;
+  }
+  &__authorization-button{
+    display: none;
+  }
+}
+
+.icon {
+  use {
+    fill: red;
+  }
+}
+
+.dropdown {
+  position: relative;
+  &__icon{
+    max-width: 18px;
+    max-height: 18px;
+  }
+  &__trigger {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+  }
+  &__content {
+    padding: 8px 12px;
+    display: none;
+    left: 0;
+    padding-top: 0.25rem;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    border-radius: 7px;
+
+    background-color: #fff;
+    z-index: 9999;
+  }
+  &:hover .dropdown__content {
+    display: block;
+  }
+
+  
+}
+
+.authorization-button{
+    padding: 14px 22px;
+    height: 48px;
+    width: 130px;
+    background: #fff;
+  }
+

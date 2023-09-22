@@ -11,13 +11,8 @@
 
 @import 'config/scrollbar';
 
-/**
-* Общие параметры, шаблоны(заготовки) и вспомогательные классы
-*/
 @import 'config/base';
 
-/**
-* Подключение стилей отдельных блоков и секций
-*/
+
 @import 'components/header';
 @import 'components/footer';
