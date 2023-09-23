@@ -8,7 +8,7 @@ $headerHeight: 100;
 $footerHeight: 100;
 
 :root {
-  --bs-font-family: 'Inter', sans-serif; // Семейство шрифта по умолчанию
+  --bs-font-family: sans-serif; // Семейство шрифта по умолчанию
   --bs-font-size: 16px; // Размер шрифта по умолчанию
   --bs-font-weight: 400; // Жирность шрифта по умолчанию
   --bs-line-height: 1; // Базовая высота шрифта
@@ -27,3 +27,9 @@ $footerHeight: 100;
                   0 0 10px 0 rgba(#000, 10%),
                   0 0 15px 0 rgba(#000, 10%);
 }
+
+// Цвета 
+$btn-gradient : var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+$btn-color : var(--background, #1D1F21);
+$btn-bg-grey: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
+$btn-bg-black: var(--background, #1D1F21);
