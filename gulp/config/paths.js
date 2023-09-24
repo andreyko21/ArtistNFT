@@ -13,7 +13,11 @@ const filePaths = {
   },
   src: {
     js: `${srcFolder}/js/*.js`,
+<<<<<<< HEAD
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,svg}`,
+=======
+    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,svg,webp}`,
+>>>>>>> 633612dd7680f75be9c09092c1929cb6f439717e
     svg: `${srcFolder}/images/**/*.svg`,
     scss: `${srcFolder}/scss/*.scss`,
     html: `${srcFolder}/*.html`,

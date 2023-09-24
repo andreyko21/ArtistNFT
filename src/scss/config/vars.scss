@@ -1,13 +1,11 @@
 $mainOffset: 15; // отступы безопасности для контейнера
 $maxWidth: 1920; // максимальная ширина страницы
 $minWidth: 320; // минимальная ширина телефона
-$containerWidth: 1160; // ширина контейнера из макета
+$containerWidth: 1140; // ширина контейнера из макета
 $maxWidthContainer: $containerWidth + ($mainOffset * 2); // ширина контейнера с учетом padding слева и справа
 
-$headerHeight: 100;
-$footerHeight: 100;
-
 :root {
+  --bs-font-family: sans-serif; // Семейство шрифта по умолчанию
   --bs-font-family: sans-serif; // Семейство шрифта по умолчанию
   --bs-font-size: 16px; // Размер шрифта по умолчанию
   --bs-font-weight: 400; // Жирность шрифта по умолчанию
@@ -33,3 +31,6 @@ $btn-gradient : var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.
 $btn-color : var(--background, #1D1F21);
 $btn-bg-grey: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
 $btn-bg-black: var(--background, #1D1F21);
+
+$secondary: #C8D2DC;
+$darkGray: #212426;
