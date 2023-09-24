@@ -1,4 +1,5 @@
 @import './style.scss';
+@import './components/button.scss';
 
 @font-face {
 	font-family: Proxima;
@@ -54,6 +55,7 @@
 	font-weight: 700;
 	font-style: normal;
 }
+
 
 body{
     background-color: #1D1F21;
