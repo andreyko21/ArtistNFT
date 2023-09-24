@@ -1,4 +1,4 @@
-import $, { event } from "jquery";
+import $ from "jquery";
 
 export default class Dropdown{
     constructor(){
@@ -25,7 +25,6 @@ export default class Dropdown{
 
     CheckScreenSize() {
         const windowWidth = $(window).width();
-        this.dropdownArrow.css('transform:', 'rotate(45deg)');
         if (windowWidth <= 400) {
             $('.menu__footer').append(this.dropdown);
             const downHeight = $(window).height() - this.dropdown.offset().top - this.dropdown.height();
