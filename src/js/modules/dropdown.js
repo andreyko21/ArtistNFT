@@ -32,10 +32,6 @@ export default class Dropdown{
         }
     }
 
-    ChangArrow(){
-        this.dropdownArrow
-    }
-
     async SelectItem(event) {
         const selectedItem = $(event.target);
         this.dropdownContent.find(selectedItem).remove();
