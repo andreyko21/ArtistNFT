@@ -175,8 +175,6 @@ $active-color-menu: blue;
     transition: fill 0.3s, transform 0.3s, box-shadow 0.3s;
   }
   &__item {
-    padding: 8px 12px;
-
     &:hover {
       .menu__link {
         color: $hover-color-menu;
