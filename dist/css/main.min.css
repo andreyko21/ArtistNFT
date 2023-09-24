@@ -855,10 +855,6 @@ sup {
   background: url(../../images/arrow-gray.svg) center/cover no-repeat;
 }
 
-.page__container {
-  height: 3000px;
-}
-
 .contact-me {
   font-family: ProximaBold;
   display: grid;
