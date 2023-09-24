@@ -1,7 +1,21 @@
-<header class="header">
+<!doctype html>
+<html lang="ru">
+  <head>
+  <style>.loaded { opacity: 1 }</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Main</title>
+</head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
   <div class="header__container">
     <a href="/main.html" class="header__logo logo">
-      <img src="/images/logo.svg" alt="logo" />
+      <img src="/images/logo.svg" alt="logo">
     </a>
     <nav class="header__menu menu">
       <ul class="menu__list">
@@ -11,8 +25,7 @@
             <svg class="menu__icon">
               <use xlink:href="/images/Sprite.svg#lock"></use>
             </svg>
-            NFT</a
-          >
+            NFT</a>
         </li>
         <li class="menu__item"><a href="#" class="menu__link">Pictures</a></li>
         <li class="menu__item"><a href="#" class="menu__link">Auction</a></li>
@@ -21,17 +34,15 @@
         <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
       </ul>
       <div class="menu__footer">
-        <a class="menu__authorization-button authorization-button" href="#"
-          ><span class="authorization-button__gradient">Authorization</span></a
-        >
+        <a class="authorization-button menu__authorization-button" href="#"><span class="authorization-button__gradient">Authorization</span></a>
       </div>
     </nav>
-    <button class="header__burger-menu-button burger-menu-button">
+    <button class="burger-menu-button header__burger-menu-button">
       <div class="burger-menu-button__icon">
         <span></span>
       </div>
     </button>
-    <div class="header__language-dropdown dropdown">
+    <div class="dropdown header__language-dropdown">
       <div class="dropdown__trigger">
         <div class="dropdown__item">ENG</div>
         <svg class="dropdown__icon">
@@ -42,11 +53,27 @@
         <div class="dropdown__item">UA</div>
       </ul>
     </div>
-    <a class="header__authorization-button authorization-button" href="#"
-      ><span class="authorization-button__gradient">Authorization</span></a
-    >
+    <a class="authorization-button header__authorization-button" href="#"><span class="authorization-button__gradient">Authorization</span></a>
     <button class="header__premium-access-button premium-access-button">
-      <img src="/images/Crown.svg" alt="Crown" />
+      <img src="/images/Crown.svg" alt="Crown">
     </button>
   </div>
 </header>
+
+      <main class="page">
+        <div data-observ></div>
+
+        <div class="page__container">
+         
+        </div>
+
+      </main>
+      <footer class="footer">
+  <div class="footer__container">
+    
+  </div>
+</footer>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
