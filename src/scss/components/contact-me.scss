@@ -1,0 +1,98 @@
+.page__container{
+	height: 3000px;
+}
+
+
+.contact-me {
+    font-family: ProximaBold;
+    display: grid;
+    grid-template: auto auto 37px auto / 1fr;
+    &__title {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 26.5px;
+        letter-spacing: 1.8px;
+        text-align: center;
+        background: $gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &__info {
+        grid-column: 1;
+        grid-row: 2;
+        color: var(--text, #FCFFFF);
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 49.5px; 
+        max-width: 540px;
+        margin: 0 auto;
+    }
+    &__main {
+        grid-column: 1;
+        grid-row: 4;
+        font-family: ProximaRegular;
+        display: grid;
+        grid-template: auto 7px 64px 15px auto 7px 64px 15px auto 7px minmax(auto, 182px) 15px 64px 18px auto / 1fr minmax(auto, 410px) 1fr;
+    }
+    &__input-title{
+        color: $secondary;
+        font-size: 14px;
+        line-height: 21px; 
+    }
+    &__input{
+        color: $secondary;
+        background: $darkGray;
+        border-radius: 9px;
+        height: 100%;
+        width: 100%;
+        font-size: 16px;
+        padding: 0 32px;
+        &::placeholder{
+            opacity: 0.6;
+        }
+    }
+    &__title-name {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    &__name {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    &__title-mail {
+        grid-column: 2;
+        grid-row: 5;
+    }
+    &__mail {
+        grid-column: 2;
+        grid-row: 7;
+    }
+    &__title-question {
+        grid-column: 2;
+        grid-row: 9;
+    }
+    &__question {
+        grid-column: 2;
+        grid-row: 11;
+        resize: none;
+        padding-top: 22px;
+    }
+    &__btn {
+        grid-column: 2;
+        grid-row: 13;
+    }
+    &__i-agree {
+        grid-column: 2;
+        grid-row: 15;
+    }
+    &__i-agree-check {
+    }
+    &__i-agree-checkbox{
+    }
+    &__i-agree-link {}
+}
+
