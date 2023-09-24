@@ -1,6 +1,7 @@
 @charset "UTF-8";
 :root {
   --bs-font-family: sans-serif;
+  --bs-font-family: sans-serif;
   --bs-font-size: 16px;
   --bs-font-weight: 400;
   --bs-line-height: 1;
@@ -18,6 +19,55 @@
                   0 0 15px 0 rgba(#000, 10%);
 }
 
+@font-face {
+  font-family: ManropeBold;
+  font-display: swap;
+  src: url("../fonts/ManropeBold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: ManropeRegular;
+  font-display: swap;
+  src: url("../fonts/ManropeRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: ProximaBold;
+  font-display: swap;
+  src: url("../fonts/ProximaBold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: ProximaExtraBold;
+  font-display: swap;
+  src: url("../fonts/ProximaExtraBold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: ProximaLight;
+  font-display: swap;
+  src: url("../fonts/ProximaLight.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: ProximaRegular;
+  font-display: swap;
+  src: url("../fonts/ProximaRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: ProximaSemibold;
+  font-display: swap;
+  src: url("../fonts/ProximaSemibold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 /* Шаблоны (заготовки)
 * @extend %имя шаблона;
 */
@@ -221,7 +271,7 @@ sup {
   padding: 8px;
 }
 .header__logo:focus {
-  stroke: red;
+  stroke: rgba(134, 168, 255, 0.6352941176);
 }
 @media (min-width: 1111px) {
   .header__menu {
@@ -267,6 +317,9 @@ sup {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.header__premium-access-button:focus {
+  border: 1px solid rgba(134, 168, 255, 0.6352941176);
 }
 .header__premium-access-button img {
   display: none;
@@ -398,28 +451,23 @@ sup {
   fill: #C8D2DC;
   transition: fill 0.3s, transform 0.3s, box-shadow 0.3s;
 }
-.menu__item {
-  padding: 8px 12px;
-}
 .menu__item:hover .menu__link {
-  color: green;
+  color: #86A8FF;
 }
 .menu__item:hover .menu__icon {
-  fill: green;
+  fill: #86A8FF;
 }
 .menu__item:focus-within .menu__link {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  color: red;
+  color: rgba(134, 168, 255, 0.6352941176);
 }
 .menu__item:focus-within .menu__icon {
-  fill: red;
+  fill: rgba(134, 168, 255, 0.6352941176);
 }
 .menu__item:active .menu__link {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  color: blue;
+  color: #3e4e77;
 }
 .menu__item:active .menu__icon {
-  fill: blue;
+  fill: #3e4e77;
 }
 .menu__item:not(:first-child) {
   margin-left: 2px;
@@ -432,6 +480,7 @@ sup {
 }
 .menu__link {
   display: flex;
+  padding: 8px 12px;
   justify-content: center;
   align-items: center;
   font-family: Manrope;
@@ -492,6 +541,7 @@ sup {
   position: relative;
 }
 .dropdown__icon {
+  transition: transform 0.3s ease-in-out;
   max-width: 18px;
   max-height: 18px;
 }
@@ -527,6 +577,12 @@ sup {
 }
 .dropdown_open .dropdown__content {
   display: flex;
+}
+.dropdown_open .dropdown__icon {
+  transform: rotate(180deg);
+}
+.dropdown:focus {
+  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
 }
 
 .burger-menu-button {
@@ -603,6 +659,9 @@ sup {
   background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.authorization-button:focus {
+  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
 }
 
 .premium-access-button {
