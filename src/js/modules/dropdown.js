@@ -6,7 +6,6 @@ export default class Dropdown{
         this.dropdownTrigger = this.dropdown.find('.dropdown__trigger');
         this.dropdownContent = this.dropdown.find('.dropdown__content');
         this.dropdownItem = this.dropdown.find('.dropdown__item');
-        this.dropdownArrow = this.dropdown.find('.dropdown__icon');
         this.BindEvents();
         this.CheckScreenSize();
 
@@ -19,8 +18,7 @@ export default class Dropdown{
     }
 
     ToggleDropDown() {
-        this.dropdown.toggleClass('dropdown_open');
-        
+        this.dropdown.toggleClass('dropdown_open');  
     }
 
     CheckScreenSize() {
