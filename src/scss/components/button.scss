@@ -18,6 +18,7 @@
     width: 100%;
     height: 64px;
     cursor: pointer;
+    margin: 30px 0;
     &:hover{
         background:  $btn-bg-grey;
         span{
@@ -27,229 +28,167 @@
             -webkit-text-fill-color: transparent;
         }
     }
-    ///
-    margin: 30px 0;
-}
-
-//Кнопка с адаптивом
-@media (max-width: 400px) {
-    .btn_adaptive {
+    @media (max-width: 700px) {
         height: 52px;
         font-size: 15px;
         border-radius: 12px;
     }
-}
-
-//Кнопка с короной
-.btn_crown{
-    span{
-        position: relative;
-        &::after{
-            content: '';
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            left: -32px;
-            top: 0px;
-            background: url(../../images/Crown.svg) center/cover no-repeat;
+    &_crown{
+        span{
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                left: -32px;
+                top: -2px;
+                background: url(../../images/Crown.svg) center/cover no-repeat;
+                @media (max-width: 700px) {
+                    width: 18px;
+                    height: 18px;
+                    left: -26px;
+                }
+            }
+        }
+        &:hover{
+            span{
+                &::after{
+                    background: url(../../images/Crown-gradient.svg) center/cover no-repeat;
+                }
+            }
         }
     }
-    &:hover{
+    &_bag{
         span{
+            position: relative;
             &::after{
+                content: '';
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                left: -32px;
+                top: -2px;
+                background: url(../../images/bag.svg) center/cover no-repeat;
+                @media (max-width: 700px) {
+                    width: 18px;
+                    height: 18px;
+                    left: -26px;
+                }
+            }
+        }
+        &:hover{
+            span{
+                &::after{
+                    background: url(../../images/bag-gradient.svg) center/cover no-repeat;
+                }
+            }
+        }
+    }
+    // Уменьшенная кнопка которая превращается в корону
+    &_adaptive-crown{
+        height: 48px;
+        font-size: 14px;
+        @media (max-width: 700px) {
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            background: $btn-bg-grey;
+            position: relative;
+            span{
+                display: none;
+            }
+            &::after{
+                content: '';
+                top: 7px;
+                left: 7px;
+                position: absolute;
+                width: 18px;
+                height: 18px;
                 background: url(../../images/Crown-gradient.svg) center/cover no-repeat;
             }
         }
     }
-}
-
-@media (max-width: 400px) {
-    .btn_crown{
-        height: 52px;
-        font-size: 15px;
-        border-radius: 12px;
+    //Серая кнопкка
+    &_grey{
+        background:  $btn-bg-grey;
         span{
-            &::after{
-                width: 18px;
-                height: 18px;
-                left: -26px;
+            background: $btn-gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &:hover{
+            background: $btn-gradient;
+            span{
+                background: none;
+                background-clip: initial;
+                -webkit-background-clip: initial;
+                -webkit-text-fill-color: initial;
+                color: $btn-color;
             }
         }
     }
-}
-
-//Кнопка с пакетом/сумкой
-.btn_bag{
-    span{
-        position: relative;
-        &::after{
-            content: '';
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            left: -32px;
-            top: 0px;
-            background: url(../../images/bag.svg) center/cover no-repeat;
-        }
-    }
-    &:hover{
+    //Темная кнопкка
+    &_black{
+        background:  $btn-bg-black;
         span{
-            &::after{
-                background: url(../../images/bag-gradient.svg) center/cover no-repeat;
+            background: $btn-gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &:hover{
+            background: $btn-gradient;
+            span{
+                background: none;
+                background-clip: initial;
+                -webkit-background-clip: initial;
+                -webkit-text-fill-color: initial;
+                color: $btn-color;
             }
         }
     }
-}
-
-@media (max-width: 400px) {
-    .btn_bag{
-        height: 52px;
-        font-size: 15px;
-        border-radius: 12px;
+    //Кнопка со стрелкой
+    &_arrow{
+        background:  $btn-bg-black;
         span{
+            background: $btn-gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
             &::after{
-                width: 18px;
-                height: 18px;
-                left: -26px;
+                content: '';
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                right: -33px;
+                top: -2px;
+                background: url(../../images/arrow.svg) center/cover no-repeat;
+                @media (max-width: 700px) {
+                    right: -32px;
+                    top: -4px;
+                }
             }
         }
-    }
-}
-
-// Уменьшенная кнопка которая превращается в корону
-.btn_adaptive-crown{
-    height: 48px;
-    font-size: 14px;
-}
-@media (max-width: 400px) {
-    .btn_adaptive-crown{
-        width: 32px;
-        height: 32px;
-        border-radius: 9px;
-        background: $btn-bg-grey;
-        position: relative;
-        span{
-            display: none;
-        }
-        &::after{
-            content: '';
-            top: 7px;
-            left: 7px;
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            background: url(../../images/Crown-gradient.svg) center/cover no-repeat;
-        }
-    }
-}
-
-//Серая кнопкка
-.btn_grey{
-    background:  $btn-bg-grey;
-    span{
-        background: $btn-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    &:hover{
-        background: $btn-gradient;
-        span{
-            background: none;
-            background-clip: initial;
-            -webkit-background-clip: initial;
-            -webkit-text-fill-color: initial;
-            color: $btn-color;
-        }
-    }
-
-}
-
-@media (max-width: 400px) {
-    .btn_grey{
-        height: 52px;
-        font-size: 15px;
-        border-radius: 12px;
-    }
-}
-
-//Темная кнопкка
-.btn_black{
-    background:  $btn-bg-black;
-    span{
-        background: $btn-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    &:hover{
-        background: $btn-gradient;
-        span{
-            background: none;
-            background-clip: initial;
-            -webkit-background-clip: initial;
-            -webkit-text-fill-color: initial;
-            color: $btn-color;
-        }
-    }
-
-}
-
-@media (max-width: 400px) {
-    .btn_black{
-        height: 52px;
-        font-size: 15px;
-        border-radius: 12px;
-    }
-}
-
-//Кнопка со стрелкой
-.btn_arrow{
-    background:  $btn-bg-black;
-    span{
-        background: $btn-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        position: relative;
-        &::after{
-            content: '';
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            right: -32px;
-            top: 0px;
-            background: url(../../images/arrow.svg) center/cover no-repeat;
-        }
-    }
-    &:hover{
-        background: $btn-gradient;
-        span{
-            background: none;
-            background-clip: initial;
-            -webkit-background-clip: initial;
-            -webkit-text-fill-color: initial;
-            color: $btn-color;
-            &::after{
-                background: url(../../images/arrow-gray.svg) center/cover no-repeat;
+        &:hover{
+            background: $btn-gradient;
+            span{
+                background: none;
+                background-clip: initial;
+                -webkit-background-clip: initial;
+                -webkit-text-fill-color: initial;
+                color: $btn-color;
+                &::after{
+                    background: url(../../images/arrow-gray.svg) center/cover no-repeat;
+                }
             }
         }
     }
 
 }
 
-@media (max-width: 400px) {
-    .btn_arrow{
-        height: 52px;
-        font-size: 15px;
-        border-radius: 12px;
-        span{
-            &::after{
-                top: -3px;
-            }
-        }
-    }
-}
 
 
 
@@ -261,6 +200,7 @@
 
 
 
-body{
-    background-color: black;
-}
+
+
+
+

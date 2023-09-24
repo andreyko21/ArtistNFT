@@ -704,9 +704,8 @@ sup {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-@media (max-width: 400px) {
-  .btn_adaptive {
+@media (max-width: 700px) {
+  .btn {
     height: 52px;
     font-size: 15px;
     border-radius: 12px;
@@ -721,24 +720,18 @@ sup {
   width: 24px;
   height: 24px;
   left: -32px;
-  top: 0px;
+  top: -2px;
   background: url(../../images/Crown.svg) center/cover no-repeat;
 }
-.btn_crown:hover span::after {
-  background: url(../../images/Crown-gradient.svg) center/cover no-repeat;
-}
-
-@media (max-width: 400px) {
-  .btn_crown {
-    height: 52px;
-    font-size: 15px;
-    border-radius: 12px;
-  }
+@media (max-width: 700px) {
   .btn_crown span::after {
     width: 18px;
     height: 18px;
     left: -26px;
   }
+}
+.btn_crown:hover span::after {
+  background: url(../../images/Crown-gradient.svg) center/cover no-repeat;
 }
 .btn_bag span {
   position: relative;
@@ -749,31 +742,24 @@ sup {
   width: 24px;
   height: 24px;
   left: -32px;
-  top: 0px;
+  top: -2px;
   background: url(../../images/bag.svg) center/cover no-repeat;
 }
-.btn_bag:hover span::after {
-  background: url(../../images/bag-gradient.svg) center/cover no-repeat;
-}
-
-@media (max-width: 400px) {
-  .btn_bag {
-    height: 52px;
-    font-size: 15px;
-    border-radius: 12px;
-  }
+@media (max-width: 700px) {
   .btn_bag span::after {
     width: 18px;
     height: 18px;
     left: -26px;
   }
 }
+.btn_bag:hover span::after {
+  background: url(../../images/bag-gradient.svg) center/cover no-repeat;
+}
 .btn_adaptive-crown {
   height: 48px;
   font-size: 14px;
 }
-
-@media (max-width: 400px) {
+@media (max-width: 700px) {
   .btn_adaptive-crown {
     width: 32px;
     height: 32px;
@@ -813,14 +799,6 @@ sup {
   -webkit-text-fill-color: initial;
   color: var(--background, #1D1F21);
 }
-
-@media (max-width: 400px) {
-  .btn_grey {
-    height: 52px;
-    font-size: 15px;
-    border-radius: 12px;
-  }
-}
 .btn_black {
   background: var(--background, #1D1F21);
 }
@@ -840,14 +818,6 @@ sup {
   -webkit-text-fill-color: initial;
   color: var(--background, #1D1F21);
 }
-
-@media (max-width: 400px) {
-  .btn_black {
-    height: 52px;
-    font-size: 15px;
-    border-radius: 12px;
-  }
-}
 .btn_arrow {
   background: var(--background, #1D1F21);
 }
@@ -863,9 +833,15 @@ sup {
   position: absolute;
   width: 24px;
   height: 24px;
-  right: -32px;
-  top: 0px;
+  right: -33px;
+  top: -2px;
   background: url(../../images/arrow.svg) center/cover no-repeat;
+}
+@media (max-width: 700px) {
+  .btn_arrow span::after {
+    right: -32px;
+    top: -4px;
+  }
 }
 .btn_arrow:hover {
   background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
@@ -879,20 +855,6 @@ sup {
 }
 .btn_arrow:hover span::after {
   background: url(../../images/arrow-gray.svg) center/cover no-repeat;
-}
-
-@media (max-width: 400px) {
-  .btn_arrow {
-    height: 52px;
-    font-size: 15px;
-    border-radius: 12px;
-  }
-  .btn_arrow span::after {
-    top: -3px;
-  }
-}
-body {
-  background-color: black;
 }
 
 @font-face {
