@@ -1,10 +1,12 @@
 import $ from "jquery";
+import Dropdown from "./dropdown";
 
 export default class Header{
     constructor(){
         this.burgerMenuButton = $('.burger-menu-button');
         this.burgerMenu = $('.menu');
         this.BindEvents();
+        this.dropDown = new Dropdown();
     }
 
     BindEvents(){
