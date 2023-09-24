@@ -1,18 +1,32 @@
 @use 'sass:math';
 @import 'config/vars';
+@import 'config/fonts';
 
-@import 'config/functions';
-@import 'config/mixins';
-@import 'config/patternSelectors';
+// @import 'config/functions';
+// @import 'config/mixins';
+// @import 'config/patternSelectors';
 
-@import 'config/reset';
+// @import 'config/reset';
 
-//@import 'libs/swiper';
+// //@import 'libs/swiper';
 
-@import 'config/scrollbar';
+// @import 'config/scrollbar';
 
+<<<<<<< HEAD
+// /**
+// * Общие параметры, шаблоны(заготовки) и вспомогательные классы
+// */
+// @import 'config/base';
+
+// /**
+// * Подключение стилей отдельных блоков и секций
+// */
+// @import 'components/header';
+// @import 'components/footer';
+=======
 @import 'config/base';
 
 
 @import 'components/header';
 @import 'components/footer';
+>>>>>>> 633612dd7680f75be9c09092c1929cb6f439717e
