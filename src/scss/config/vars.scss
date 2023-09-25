@@ -27,10 +27,13 @@ $maxWidthContainer: $containerWidth + ($mainOffset * 2); // ширина кон�
 }
 
 // Цвета 
-$btn-gradient : var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
-$btn-color : var(--background, #1D1F21);
-$btn-bg-grey: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
-$btn-bg-black: var(--background, #1D1F21);
+$gradient : var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+$darkGrayTwo : var(--background, #1D1F21);
+$darkGrayGradient: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
+$slateGray: var(--background, #1D1F21);
+$deepTeal: var(--stroke, #525960);
+$blue: var(--color-3, #86A8FF);
+$red:  rgba(202, 56, 56, 1);
 
 $secondary: #C8D2DC;
 $darkGray: #212426;
