@@ -1,0 +1,90 @@
+.switch-block {
+    position: relative;
+  #mySwitch {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+  .switch {
+    width: 100%;
+    height: 100%;
+    background-color: $darkGray;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+    padding: 7px 8px;
+  }
+  .switch-background {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    .switch-button {
+      transition: left 0.3s;
+      border-radius: 12px;
+      background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+    }
+  }
+ 
+
+  .switch-on,
+  .switch-off {
+    justify-content: center;
+    align-items: center;
+    padding: 14px 33px;
+    flex: 50%;
+    text-align: center;
+    font-family: 'Proxima';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: color 0.5s;
+    user-select: none;
+  }
+
+  .switch-on {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: $white;
+  }
+
+  .switch-off {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.333;
+  }
+
+  #mySwitch:checked + .switch .switch-on {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.333;
+    color: $darkGray;
+  }
+
+  #mySwitch:checked + .switch .switch-off {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: $white;
+  }
+
+  #mySwitch:checked + .switch .switch-button {
+    left: 0;
+  }
+
+  &:focus-within {
+    .switch {
+      outline: 1px solid $focusColor;
+    }
+  }
+}
