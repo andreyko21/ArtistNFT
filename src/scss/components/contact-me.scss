@@ -1,8 +1,12 @@
-
 .contact-me {
     font-family: ProximaBold;
     display: grid;
     grid-template: auto auto 37px auto / 1fr;
+    position: relative;
+    @media (max-width: 700px) {
+        grid-template: auto auto 15px auto / 1fr;
+        padding-top: 10px;
+    }
     &__title {
         grid-column: 1;
         grid-row: 1;
@@ -15,6 +19,13 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        @media (max-width: 700px) {
+            font-size: 14px;
+            letter-spacing: 1.4px;
+        }
+        @media (max-width: 440px) {
+            text-align: left;
+        }
     }
     &__info {
         grid-column: 1;
@@ -26,18 +37,36 @@
         line-height: 49.5px; 
         max-width: 540px;
         margin: 0 auto;
+        @media (max-width: 700px) {
+            font-size: 26px;
+            line-height: 34px;
+            max-width: 410px;
+        }
+        @media (max-width: 440px) {
+            text-align: left;
+            margin: 0;
+            max-width: 306px;
+        }
     }
     &__main {
         grid-column: 1;
         grid-row: 4;
         font-family: ProximaRegular;
         display: grid;
-        grid-template: auto 7px 64px 15px auto 7px 64px 15px auto 7px minmax(auto, 182px) 15px 64px 18px auto / 1fr minmax(auto, 410px) 1fr;
+        font-size: 14px;
+        grid-template: auto 7px 64px 15px auto 7px 64px 15px auto 7px minmax(auto, 182px) 15px 64px 19px auto / 1fr minmax(auto, 410px) 1fr;
+        @media (max-width: 440px) {
+            grid-template: auto 7px 64px 15px auto 7px 64px 15px auto 7px minmax(auto, 182px) 15px 64px 15px auto / 1fr minmax(auto, 410px) 1fr;
+        }
     }
     &__input-title{
         color: $secondary;
-        font-size: 14px;
         line-height: 21px; 
+        display: flex;
+        justify-content: space-between;
+    }
+    &__error{
+        color: $red;
     }
     &__input{
         color: $secondary;
@@ -76,6 +105,12 @@
         grid-row: 11;
         resize: none;
         padding-top: 22px;
+        &::-webkit-scrollbar-track {
+            border-radius: 2px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 2px;
+        }
     }
     &__btn {
         grid-column: 2;
@@ -84,9 +119,111 @@
     &__i-agree {
         grid-column: 2;
         grid-row: 15;
+        color: $secondary;
+        font-family: ProximaRegular;
+        display: grid;
+        align-items: center;
+        grid-template: 1fr / 20px 10px 72px 10px 86px 5px 24px 9px 80px;
+        @media (max-width: 350px) {
+            grid-template: auto 5px auto / 20px 10px 24px 10px 38px 10px 1fr;
+        }
+        span{
+            &:nth-child(2){
+                grid-column: 3;
+                grid-row: 1;
+                @media (max-width: 350px) {
+                    grid-column: 3/6;
+                    grid-row: 1;
+                }
+            }
+            &:nth-child(4){
+                grid-column: 7;
+                grid-row: 1;
+                @media (max-width: 350px) {
+                    grid-column: 3;
+                    grid-row: 3;
+                }
+            }
+        }
     }
     &__i-agree-checkbox{
+        grid-column: 1;
+        grid-row: 1;
     }
-    &__i-agree-link {}
+    &__i-agree-link {
+        color: $blue;
+        text-decoration: underline;
+        &:nth-child(3){
+            grid-column: 5;
+            grid-row: 1;
+            @media (max-width: 350px) {
+                grid-column: 7/8;
+                grid-row: 1;
+            }
+        }
+        &:nth-child(5){
+            grid-column: 9;
+            grid-row: 1;
+            @media (max-width: 350px) {
+                grid-column: 5/8;
+                grid-row: 3;
+            }
+        }
+    }
+    &__bg-imgage {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+    &__bg-picture {
+        &_one {
+            position: absolute;
+            top: 203px;
+            @media (min-width:700px) {
+                left: -314px;
+            }
+            @media (max-width:700px) {
+                right: 33px;
+                top: -9px;
+                transform: rotate(-75deg);
+                img{
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+        }
+        &_two {
+            position: absolute;
+            top: 118px;
+            @media (min-width:700px) {
+                left: -6px;
+            }
+            @media (max-width:700px) {
+                right: -47px;
+                top: -19px;
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+        &_three {
+            position: absolute;
+            left: 65px;
+            bottom: 14px;
+            @media (max-width:700px) {
+                display: none;
+            }
+        }
+        &_four {
+            position: absolute;
+            right: -401px;
+            top: 28px;
+            @media (max-width:700px) {
+                display: none;
+            }
+        }
+    }
 }
-

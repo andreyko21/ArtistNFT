@@ -41,7 +41,7 @@
                 height: 24px;
                 left: -32px;
                 top: -2px;
-                background: url(../../images/Crown.svg) center/cover no-repeat;
+                background: url(../../images/svg/Crown.svg) center/cover no-repeat;
                 @media (max-width: 700px) {
                     width: 18px;
                     height: 18px;
@@ -52,7 +52,7 @@
         &:hover{
             span{
                 &::after{
-                    background: url(../../images/Crown-gradient.svg) center/cover no-repeat;
+                    background: url(../../images/svg/Crown-gradient.svg) center/cover no-repeat;
                 }
             }
         }
@@ -67,7 +67,7 @@
                 height: 24px;
                 left: -32px;
                 top: -2px;
-                background: url(../../images/bag.svg) center/cover no-repeat;
+                background: url(../../images/svg/bag.svg) center/cover no-repeat;
                 @media (max-width: 700px) {
                     width: 18px;
                     height: 18px;
@@ -78,7 +78,7 @@
         &:hover{
             span{
                 &::after{
-                    background: url(../../images/bag-gradient.svg) center/cover no-repeat;
+                    background: url(../../images/svg/bag-gradient.svg) center/cover no-repeat;
                 }
             }
         }
@@ -103,7 +103,7 @@
                 position: absolute;
                 width: 18px;
                 height: 18px;
-                background: url(../../images/Crown-gradient.svg) center/cover no-repeat;
+                background: url(../../images/svg/Crown-gradient.svg) center/cover no-repeat;
             }
         }
     }
@@ -163,7 +163,7 @@
                 height: 24px;
                 right: -33px;
                 top: -2px;
-                background: url(../../images/arrow.svg) center/cover no-repeat;
+                background: url(../../images/svg/arrow.svg) center/cover no-repeat;
                 @media (max-width: 700px) {
                     right: -32px;
                     top: -4px;
@@ -179,7 +179,7 @@
                 -webkit-text-fill-color: initial;
                 color: $darkGrayTwo;
                 &::after{
-                    background: url(../../images/arrow-gray.svg) center/cover no-repeat;
+                    background: url(../../images/svg/arrow-gray.svg) center/cover no-repeat;
                 }
             }
         }

@@ -15,7 +15,7 @@
       <header class="header">
   <div class="header__container">
     <a href="/main.html" class="header__logo logo">
-      <img src="/images/logo.svg" alt="logo">
+      <img src="/images/svg/logo.svg" alt="logo">
     </a>
     <nav class="header__menu menu">
       <ul class="menu__list">
@@ -23,7 +23,7 @@
         <li class="menu__item">
           <a href="#" class="menu__link">
             <svg class="menu__icon">
-              <use xlink:href="/images/Sprite.svg#lock"></use>
+              <use xlink:href="/images/svg/Sprite.svg#lock"></use>
             </svg>
             NFT</a>
         </li>
@@ -46,7 +46,7 @@
       <div class="dropdown__trigger">
         <div class="dropdown__item">ENG</div>
         <svg class="dropdown__icon">
-          <use xlink:href="/images/Sprite.svg#dropdownArrow"></use>
+          <use xlink:href="/images/svg/Sprite.svg#dropdownArrow"></use>
         </svg>
       </div>
       <ul class="dropdown__content">
@@ -55,7 +55,7 @@
     </button>
     <a class="authorization-button header__authorization-button" href="#"><span class="authorization-button__gradient">Authorization</span></a>
     <button class="header__premium-access-button premium-access-button">
-      <img src="/images/Crown.svg" alt="Crown">
+      <img src="/images/svg/Crown.svg" alt="Crown">
     </button>
   </div>
 </header>
@@ -63,7 +63,59 @@
       <main class="page">
         <div data-observ></div>
         <div class="page__container">
-          
+          <div class="contact-me">
+    <div class="contact-me__title">CONTACT ME</div>
+    <div class="contact-me__info">Want to apply your work or an question appeared? </div>
+    <div class="contact-me__main">
+        <div class="contact-me__input-title contact-me__title-name">
+            <span>Name</span>
+            <div class="contact-me__error contact-me__error-name">Please enter a valid name</div>
+        </div>
+        <input type="text" class="contact-me__input contact-me__name" placeholder="Your name">
+        <div class="contact-me__input-title contact-me__title-mail">
+            <span>Mail</span>
+            <div class="contact-me__error contact-me__error-mail">Please enter a correct email address</div>
+        </div>
+        <input type="text" class="contact-me__input contact-me__mail" placeholder="Your mail">
+        <div class="contact-me__input-title contact-me__title-question">
+            <span>Your question</span>
+            <div class="contact-me__error contact-me__error-question">min 5 characters</div>
+        </div>
+        <textarea type="text" class="contact-me__input contact-me__question" placeholder="Your question" name="" id="" cols="30" rows="10"></textarea>
+        <button class="btn contact-me__btn"><span>Send message</span></button>
+        <div class="contact-me__i-agree">
+            <div class="checkbox contact-me__i-agree-checkbox">
+    <input type="checkbox" id="contact-me-checkbox" class="checkbox__input">
+    <label for="contact-me-checkbox"></label>
+</div>
+
+
+
+            <span>I agree with</span>
+            <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
+            <span>and</span>
+            <a href="#" class="contact-me__i-agree-link">Terms of use</a>
+        </div> 
+        <div class="contact-me__bg-imgage">
+            <picture class="contact-me__bg-picture contact-me__bg-picture_one">
+                <source srcset="../images/main/diamond-one.webp" type="image/webp">
+                <img src="../images/main/diamond-one.png" alt="">
+            </picture>
+            <picture class="contact-me__bg-picture contact-me__bg-picture_two">
+                <source srcset="../images/main/diamond-two.webp" type="image/webp">
+                <img src="../images/main/diamond-two.png" alt="">
+            </picture>
+            <picture class="contact-me__bg-picture contact-me__bg-picture_three">
+                <source srcset="../images/main/diamond-three.webp" type="image/webp">
+                <img src="../images/main/diamond-three.png" alt="">
+            </picture>
+            <picture class="contact-me__bg-picture contact-me__bg-picture_four">
+                <source srcset="../images/main/cube.webp" type="image/webp">
+                <img src="../images/main/cube.png" alt="">
+            </picture>
+        </div>
+    </div>
+</div>
         </div>
       </main>
       <footer class="footer">
