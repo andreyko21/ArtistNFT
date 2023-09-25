@@ -25,8 +25,6 @@ export default class Dropdown{
         const windowWidth = $(window).width();
         if (windowWidth <= 400) {
             $('.menu__footer').append(this.dropdown);
-            const downHeight = $(window).height() - this.dropdown.offset().top - this.dropdown.height();
-            console.log(this.dropdownContent.height() + 20);
         } else {
             this.dropdown.insertAfter('.menu');
         }
