@@ -1,0 +1,114 @@
+.footer {
+  padding-top: 11px;
+  padding-bottom: 9px;
+  background-color: $darkGray;
+  @media (max-width: 600px) {
+    padding-top: 21px;
+    padding-bottom: 25px;
+  }
+  &__logo {
+    grid-area: logo;
+    padding: 8px;
+    padding-bottom: 14px;
+  }
+  &__container {
+    display: grid;
+    align-items: center;
+    grid-template:
+      'logo privacy terms social'
+      'line line line line'
+      'allRights allRights allRights allRights' auto/ min-content max-content max-content;
+    @media (max-width: 600px) {
+      grid-template:
+        'logo  social'
+        'privacy privacy'
+        'line line'
+        'terms terms'
+        'allRights allRights' auto/ min-content;
+    }
+  }
+
+  &__social {
+    grid-area: social;
+    margin-left: auto;
+    margin-right: 15px;
+    @media (max-width: 600px) {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    color: rgba($color: $lightBlueGrey, $alpha: 0.6);
+    font-family: 'Proxima';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    &:focus {
+      color: $focusColor;
+    }
+    &:hover {
+      color: $hoverColor;
+    }
+    &:active {
+      color: $activeColor;
+    }
+    &:not(:first-child) {
+      margin-left: 30px;
+      @media (max-width: 600px) {
+        margin-left: 0;
+      }
+    }
+    &.privacy {
+      grid-area: privacy;
+      @media (max-width: 600px) {
+        margin-top: 23px;
+      }
+    }
+    &.terms {
+      grid-area: terms;
+    }
+  }
+  &__line {
+    grid-area: line;
+    height: 1px;
+    width: 100%;
+    background-color: rgba($color: $white, $alpha: 0.05);
+    margin-top: 5px;
+    @media (max-width: 600px) {
+      margin-top: 18px;
+      margin-bottom: 12px;
+    }
+  }
+  &__all-rights {
+    grid-area: allRights;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-family: 'Proxima';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: $lightBlueGrey;
+    @media (max-width: 600px) {
+      background-color: $jetBlack;
+      padding: 13px 10px 14px;
+      border-radius: 8px;
+      margin-top: 22px;
+    }
+  }
+}
+
+.social {
+  &__link {
+    &:not(:first-child) {
+      margin-left: 14px;
+    }
+    @media (max-width: 360px) {
+      &:not(:first-child) {
+        margin-left: 6px;
+      }
+    }
+  }
+}

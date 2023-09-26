@@ -1,5 +1,5 @@
 .switch-block {
-    position: relative;
+  position: relative;
   #mySwitch {
     opacity: 0;
     pointer-events: none;
@@ -33,7 +33,6 @@
       height: 100%;
     }
   }
- 
 
   .switch-on,
   .switch-off {
@@ -56,12 +55,20 @@
     font-weight: 400;
     line-height: 1.75;
     color: $white;
+    @media (max-width: 400px) {
+      font-size: 14px;
+      line-height: 1.42857;
+    }
   }
 
   .switch-off {
     font-size: 18px;
     font-weight: 700;
     line-height: 1.333;
+    @media (max-width: 400px) {
+      font-size: 14px;
+      line-height: 1.42857;
+    }
   }
 
   #mySwitch:checked + .switch .switch-on {
@@ -69,6 +76,10 @@
     font-weight: 700;
     line-height: 1.333;
     color: $darkGray;
+    @media (max-width: 400px) {
+      font-size: 14px;
+      line-height: 1.42857;
+    }
   }
 
   #mySwitch:checked + .switch .switch-off {
@@ -76,6 +87,10 @@
     font-weight: 400;
     line-height: 1.75;
     color: $white;
+    @media (max-width: 400px) {
+      font-size: 14px;
+      line-height: 1.42857;
+    }
   }
 
   #mySwitch:checked + .switch .switch-button {
