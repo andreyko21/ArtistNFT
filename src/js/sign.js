@@ -2,33 +2,41 @@ import $ from 'jquery';
 import 'jquery-validation';
 import firebase from './modules/firebase';
 import {
-    getAuth,
+  getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from 'firebase/auth';
 
 class AuthPage {
   constructor() {
-    this.emailBlock = $('#email');
-    this.passwordBlock = $('#password');
-    this.loginTextLinkBlock = $('.text-link_signUp');
-    this.signUpTextLinkBlock = $('.text-link_signIn');
     this.roleBlock = $('.radio-buttons-block');
     this.submitButton = $('.submit-button');
-    this.form = $('.authorization-section__form');
+    this.SignInform = $('#singInForm');
+    this.SignUpform = $('#singUpForm');
     this.typeAuth = $('#mySwitch');
     this.formErrorBlock = $('.authorization-section__error');
     this.Init();
     this.BindEvents();
-    this.setupValidation();
+    this.ValidationSignIn();
+    this.ValidationSignUp();
   }
 
-  setupValidation() {
-    this.validator = this.form.validate({
+  initializeValidation(formElement) {
+    $.validator.addMethod(
+      'cyrillicEmail',
+      function (value, element) {
+        return /^[а-яА-ЯёЁa-zA-Z0-9._%+-]+@[а-яА-ЯёЁa-zA-Z0-9.-]+\.[а-яА-ЯёЁa-zA-Z]{2,4}$/.test(
+          value
+        );
+      },
+      'Please enter a valid email address'
+    );
+
+    return formElement.validate({
       rules: {
         email: {
           required: true,
-          email: true,
+          cyrillicEmail: true,
         },
         firstName: {
           required: true,
@@ -67,24 +75,39 @@ class AuthPage {
         $(element).parent().removeClass('error-block').addClass(validClass);
       },
     });
+  }
 
+  ValidationSignIn() {
+    this.signInValidator = this.initializeValidation(this.SignInform);
     $('input').on('keyup change', () => {
       let valid = true;
       $('input').each(() => {
-        valid = this.validator.element(this) && valid;
+        valid = this.signInValidator.element(this) && valid;
+      });
+    });
+  }
+
+  ValidationSignUp() {
+    this.signUpValidator = this.initializeValidation(this.SignUpform);
+    $('input').on('keyup change', () => {
+      let valid = true;
+      $('input').each(() => {
+        valid = this.signUpValidator.element(this) && valid;
       });
     });
   }
 
   async BindEvents() {
     this.auth = await firebase.getAuth();
-    this.form.on('submit', () => {
-      if (this.validator.form()) {
-        if (this.typeAuth.is(':checked')) {
-          this.SignIn();
-        } else {
-          this.SignUp();
-        }
+    this.SignInform.on('submit', () => {
+      if (this.signInValidator.form()) {
+        this.SignIn();
+      }
+    });
+
+    this.SignUpform.on('submit', () => {
+      if (this.signUpValidator.form()) {
+        this.SignUp();
       }
     });
 
@@ -113,44 +136,42 @@ class AuthPage {
 
   ShowSignIn() {
     this.typeAuth.prop('checked', true);
-    this.loginTextLinkBlock.css('display', 'flex');
-    this.signUpTextLinkBlock.hide();
-    this.roleBlock.hide();
-    this.emailBlock.show();
-    this.passwordBlock.show();
+    this.SignInform.show();
+    this.SignUpform.hide();
   }
 
   ShowSignUp() {
     this.typeAuth.prop('checked', false);
-    this.loginTextLinkBlock.hide();
-    this.signUpTextLinkBlock.css('display', 'flex');
-    this.roleBlock.show();
-    this.emailBlock.show();
-    this.passwordBlock.show();
+    this.SignInform.hide();
+    this.SignUpform.show();
   }
 
   async SignUp() {
     try {
-        await createUserWithEmailAndPassword(
-          this.auth,
-          this.emailBlock.val(),
-          this.passwordBlock.val()
-        );
-      } catch (error) {
-        this.formErrorBlock.html(this.getErrorMessage(error));
-      }
+      await createUserWithEmailAndPassword(
+        this.auth,
+        this.SignUpform.find('#email-signUp').val(),
+        this.SignUpform.find('#password-signUp').val()
+      );
+      window.location.href = '/index.html';
+    } catch (error) {
+      this.SignUpform.find('.authorization-section__error').html(
+        this.getErrorMessage(error)
+      );
+    }
   }
 
   async SignIn() {
     try {
-        await signInWithEmailAndPassword(
-          this.auth,
-          this.emailBlock.val(),
-          this.passwordBlock.val()
-        );
-      } catch (error) {
-        this.formErrorBlock.html(this.getErrorMessage(error));
-      }
+      await signInWithEmailAndPassword(
+        this.auth,
+        this.SignInform.find('#email-signIn').val(),
+        this.SignInform.find('#password-signIn').val()
+      );
+      window.location.href = '/index.html';
+    } catch (error) {
+      this.formErrorBlock.html(this.getErrorMessage(error));
+    }
   }
 
   getErrorMessage(error) {
