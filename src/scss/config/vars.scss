@@ -38,12 +38,13 @@ $red:  rgba(202, 56, 56, 1);
 $secondary: #C8D2DC;
 $darkGray: #212426;
 $lightBlueGrey: #C8D2DC;
-$focusColor: red;
-$hoverColor: blue;
-$activeColor: green;
+$focusColor: #86a8ffa2;
+$hoverColor: #86A8FF;
+$activeColor: #3e4e77;
 $white: #ffffff;
 $jetBlack:#1D1F21;
 $lightBlue: #86a8ff;
 $errorColor: rgb(129, 2, 2);
-
+$defaultGradient: linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+$rotateGradient: linear-gradient(-95deg, #68C9FF 9.27%, #D1B5FF 84.06%);
 //.
