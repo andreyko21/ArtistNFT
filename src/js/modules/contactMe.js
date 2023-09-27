@@ -1,40 +1,56 @@
+import $ from "jquery";
+import firebase from './firebase';
+import 'jquery-validation';
+
 export default class ContactMe {
     constructor(){
-        this.name = document.querySelector('.contact-me__name');
-        this.nameError = document.querySelector('.contact-me__error-name');
-        this.mail = document.querySelector('.contact-me__mail');
-        this.mailError = document.querySelector('.contact-me__error-mail');
-        this.question = document.querySelector('.contact-me__question');
-        this.questionError = document.querySelector('.contact-me__error-question');
-        this.btn = document.querySelector('.contact-me__btn');
-        this.nameRegEx = /^[A-Za-zА-Яа-яЁё\s]+$/u;
-        this.emailRegEx = /^[A-Za-zА-Яа-яЁё0-9._%+-]+@[A-Za-zА-Яа-яЁё0-9.-]+\.[A-Za-zА-Яа-яЁё]{2,}$/u;
+        this.form = $('.contact-me__form')
     }
-    check(){
-        this.btn.addEventListener('click', () => {
-            if(!this.nameRegEx.test(this.name.value)){
-                this.nameError.innerHTML = 'Please enter a valid name';
-            }else{
-                this.nameError.innerHTML = '';
-            }
-            if(!this.emailRegEx.test(this.mail.value)){
-                this.mailError.innerHTML = 'Please enter a correct email address';
-            }else{
-                this.mailError.innerHTML = '';
-            }
-            if(this.question.value.length <= 5){
-                this.questionError.innerHTML = 'min 5 characters';
-            }else{
-                this.questionError.innerHTML = '';
-            }
-            if(this.nameRegEx.test(this.name.value) && this.emailRegEx.test(this.mail.value) && this.question.value.length >= 5){
-                alert('отправка на firebase')
-                this.name.value = '';
-                this.mail.value = '';
-                this.question.value = '';
-            }
-        });
+    validation(){
+            //Кастумный метод для проверки почты с доменами на кирилице\\
+            $.validator.addMethod("castumEmail", function(value, element) {
+                var regex = /^[a-zA-Z0-9а-яА-ЯёЁ_.-]+@[a-zA-Z0-9а-яА-ЯёЁ.-]+\.[a-zA-Zа-яА-ЯёЁ]{2,}$/;
+                return this.optional(element) || regex.test(value);
+            }, "Please enter a correct email"); 
+
+            this.form.validate({
+              rules: {
+                name: "required",
+                email: {
+                  required: true,
+                  castumEmail: true
+                },
+                question: {
+                    required: true,
+                    minlength: 5 
+                },
+              },
+              messages: {
+                name: "Please enter a valid name",
+                email: {
+                  required: "Please enter a email",
+                },
+                question:{
+                    required: "Please enter a question",
+                    minlength: "min 5 characters",
+                }
+              },
+              errorPlacement: function(error, element) {
+                if (element.attr("name") === "name") {
+                  error.appendTo(".contact-me__error-name");
+                } else if (element.attr("name") === "email") {
+                  error.appendTo(".contact-me__error-mail");
+                } else if (element.attr("name") === "question") {
+                  error.appendTo(".contact-me__error-question");
+                }
+              },
+              submitHandler: function(form) {
+                //дополнительные действия перед отправкой\\
+                alert('ok')
+                form.submit();
+              }
+            });
     }
-};
+}
 
 

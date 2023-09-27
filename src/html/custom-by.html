@@ -1,0 +1,57 @@
+<div class="custom-by">
+    <div class="custom-by__title">CUSTOM BY YOUR OWN</div>
+    <div class="custom-by__info">Want to get your own?</div>
+    <form class="custom-by__form">
+        <div class="custom-by__input-title custom-by__title-type">
+            <span>Type of item</span>
+            <div class="custom-by__error custom-by__error-type"></div>
+        </div>
+        <div class="custom-by__dropdown custom-by__type">
+            <button class="custom-by__dropdown-btn">T-SHIRT</button>
+            <ul class="custom-by__dropdown-list">
+                <li class="custom-by__dropdown-li">T-SHIRT</li>
+                <li class="custom-by__dropdown-li">SWEATER</li>
+                <li class="custom-by__dropdown-li">JACKET</li>
+            </ul>
+        </div>
+        <div class="custom-by__input-title custom-by__title-size">
+            <span>Size</span>
+            <div class="custom-by__error custom-by__error-size"></div>
+        </div>
+        <input type="text" class="custom-by__input custom-by__size" name="email" placeholder="">
+        <div class="custom-by__input-title custom-by__title-question">
+            <span>Your comment</span>
+            <div class="custom-by__error custom-by__error-question"></div>
+        </div>
+        <textarea type="text" class="custom-by__input custom-by__question" placeholder="Comment" name="question" id="" cols="30" rows="10"></textarea>
+        <button class="btn custom-by__btn"><span>Send message</span></button>
+        <div class="custom-by__i-agree">
+            @@include('checkbox.html', {
+                'class': 'custom-by__i-agree-checkbox',
+                'id': 'custom-by-checkbox'
+            })
+            <span>I agree with</span>
+            <a href="#" class="custom-by__i-agree-link">Privacy Policy</a>
+            <span>and</span>
+            <a href="#" class="custom-by__i-agree-link">Terms of use</a>
+        </div> 
+        <div class="custom-by__bg-imgage">
+            <picture class="custom-by__bg-picture custom-by__bg-picture_one">
+                <source srcset="../images/main/diamond-one.webp" type="image/webp">
+                <img src="../images/main/diamond-one.png" alt="">
+            </picture>
+            <picture class="custom-by__bg-picture custom-by__bg-picture_two">
+                <source srcset="../images/main/diamond-two.webp" type="image/webp">
+                <img src="../images/main/diamond-two.png" alt="">
+            </picture>
+            <picture class="custom-by__bg-picture custom-by__bg-picture_three">
+                <source srcset="../images/main/diamond-three.webp" type="image/webp">
+                <img src="../images/main/diamond-three.png" alt="">
+            </picture>
+            <picture class="custom-by__bg-picture custom-by__bg-picture_four">
+                <source srcset="../images/main/cube.webp" type="image/webp">
+                <img src="../images/main/cube.png" alt="">
+            </picture>
+        </div>
+    </form>
+</div>

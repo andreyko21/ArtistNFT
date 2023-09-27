@@ -1,22 +1,22 @@
 <div class="contact-me">
     <div class="contact-me__title">CONTACT ME</div>
     <div class="contact-me__info">Want to apply your work or an question appeared? </div>
-    <div class="contact-me__main">
+    <form class="contact-me__form">
         <div class="contact-me__input-title contact-me__title-name">
             <span>Name</span>
             <div class="contact-me__error contact-me__error-name"></div>
         </div>
-        <input type="text" class="contact-me__input contact-me__name" placeholder="Your name">
+        <input type="text" class="contact-me__input contact-me__name" name="name" placeholder="Your name">
         <div class="contact-me__input-title contact-me__title-mail">
             <span>Mail</span>
             <div class="contact-me__error contact-me__error-mail"></div>
         </div>
-        <input type="text" class="contact-me__input contact-me__mail" placeholder="Your mail">
+        <input type="text" class="contact-me__input contact-me__mail" name="email" placeholder="Your mail">
         <div class="contact-me__input-title contact-me__title-question">
             <span>Your question</span>
             <div class="contact-me__error contact-me__error-question"></div>
         </div>
-        <textarea type="text" class="contact-me__input contact-me__question" placeholder="Your question" name="" id="" cols="30" rows="10"></textarea>
+        <textarea type="text" class="contact-me__input contact-me__question" placeholder="Your question" name="question" id="" cols="30" rows="10"></textarea>
         <button class="btn contact-me__btn"><span>Send message</span></button>
         <div class="contact-me__i-agree">
             @@include('checkbox.html', {
@@ -46,5 +46,5 @@
                 <img src="../images/main/cube.png" alt="">
             </picture>
         </div>
-    </div>
+    </form>
 </div>

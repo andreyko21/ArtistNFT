@@ -1,4 +1,4 @@
-.contact-me {
+.custom-by {
     font-family: ProximaBold;
     display: grid;
     grid-template: auto auto 37px auto / 1fr;
@@ -68,6 +68,85 @@
     &__error{
         color: $red;
     }
+    &__dropdown {
+        position: relative;
+    }
+    &__dropdown-btn {
+        padding: 0 20px 0 32px;
+        border-radius: 9px;
+        font-family: ProximaSemibold;
+        background: $darkGray;
+        color: $secondary;
+        font-size: 16px;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 24px;
+            height: 24px;
+            background: url(../../images/svg/form-arrow.svg);
+            transition: all 300ms ease 0s;
+        }
+    }
+    &__dropdown-list{
+        transition: opacity 0s ease 0s;
+        position: absolute;
+        z-index: -10;
+        opacity: 0;
+        border-radius: 9px;
+        width: 100%;
+        background: $secondary;
+        color: $darkGray ;
+        display: grid;
+        grid-template: 40px 40px 40px / 1fr;
+    }
+    &__dropdown-li {
+        cursor: pointer;
+        padding-left: 32px;
+        left: 0px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        &:nth-child(1){
+            grid-column: 1;
+            grid-row: 1;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+        &:nth-child(2){
+            grid-column: 1;
+            grid-row: 2;
+        }
+        &:nth-child(3){
+            grid-column: 1;
+            grid-row: 3;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+        &:hover{
+            background: $darkGray ;
+            color: $secondary;
+        }
+    }
+    &__dropdown-active{
+        .custom-by{
+            &__dropdown-list{
+                transition: opacity 100ms ease 0s;
+                z-index: 1;
+                opacity: 1;
+            }
+            &__dropdown-btn {
+                &::after{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
     &__input{
         color: $secondary;
         background: $darkGray;
@@ -80,19 +159,19 @@
             opacity: 0.6;
         }
     }
-    &__title-name {
+    &__title-type {
         grid-column: 2;
         grid-row: 1;
     }
-    &__name {
+    &__type {
         grid-column: 2;
         grid-row: 3;
     }
-    &__title-mail {
+    &__title-size {
         grid-column: 2;
         grid-row: 5;
     }
-    &__mail {
+    &__size {
         grid-column: 2;
         grid-row: 7;
     }
@@ -227,3 +306,4 @@
         }
     }
 }
+
