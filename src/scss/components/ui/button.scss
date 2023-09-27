@@ -1,26 +1,27 @@
 .button {
-    display: block;
-    width: 100%;
-    background: $defaultGradient;
-    padding: 18px;
-    font-family: 'Proxima';
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.47222;
-    border-radius: 16px;
-    text-align: center;
-    text-decoration: none;
-    color: $darkGray;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: $defaultGradient;
+  padding: 18px;
+  font-family: 'Proxima';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.47222;
+  border-radius: 16px;
+  text-decoration: none;
+  color: $darkGray;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
-    &:focus{
-        outline: 2px solid $focusColor;
-    }
-    &:hover{
-        color: $white;
-    }
-    &:active{
-        background: $rotateGradient;
-        transform: scale(0.95);
-    }
+  &:focus {
+    outline: 2px solid $focusColor;
   }
+  &:hover {
+    color: $white;
+  }
+  &:active {
+    background: $rotateGradient;
+    transform: scale(0.95);
+  }
+}
