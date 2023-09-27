@@ -18,6 +18,24 @@ export default class CustomBy {
       this.li.click(function() {
         $('.custom-by__dropdown-btn').text($(this).html())
       });
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // При видимості елемента
+                $('.custom-by__type').removeClass('custom-by__dropdown-top');
+            } else {
+                // При відсутності видимості елемента
+                $('.custom-by__type').addClass('custom-by__dropdown-top');
+            }
+        });
+      }, {
+        threshold: 1 // Встановлюємо поріг видимості
+      });
+
+      const element = document.querySelector('.custom-by__dropdown-list');
+
+      observer.observe(element);
     }
 }
 

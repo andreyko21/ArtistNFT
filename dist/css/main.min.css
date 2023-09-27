@@ -1173,11 +1173,7 @@ sup {
     padding-top: 10px;
   }
 }
-<<<<<<< HEAD
 .custom-by__title {
-=======
-.contact-me__title {
->>>>>>> d3c451dd324ff5fcbb4250e557c1f4c83ba5b5ac
   grid-column: 1;
   grid-row: 1;
   font-size: 18px;
@@ -1232,6 +1228,8 @@ sup {
   font-family: ProximaRegular;
   display: grid;
   font-size: 14px;
+  max-width: 410px;
+  margin: 0 auto;
   grid-template: auto 7px 64px 15px auto 7px 64px 15px auto 7px minmax(auto, 182px) 15px 64px 19px auto/1fr minmax(auto, 410px) 1fr;
 }
 @media (max-width: 440px) {
@@ -1258,6 +1256,9 @@ sup {
   background: #212426;
   color: #C8D2DC;
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
   width: 100%;
   height: 100%;
   text-align: left;
@@ -1276,6 +1277,7 @@ sup {
 .custom-by__dropdown-list {
   transition: opacity 0s ease 0s;
   position: absolute;
+  top: 64px;
   z-index: -10;
   opacity: 0;
   border-radius: 9px;
@@ -1312,6 +1314,9 @@ sup {
 .custom-by__dropdown-li:hover {
   background: #212426;
   color: #C8D2DC;
+}
+.custom-by__dropdown-top .custom-by__dropdown-list {
+  top: -120px;
 }
 .custom-by__dropdown-active .custom-by__dropdown-list {
   transition: opacity 100ms ease 0s;
@@ -1546,7 +1551,6 @@ sup {
   background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
 }
 
-<<<<<<< HEAD
 .input-block {
   display: flex;
   flex-direction: column;
@@ -1578,14 +1582,12 @@ sup {
   -webkit-box-shadow: 0 0 0px 40rem #212426 inset;
 }
 .input-block:focus-within .input-block__label {
-  color: red;
+  color: rgba(134, 168, 255, 0.6352941176);
 }
 .input-block:focus-within .input-block__input {
-  outline: 1px solid red;
+  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
 }
 
-=======
->>>>>>> d3c451dd324ff5fcbb4250e557c1f4c83ba5b5ac
 @font-face {
   font-family: Proxima;
   font-display: swap;
