@@ -67,7 +67,6 @@
     "gulp-webp-html-nosvg": "^1.0.1",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
-    "imagemin-mozjpeg": "^10.0.0",
     "postcss-preset-env": "^8.5.0",
     "prettier": "2.8.8",
     "sass": "*1.62.1",

@@ -199,3 +199,23 @@ class AuthPage {
 }
 
 new AuthPage();
+
+$(document).ready(function () {
+  $('.wrapper').mousemove(function (e) {
+    var containerWidth = $(this).width();
+    var containerHeight = $(this).height();
+    var mouseX = e.pageX - $(this).offset().left;
+    var mouseY = e.pageY - $(this).offset().top;
+    var offsetX = 0.5 - mouseX / containerWidth;
+    var offsetY = 0.5 - mouseY / containerHeight;
+
+    $('.parallax').css({
+      transform:
+        'translate(-50%,-50%) translate(' +
+        offsetX * 40 +
+        'px,' +
+        offsetY * 40 +
+        'px)',
+    });
+  });
+});
