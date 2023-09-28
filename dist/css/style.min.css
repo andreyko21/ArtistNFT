@@ -890,13 +890,13 @@ sup {
     grid-template: "logo  social" "privacy privacy" "line line" "terms terms" "allRights allRights" auto/min-content;
   }
 }
-.footer__social {
+.footer .social {
   grid-area: social;
   margin-left: auto;
   margin-right: 15px;
 }
 @media (max-width: 650px) {
-  .footer__social {
+  .footer .social {
     margin-right: 0;
   }
 }
