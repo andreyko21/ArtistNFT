@@ -6,19 +6,19 @@
   // Chrome, Edge, and Safari
   &::-webkit-scrollbar {
     width: rem(8);
-    background-color: var(--white-color);
+    background-color: none;
   }
 
   &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 rem(6) rgba(#000, 20%);
+    box-shadow: inset 0 0 rem(6) rgba($darkGray, 20%);
     border-radius: rem(4);
-    background: #eee;
+    background: $darkGray;
   }
 
   &::-webkit-scrollbar-thumb {
     border-radius: rem(4);
     border: 0 none #fff;
-    background-color: var(--primary-color);
+    background-color: rgba($color: $jetBlack, $alpha: 0.7);
 
     &:hover {
       background-color: var(--primary-hover-color);
