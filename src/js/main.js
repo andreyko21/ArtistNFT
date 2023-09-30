@@ -2,14 +2,17 @@ import Swiper from 'swiper';
 import $ from 'jquery';
 import Header from './modules/header';
 import firebase from './modules/firebase';
+import ContactMe from './modules/contactMe';
 
 class MainPage {
   constructor() {
     this.header = new Header();
+    this.contactMe = new ContactMe();
     this.init();
   }
   init() {
     firebase.getAuth();
+    this.contactMe.validation();
   }
 }
 

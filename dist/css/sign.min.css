@@ -1009,6 +1009,9 @@ sup {
   -webkit-text-fill-color: #C8D2DC;
   -webkit-box-shadow: 0 0 0px 40rem #212426 inset;
 }
+.input-block__error {
+  color: rgb(202, 56, 56);
+}
 .input-block:focus-within .input-block__label {
   color: rgba(134, 168, 255, 0.6352941176);
 }
