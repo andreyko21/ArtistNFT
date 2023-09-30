@@ -2,41 +2,63 @@ import $ from "jquery";
 import firebase from './firebase';
 
 export default class CustomBy {
-    constructor(){
-        this.li = $(".custom-by__dropdown-li");
-    }
-    dropdown(){
-      $('.custom-by__dropdown-btn').on('click', function() {
-        $('.custom-by__type').toggleClass("custom-by__dropdown-active");
-      });
-      $(document).on('click', function(event) {
-        var element = $('.custom-by__dropdown-btn');
-        if (!element.is(event.target) && element.has(event.target).length === 0) {
-          $('.custom-by__type').removeClass("custom-by__dropdown-active");
-        }
-      });
-      this.li.click(function() {
-        $('.custom-by__dropdown-btn').text($(this).html())
-      });
+  constructor() {
+      this.li = $(".custom-by__dropdown-li");
+  }
+  dropdown() {
+    const dropDownOne = new Dropdown('#dropOne');
+    const dropDownTwo = new Dropdown('#dropTwo')
+  }
+}
 
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // При видимості елемента
-                $('.custom-by__type').removeClass('custom-by__dropdown-top');
-            } else {
-                // При відсутності видимості елемента
-                $('.custom-by__type').addClass('custom-by__dropdown-top');
+class Dropdown {
+    constructor(thisDrop) {
+        this.drop = $(thisDrop);
+        this.dropdownToggle = this.drop.find('.custom-by__dropdown-btn');
+        this.dropdownMenu = this.drop.find('.custom-by__dropdown-list');
+        this.li = this.drop.find('.custom-by__dropdown-li');
+        console.log(this.dropdownToggle);
+
+        const options = {
+            rootMargin: "0px 0px -190px 0px", 
+            threshold: 0 
+        };
+        
+        const classDrop = this.drop
+        const thisBtn = this.dropdownToggle
+
+        const observer = new IntersectionObserver(callback, options);
+        const self = this;
+        function callback(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    classDrop.removeClass('custom-by__dropdown-top');
+                } else {
+                    classDrop.addClass('custom-by__dropdown-top');
+                }
+            });
+        }
+        
+        $(document).ready(function() {
+            const targetElement = self.dropdownToggle[0];
+            observer.observe(targetElement);
+        });
+
+        this.dropdownToggle.on('click', function () {
+            classDrop.toggleClass("custom-by__dropdown-active");
+        });
+
+        $(document).on('click', function (event) {
+            if (!thisBtn.is(event.target) && thisBtn.has(event.target).length === 0) {
+                classDrop.removeClass("custom-by__dropdown-active");
             }
         });
-      }, {
-        threshold: 1 // Встановлюємо поріг видимості
-      });
 
-      const element = document.querySelector('.custom-by__dropdown-list');
-
-      observer.observe(element);
+        this.li.click(function () {
+            thisBtn.text($(this).html());
+        });
     }
 }
+
 
 

@@ -1226,28 +1226,24 @@ sup {
   grid-column: 1;
   grid-row: 4;
   font-family: ProximaRegular;
-  display: grid;
   font-size: 14px;
   max-width: 410px;
   margin: 0 auto;
-  grid-template: auto 7px 64px 15px auto 7px 64px 15px auto 7px minmax(auto, 182px) 15px 64px 19px auto/1fr minmax(auto, 410px) 1fr;
-}
-@media (max-width: 440px) {
-  .custom-by__form {
-    grid-template: auto 7px 64px 15px auto 7px 64px 15px auto 7px minmax(auto, 182px) 15px 64px 15px auto/1fr minmax(auto, 410px) 1fr;
-  }
 }
 .custom-by__input-title {
   color: #C8D2DC;
   line-height: 21px;
-  display: flex;
-  justify-content: space-between;
 }
 .custom-by__error {
   color: rgb(202, 56, 56);
 }
+.custom-by__wrapper-dropdown {
+  height: 92px;
+  width: 100%;
+}
 .custom-by__dropdown {
   position: relative;
+  height: 64px;
 }
 .custom-by__dropdown-btn {
   padding: 0 20px 0 32px;
@@ -1326,25 +1322,20 @@ sup {
 .custom-by__dropdown-active .custom-by__dropdown-btn::after {
   transform: rotate(180deg);
 }
-.custom-by__input {
+.custom-by__question {
   color: #C8D2DC;
   background: #212426;
   border-radius: 9px;
-  height: 100%;
+  max-height: 100%;
   width: 100%;
   font-size: 16px;
   padding: 0 32px;
 }
-.custom-by__input::placeholder {
+.custom-by__question::placeholder {
   opacity: 0.6;
 }
-.custom-by__title-type {
-  grid-column: 2;
-  grid-row: 1;
-}
-.custom-by__type {
-  grid-column: 2;
-  grid-row: 3;
+.custom-by__btn {
+  max-height: 64px;
 }
 .custom-by__title-size {
   grid-column: 2;
@@ -1437,6 +1428,7 @@ sup {
   }
 }
 .custom-by__bg-imgage {
+  display: none;
   position: absolute;
   top: 0;
   z-index: -1;

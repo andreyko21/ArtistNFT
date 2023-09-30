@@ -52,26 +52,29 @@
         grid-column: 1;
         grid-row: 4;
         font-family: ProximaRegular;
-        display: grid;
         font-size: 14px;
         max-width: 410px;
         margin: 0 auto;
-        grid-template: auto 7px 64px 15px auto 7px 64px 15px auto 7px minmax(auto, 182px) 15px 64px 19px auto / 1fr minmax(auto, 410px) 1fr;
+
         @media (max-width: 440px) {
-            grid-template: auto 7px 64px 15px auto 7px 64px 15px auto 7px minmax(auto, 182px) 15px 64px 15px auto / 1fr minmax(auto, 410px) 1fr;
+
         }
     }
     &__input-title{
         color: $secondary;
         line-height: 21px; 
-        display: flex;
-        justify-content: space-between;
     }
     &__error{
         color: $red;
     }
+    &__wrapper-dropdown{
+        height: 92px;
+        width: 100%;
+    }
     &__dropdown {
         position: relative;
+        height: 64px;
+
     }
     &__dropdown-btn {
         padding: 0 20px 0 32px;
@@ -161,10 +164,13 @@
         }
     }
     &__input{
+
+    }
+    &__question{
         color: $secondary;
         background: $darkGray;
         border-radius: 9px;
-        height: 100%;
+        max-height: 100%;
         width: 100%;
         font-size: 16px;
         padding: 0 32px;
@@ -173,12 +179,13 @@
         }
     }
     &__title-type {
-        grid-column: 2;
-        grid-row: 1;
+
+    }
+    &__btn{
+        max-height: 64px;
     }
     &__type {
-        grid-column: 2;
-        grid-row: 3;
+
     }
     &__title-size {
         grid-column: 2;
@@ -263,6 +270,7 @@
         }
     }
     &__bg-imgage {
+        display: none;
         position: absolute;
         top: 0;
         z-index: -1;
@@ -320,3 +328,30 @@
     }
 }
 
+
+        // /* CSS стили для кнопки и выпадающего меню */
+        // .dropdown-toggle {
+        //     cursor: pointer;
+        // }
+
+        // .dropdown-menu {
+        //     display: none;
+        //     position: absolute;
+        //     background-color: #ffffff;
+        //     border: 1px solid #ccc;
+        //     padding: 8px;
+        // }
+
+        // .dropdown-menu.active {
+        //     display: block;
+        // }
+
+        // /* Стили для элементов меню */
+        // .menu-item {
+        //     margin: 5px 0;
+        //     cursor: pointer;
+        // }
+
+        // .menu-item:hover {
+        //     background-color: #f0f0f0;
+        // }
