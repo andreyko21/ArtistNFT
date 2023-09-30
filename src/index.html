@@ -7,19 +7,85 @@
       <main class="page">
         <div data-observ></div>
         <div class="page__container">
-          <!-- <section class="we-here-section">
-            <div class="we-here-section__social social"></div>
-            <h1 class="we-here-section__title">
-              We are here to inspire and share art
-            </h1>
-            <p class="we-here-section__description">
-              Indulgence announcing uncommonly met she continuing two unpleasing
-              terminated
-            </p>
-            <button class="button_gradient-background">Premium access</button>
-            <button class="button">Discover</button>
-          </section> -->
-          @@include('html/custom-by.html')
+          <section class="we-here-section">
+            <div class="we-here-section__text-block">
+              @@include('./html/social.html')
+              <h1 class="we-here-section__title">
+                We are here to inspire and share art
+              </h1>
+              <p class="we-here-section__description">
+                Indulgence announcing uncommonly met she continuing two
+                unpleasing terminated
+              </p>
+              <div class="we-here-section__buttons-block">
+                <button class="button button_gradient-background">
+                  Premium access
+                </button>
+                <button class="button">Discover</button>
+              </div>
+            </div>
+            <div class="we-here-section__img-block">
+              <img src="/images/main/we-here-img.png" alt="" />
+              <div class="we-here-section__circle parallax">
+                <img src="/images/auth/circle.svg" alt="circle" />
+              </div>
+              <div class="we-here-section__star parallax">
+                <img src="/images/auth/Star.svg" alt="star" />
+              </div>
+              <div class="we-here-section__star-2 parallax">
+                <img src="/images/auth/Star.svg" alt="star" />
+              </div>
+            </div>
+            <div class="we-here-section__blur">
+              <img src="/images/main/blur.svg" alt="right-blur" />
+            </div>
+            <div class="we-here-section__make-art backgroud-text">MAKE ART</div>
+            <div class="we-here-section__not-war backgroud-text">NOT WAR</div>
+          </section>
+          <section class="biography-section">
+            <div class="biography-section__img-block">
+              <div class="biography-section__img-background"></div>
+              <img src="/images/main/biography.png" alt="biography" />
+            </div>
+              <p class="biography-section__sub-title">BIOGRAPHY</p>
+              <h2 class="biography-section__title">Perchen Arts. Biography</h2>
+              <p class="biography-section__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.</br> Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</br>
+                Turpis egestes maecenas pharetra convallis posuere morbi leo
+                urna molestie at. Diam in arcu curcus euismod quis viverra nibh
+                cras. In ante metus dictum at tempor commodo ullamcorper.
+                Ultrices eros in curcus turpis massa.
+              </p>
+              <div class="biography-section__swiper swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="biography-section__swiper-slide swiper-slide">
+                    <div class="biography-section__year-block">2007</div>
+                    <p class="biography-section__year-description">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </p>
+                  </div>
+                  <div class="biography-section__swiper-slide swiper-slide">
+                    <div class="biography-section__year-block">2014</div>
+                    <p class="biography-section__year-description">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </p>
+                  </div>
+                  <div class="biography-section__swiper-slide swiper-slide">
+                    <div class="biography-section__year-block">2019</div>
+                    <p class="biography-section__year-description">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </p>
+                  </div>
+              </div>
+            </div>
+          </section>
+          @@include('html/contact-me.html')
         </div>
       </main>
       @@include('html/footer.html')

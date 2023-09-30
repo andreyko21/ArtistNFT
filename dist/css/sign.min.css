@@ -890,13 +890,13 @@ sup {
     grid-template: "logo  social" "privacy privacy" "line line" "terms terms" "allRights allRights" auto/min-content;
   }
 }
-.footer__social {
+.footer .social {
   grid-area: social;
   margin-left: auto;
   margin-right: 15px;
 }
 @media (max-width: 650px) {
-  .footer__social {
+  .footer .social {
     margin-right: 0;
   }
 }
@@ -1008,6 +1008,9 @@ sup {
 .input-block__input:-webkit-autofill, .input-block__input:-webkit-autofill:hover, .input-block__input:-webkit-autofill:focus {
   -webkit-text-fill-color: #C8D2DC;
   -webkit-box-shadow: 0 0 0px 40rem #212426 inset;
+}
+.input-block__error {
+  color: rgb(202, 56, 56);
 }
 .input-block:focus-within .input-block__label {
   color: rgba(134, 168, 255, 0.6352941176);

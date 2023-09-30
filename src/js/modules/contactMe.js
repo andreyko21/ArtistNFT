@@ -26,7 +26,7 @@ export default class ContactMe {
                 },
               },
               messages: {
-                name: "Please enter a valid name",
+                name: "Please enter name",
                 email: {
                   required: "Please enter a email",
                 },
