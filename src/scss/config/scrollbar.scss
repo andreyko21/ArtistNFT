@@ -18,7 +18,7 @@
   &::-webkit-scrollbar-thumb {
     border-radius: rem(4);
     border: 0 none #fff;
-    background-color: rgba($color: $jetBlack, $alpha: 0.7);
+    background-color: rgba($color: red, $alpha: 0.7);
 
     &:hover {
       background-color: var(--primary-hover-color);

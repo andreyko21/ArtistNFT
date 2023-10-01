@@ -7,6 +7,7 @@
   max-width: 245px;
   overflow-y: auto;
   overflow-x: hidden;
+  z-index: 2;
   @media (min-width: 1151px) {
     display: flex !important;
   }
@@ -19,13 +20,14 @@
     transform: translate(-100%);
     background-color: $jetBlack;
     transition: transform ease 0.3s;
-    z-index: 5;
+    display: none;
   }
   @media (max-width: 600px) {
     max-width: none;
     justify-content: flex-start;
     transform: translate(0, -100%);
-    height: auto;
+    position: fixed;
+    height: max-content;
   }
   &__menu {
     display: flex;
@@ -129,9 +131,15 @@
     line-height: 1.66667;
   }
   &.menu_open {
-    left: 0;
-    top: 0;
-    transform: translate(0%);
+    @media (max-width: 1150px) {
+      transform: translate(0%);
+      left: 0;
+      top: 0;
+    }
+    @media (max-width: 600px) {
+      top: 64px;
+      height: max-content;
+    }
   }
 }
 

@@ -5,6 +5,13 @@
   flex-direction: column;
   max-width: 345px;
   border-right: 1px solid rgba($color: $steelGray, $alpha: 0.3);
+  @media (min-width: 601px) {
+    overflow: auto;
+  }
+  @media (max-width: 600px) {
+    height: max-content;
+    padding-bottom: 29px;
+  }
   &__title {
     color: $white;
     font-family: 'Proxima';
@@ -19,10 +26,17 @@
   &__list-users {
     flex-grow: 1;
     margin-top: 29px;
+
     display: flex;
     flex-direction: column;
-    overflow: auto;
+
     padding-right: 29px;
+    @media (min-width: 601px) {
+      overflow: auto;
+    }
+    @media (max-width: 600px) {
+      padding-right: 0;
+    }
   }
   &__user {
     border-radius: 14px;
@@ -67,6 +81,9 @@
     }
     &:not(:first-child) {
       margin-top: 8px;
+    }
+    @media (max-width: 600px) {
+      background-color: $gunmetalGrey;
     }
   }
   @media (max-width: 600px) {

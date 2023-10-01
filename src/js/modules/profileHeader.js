@@ -5,21 +5,13 @@ export default class Header {
     this.burgerMenuButton = $('.burger-menu-button');
     this.burgerMenu = $('.profile-sidebar');
     this.siliderBackground = $('.silider-background');
+
     this.BindEvents();
-    this.dropDown = new Dropdown();
   }
 
   BindEvents() {
     this.burgerMenuButton.click(() => this.ToggleBurgerMenu());
     this.siliderBackground.click(() => this.ToggleBurgerMenu());
-  }
-
-  CheckScreenSize() {
-    const windowWidth = $(window).width();
-    if (windowWidth <= 1150) {
-    } else {
-      this.dropdown.insertAfter('.menu');
-    }
   }
 
   ToggleBurgerMenu() {
