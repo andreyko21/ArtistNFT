@@ -7,7 +7,7 @@ export default class CustomBy {
   }
   dropdown() {
     const dropDownOne = new Dropdown('#dropOne');
-    const dropDownTwo = new Dropdown('#dropTwo')
+    // const dropDownTwo = new Dropdown('#dropTwo')
   }
 }
 

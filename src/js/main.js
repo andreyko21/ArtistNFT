@@ -3,16 +3,19 @@ import $ from 'jquery';
 import Header from './modules/header';
 import firebase from './modules/firebase';
 import ContactMe from './modules/contactMe';
+import CustomBy from './modules/customBy';
 
 class MainPage {
   constructor() {
     this.header = new Header();
-    this.contactMe = new ContactMe();
+    // this.contactMe = new ContactMe();
+    this.customBy = new CustomBy();
     this.init();
   }
   init() {
     firebase.getAuth();
-    this.contactMe.validation();
+    // this.contactMe.validation();
+    this.customBy.dropdown();
   }
 }
 

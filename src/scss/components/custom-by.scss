@@ -1,18 +1,15 @@
 .custom-by {
     font-family: ProximaBold;
-    display: grid;
-    grid-template: auto auto 37px auto / 1fr;
     position: relative;
     @media (max-width: 700px) {
         grid-template: auto auto 15px auto / 1fr;
         padding-top: 10px;
     }
     &__title {
-        grid-column: 1;
-        grid-row: 1;
         font-size: 18px;
         font-weight: 700;
         line-height: 26.5px;
+        margin-bottom: 1px;
         letter-spacing: 1.8px;
         text-align: center;
         background: $gradient;
@@ -28,15 +25,13 @@
         }
     }
     &__info {
-        grid-column: 1;
-        grid-row: 2;
         color: var(--text, #FCFFFF);
         text-align: center;
         font-size: 36px;
         font-weight: 700;
         line-height: 49.5px; 
         max-width: 540px;
-        margin: 0 auto;
+        margin: 0 auto 31px;
         @media (max-width: 700px) {
             font-size: 26px;
             line-height: 34px;
@@ -60,9 +55,10 @@
 
         }
     }
-    &__input-title{
+    &__dropdown-title{
         color: $secondary;
         line-height: 21px; 
+        margin-bottom: 7px;
     }
     &__error{
         color: $red;
@@ -270,7 +266,7 @@
         }
     }
     &__bg-imgage {
-        display: none;
+        // display: none;
         position: absolute;
         top: 0;
         z-index: -1;
@@ -327,31 +323,3 @@
         }
     }
 }
-
-
-        // /* CSS стили для кнопки и выпадающего меню */
-        // .dropdown-toggle {
-        //     cursor: pointer;
-        // }
-
-        // .dropdown-menu {
-        //     display: none;
-        //     position: absolute;
-        //     background-color: #ffffff;
-        //     border: 1px solid #ccc;
-        //     padding: 8px;
-        // }
-
-        // .dropdown-menu.active {
-        //     display: block;
-        // }
-
-        // /* Стили для элементов меню */
-        // .menu-item {
-        //     margin: 5px 0;
-        //     cursor: pointer;
-        // }
-
-        // .menu-item:hover {
-        //     background-color: #f0f0f0;
-        // }
