@@ -37,9 +37,8 @@ $(document).ready(function () {
     });
   });
   new Swiper('.biography-section__swiper', {
-    // Опції Swiper
-    slidesPerView: 2.1, // Кількість видимих слайдів одночасно
-    spaceBetween: 10, // Відступ між слайдами
+    slidesPerView: 2.1,
+    spaceBetween: 10,
     breakpoints: {
       430: {
         slidesPerView: 2.5,
