@@ -33,6 +33,9 @@
         }
     }
     &__input{
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
         width: 20px;
         height: 20px;
         opacity: 0;

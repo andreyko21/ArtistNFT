@@ -4,10 +4,44 @@ import firebase from './firebase';
 export default class CustomBy {
   constructor() {
       this.li = $(".custom-by__dropdown-li");
+      this.form = $('.custom-by__form')
   }
   dropdown() {
     const dropDownOne = new Dropdown('#dropOne');
-    // const dropDownTwo = new Dropdown('#dropTwo')
+    const dropDownTwo = new Dropdown('#dropTwo')
+  }
+  validation(){
+    this.form.validate({
+      rules: {
+        checkbox: {
+            required: true,
+          },
+        radioBtn: {
+            required: true,
+          },
+      },
+      messages: {
+        checkbox:{
+            required: 'please click checkbox'
+        },
+        radioBtn:{
+            required: 'choose a color'
+        },
+      },
+      errorPlacement: function(error, element) {
+        if (element.attr("name") === "checkbox") {
+          error.appendTo(".custom-by__i-agree-error");
+        } else if (element.attr("name") === "radioBtn") {
+            error.appendTo(".custom-by__color-error");
+        }
+      },
+      submitHandler: function(form) {
+        //дополнительные действия перед отправкой\\
+
+        alert('ok')
+        form.submit();
+      }
+    });
   }
 }
 
@@ -17,7 +51,6 @@ class Dropdown {
         this.dropdownToggle = this.drop.find('.custom-by__dropdown-btn');
         this.dropdownMenu = this.drop.find('.custom-by__dropdown-list');
         this.li = this.drop.find('.custom-by__dropdown-li');
-        console.log(this.dropdownToggle);
 
         const options = {
             rootMargin: "0px 0px -190px 0px", 
