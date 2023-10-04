@@ -1,0 +1,7 @@
+@import './chat-list.scss';
+@import './current-chat.scss';
+
+.profile-chat {
+  flex-grow: 1;
+  display: flex;
+}

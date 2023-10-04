@@ -11,7 +11,7 @@ $maxWidthContainer: $containerWidth + ($mainOffset * 2); // ширина кон�
   --bs-font-weight: 400; // Жирность шрифта по умолчанию
   --bs-line-height: 1; // Базовая высота шрифта
   --bs-font-color: #222; // Цвет шрифта по умолчанию
-  --bs-transition: .3s ease-in-out;
+  --bs-transition: 0.3s ease-in-out;
   --bs-radius: 10px;
 
   --primary-color: #131313;
@@ -21,30 +21,41 @@ $maxWidthContainer: $containerWidth + ($mainOffset * 2); // ширина кон�
   --black-color: #131313;
 
   --bs-shadow: 0px 2px 3px rgba(#000, 10%), 0px 8px 3px rgba(#000, 10%);
-  --hover-shadow: 0 0 5px 0 rgba(#000, 10%),
-                  0 0 10px 0 rgba(#000, 10%),
-                  0 0 15px 0 rgba(#000, 10%);
+  --hover-shadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
+    0 0 15px 0 rgba(#000, 10%);
 }
 
-// Цвета 
-$gradient : var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
-$darkGrayTwo : var(--background, #1D1F21);
-$darkGrayGradient: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
-$slateGray: var(--background, #1D1F21);
+// Цвета
+$gradient: var(--primary,linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+$darkGrayTwo: var(--background, #1d1f21);
+$darkGrayGradient: var(
+  --linear-10,
+  linear-gradient(
+    95deg,
+    rgba(104, 201, 255, 0.1) 9.27%,
+    rgba(209, 181, 255, 0.1) 84.06%
+  )
+);
+$slateGray: var(--background, #1d1f21);
 $deepTeal: var(--stroke, #525960);
-$blue: var(--color-3, #86A8FF);
-$red:  rgba(202, 56, 56, 1);
+$blue: var(--color-3, #86a8ff);
+$red: rgba(202, 56, 56, 1);
+$whiteText: var(--text, #FCFFFF);
+$gradientCard: linear-gradient(141deg, rgba(104, 128, 255, 0.90) 3.3%, rgba(60, 167, 244, 0.90) 52.35%, rgba(140, 69, 255, 0.90) 92.15%), url(<path-to-image>), lightgray 50% / cover no-repeat;
 
-$secondary: #C8D2DC;
+$secondary: #c8d2dc;
 $darkGray: #212426;
-$lightBlueGrey: #C8D2DC;
+$lightBlueGrey: #c8d2dc;
 $focusColor: #86a8ffa2;
-$hoverColor: #86A8FF;
+$hoverColor: #86a8ff;
 $activeColor: #3e4e77;
 $white: #ffffff;
-$jetBlack:#1D1F21;
+$jetBlack: #1d1f21;
 $lightBlue: #86a8ff;
 $errorColor: rgb(129, 2, 2);
-$defaultGradient: linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%);
-$rotateGradient: linear-gradient(-95deg, #68C9FF 9.27%, #D1B5FF 84.06%);
-//.
+$defaultGradient: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+$rotateGradient: linear-gradient(-95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+$steelGray: #525960;
+$emeraldGreen: #47cd7d;
+$gunmetalGrey: #2c2f33;
+$royalBlue: #3626ea;
