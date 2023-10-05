@@ -1,11 +1,12 @@
 $to-burger-menu: 1110px;
 $focus-color-menu: #86a8ffa2;
-$hover-color-menu: #86A8FF;
+$hover-color-menu: #86a8ff;
 $active-color-menu: #3e4e77;
 
-.header {   
-  position: relative;
-  .icon{
+.header {
+  position: sticky;
+  top: 0;
+  .icon {
     max-width: 145px;
     max-height: 30px;
   }
@@ -44,7 +45,7 @@ $active-color-menu: #3e4e77;
       margin-left: auto;
     }
     @media (max-width: 400px) {
-        margin-right: auto;
+      margin-right: auto;
     }
   }
   &__authorization-button {
@@ -61,7 +62,7 @@ $active-color-menu: #3e4e77;
     display: flex;
     justify-content: center;
     align-items: center;
-    &:focus{
+    &:focus {
       border: 1px solid $focus-color-menu;
     }
     img {
@@ -288,7 +289,7 @@ $active-color-menu: #3e4e77;
     font-weight: 400;
     line-height: 19px;
   }
-  &__content { 
+  &__content {
     display: none;
     left: 0;
     position: absolute;
@@ -301,29 +302,28 @@ $active-color-menu: #3e4e77;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    .dropdown__item{
+    .dropdown__item {
       padding: 5px 12px;
       text-align: start;
       width: 100%;
-      &:not(:first-child){
+      &:not(:first-child) {
         padding-top: 3px;
         padding-bottom: 3px;
       }
     }
   }
-  &__item{
+  &__item {
     user-select: none;
   }
-  &_open{
-    .dropdown__content{
+  &_open {
+    .dropdown__content {
       display: flex;
     }
-    .dropdown__icon{
+    .dropdown__icon {
       transform: rotate(180deg);
-      
     }
   }
-  &:focus{
+  &:focus {
     outline: 1px solid $focus-color-menu;
   }
 }
@@ -424,7 +424,7 @@ $active-color-menu: #3e4e77;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  &:focus{
+  &:focus {
     outline: 1px solid $focus-color-menu;
   }
 }
