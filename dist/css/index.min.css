@@ -1700,6 +1700,11 @@ sup {
   padding-top: 30px;
   padding-bottom: 89px;
 }
+@media (max-width: 600px) {
+  .nft-swiper-section {
+    padding-bottom: 27px;
+  }
+}
 .nft-swiper-section__container {
   max-width: 1920px;
   padding-left: 0 !important;
@@ -1708,8 +1713,8 @@ sup {
   overflow-y: visible;
 }
 .nft-swiper-section__swiper-container {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 @media (min-width: 601px) {
   .nft-swiper-section .swiper-slide-active {
@@ -1719,6 +1724,11 @@ sup {
   .nft-swiper-section .swiper-slide-next .nft-card,
   .nft-swiper-section .swiper-slide-active .nft-card {
     opacity: 1;
+  }
+}
+@media (max-width: 600px) {
+  .nft-swiper-section {
+    padding-top: 0px;
   }
 }
 
@@ -1735,6 +1745,11 @@ sup {
     opacity: 0.3;
   }
 }
+@media (max-width: 600px) {
+  .nft-card {
+    margin-top: 10px;
+  }
+}
 .nft-card__sub-title {
   padding: 17px 20px;
   font-family: "Proxima";
@@ -1749,7 +1764,8 @@ sup {
 }
 @media (max-width: 600px) {
   .nft-card__sub-title {
-    padding: 8px 13px 0px;
+    padding: 10px 13px 0px;
+    font-size: 14px;
   }
 }
 @media (max-width: 600px) {
@@ -1776,7 +1792,9 @@ sup {
 }
 @media (max-width: 600px) {
   .nft-card__title {
-    padding: 0px 13px 0px;
+    padding: 4px 13px 0px;
+    font-size: 18px;
+    line-height: 1.44444;
   }
 }
 .nft-card__description {
@@ -1789,7 +1807,7 @@ sup {
 }
 @media (max-width: 600px) {
   .nft-card__description {
-    padding: 0px 13px 0px;
+    padding: 3px 13px 0px;
     font-size: 12px;
     line-height: 1.66667;
   }
@@ -1805,6 +1823,7 @@ sup {
 @media (max-width: 600px) {
   .nft-card__footer {
     padding: 11px 19px 15px 13px;
+    margin-top: 10px;
   }
 }
 .nft-card__price {
@@ -1880,6 +1899,13 @@ sup {
     padding-bottom: 20px;
   }
 }
+@media (max-width: 600px) {
+  .banner-section__img-block {
+    width: 70%;
+    padding-top: 28px;
+    padding-bottom: 32px;
+  }
+}
 .banner-section__img-block img {
   width: 100%;
   height: 100%;
@@ -1915,6 +1941,13 @@ sup {
   font-weight: 700;
   line-height: 1.375;
 }
+@media (max-width: 500px) {
+  .banner-section__title {
+    font-size: 26px;
+    line-height: 1.30769;
+    margin-top: 5px;
+  }
+}
 .banner-section__description {
   margin-top: 12px;
   color: #ffffff;
@@ -1922,6 +1955,13 @@ sup {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.75;
+}
+@media (max-width: 500px) {
+  .banner-section__description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 7px;
+  }
 }
 .banner-section__button {
   margin-top: 12px;
@@ -1941,6 +1981,12 @@ sup {
 @media (max-width: 500px) {
   .banner-section__button {
     margin-left: 0;
+    margin-top: 24px;
+    padding: 13px 28px;
+    border-radius: 12px;
+    max-width: 135px;
+    font-size: 15px;
+    line-height: 1.76667;
   }
 }
 .banner-section__icon {
@@ -1956,6 +2002,9 @@ sup {
 @media (max-width: 500px) {
   .banner-section__icon {
     margin-left: 0;
+    margin-top: 0;
+    width: 24px;
+    height: 24px;
   }
 }
 .banner-section__icon img {
@@ -2077,6 +2126,11 @@ body {
 @media (max-width: 960px) {
   .page {
     padding-top: 62px;
+  }
+}
+@media (max-width: 600px) {
+  .page {
+    padding-bottom: 35px;
   }
 }
 
@@ -2382,21 +2436,23 @@ body {
   left: 29.2%;
 }
 
-.biography-section {
+.biography-section__container {
   padding-top: 88px;
   padding-bottom: 34px;
   display: grid;
   grid-template: "img sub-title" "img title" "img description" "img swiper" min-content/auto auto;
 }
 @media (max-width: 960px) {
-  .biography-section {
+  .biography-section__container {
     justify-content: center;
     grid-template: "sub-title" "title" "img" "description" "swiper" auto/auto;
   }
 }
 @media (max-width: 600px) {
-  .biography-section {
+  .biography-section__container {
     padding-top: 10px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 .biography-section__img-block {
@@ -2411,6 +2467,18 @@ body {
 .biography-section__img-block img {
   width: 100%;
   height: 100%;
+  border-radius: 24px;
+}
+@media (max-width: 600px) {
+  .biography-section__img-block {
+    max-width: 254px;
+    max-height: 326px;
+    width: 100%;
+    height: 100%;
+    transform: rotate(3.137deg);
+    margin-top: 38px;
+    left: 16px;
+  }
 }
 .biography-section__img-background {
   position: absolute;
@@ -2428,6 +2496,15 @@ body {
     left: -7%;
   }
 }
+@media (max-width: 400px) {
+  .biography-section__img-background {
+    left: -12%;
+    width: 255.913px;
+    height: 336.528px;
+    transform: rotate(-6.862deg);
+    bottom: 0%;
+  }
+}
 .biography-section__sub-title {
   margin-top: 42px;
   max-width: 550px;
@@ -2442,6 +2519,16 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 600px) {
+  .biography-section__sub-title {
+    font-size: 14px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 55px;
+    line-height: 1.89286;
+    letter-spacing: 1.4px;
+  }
+}
 .biography-section__title {
   max-width: 550px;
   grid-area: title;
@@ -2451,6 +2538,14 @@ body {
   font-weight: 700;
   line-height: 1.375;
   height: min-content;
+}
+@media (max-width: 600px) {
+  .biography-section__title {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 26px;
+    line-height: 1.30769;
+  }
 }
 .biography-section__description {
   max-width: 550px;
@@ -2462,10 +2557,29 @@ body {
   font-weight: 400;
   line-height: 1.75;
 }
+@media (max-width: 600px) {
+  .biography-section__description {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+}
 .biography-section__swiper {
   max-width: 550px;
   grid-area: swiper;
   overflow: hidden;
+  margin-top: 41px;
+  margin-bottom: 29px;
+}
+@media (max-width: 600px) {
+  .biography-section__swiper {
+    margin-top: 33px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 0;
+  }
 }
 .biography-section__year-block {
   border-radius: 10px;
@@ -2478,6 +2592,11 @@ body {
   font-weight: 700;
   line-height: 1.42857;
 }
+@media (max-width: 600px) {
+  .biography-section__year-block {
+    padding: 5px 13px 4px;
+  }
+}
 .biography-section__year-description {
   margin-top: 10px;
   color: #ffffff;
@@ -2486,9 +2605,14 @@ body {
   font-weight: 600;
   line-height: 1.75;
 }
-.biography-section__swiper {
-  margin-top: 41px;
-  margin-bottom: 29px;
+@media (max-width: 600px) {
+  .biography-section__year-description {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.71429;
+    max-width: 131px;
+    margin-top: 14px;
+  }
 }
 
 .backgroud-text {
