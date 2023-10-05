@@ -393,7 +393,6 @@ sup {
   color: var(--background, #1d1f21);
 }
 .btn_arrow {
-  width: 100%;
   background: var(--background, #1d1f21);
 }
 .btn_arrow span {
@@ -1123,7 +1122,6 @@ sup {
   color: var(--background, #1d1f21);
 }
 .btn_arrow {
-  width: 100%;
   background: var(--background, #1d1f21);
 }
 .btn_arrow span {
