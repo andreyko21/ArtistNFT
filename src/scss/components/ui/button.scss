@@ -13,7 +13,8 @@
   text-decoration: none;
   color: $darkGray;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-
+  cursor: pointer;
+  user-select: none;
   &:focus {
     outline: 2px solid $focusColor;
   }

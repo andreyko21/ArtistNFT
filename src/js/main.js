@@ -54,4 +54,57 @@ $(document).ready(function () {
       },
     },
   });
+
+  const nftSwiper = new Swiper('.nft-swiper-section__swiper-container', {
+    slidesPerView: 1.2,
+    spaceBetween: 16,
+    centeredSlides: false,
+    loop: false,
+    breakpoints: {
+      450: {
+        slidesPerView: 1.6,
+        centeredSlides: false,
+        loop: false,
+      },
+      601: {
+        slidesPerView: 1.9,
+        centeredSlides: true,
+        loop: true,
+      },
+      681: {
+        slidesPerView: 2.3,
+        centeredSlides: true,
+        loop: true,
+      },
+      820: {
+        slidesPerView: 2.8,
+        centeredSlides: true,
+        loop: true,
+      },
+      960: {
+        slidesPerView: 3.3,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+      },
+      1190: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+      },
+      1441: {
+        slidesPerView: 4.5,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+      },
+      1550: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+      },
+    },
+  });
 });
