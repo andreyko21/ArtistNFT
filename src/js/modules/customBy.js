@@ -1,5 +1,6 @@
 import $ from "jquery";
 import firebase from './firebase';
+import 'jquery-validation';
 
 export default class CustomBy {
   constructor() {

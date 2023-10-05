@@ -1,5 +1,6 @@
 @import './index.scss';
 @import './components/one-item.scss';
+@import './components/custom-by.scss';
 
 .page{
     padding-top: 62px;
@@ -45,16 +46,17 @@
         }
     }
     &__cards{
-        // max-width: 1111px;
+        max-width: 1111px;
         margin: 0 auto;
         display: grid;
         gap: 24px;
         grid-template-columns: repeat(3,1fr) ;
         justify-content: center;
         @media (max-width: 1170px) {
-
+            grid-template-columns: repeat(2 ,1fr) ;
         }
-        @media (max-width: 761px) {
+        @media (max-width: 761px) {        
+            grid-template-columns: 1fr ;
             padding: 0 10px;
             gap: 19px;
         }
