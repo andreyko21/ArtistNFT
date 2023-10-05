@@ -5,6 +5,8 @@
 @import './components/ui/input.scss';
 @import './components/contact-me.scss';
 @import './components/checkbox.scss';
+@import './index/nft-swiper-section.scss';
+@import './index/banner-section.scss';
 
 @font-face {
   font-family: Proxima;
@@ -179,6 +181,23 @@ body {
       }
     }
   }
+  &__img-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 168%;
+    height: 100%;
+    overflow: hidden;
+    @media (max-width: 960px) {
+      width: 100%;
+      height: 150%;
+    }
+    @media (max-width: 400px) {
+      width: 100vw;
+      height: 150%;
+      right: -15px;
+    }
+  }
   &__img-block {
     position: relative;
     margin-right: 15px;
@@ -203,29 +222,37 @@ body {
       margin-top: 55px;
     }
     img {
+      object-fit: contain;
       user-select: none;
       pointer-events: none;
       position: absolute;
-      width: 168%;
-      height: 109%;
-      bottom: -39px;
+      width: 100%;
+      height: fit-content;
+      bottom: -6.3%;
       right: -48px;
       z-index: 1;
-      @media (max-width: 1100px) {
-        right: -42px;
-      }
+
       @media (max-width: 960px) {
-        width: 100%;
-        height: 150%;
-        right: -6.2%;
-        bottom: -8.604%;
+        max-width: 100%;
+        width: fit-content;
+        height: fit-content;
+        right: -8.2%;
+        bottom: -48px;
         overflow-x: hidden;
       }
-      @media (max-width: 400px) {
-        height: 135%;
-        width: 132%;
-        right: -30%;
-        bottom: -7.65%;
+      @media (max-width: 600px) {
+        height: fit-content;
+        width: 95%;
+        max-width: none;
+        right: -20%;
+        bottom: -30px;
+      }
+      @media (max-width: 460px) {
+        height: fit-content;
+        width: 125%;
+        max-width: none;
+        right: -25%;
+        bottom: -30px;
       }
     }
   }
@@ -313,6 +340,9 @@ body {
       'img'
       'description'
       'swiper' auto/ auto;
+  }
+  @media (max-width: 600px) {
+    padding-top: 10px;
   }
   &__img-block {
     max-width: 445px;
