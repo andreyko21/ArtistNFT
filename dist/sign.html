@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <style>.loaded { opacity: 1 }</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/sign.min.css">
+  <title>Authorization</title>
+</head>
+
+  <body>
+    <div class="wrapper">
+      <main class="page">
+        <div data-observ></div>
+        <div class="page__container">
+          <section class="authorization-section">
+            <div class="parallax page__circle">
+              <img src="/images/svg/circle.svg" alt="circle">
+            </div>
+            <div class="parallax page__star">
+              <img src="/images/svg/Star.svg" alt="star">
+            </div>
+            <a href="/main.html" class="authorization-section__logo logo">
+              <img src="/images/svg/logo.svg" alt="logo">
+            </a>
+            <h1 class="authorization-section__title">Authorization</h1>
+            <div class="switch-block">
+  <input type="checkbox" id="mySwitch" checked="checked">
+  <label for="mySwitch" class="switch">
+    <span class="switch-background">
+      <span class="switch-on">Log in</span>
+      <span class="switch-off">Sign up</span>
+      <span class="switch-button"></span></span>
+  </label>
+</div>
+
+            <form class="authorization-section__form signIn-form" id="singInForm" autocomplete="off" onsubmit="event.preventDefault();">
+              <div class="input-block">
+                <label class="input-block__label" for="email">E-mail</label>
+                <input class="input-block__input" type="text" id="email-signIn" name="email" placeholder="Your e-mail" autocomplete="off">
+                <div class="input-block__error"></div>
+              </div>
+
+              <div class="input-block">
+                <label class="input-block__label" for="password">Password</label>
+                <input class="input-block__input" type="password" id="password-signIn" name="password" placeholder="Your password" autocomplete="off">
+                <div class="input-block__error"></div>
+              </div>
+              <div class="authorization-section__error"></div>
+              <button class="button submit-button" type="submit">
+                <span></span>Sign In
+              </button>
+              <div class="authorization-section__text-link text-link">
+                <p class="text-link__text">Don’t have account yet?</p>
+                <a class="text-link__link signUp" href="#signUp">Sign up</a>
+              </div>
+            </form>
+            <form class="authorization-section__form signUp-form" id="singUpForm" autocomplete="off" onsubmit="event.preventDefault();">
+              <div class="authorization-section__radio-buttons-block radio-buttons-block">
+                <label class="radio-buttons-block__title">Select your role</label>
+                <div class="radio-buttons-block__radio-list">
+                  <label class="radio-button">Customer
+    <input type="radio" checked="checked" name="@@name">
+    <span class="checkmark"></span>
+</label>
+                  <label class="radio-button">Admin
+    <input type="radio" name="@@name">
+    <span class="checkmark"></span>
+</label> <label class="radio-button">Artist
+    <input type="radio" name="@@name">
+    <span class="checkmark"></span>
+</label>
+                </div>
+              </div>
+              <div class="input-block">
+                <label class="input-block__label" for="email">E-mail</label>
+                <input class="input-block__input" type="text" id="email-signUp" name="email" placeholder="Your e-mail" autocomplete="off">
+                <div class="input-block__error"></div>
+              </div>
+              <div class="input-block">
+                <label class="input-block__label" for="password">Password</label>
+                <input class="input-block__input" type="password" id="password-signUp" name="password" placeholder="Your password" autocomplete="off">
+                <div class="input-block__error"></div>
+              </div>
+              <div class="authorization-section__error"></div>
+              <button class="button submit-button" type="submit">
+                <span></span>Sign Up
+              </button>
+              <div class="authorization-section__text-link text-link">
+                <p class="text-link__text">Already have accoun?</p>
+                <a class="text-link__link" href="#login">Log In</a>
+              </div>
+            </form>
+          </section>
+          <div class="page__left-blur">
+            <img src="/images/auth/blur.svg" alt="left-blur">
+          </div>
+          <div class="page__right-blur">
+            <img src="/images/auth/blur.svg" alt="right-blur">
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/sign.min.js"></script>
+  </body>
+</html>
