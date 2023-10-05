@@ -432,7 +432,8 @@ sup {
 }
 
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
   height: 64px;
   z-index: 5;
   background-color: #1d1f21;
@@ -633,10 +634,10 @@ sup {
   transition: fill 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .menu__item:hover .menu__link {
-  color: #86A8FF;
+  color: #86a8ff;
 }
 .menu__item:hover .menu__icon {
-  fill: #86A8FF;
+  fill: #86a8ff;
 }
 .menu__item:focus-within .menu__link {
   color: rgba(134, 168, 255, 0.6352941176);
@@ -1027,7 +1028,6 @@ sup {
   padding: 33px 28px;
   max-width: 245px;
   overflow-y: auto;
-  overflow-x: hidden;
   z-index: 2;
 }
 @media (min-width: 1151px) {
@@ -1373,13 +1373,15 @@ sup {
   border-radius: 8px 8px 0px 8px;
 }
 .current-chat__message-box {
-  overflow-y: auto;
+  scroll-behavior: smooth;
+  overflow: auto;
   flex-grow: 1;
   padding-left: 14px;
   padding-right: 14px;
   padding-top: 20px;
   padding-top: 20px;
   padding-right: 20px;
+  flex-direction: column-reverse;
 }
 .current-chat__message-block {
   max-width: 454px;
@@ -1424,9 +1426,10 @@ sup {
   .current-chat {
     position: fixed;
     right: 0;
-    top: 64px;
-    height: calc(100vh - 64px);
+    top: 0;
+    height: 100%;
     width: 100%;
+    padding-top: 64px;
     overflow: hidden;
     display: none;
     background-color: #1d1f21;

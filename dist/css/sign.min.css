@@ -432,7 +432,8 @@ sup {
 }
 
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
   height: 64px;
   z-index: 5;
   background-color: #1d1f21;
@@ -633,10 +634,10 @@ sup {
   transition: fill 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .menu__item:hover .menu__link {
-  color: #86A8FF;
+  color: #86a8ff;
 }
 .menu__item:hover .menu__icon {
-  fill: #86A8FF;
+  fill: #86a8ff;
 }
 .menu__item:focus-within .menu__link {
   color: rgba(134, 168, 255, 0.6352941176);
@@ -1196,6 +1197,8 @@ sup {
   text-decoration: none;
   color: #212426;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
+  user-select: none;
 }
 .button:focus {
   outline: 2px solid rgba(134, 168, 255, 0.6352941176);
