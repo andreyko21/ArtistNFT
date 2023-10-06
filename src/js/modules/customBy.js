@@ -5,17 +5,23 @@ import 'jquery-validation';
 export default class CustomBy {
   constructor() {
       this.li = $(".custom-by__dropdown-li");
-      this.form = $('.custom-by__form')
+      this.form = $('.custom-by__form');
+      this.dropOne = new Dropdown('#dropOne');
+      this.dropTwo = new Dropdown('#dropTwo');
   }
-  dropdown() {
-    const dropDownOne = new Dropdown('#dropOne');
-    const dropDownTwo = new Dropdown('#dropTwo')
-  }
+  // dropdown() {
+  //   const dropDownOne = new Dropdown('#dropOne');
+  //   const dropDownTwo = new Dropdown('#dropTwo')
+  // }
   validation(){
     this.form.validate({
       rules: {
         checkbox: {
             required: true,
+          },
+        comment: {
+            required: true,
+            minlength: 5 
           },
         radioBtn: {
             required: true,
@@ -24,6 +30,10 @@ export default class CustomBy {
       messages: {
         checkbox:{
             required: 'please click checkbox'
+        },
+        comment:{
+          required: 'minimum 5 characters',
+          minlength: 'minimum 5 characters'
         },
         radioBtn:{
             required: 'choose a color'
@@ -34,6 +44,8 @@ export default class CustomBy {
           error.appendTo(".custom-by__i-agree-error");
         } else if (element.attr("name") === "radioBtn") {
             error.appendTo(".custom-by__color-error");
+        } else if (element.attr("name") === "comment") {
+          error.appendTo(".custom-by__error-comment");
         }
       },
       submitHandler: function(form) {
@@ -54,15 +66,13 @@ class Dropdown {
       this.dropdownMenu = this.drop.find('.custom-by__dropdown-list');
       this.li = this.drop.find('.custom-by__dropdown-li');
       this.height = this.dropdownMenu.height();
-
+      this.dropdown();
+    }
+    dropdown(){
       const options = {
-          rootMargin: `0px 0px -${this.height + 70}px 0px`,
-          threshold: 0
+        rootMargin: `0px 0px -${this.height + 70}px 0px`,
+        threshold: 0
       };
-
-      const classDrop = this.drop;
-      const thisBtn = this.dropdownToggle;
-
       const observer = new IntersectionObserver(callback, options);
       const self = this;
 
@@ -80,6 +90,9 @@ class Dropdown {
           const targetElement = self.dropdownToggle[0];
           observer.observe(targetElement);
       });
+
+      const classDrop = this.drop;
+      const thisBtn = this.dropdownToggle;
 
       this.dropdownToggle.on('click', function () {
           classDrop.toggleClass("custom-by__dropdown-active");

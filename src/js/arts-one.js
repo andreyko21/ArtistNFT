@@ -10,7 +10,6 @@ class ArtsOne {
 
     }
     init() {
-        this.customBy.dropdown();
         this.customBy.validation();
     }
   }
