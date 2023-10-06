@@ -88,6 +88,11 @@
       margin-bottom: 16px;
     }
   }
+  &__error{
+    color: $red;
+    position: absolute;
+    bottom: 0;
+  }
   &__i-agree {
     padding-bottom: 17px;
     position: relative;
@@ -103,9 +108,26 @@
     font-family: ProximaRegular;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 8px;
     label{
         cursor: pointer;
+        &:nth-child(2){
+            grid-column: 3;
+            grid-row: 1;
+            @media (max-width: 350px) {
+                grid-column: 3/6;
+                grid-row: 1;
+            }
+        }
+        &:nth-child(4){
+            grid-column: 7;
+            grid-row: 1;
+            @media (max-width: 350px) {
+                grid-column: 3;
+                grid-row: 3;
+            }
+        }
     }
 }
 &__i-agree-checkbox{
