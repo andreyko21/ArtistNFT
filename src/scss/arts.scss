@@ -1,6 +1,5 @@
 @import './index.scss';
 @import './components/one-item.scss';
-@import './components/custom-by.scss';
 
 .page{
     padding-top: 62px;
@@ -63,6 +62,51 @@
         @media (max-width: 400px) {
             padding: 0;
         }
+    }
+    &__blur{
+        top: -110px;
+        left: -30px;
+        position: absolute;
+        @media (max-width: 700px) {
+            display: none;
+        }
+    }
+    &__circle{
+        position: absolute;
+        top: 132px;
+        @media (min-width: 700px) {
+            right: 16.6%;
+        }
+        @media (max-width: 700px) {
+            left: 30px;
+            top: 45px;
+        }
+        @media (max-width: 500px) {
+            left: -12px;
+        }
+    }
+    &__star{
+        position: absolute;
+        top: 5px;
+        @media (min-width: 700px) {
+            left: 13%;
+        }
+        @media (min-width: 1100px) {
+            left: 23.2%;
+        }
+        @media (max-width: 700px) {
+            right: -10px;
+            top: -29px;
+            img{
+                width: 26px;
+                height: 36px;
+            }
+        }
+        @media (max-width: 500px) {
+            right: -35px;
+            top: -25px;
+        }
+
     }
     &::after, &::before{
         position: absolute;

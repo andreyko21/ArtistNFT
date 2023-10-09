@@ -11,19 +11,24 @@
             <div class="arts__title">Art which inspire</div>
             <div class="arts__info">Indulgence announcing uncommonly met she continuing two unpleasing terminated</div>
             <div class="arts__cards">
-              @@include('./html/one-item.html', {'class': 'open', 'big': 'one-card_big'})
-              @@include('./html/one-item.html', {'class': 'unlock',})
-              @@include('./html/one-item.html', {'class': 'open',})
-              @@include('./html/one-item.html', {'class': 'unlock',})
-              @@include('./html/one-item.html', {'class': 'open',})
-              @@include('./html/one-item.html', {'class': 'unlock',})
-              @@include('./html/one-item.html', {'class': 'open','big': 'one-card_big'})
-              @@include('./html/one-item.html', {'class': 'unlock',})
-              @@include('./html/one-item.html', {'class': 'open',})
-              @@include('./html/one-item.html', {'class': 'unlock',})
+              @@include('./html/one-item.html', {'class': 'one-card_open', 'big': 'one-card_big'})
+              @@include('./html/one-item.html', {'class': 'one-card_unlock',})
+              @@include('./html/one-item.html', {'class': 'one-card_open',})
+              @@include('./html/one-item.html', {'class': 'one-card_unlock',})
+              @@include('./html/one-item.html', {'class': 'one-card_open',})
+              @@include('./html/one-item.html', {'class': 'one-card_unlock',})
+              @@include('./html/one-item.html', {'class': 'one-card_open','big': 'one-card_big'})
+              @@include('./html/one-item.html', {'class': 'one-card_unlock',})
+              @@include('./html/one-item.html', {'class': 'one-card_open',})
+              @@include('./html/one-item.html', {'class': 'one-card_unlock',})
             </div>
-            <img src="./images/arts-one/blur.svg" alt="">
-            @@include('html/custom-by.html')
+            <img class="arts__blur" src="./images/arts-one/blur.svg" alt="">
+            <div class="arts__circle parallax">
+              <img src="/images/svg/circle.svg" alt="circle" />
+            </div>
+            <div class="arts__star parallax">
+              <img src="/images/svg/Star.svg" alt="star" />
+            </div>
           </div>
         </div>
       </main>

@@ -125,6 +125,9 @@
         width: 100%;
         background: $secondary;
         color: $darkGray ;
+        max-height: 170px;
+        overflow: auto;
+        background: $darkGray ;
     }
     &__dropdown-li {
         cursor: pointer;
@@ -133,6 +136,7 @@
         width: 100%;
         display: flex;
         align-items: center;
+        background: $secondary;
         &:first-child{
             border-top-left-radius: 6px;
             border-top-right-radius: 6px;

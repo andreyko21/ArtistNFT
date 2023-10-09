@@ -180,9 +180,7 @@
     @media (max-width: 761px) {
         grid-column: 1;
     }
-}
-.unlock{
-    &:hover{
+    &_unlock.active{
         .one-card{
             &__unlock {
                 display: flex;
@@ -194,9 +192,7 @@
             }
         }
     }
-}
-.open{
-    &:hover{
+    &_open.active{
         .one-card{
             &__open {
                 z-index: 1;
@@ -205,3 +201,4 @@
         }
     }
 }
+
