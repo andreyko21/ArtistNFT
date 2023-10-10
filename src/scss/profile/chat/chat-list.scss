@@ -26,11 +26,10 @@
   &__list-users {
     flex-grow: 1;
     margin-top: 29px;
-
     display: flex;
     flex-direction: column;
-
     padding-right: 29px;
+
     @media (min-width: 601px) {
       overflow: auto;
     }

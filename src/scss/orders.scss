@@ -1,0 +1,223 @@
+@import './profile/profile.scss';
+@import './components/ui/button.scss';
+
+.page__main {
+}
+
+.orders-section {
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  color: $white;
+
+  position: relative;
+  overflow: auto;
+  padding-left: 14px;
+  padding-right: 31px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @media (max-width: 1200px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &__table-block {
+    height: 100%;
+    overflow: auto;
+  }
+  &__table-orders {
+    width: 100%;
+  }
+}
+
+.table-orders {
+  min-height: 0;
+  overflow: auto;
+  max-height: 400px; /* Устанавливаем максимальную высоту в 400 пикселей (замените на желаемое значение) */
+  overflow-y: auto; /* Добавляем вертикальную прокрутку, если содержимое превышает максимальную высоту */
+  overflow-x: hidden; /* Скрываем горизонтальную прокрутку, если содержимое превышает ширину таблицы */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  @media (max-width: 960px) {
+    padding-left: 14px;
+    padding-right: 31px;
+  }
+
+  border-collapse: separate;
+  border-spacing: 0px 0px;
+  thead {
+    height: 100%;
+    position: sticky;
+    top: 0;
+  }
+  tbody {
+    min-height: 0px !important;
+    height: 300px !important;
+  }
+  &__head {
+    height: 100%;
+    background-color: $darkGray;
+    padding-left: 30px;
+    padding-right: 31px;
+
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
+  &__title {
+    height: 100%;
+    text-align: left;
+    color: $white;
+    font-family: 'Proxima';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.07143;
+    padding-top: 28px;
+    padding-bottom: 20px;
+    &:first-child {
+      padding-left: 20px;
+    }
+  }
+  &-item {
+    height: 100%;
+    background-color: $jetBlack;
+    @media (max-width: 960px) {
+      display: grid;
+      margin-top: 8px;
+      grid-template:
+        'color type'
+        'color email'
+        'size size'
+        'address comment'
+        'action action' auto / min-content auto;
+    }
+    &__type {
+      height: 100%;
+      grid-area: type;
+      color: $white;
+      font-family: 'Proxima';
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.3125;
+      padding-left: 20px;
+      border-radius: 14px 0px 0px 14px;
+      @media (max-width: 960px) {
+        text-align: right;
+      }
+    }
+    &__color {
+      height: 100%;
+      grid-area: color;
+      display: block;
+      padding-top: 29px;
+      padding-bottom: 29px;
+      span {
+        display: block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: $burntOrange;
+      }
+      @media (max-width: 960px) {
+        padding-top: 0;
+        padding-bottom: 0;
+        align-self: center;
+        width: min-content;
+      }
+    }
+    &__email {
+      height: 100%;
+      grid-area: email;
+      color: $white;
+      font-family: 'Proxima';
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+      @media (max-width: 960px) {
+        text-align: right;
+      }
+    }
+    &__size {
+      height: 100%;
+      grid-area: size;
+      color: $white;
+      font-family: 'Proxima';
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.3125;
+      @media (max-width: 960px) {
+        display: flex;
+        justify-content: space-between;
+        &::before {
+          content: 'Size';
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.07143;
+          align-self: center;
+        }
+      }
+    }
+    &__comment {
+      height: 100%;
+      grid-area: comment;
+      &-text {
+        color: $white;
+        font-family: 'Proxima';
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+    }
+    &__address {
+      height: 100%;
+      grid-area: address;
+      &-text {
+        color: $white;
+        font-family: 'Proxima';
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+    }
+    &__action {
+      height: 100%;
+      grid-area: action;
+      &-button {
+        padding: 10px 30px 10px 29px;
+        color: $jetBlack;
+        font-family: 'Proxima';
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.42857;
+        max-width: 116px;
+        border-radius: 8px;
+        @media (max-width: 960px) {
+          max-width: none;
+        }
+      }
+      border-radius: 0px 14px 14px 0px;
+    }
+  }
+}
+
+.show-more-link {
+  background: none;
+  color: #86a8ff;
+  font-family: 'Proxima';
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration-line: underline;
+  &:hover {
+    color: $hoverColor;
+  }
+  &:focus {
+    color: $focusColor;
+  }
+  &:active {
+    color: $activeColor;
+  }
+  @media (max-width: 960px) {
+    display: none;
+  }
+}

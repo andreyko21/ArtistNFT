@@ -26,7 +26,10 @@ $maxWidthContainer: $containerWidth + ($mainOffset * 2); // ширина кон�
 }
 
 // Цвета
-$gradient: var(--primary,linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+$gradient: var(
+  --primary,
+  linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
+);
 $darkGrayTwo: var(--background, #1d1f21);
 $darkGrayGradient: var(
   --linear-10,
@@ -40,8 +43,14 @@ $slateGray: var(--background, #1d1f21);
 $deepTeal: var(--stroke, #525960);
 $blue: var(--color-3, #86a8ff);
 $red: rgba(202, 56, 56, 1);
-$whiteText: var(--text, #FCFFFF);
-$gradientCard: linear-gradient(141deg, rgba(104, 128, 255, 0.90) 3.3%, rgba(60, 167, 244, 0.90) 52.35%, rgba(140, 69, 255, 0.90) 92.15%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+$whiteText: var(--text, #fcffff);
+$gradientCard: linear-gradient(
+    141deg,
+    rgba(104, 128, 255, 0.9) 3.3%,
+    rgba(60, 167, 244, 0.9) 52.35%,
+    rgba(140, 69, 255, 0.9) 92.15%
+  ),
+  url(<path-to-image>), lightgray 50% / cover no-repeat;
 
 $secondary: #c8d2dc;
 $darkGray: #212426;
@@ -59,3 +68,4 @@ $steelGray: #525960;
 $emeraldGreen: #47cd7d;
 $gunmetalGrey: #2c2f33;
 $royalBlue: #3626ea;
+$burntOrange: #eb8032;
