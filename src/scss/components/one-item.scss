@@ -2,11 +2,14 @@
     overflow: hidden;
     font-family: Proxima;
     border-radius: 12px;
-    height: 100%;
+    height: 420px;
     width: 100%;
     position: relative;
     z-index: 1;
     color: $whiteText;
+    @media (max-width: 761px) {
+        height: 412px;
+    }
     &__bg{
         position: absolute;
         z-index: -1;
@@ -170,13 +173,14 @@
     }
     &_big{
         grid-column: span 2;
+        @media (max-width: 761px) {
+            height: 199px;
+        }
     }
     @media (max-width: 761px) {
         grid-column: 1;
     }
-}
-.unlock{
-    &:hover{
+    &_unlock.active{
         .one-card{
             &__unlock {
                 display: flex;
@@ -188,9 +192,7 @@
             }
         }
     }
-}
-.open{
-    &:hover{
+    &_open.active{
         .one-card{
             &__open {
                 z-index: 1;
@@ -199,3 +201,4 @@
         }
     }
 }
+
