@@ -15,7 +15,6 @@ class Chat {
     this.BindEvents();
   }
   BindEvents() {
-    this.currentChatMessageBox.animate({ scrollTop: 1000 }, 1000);
     this.usersListBlock.on('click', '.chat-list__user', () =>
       this.OpenMessage()
     );
