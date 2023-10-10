@@ -24,7 +24,9 @@
     object-fit: contain;
   }
 }
-
+body{
+  background-color: $jetBlack;
+}
 .wrapper {
   display: flex;
   flex-direction: column;

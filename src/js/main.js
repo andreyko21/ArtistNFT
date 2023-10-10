@@ -36,6 +36,7 @@ $(document).ready(function () {
         'px)',
     });
   });
+
   new Swiper('.biography-section__swiper', {
     slidesPerView: 2.3,
     spaceBetween: 10,
@@ -55,7 +56,7 @@ $(document).ready(function () {
     },
   });
 
-  const nftSwiper = new Swiper('.nft-swiper-section__swiper-container', {
+new Swiper('.nft-swiper-section__swiper-container', {
     slidesPerView: 1.22,
     spaceBetween: 16,
     centeredSlides: false,
