@@ -265,13 +265,13 @@ sup {
   border: none;
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
   text-decoration: none;
-  color: var(--background, #1d1f21);
+  color: #1d1f21;
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
 .btn:hover {
-  background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+  background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .btn:hover span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -338,7 +338,7 @@ sup {
     width: 32px;
     height: 32px;
     border-radius: 9px;
-    background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+    background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
     position: relative;
   }
   .btn_adaptive-crown span {
@@ -355,7 +355,7 @@ sup {
   }
 }
 .btn_grey {
-  background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+  background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .btn_grey span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -371,10 +371,10 @@ sup {
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  color: var(--background, #1d1f21);
+  color: #1d1f21;
 }
 .btn_black {
-  background: var(--background, #1d1f21);
+  background: #1d1f21;
 }
 .btn_black span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -390,10 +390,10 @@ sup {
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  color: var(--background, #1d1f21);
+  color: #1d1f21;
 }
 .btn_arrow {
-  background: var(--background, #1d1f21);
+  background: #1d1f21;
 }
 .btn_arrow span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -425,7 +425,7 @@ sup {
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  color: var(--background, #1d1f21);
+  color: #1d1f21;
 }
 .btn_arrow:hover span::after {
   background: url(../../images/svg/arrow-gray.svg) center/cover no-repeat;

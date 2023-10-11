@@ -138,7 +138,7 @@
         text-align: center;
         font-size: 14px;
         font-weight: 400;
-        line-height: 21px;
+        line-height: 1.5;
         max-width: 257px;
         margin: 0 auto 9px;
         @media (max-width: 761px) {
@@ -168,8 +168,14 @@
             height: 48px;
         }
     }
-    &__btn{
+    &__open-btn{
         width: 134px;
+    }
+    &__btn{
+        pointer-events: none;
+        &_active{
+            pointer-events: auto;
+        }
     }
     &_big{
         grid-column: span 2;

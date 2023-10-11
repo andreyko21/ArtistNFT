@@ -1,6 +1,7 @@
 @import './index.scss';
 @import './components/one-item.scss';
 
+
 .page{
     padding-top: 62px;
     height: 100%;
@@ -132,3 +133,7 @@
     }
 }
 
+.btn_crown{
+    height: 64px;
+    width: 209px;
+}

@@ -453,13 +453,13 @@ sup {
   border: none;
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
   text-decoration: none;
-  color: var(--background, #1d1f21);
+  color: #1d1f21;
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
 .btn:hover {
-  background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+  background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .btn:hover span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -526,7 +526,7 @@ sup {
     width: 32px;
     height: 32px;
     border-radius: 9px;
-    background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+    background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
     position: relative;
   }
   .btn_adaptive-crown span {
@@ -543,7 +543,7 @@ sup {
   }
 }
 .btn_grey {
-  background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+  background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .btn_grey span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -559,10 +559,10 @@ sup {
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  color: var(--background, #1d1f21);
+  color: #1d1f21;
 }
 .btn_black {
-  background: var(--background, #1d1f21);
+  background: #1d1f21;
 }
 .btn_black span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -578,10 +578,10 @@ sup {
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  color: var(--background, #1d1f21);
+  color: #1d1f21;
 }
 .btn_arrow {
-  background: var(--background, #1d1f21);
+  background: #1d1f21;
 }
 .btn_arrow span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -613,7 +613,7 @@ sup {
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  color: var(--background, #1d1f21);
+  color: #1d1f21;
 }
 .btn_arrow:hover span::after {
   background: url(../../images/svg/arrow-gray.svg) center/cover no-repeat;
@@ -1212,13 +1212,13 @@ sup {
   border: none;
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
   text-decoration: none;
-  color: var(--background, #1d1f21);
+  color: #1d1f21;
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
 .btn:hover {
-  background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+  background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .btn:hover span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -1285,7 +1285,7 @@ sup {
     width: 32px;
     height: 32px;
     border-radius: 9px;
-    background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+    background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
     position: relative;
   }
   .btn_adaptive-crown span {
@@ -1302,7 +1302,7 @@ sup {
   }
 }
 .btn_grey {
-  background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+  background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .btn_grey span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -1318,10 +1318,10 @@ sup {
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  color: var(--background, #1d1f21);
+  color: #1d1f21;
 }
 .btn_black {
-  background: var(--background, #1d1f21);
+  background: #1d1f21;
 }
 .btn_black span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -1337,10 +1337,10 @@ sup {
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  color: var(--background, #1d1f21);
+  color: #1d1f21;
 }
 .btn_arrow {
-  background: var(--background, #1d1f21);
+  background: #1d1f21;
 }
 .btn_arrow span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -1372,7 +1372,7 @@ sup {
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  color: var(--background, #1d1f21);
+  color: #1d1f21;
 }
 .btn_arrow:hover span::after {
   background: url(../../images/svg/arrow-gray.svg) center/cover no-repeat;
@@ -1440,8 +1440,8 @@ sup {
   border-radius: 7px;
   width: 18px;
   height: 18px;
-  background: var(--background, #1d1f21);
-  border: 3px solid var(--background, #1d1f21);
+  background: #1d1f21;
+  border: 3px solid #1d1f21;
   opacity: 1;
 }
 .checkbox label::after {
@@ -1451,7 +1451,7 @@ sup {
   width: 100%;
   height: 100%;
   border-radius: 7px;
-  background: var(--stroke, #525960);
+  background: #525960;
 }
 .checkbox__input {
   position: relative;
@@ -1621,7 +1621,7 @@ sup {
   margin-right: 2px;
 }
 .contact-me__i-agree-link {
-  color: var(--color-3, #86a8ff);
+  color: #86a8ff;
   text-decoration: underline;
 }
 .contact-me__i-agree-link:nth-child(3) {
@@ -2655,7 +2655,7 @@ body {
   width: 100%;
   position: relative;
   z-index: 1;
-  color: var(--text, #fcffff);
+  color: #fcffff;
 }
 @media (max-width: 761px) {
   .one-card {
@@ -2795,7 +2795,7 @@ body {
   text-align: center;
   font-size: 14px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 1.5;
   max-width: 257px;
   margin: 0 auto 9px;
 }
@@ -2831,8 +2831,14 @@ body {
     height: 48px;
   }
 }
-.one-card__btn {
+.one-card__open-btn {
   width: 134px;
+}
+.one-card__btn {
+  pointer-events: none;
+}
+.one-card__btn_active {
+  pointer-events: auto;
 }
 .one-card_big {
   grid-column: span 2;
@@ -2880,7 +2886,7 @@ body {
   }
 }
 .arts__title {
-  color: var(--text, #fcffff);
+  color: #fcffff;
   text-align: center;
   font-size: 64px;
   font-weight: 700;
@@ -2895,7 +2901,7 @@ body {
   }
 }
 .arts__info {
-  color: var(--text, #fcffff);
+  color: #fcffff;
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -3019,4 +3025,9 @@ body {
 .arts::after {
   content: "NOT WAR";
   right: -182px;
+}
+
+.btn_crown {
+  height: 64px;
+  width: 209px;
 }
