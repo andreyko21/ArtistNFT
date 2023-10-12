@@ -414,7 +414,7 @@ body {
   cursor: pointer;
 }
 .btn:hover {
-  background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+  background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .btn:hover span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -481,7 +481,7 @@ body {
     width: 32px;
     height: 32px;
     border-radius: 9px;
-    background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+    background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
     position: relative;
   }
   .btn_adaptive-crown span {
@@ -498,7 +498,7 @@ body {
   }
 }
 .btn_grey {
-  background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+  background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .btn_grey span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -1128,11 +1128,9 @@ body {
   align-items: center;
   width: 100%;
   background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
-  padding: 18px;
   font-family: "Proxima";
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.47222;
   border-radius: 16px;
   text-decoration: none;
   color: #212426;
@@ -1173,7 +1171,7 @@ body {
   cursor: pointer;
 }
 .btn:hover {
-  background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+  background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .btn:hover span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
@@ -1240,7 +1238,7 @@ body {
     width: 32px;
     height: 32px;
     border-radius: 9px;
-    background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+    background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
     position: relative;
   }
   .btn_adaptive-crown span {
@@ -1257,7 +1255,7 @@ body {
   }
 }
 .btn_grey {
-  background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%));
+  background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .btn_grey span {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
