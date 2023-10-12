@@ -1,5 +1,5 @@
 .contact-me {
-  font-family: ProximaBold;
+  font-family: Proxima;
   position: relative;
   height: 100%;
   @media (max-width: 700px) {
@@ -94,6 +94,7 @@
     bottom: 0;
   }
   &__i-agree {
+    font-family: Proxima;
     padding-bottom: 17px;
     position: relative;
     order: 6;
@@ -105,10 +106,9 @@
     grid-column: 2;
     grid-row: 15;
     color: $secondary;
-    font-family: ProximaRegular;
+    font-weight: 400;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 8px;
     label{
         cursor: pointer;

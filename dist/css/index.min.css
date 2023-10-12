@@ -1423,7 +1423,7 @@ body {
 }
 
 .contact-me {
-  font-family: ProximaBold;
+  font-family: Proxima;
   position: relative;
   height: 100%;
 }
@@ -1528,6 +1528,7 @@ body {
   bottom: 0;
 }
 .contact-me__i-agree {
+  font-family: Proxima;
   padding-bottom: 17px;
   position: relative;
   order: 6;
@@ -1539,10 +1540,9 @@ body {
   grid-column: 2;
   grid-row: 15;
   color: #c8d2dc;
-  font-family: ProximaRegular;
+  font-weight: 400;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 8px;
 }
 .contact-me__i-agree label {

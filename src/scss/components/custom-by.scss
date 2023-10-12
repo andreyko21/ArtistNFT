@@ -1,5 +1,5 @@
 .custom-by {
-    font-family: ProximaBold;
+    font-family: Proxima;
     position: relative;
     @media (max-width: 700px) {
         grid-template: auto auto 15px auto / 1fr;
@@ -381,10 +381,10 @@
         grid-column: 2;
         grid-row: 15;
         color: $secondary;
-        font-family: ProximaRegular;
+        font-family: Proxima;
+        font-weight: 400;
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
         gap: 8px;
         label{
             cursor: pointer;
