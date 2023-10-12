@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', { 'title': 'Profile', 'srcStyle': 'orders' })
+  @@include('html/head.html', { 'title': 'Profile', 'srcStyle': 'nft-orders' })
   <body>
     <div class="wrapper-2">
       @@include('html/profile/profile-header.html')
@@ -9,7 +9,8 @@
 
         <div class="page__container">
           @@include('html/profile/profile-sidebar.html',{'messageClass': '',
-          'ordersClass': 'profile-sidebar__menu-item_active', 'usersClass': ''})
+          'ordersClass': '','nftOrdersClass':
+          'profile-sidebar__menu-item_active', 'usersClass': ''})
           <div class="page__main">
             @@include('html/profile/nft-orders.html')
           </div>
