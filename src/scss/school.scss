@@ -1,2 +1,437 @@
-@import './style.scss';
+@import "./style.scss";
 //p @import 'config/fonts';
+//# fonts
+@font-face {
+   font-family: ManropeRegular;
+   font-display: swap;
+   src: url("../fonts/ManropeRegular.woff2") format("woff2");
+   font-weight: 400;
+   font-style: normal;
+}
+@font-face {
+   font-family: ProximaBold;
+   font-display: swap;
+   src: url("../fonts/ProximaBold.woff2") format("woff2");
+   font-weight: 700;
+   font-style: normal;
+}
+@font-face {
+   font-family: ProximaExtraBold;
+   font-display: swap;
+   src: url("../fonts/ProximaExtraBold.woff2") format("woff2");
+   font-weight: 800;
+   font-style: normal;
+}
+@font-face {
+   font-family: ProximaLight;
+   font-display: swap;
+   src: url("../fonts/ProximaLight.woff2") format("woff2");
+   font-weight: 300;
+   font-style: normal;
+}
+@font-face {
+   font-family: ProximaRegular;
+   font-display: swap;
+   src: url("../fonts/ProximaRegular.woff2") format("woff2");
+   font-weight: 400;
+   font-style: normal;
+}
+@font-face {
+   font-family: ProximaSemibold;
+   font-display: swap;
+   src: url("../fonts/ProximaSemibold.woff2") format("woff2");
+   font-weight: 600;
+   font-style: normal;
+}
+.designer {
+   position: relative;
+   padding-bottom: 52px;
+   @media (max-width: 1024px) {
+      padding-bottom: 70px;
+   }
+   @media (max-width: 375px) {
+      padding-bottom: 61px;
+   }
+
+   &__container {
+      display: flex;
+      @media (max-width: 576px) {
+         flex-direction: column;
+      }
+   }
+
+   &__bg-text {
+      font-family: Proxima Nova;
+      font-size: clamp(50px, 8vw, 80px);
+      font-weight: 700;
+      line-height: normal;
+      color: transparent;
+      opacity: 0.2;
+      -webkit-text-stroke: 1px $whileBlue;
+      position: absolute;
+      top: 89px;
+      left: -103px;
+      @media (max-width: 576px) {
+         top: 11px;
+         left: -100px;
+      }
+      @media (max-width: 375px) {
+         top: 12px;
+         left: -147px;
+         white-space: nowrap;
+      }
+   }
+
+   &__content {
+      max-width: 432px;
+      width: 100%;
+      margin: 175px 0 0 17px;
+      @media (max-width: 576px) {
+         margin: 72px 0 0 0px;
+      }
+      @media (max-width: 375px) {
+         margin: 67px 0 0 0px;
+      }
+
+      &-title {
+         font-family: Proxima Nova;
+         font-size: clamp(36px, 5vw, 64px);
+         font-weight: 700;
+         line-height: 65px;
+         color: $whileBlue;
+         margin-bottom: clamp(8px, 1vw, 16px);
+         @media (max-width: 375px) {
+            max-width: 250px;
+            width: 100%;
+            line-height: 40px;
+         }
+      }
+
+      &-text {
+         max-width: 271px;
+         width: 100%;
+         font-family: Proxima Nova;
+         font-size: clamp(15px, 4vw, 16px);
+         font-weight: 400;
+         line-height: 28px;
+         color: $whileBlue;
+         margin-bottom: clamp(24px, 5vw, 40px);
+         @media (max-width: 375px) {
+            line-height: 24px;
+         }
+      }
+
+      &-link {
+         width: clamp(193px, 15vw, 209px);
+         height: clamp(52px, 5vw, 64px);
+      }
+   }
+
+   &__box {
+      position: relative;
+      z-index: -1;
+      max-width: 617px;
+      width: 100%;
+      height: 100%;
+      margin: 24px 0 0 50px;
+      @media (max-width: 768px) {
+         margin: 105px 0 0 20px;
+      }
+      @media (max-width: 576px) {
+         margin: 50px 0 0 0px;
+         @media (max-width: 375px) {
+            border-radius: 24px;
+            margin: 31px 0 0 0px;
+         }
+      }
+      &-bg {
+         width: 100%;
+         img {
+            width: 100%;
+            height: 100%;
+            // margin: 24px 0 0 50px;
+         }
+      }
+      &-img {
+         position: absolute;
+         top: 74px;
+         left: -66px;
+         img {
+            width: 100%;
+            height: 100%;
+         }
+         @media (min-width: 576px) and (max-width: 768px) {
+            top: 35px;
+            left: -20px;
+         }
+         @media (max-width: 576px) {
+            left: 0px;
+         }
+         @media (max-width: 375px) {
+            top: 74px;
+            left: auto;
+            right: 0;
+         }
+      }
+      &-star {
+         &_top {
+            position: absolute;
+            top: 222px;
+            right: -72px;
+            width: 33px;
+            height: 44px;
+            transform: rotate(163deg);
+            @media (max-width: 1439.98px) {
+               right: -30px;
+            }
+            @media (max-width: 1024px) {
+               top: 150px;
+               right: 0px;
+            }
+            @media (max-width: 768px) {
+               top: 30px;
+               right: -5px;
+            }
+            @media (max-width: 375px) {
+               top: -14px;
+               right: 2px;
+            }
+         }
+         &_bottom {
+            position: absolute;
+            bottom: 193px;
+            transform: rotate(190deg);
+            left: -2px;
+            @media (max-width: 1024px) {
+               bottom: 150px;
+               left: 0px;
+            }
+            @media (max-width: 768px) {
+               bottom: 70px;
+               left: -48px;
+            }
+            @media (max-width: 375px) {
+               bottom: 93px;
+               left: -26px;
+            }
+         }
+      }
+   }
+
+   &__bg-subtext {
+      font-family: Proxima Nova;
+      font-size: clamp(50px, 8vw, 80px);
+      font-weight: 700;
+      line-height: normal;
+      color: transparent;
+      opacity: 0.2;
+      -webkit-text-stroke: 1px $whileBlue;
+      position: absolute;
+      bottom: 0;
+      left: 26.1%;
+
+      @media (max-width: 1024px) {
+         //   text-align: center;
+         left: 15%;
+      }
+      @media (max-width: 375px) {
+         left: 26px;
+         white-space: nowrap;
+      }
+   }
+
+   &__blur {
+      display: none;
+      @media (max-width: 375px) {
+         display: block;
+         position: absolute;
+         top: 40px;
+         z-index: -3;
+      }
+   }
+}
+.benefits {
+   margin-top: 47px;
+   @media (max-width: 375px) {
+      margin-top: 37px;
+   }
+   &__text {
+      font-family: Proxima Nova;
+      font-size: clamp(14px, 3vw, 18px);
+      font-weight: 700;
+      line-height: 26.5px;
+      letter-spacing: 1.8px;
+      background: $defaultGradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      // padding-right: 14px;
+      @media (max-width: 375px) {
+         text-align-last: left;
+         line-height: 26.5px;
+         letter-spacing: 1.4px;
+      }
+   }
+   &__title {
+      font-family: Proxima Nova;
+      font-size: clamp(26px, 5vw, 36px);
+      font-weight: 700;
+      line-height: 49.5px;
+      text-align: center;
+      color: $whileBlue;
+      // padding-right: 14px;
+      @media (max-width: 375px) {
+         text-align: left;
+         line-height: 34px;
+         max-width: 225px;
+         width: 100%;
+         padding: 0;
+      }
+   }
+   &__card {
+      margin-top: clamp(29px, 5vw, 32px);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(253px, 1fr));
+      gap: 30px;
+      padding: 0 19px 0 12px;
+
+      @media (max-width: 576px) {
+         padding: 0;
+         grid-template-columns: repeat(auto-fill, minmax(167px, 1fr));
+         gap: 0px;
+         column-gap: 10px;
+         row-gap: 12px;
+      }
+
+      &-item {
+         padding: 18px 23px 32px 19px;
+         border-radius: 12px;
+         background: $darkGray;
+         @media (max-width: 576px) {
+            padding: 10px 11px 14px 10px;
+         }
+      }
+
+      &-img {
+         display: inline-block;
+         padding: 10px;
+         border-radius: 12px;
+         background: $darkGrayGradient;
+         img {
+            width: 28px;
+            height: 28px;
+
+            @media (max-width: 375px) {
+               width: 18px;
+               height: 18px;
+            }
+         }
+         @media (max-width: 375px) {
+            padding: 9px;
+         }
+      }
+
+      &-title {
+         font-family: Proxima Nova;
+         font-size: clamp(14px, 3vw, 20px);
+         font-weight: 700;
+         line-height: 30px;
+         color: $whileBlue;
+         margin: 9px 0 6px;
+         @media (max-width: 375px) {
+            margin: 1px 0 0px;
+         }
+      }
+
+      &-text {
+         font-family: Proxima Nova;
+         font-size: clamp(12px, 2vw, 16px);
+         font-weight: 400;
+         line-height: 28px;
+         color: $whileBlue;
+         max-width: 213px;
+         width: 100%;
+         @media (max-width: 375px) {
+            line-height: 20px;
+         }
+      }
+   }
+}
+.artist {
+   margin-top: 60px;
+   position: relative;
+   &__row{
+      display: flex;
+      justify-content: center;
+   
+   }
+
+   &__bg-text {
+      font-family: Proxima Nova;
+      font-size: clamp(50px, 8vw, 80px);
+      font-weight: 700;
+      line-height: normal;
+      color: transparent;
+      opacity: 0.2;
+      -webkit-text-stroke: 1px $whileBlue;
+      &_make {
+         position: absolute;
+         top: 47px;
+         left: -38px;
+         z-index: -1;
+      }
+
+      &_war {
+         position: absolute;
+         top: 47px;
+         right: -27px;
+         z-index: -1;
+      }
+   }
+   &__star {
+      position: absolute;
+      left: 390px;
+   }
+   &__diamante {
+      &_top {
+         position: absolute;
+         top: -20px;
+         right: 274px;
+         width: 200px;
+         height: 200px;
+         z-index: -1;
+         img {
+            width: 100%;
+            height: 100%;
+         }
+      }
+   }
+   &__blur {
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // z-index: -1;
+   }
+   &__title {
+      font-family: Proxima Nova;
+      font-size: clamp(26px, 5vw, 36px);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 49.5px;
+      color: $whileBlue;
+      text-align: center;
+      margin: 14px 0 16px;
+   }
+   &__text {
+      font-family: Proxima Nova;
+      font-size: clamp(15px, 5vw, 16px);
+      font-weight: 400;
+      line-height: 28px;
+      color: $whileBlue;
+      text-align: center;
+      max-width: 415px;
+      width: 100%;
+      margin: 0 auto;
+   }
+}
