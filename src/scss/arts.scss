@@ -49,13 +49,14 @@
         max-width: 1111px;
         margin: 0 auto;
         display: grid;
+        grid-auto-flow: dense;
         gap: 24px;
         grid-template-columns: repeat(3,1fr) ;
         justify-content: center;
         @media (max-width: 1170px) {
             grid-template-columns: repeat(2 ,1fr) ;
         }
-        @media (max-width: 761px) {        
+        @media (max-width: 700px){        
             grid-template-columns: 1fr ;
             padding: 0 10px;
             gap: 19px;
@@ -79,33 +80,26 @@
             right: 16.6%;
         }
         @media (max-width: 700px) {
-            left: 30px;
-            top: 45px;
-        }
-        @media (max-width: 500px) {
-            left: -12px;
+            left: -25px;
+            top: 47px;
         }
     }
     &__star{
         position: absolute;
         top: 5px;
         @media (min-width: 700px) {
-            left: 13%;
+            left: 10%;
         }
         @media (min-width: 1100px) {
             left: 23.2%;
         }
         @media (max-width: 700px) {
-            right: -10px;
-            top: -29px;
+            right: -22px;
+            top: -26px;
             img{
                 width: 26px;
                 height: 36px;
             }
-        }
-        @media (max-width: 500px) {
-            right: -35px;
-            top: -25px;
         }
 
     }

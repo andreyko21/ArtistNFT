@@ -209,9 +209,8 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  font-family: ProximaBold;
+  font-family: Proxima;
   font-size: 18px;
-  font-style: normal;
   font-weight: 700;
   display: flex;
   align-items: center;
