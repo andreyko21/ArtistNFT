@@ -1093,6 +1093,12 @@ body {
   height: 15px;
   margin-right: 10px;
 }
+@media (max-width: 1150px) {
+  .profile-sidebar__log-out {
+    padding-left: 8px;
+    margin-top: 24px;
+  }
+}
 .profile-sidebar__line {
   width: 100%;
   height: 1px;
@@ -1190,6 +1196,8 @@ body {
   .chat-list__title {
     margin-top: 17px;
     font-size: 20px;
+    text-align: left;
+    margin-left: 15px;
   }
 }
 .chat-list__list-users {
@@ -1407,6 +1415,7 @@ body {
   line-height: 1.25;
 }
 .current-chat__back-button {
+  background: none;
   max-width: 18px;
   max-height: 18px;
   margin-right: 20px;
@@ -1417,15 +1426,11 @@ body {
   .current-chat__back-button {
     display: flex;
   }
-}
-.current-chat__back-button .current-chat__back-arrow {
-  max-width: 18px;
-  max-height: 18px;
-  stroke: red;
-}
-.current-chat__back-button .current-chat__back-arrow use {
-  width: 100%;
-  height: 100%;
+  .current-chat__back-button .icon-right-arrow {
+    font-size: 20px;
+    transform: scale(-1);
+    color: #ffffff;
+  }
 }
 @media (min-width: 601px) {
   .current-chat {
@@ -1467,6 +1472,103 @@ body {
 .profile-chat {
   flex-grow: 1;
   display: flex;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("/fonts/icomoon.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-nft-orders:before {
+  content: "\e910";
+}
+
+.icon-copy:before {
+  content: "\e90f";
+}
+
+.icon-lock:before {
+  content: "\e902";
+}
+
+.icon-pinterest:before {
+  content: "\e903";
+}
+
+.icon-telegram:before {
+  content: "\e904";
+}
+
+.icon-instagram:before {
+  content: "\e901";
+}
+
+.icon-twitter-3:before {
+  content: "\e900";
+}
+
+.icon-diamond:before {
+  content: "\e905";
+}
+
+.icon-logo:before {
+  content: "\e906";
+}
+
+.icon-messages:before {
+  content: "\e907";
+}
+
+.icon-orders:before {
+  content: "\e908";
+}
+
+.icon-right-arrow:before {
+  content: "\e909";
+}
+
+.icon-star:before {
+  content: "\e90a";
+}
+
+.icon-stats:before {
+  content: "\e90b";
+}
+
+.icon-bag:before {
+  content: "\e90c";
+}
+
+.icon-coin:before {
+  content: "\e90d";
+}
+
+.icon-crown:before {
+  content: "\e90e";
+}
+
+.icon-users:before {
+  content: "\e972";
+}
+
+.icon-back-arrow:before {
+  content: "\ea40";
 }
 
 @font-face {
@@ -1734,7 +1836,7 @@ body {
 }
 @media (max-width: 600px) {
   .orders-section {
-    padding-left: 20px;
+    padding-left: 15px;
   }
 }
 

@@ -92,6 +92,10 @@
   content: "\e972";
 }
 
+.icon-back-arrow:before {
+  content: "\ea40";
+}
+
 :root {
   --bs-font-family: sans-serif;
   --bs-font-family: sans-serif;
@@ -1186,6 +1190,12 @@ body {
   height: 15px;
   margin-right: 10px;
 }
+@media (max-width: 1150px) {
+  .profile-sidebar__log-out {
+    padding-left: 8px;
+    margin-top: 24px;
+  }
+}
 .profile-sidebar__line {
   width: 100%;
   height: 1px;
@@ -1283,6 +1293,8 @@ body {
   .chat-list__title {
     margin-top: 17px;
     font-size: 20px;
+    text-align: left;
+    margin-left: 15px;
   }
 }
 .chat-list__list-users {
@@ -1500,6 +1512,7 @@ body {
   line-height: 1.25;
 }
 .current-chat__back-button {
+  background: none;
   max-width: 18px;
   max-height: 18px;
   margin-right: 20px;
@@ -1510,15 +1523,11 @@ body {
   .current-chat__back-button {
     display: flex;
   }
-}
-.current-chat__back-button .current-chat__back-arrow {
-  max-width: 18px;
-  max-height: 18px;
-  stroke: red;
-}
-.current-chat__back-button .current-chat__back-arrow use {
-  width: 100%;
-  height: 100%;
+  .current-chat__back-button .icon-right-arrow {
+    font-size: 20px;
+    transform: scale(-1);
+    color: #ffffff;
+  }
 }
 @media (min-width: 601px) {
   .current-chat {
@@ -1823,6 +1832,15 @@ body {
   transform: scale(0.95);
 }
 
+@media (max-width: 600px) {
+  .page {
+    margin-left: 15px;
+  }
+  .page__container {
+    padding-bottom: 0;
+  }
+}
+
 .table-orders {
   position: relative;
   min-height: 0;
@@ -1844,7 +1862,6 @@ body {
     height: 100%;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
-    padding-bottom: 20px;
   }
 }
 @media (max-width: 600px) {
