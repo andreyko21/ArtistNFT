@@ -1,6 +1,6 @@
 @import "./style.scss";
 //p @import 'config/fonts';
-//# fonts
+//# ---- fonts -----
 @font-face {
    font-family: ManropeRegular;
    font-display: swap;
@@ -43,6 +43,7 @@
    font-weight: 600;
    font-style: normal;
 }
+//# ----- style -----
 .designer {
    position: relative;
    padding-bottom: 52px;
@@ -68,17 +69,35 @@
       color: transparent;
       opacity: 0.2;
       -webkit-text-stroke: 1px $whileBlue;
-      position: absolute;
-      top: 89px;
-      left: -103px;
-      @media (max-width: 576px) {
-         top: 11px;
-         left: -100px;
+
+      &_top {
+         position: absolute;
+         top: 89px;
+         left: -103px;
+         @media (max-width: 576px) {
+            top: 11px;
+            left: -100px;
+         }
+         @media (max-width: 375px) {
+            top: 12px;
+            left: -147px;
+            white-space: nowrap;
+         }
       }
-      @media (max-width: 375px) {
-         top: 12px;
-         left: -147px;
-         white-space: nowrap;
+
+      &_sub {
+         position: absolute;
+         bottom: 0;
+         left: 26.1%;
+
+         @media (max-width: 1024px) {
+            //   text-align: center;
+            left: 15%;
+         }
+         @media (max-width: 375px) {
+            left: 26px;
+            white-space: nowrap;
+         }
       }
    }
 
@@ -218,28 +237,6 @@
       }
    }
 
-   &__bg-subtext {
-      font-family: Proxima Nova;
-      font-size: clamp(50px, 8vw, 80px);
-      font-weight: 700;
-      line-height: normal;
-      color: transparent;
-      opacity: 0.2;
-      -webkit-text-stroke: 1px $whileBlue;
-      position: absolute;
-      bottom: 0;
-      left: 26.1%;
-
-      @media (max-width: 1024px) {
-         //   text-align: center;
-         left: 15%;
-      }
-      @media (max-width: 375px) {
-         left: 26px;
-         white-space: nowrap;
-      }
-   }
-
    &__blur {
       display: none;
       @media (max-width: 375px) {
@@ -361,10 +358,9 @@
 .artist {
    margin-top: 60px;
    position: relative;
-   &__row{
+   &__row {
       display: flex;
       justify-content: center;
-   
    }
 
    &__bg-text {
