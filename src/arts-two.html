@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Arts two', 'srcStyle': 'arts-two' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+        <div data-observ></div>
+        <div class="page__container">
+          <div class="arts-two">
+            <div class="arts-two__clothes">
+              <div class="arts-two__clothes-block-info">
+                <div class="arts-two__clothes-title">Are you ready to get custom clothes?</div>
+                <div class="arts-two__clothes-info">Indulgence announcing uncommonly met she continuing two unpleasing terminated</div>
+                <a href="" class="arts-two__clothes-btn btn btn_bag"><span>Get custom now</span></a>
+              </div>
+              <div class="arts-two__clothes-block-image">
+                <div class="arts-two__clothes-image">
+                  <picture>
+                    <source srcset="./images/arts-two/pictureM.webp" type="image/webp">
+                    <img src="./images/arts-two/picture.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="arts-two__clothes-bg">
+                  <picture>
+                    <source srcset="./images/arts-two/bg.webp" type="image/webp">
+                    <img src="./images/arts-two/bg.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="arts-two__cards cards">
+              <!-- Arts - карточки -->
+            </div>
+            <div class="arts-two__form">
+              @@include('html/custom-by.html')
+            </div>
+            <img class="arts-two__blur" src="./images/arts-two/blur.svg" alt="">
+            <div class="arts-two__circle parallax">
+              <img src="/images/svg/circle.svg" alt="circle" />
+            </div>
+            <div class="arts-two__star parallax">
+              <img src="/images/svg/Star.svg" alt="star" />
+            </div>
+            <div class="arts-two__star-two parallax">
+              <img src="/images/svg/Star.svg" alt="star" />
+            </div>
+          </div>
+        </div>
+      </main>
+      @@include('html/footer.html')
+    </div>
+    <script src="js/artsTwo.min.js"></script>
+  </body>
+</html>
