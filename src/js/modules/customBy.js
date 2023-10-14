@@ -8,11 +8,8 @@ export default class CustomBy {
       this.form = $('.custom-by__form');
       this.dropOne = new Dropdown('#dropOne');
       this.dropTwo = new Dropdown('#dropTwo');
+      this.validation()
   }
-  // dropdown() {
-  //   const dropDownOne = new Dropdown('#dropOne');
-  //   const dropDownTwo = new Dropdown('#dropTwo')
-  // }
   validation(){
     this.form.validate({
       rules: {
@@ -57,7 +54,6 @@ export default class CustomBy {
     });
   }
 }
-
 
 class Dropdown {
   constructor(thisDrop) {

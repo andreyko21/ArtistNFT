@@ -4,7 +4,9 @@ export default class LoadArts{
     constructor(info, id){
       this.info = info;
       this.id = id;
-      this.cardBlock = $('.arts__cards');
+      this.cardBlock = $('.cards');
+      this.addClass();
+      this.loaditem();
     }
     addClass(){
       this.classInfo = 'one-card_open';

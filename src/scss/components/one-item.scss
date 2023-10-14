@@ -2,10 +2,10 @@
     overflow: hidden;
     font-family: Proxima;
     border-radius: 12px;
-    height: 420px;
+    aspect-ratio:  117 / 138.68; 
     width: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 3;
     color: $whiteText;
     @media (max-width: 700px) {   
         height: 412px;
@@ -18,11 +18,6 @@
         width: 100%;
         height: 100%;
         transition: all 0.3s ease 0s;
-        &_default{
-
-        }
-        &_blur{
-        }
         img {
             object-fit: cover;
             height: 100%;
@@ -178,6 +173,8 @@
         }
     }
     &_big{
+        aspect-ratio:  73 / 40; 
+        height: 100%;
         grid-column: span 2;
         @media (max-width: 700px){   
             height: 199px;

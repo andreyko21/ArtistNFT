@@ -3,11 +3,13 @@ import Header from './modules/header';
 import { collection, getDocs} from "firebase/firestore";
 import firebase from './modules/firebase';
 import LoadArts from './modules/loadArts';
+import CustomBy from './modules/customBy';
 
 class ArtsOne {
   constructor() {
     this.header = new Header();
     this.db = firebase.getFirestore();
+    this.customBy = new CustomBy();
     this.prolax();
     this.firebase();
     this.oneItem();
@@ -19,7 +21,7 @@ class ArtsOne {
     });
   }
   oneItem(){
-    $('.arts__cards').on('click mouseenter', '.one-card', (event) => {
+    $('.cards').on('click mouseenter', '.one-card', (event) => {
       $('.active').removeClass('active');
       const clickedElement = $(event.currentTarget);
       clickedElement.addClass('active');
@@ -29,13 +31,13 @@ class ArtsOne {
       },1);
     });
     
-    $('.arts__cards').on('mouseleave', '.one-card', () => {
+    $('.cards').on('mouseleave', '.one-card', () => {
       $('.active').removeClass('active');
     });
   }
   prolax(){
     $(document).ready(function () {
-      $('.arts').mousemove(function (e) {
+      $('.arts-two').mousemove(function (e) {
         var containerWidth = $(this).width();
         var containerHeight = $(this).height();
         var mouseX = e.pageX - $(this).offset().left;
