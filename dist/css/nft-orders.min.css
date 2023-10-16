@@ -1,101 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "icomoon";
-  src: url("/fonts/icomoon.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-[class^=icon-],
-[class*=" icon-"] {
-  font-family: "icomoon" !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-nft-orders:before {
-  content: "\e910";
-}
-
-.icon-copy:before {
-  content: "\e90f";
-}
-
-.icon-lock:before {
-  content: "\e902";
-}
-
-.icon-pinterest:before {
-  content: "\e903";
-}
-
-.icon-telegram:before {
-  content: "\e904";
-}
-
-.icon-instagram:before {
-  content: "\e901";
-}
-
-.icon-twitter-3:before {
-  content: "\e900";
-}
-
-.icon-diamond:before {
-  content: "\e905";
-}
-
-.icon-logo:before {
-  content: "\e906";
-}
-
-.icon-messages:before {
-  content: "\e907";
-}
-
-.icon-orders:before {
-  content: "\e908";
-}
-
-.icon-right-arrow:before {
-  content: "\e909";
-}
-
-.icon-star:before {
-  content: "\e90a";
-}
-
-.icon-stats:before {
-  content: "\e90b";
-}
-
-.icon-bag:before {
-  content: "\e90c";
-}
-
-.icon-coin:before {
-  content: "\e90d";
-}
-
-.icon-crown:before {
-  content: "\e90e";
-}
-
-.icon-users:before {
-  content: "\e972";
-}
-
-.icon-back-arrow:before {
-  content: "\ea40";
-}
-
 :root {
   --bs-font-family: sans-serif;
   --bs-font-family: sans-serif;
@@ -1246,331 +1149,6 @@ body {
   }
 }
 
-@media (max-width: 600px) {
-  .page__container {
-    padding-left: 0;
-  }
-}
-
-.chat-list {
-  padding: 32px 0px 32px 29px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  max-width: 345px;
-  min-width: 120px;
-  border-right: 1px solid rgba(82, 89, 96, 0.3);
-}
-@media (max-width: 850px) {
-  .chat-list {
-    padding-left: 0px;
-  }
-}
-@media (min-width: 601px) {
-  .chat-list {
-    overflow: auto;
-  }
-}
-@media (max-width: 600px) {
-  .chat-list {
-    height: max-content;
-    padding-bottom: 29px;
-  }
-}
-.chat-list__title {
-  color: #ffffff;
-  font-family: "Proxima";
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.42857;
-}
-@media (max-width: 850px) {
-  .chat-list__title {
-    text-align: center;
-  }
-}
-@media (max-width: 600px) {
-  .chat-list__title {
-    margin-top: 17px;
-    font-size: 20px;
-    text-align: left;
-    margin-left: 15px;
-  }
-}
-.chat-list__list-users {
-  flex-grow: 1;
-  margin-top: 29px;
-  display: flex;
-  flex-direction: column;
-  padding-right: 29px;
-}
-@media (max-width: 850px) {
-  .chat-list__list-users {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-}
-@media (min-width: 601px) {
-  .chat-list__list-users {
-    overflow: auto;
-  }
-}
-@media (max-width: 600px) {
-  .chat-list__list-users {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-.chat-list__user {
-  border-radius: 14px;
-  background-color: #1d1f21;
-  padding: 14px 18px 14px 12px;
-  display: grid;
-  grid-template: "img name time" "img message message";
-}
-@media (max-width: 700px) and (min-width: 600.1px) {
-  .chat-list__user {
-    grid-template: "img";
-  }
-}
-.chat-list__user-avatar-block {
-  grid-area: img;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 12px;
-}
-@media (max-width: 700px) and (min-width: 600.1px) {
-  .chat-list__user-avatar-block {
-    margin-right: 0;
-  }
-}
-.chat-list__user-name {
-  text-align: left;
-  grid-area: name;
-  color: #c8d2dc;
-  font-family: "Proxima";
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.25;
-}
-@media (max-width: 700px) and (min-width: 600.1px) {
-  .chat-list__user-name {
-    display: none;
-  }
-}
-.chat-list__user-last-message-time {
-  text-align: right;
-  grid-area: time;
-  color: #c8d2dc;
-  font-family: "Proxima";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.25;
-}
-@media (max-width: 700px) and (min-width: 600.1px) {
-  .chat-list__user-last-message-time {
-    display: none;
-  }
-}
-.chat-list__user-message-text {
-  grid-area: message;
-  color: #ffffff;
-  font-family: "Proxima";
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.07143;
-}
-@media (max-width: 700px) and (min-width: 600.1px) {
-  .chat-list__user-message-text {
-    display: none;
-  }
-}
-.chat-list__user:not(:first-child) {
-  margin-top: 8px;
-}
-@media (max-width: 600px) {
-  .chat-list__user {
-    background-color: #2c2f33;
-  }
-}
-@media (max-width: 600px) {
-  .chat-list {
-    max-width: none;
-    border-right: none;
-    padding: 0;
-  }
-}
-
-.current-chat {
-  padding: 10px 0px 10px 10px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-.current-chat__user-info {
-  display: flex;
-  align-items: center;
-  padding: 15px 14px;
-}
-.current-chat__user-name {
-  margin-left: 13px;
-  color: #c8d2dc;
-  font-family: "Proxima";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.9375;
-}
-.current-chat__user-status {
-  margin-left: 24px;
-  color: #ffffff;
-  font-family: "Proxima";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.25;
-  display: flex;
-  align-items: center;
-}
-.current-chat__user-status .online-status {
-  margin-right: 6px;
-}
-.current-chat__message.current-user-message {
-  width: fit-content;
-  margin-left: auto;
-}
-.current-chat__message.current-user-message .current-chat__message-block {
-  border-radius: 8px 8px 0px 8px;
-}
-.current-chat__message.current-user-message .current-chat__message-block-time {
-  margin-left: auto;
-  width: fit-content;
-}
-.current-chat__message.companion-user-message {
-  width: fit-content;
-  margin-right: auto;
-}
-.current-chat__message.companion-user-message .current-chat__message-block {
-  background-color: #3626ea;
-  border-radius: 8px 8px 8px 0px;
-}
-.current-chat__message.companion-user-message .current-chat__message-block-time {
-  margin-right: auto;
-  width: fit-content;
-}
-.current-chat__message:not(:first-child) {
-  margin-top: 20px;
-}
-.current-chat__message-input-block {
-  padding: 10px 14px;
-  position: relative;
-}
-.current-chat__message-input {
-  padding: 20px 60px 20px 32px;
-  width: 100%;
-  border-radius: 9px;
-  color: #c8d2dc;
-  font-family: "Proxima";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.3125;
-  background-color: #2c2f33;
-}
-.current-chat__message-send {
-  position: absolute;
-  right: 24px;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-.current-chat__message-box-text {
-  background-color: #2c2f33;
-  padding: 12px 24px;
-  border-radius: 8px 8px 0px 8px;
-}
-.current-chat__message-box {
-  scroll-behavior: smooth;
-  overflow: auto;
-  flex-grow: 1;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-top: 20px;
-  padding-top: 20px;
-  padding-right: 20px;
-  flex-direction: column-reverse;
-  display: flex;
-}
-.current-chat__message-block {
-  max-width: 454px;
-  background-color: #2c2f33;
-  width: fit-content;
-}
-.current-chat__message-block-time {
-  margin-top: 6px;
-  color: rgba(200, 210, 220, 0.6);
-  font-family: "Proxima";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.25;
-}
-.current-chat__back-button {
-  background: none;
-  max-width: 18px;
-  max-height: 18px;
-  margin-right: 20px;
-  background-color: none;
-  display: none;
-}
-@media (max-width: 600px) {
-  .current-chat__back-button {
-    display: flex;
-  }
-  .current-chat__back-button .icon-right-arrow {
-    font-size: 20px;
-    transform: scale(-1);
-    color: #ffffff;
-  }
-}
-@media (min-width: 601px) {
-  .current-chat {
-    display: flex !important;
-  }
-}
-@media (max-width: 600px) {
-  .current-chat {
-    position: fixed;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    padding-top: 64px;
-    overflow: hidden;
-    display: none;
-    background-color: #1d1f21;
-    transform: translate(100%);
-    transition: transform ease 1s;
-  }
-  .current-chat.current-chat_open {
-    display: flex;
-    transform: translate(0);
-  }
-}
-
-.message-block_text {
-  padding: 12px 24px;
-  color: #ffffff;
-  font-family: "Proxima";
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.28571;
-}
-.message-block_img {
-  padding: 12px;
-}
-
-.profile-chat {
-  flex-grow: 1;
-  display: flex;
-}
-
 @font-face {
   font-family: Proxima;
   font-display: swap;
@@ -1624,6 +1202,143 @@ body {
   background-color: #1d1f21;
 }
 
+.table-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  padding-left: 14px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+@media (max-width: 960px) {
+  .table-section {
+    padding-top: 0px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.table-section__title {
+  display: none;
+  color: #ffffff;
+  font-family: "Proxima";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@media (max-width: 960px) {
+  .table-section__title {
+    display: flex;
+    padding-bottom: 6px;
+  }
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px 0px;
+}
+.table__title {
+  text-align: left;
+  color: #ffffff;
+  font-family: "Proxima";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.07143;
+}
+.table__scroll-container {
+  height: auto;
+  overflow: auto;
+}
+.table-header {
+  padding-left: 14px;
+  padding-right: 34px;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+.table-header tr td {
+  padding-right: 10px;
+}
+.table-header tr td:first-child {
+  padding-left: 10px;
+}
+@media (max-width: 960px) {
+  .table-header {
+    display: none;
+  }
+}
+.table__body {
+  padding-right: 22px;
+  border-spacing: 0px 8px;
+  border-collapse: separate;
+  width: 100%;
+}
+@media (max-width: 960px) {
+  .table__body tbody {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .table__body tbody {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.table__body tr {
+  background: #1d1f21;
+}
+.table__body tr td {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 10px;
+}
+.table__body tr td:first-child {
+  padding-left: 24px;
+  border-radius: 14px 0px 0px 14px;
+}
+@media (max-width: 960px) {
+  .table__body tr td:first-child {
+    padding-left: 0;
+    border-radius: 0;
+  }
+}
+.table__body tr td:last-child {
+  border-radius: 0px 14px 14px 0px;
+}
+@media (max-width: 960px) {
+  .table__body tr td:last-child {
+    border-radius: 0;
+  }
+}
+@media (max-width: 960px) {
+  .table__body tr td {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 960px) {
+  .table__body tr {
+    display: grid;
+    background: #2c2f33;
+    border-radius: 14px;
+    padding: 19px 19px 18px 18px;
+  }
+}
+@media (max-width: 960px) {
+  .table__body {
+    padding-right: 15px;
+  }
+}
+
 @media (max-width: 960px) {
   .page {
     height: 100%;
@@ -1639,11 +1354,11 @@ body {
 
 .page__main {
   height: 100%;
-}
-@media (max-width: 960px) {
-  .page__main {
-    background-color: #1d1f21;
-  }
+  padding-top: 14px;
+  flex-grow: 1;
+  background-color: #212426;
+  border-radius: 32px 0px 0px 0px;
+  display: flex;
 }
 @media (min-width: 1150.1px) {
   .page__main {
@@ -1651,27 +1366,19 @@ body {
     overflow: hidden;
   }
 }
-
-.orders-section {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  color: #ffffff;
-  padding-left: 14px;
-  padding-right: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
 @media (max-width: 960px) {
-  .orders-section {
-    padding-top: 0px;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    height: auto;
+  .page__main {
+    background-color: #1d1f21;
+    background: none;
+    padding-top: 17px;
   }
 }
+@media (max-width: 600px) {
+  .page__main {
+    padding-left: 15px;
+  }
+}
+
 .orders-section__table-block {
   padding-bottom: 10px;
   padding-right: 20px;
@@ -1726,13 +1433,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 600px) {
-  .wrapper-2 {
-    max-height: max-content;
-    height: 100%;
-    overflow-y: auto;
-  }
-}
 
 .page {
   display: flex;
@@ -1746,32 +1446,18 @@ body {
   justify-content: space-between;
   width: 100%;
 }
-@media (max-width: 600px) {
-  .page__container {
-    display: block;
-    height: max-content;
-    padding-bottom: 29px;
-  }
-}
-
-.page__main {
-  flex-grow: 1;
-  background-color: #212426;
-  border-radius: 32px 0px 0px 0px;
-  display: flex;
-}
-@media (max-width: 600px) {
-  .page__main {
-    background: none;
-  }
-}
 
 .online-status {
   display: block;
   width: 8px;
   height: 8px;
-  background-color: #47cd7d;
   border-radius: 50%;
+}
+.online-status_online {
+  background-color: #47cd7d;
+}
+.online-status_offline {
+  background-color: #c8d2dc;
 }
 
 .burger-menu-button {
@@ -1805,101 +1491,35 @@ body {
   }
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
-  font-family: "Proxima";
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: 16px;
-  text-decoration: none;
-  color: #212426;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  cursor: pointer;
-  user-select: none;
+.nft-orders-section .table__title-name {
+  width: 22%;
 }
-.button:focus {
-  outline: 2px solid rgba(134, 168, 255, 0.6352941176);
+.nft-orders-section .table__title-crypto {
+  width: 34.8%;
 }
-.button:hover {
-  color: #ffffff;
+.nft-orders-section .table__title-status {
+  width: 16.5%;
 }
-.button:active {
-  background: linear-gradient(-95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
-  transform: scale(0.95);
+.nft-orders-section .table__title-price {
+  width: 14.7%;
 }
-
-@media (max-width: 600px) {
-  .page {
-    margin-left: 15px;
-  }
-  .page__container {
+.table__body tr td {
+  padding-top: 20px;
+  padding-bottom: 22px;
+}
+@media (max-width: 960px) {
+  .table__body tr td {
+    padding-top: 0;
     padding-bottom: 0;
   }
 }
 
-.table-orders {
-  position: relative;
-  min-height: 0;
-  max-height: 400px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border-collapse: separate;
-  border-spacing: 0px 8px;
-}
-.table-orders thead {
-  position: sticky;
-  top: 0;
-  left: 0;
-}
-@media (max-width: 960px) {
-  .table-orders tbody {
-    display: grid;
-    height: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-}
-@media (max-width: 600px) {
-  .table-orders tbody {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-.table-orders__head {
-  height: 100%;
-  background-color: #212426;
-  padding-left: 30px;
-  padding-right: 31px;
-}
-@media (max-width: 960px) {
-  .table-orders__head {
-    display: none;
-  }
-}
-.table-orders__title {
-  height: 100%;
-  text-align: left;
-  color: #ffffff;
-  font-family: "Proxima";
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.07143;
-  padding-top: 19px;
-  padding-bottom: 13px;
-}
-.table-orders__title:first-child {
-  padding-left: 15px;
-}
-.table-orders-item {
+.table-nft-order {
   height: min-content;
   background-color: #1d1f21;
 }
 @media (max-width: 960px) {
-  .table-orders-item {
+  .table-nft-order {
     display: grid;
     padding: 19px 19px 17px 18px;
     background-color: #2c2f33;
@@ -1907,25 +1527,25 @@ body {
     grid-template: "img name" "img date" "address address" "price price" "status status" auto/46px auto;
   }
 }
-.table-orders-item__nft-img {
+.table-nft-order__nft-img {
+  width: 7.8%;
   grid-area: img;
   border-radius: 8px 0px 0px 8px;
-  width: 77px;
   padding-left: 25px;
 }
-.table-orders-item__nft-img img {
+.table-nft-order__nft-img img {
   width: 32px;
   height: 32px;
 }
 @media (max-width: 960px) {
-  .table-orders-item__nft-img {
+  .table-nft-order__nft-img {
     padding-left: 0;
     width: 50px;
     display: flex;
     align-items: center;
   }
 }
-.table-orders-item__nft-name {
+.table-nft-order__nft-name {
   width: 14.2%;
   grid-area: name;
   color: #ffffff;
@@ -1937,18 +1557,18 @@ body {
   padding-right: 10px;
 }
 @media (max-width: 960px) {
-  .table-orders-item__nft-name {
+  .table-nft-order__nft-name {
     width: 100%;
     font-weight: 600;
     line-height: 1.3125;
   }
 }
-.table-orders-item__crypto-address {
+.table-nft-order__crypto-address {
   width: 33.9%;
   padding-right: 10px;
   grid-area: address;
 }
-.table-orders-item__crypto-address-copy {
+.table-nft-order__crypto-address-copy {
   display: flex;
   align-items: center;
   width: fit-content;
@@ -1956,30 +1576,30 @@ body {
   border-radius: 13px;
   background: #212426;
 }
-.table-orders-item__crypto-address-copy-text {
+.table-nft-order__crypto-address-copy-text {
   color: #ffffff;
   font-family: "Proxima";
   font-weight: 700;
   font-size: 14px;
   line-height: 1.42857;
 }
-.table-orders-item__crypto-address-copy-text::before {
+.table-nft-order__crypto-address-copy-text::before {
   content: "EQBSSl0Xlo3...kkHTmFw5YVYOiWJ.";
 }
 @media (max-width: 960px) {
-  .table-orders-item__crypto-address-copy-text {
+  .table-nft-order__crypto-address-copy-text {
     font-size: 12px;
     line-height: 1.66667;
   }
-  .table-orders-item__crypto-address-copy-text::before {
+  .table-nft-order__crypto-address-copy-text::before {
     content: "EQBS...5YVYOiWJ.";
   }
 }
-.table-orders-item__crypto-address-copy-button {
+.table-nft-order__crypto-address-copy-button {
   background: none;
   margin-left: 25px;
 }
-.table-orders-item__crypto-address-copy-button .icon-copy {
+.table-nft-order__crypto-address-copy-button .icon-copy {
   background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1987,19 +1607,19 @@ body {
   height: 18px;
 }
 @media (max-width: 960px) {
-  .table-orders-item__crypto-address-copy-button {
+  .table-nft-order__crypto-address-copy-button {
     margin-left: 10px;
   }
 }
 @media (max-width: 960px) {
-  .table-orders-item__crypto-address-copy {
+  .table-nft-order__crypto-address-copy {
     padding: 8px 12px 8px 11px;
-    margin-right: 5px;
+    margin-right: 0px;
     border-radius: 8px;
   }
 }
 @media (max-width: 960px) {
-  .table-orders-item__crypto-address {
+  .table-nft-order__crypto-address {
     width: 100%;
     margin-top: 17px;
     padding-top: 10px;
@@ -2012,28 +1632,28 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-  .table-orders-item__crypto-address:before {
+  .table-nft-order__crypto-address:before {
     content: "Adress";
     font-size: 14px;
     font-weight: 400;
     line-height: 1.07143;
   }
 }
-.table-orders-item__status {
+.table-nft-order__status {
   width: 16%;
   grid-area: status;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-right: 10px;
 }
-.table-orders-item__status span {
+.table-nft-order__status span {
   width: fit-content;
   display: block;
   padding: 6px 22px;
   border-radius: 10px;
   text-align: center;
 }
-.table-orders-item__status-success {
+.table-nft-order__status-success {
   background-color: rgba(197, 255, 152, 0.1);
   color: #c5ff98;
   font-family: "Proxima";
@@ -2042,17 +1662,17 @@ body {
   line-height: 1.75;
 }
 @media (max-width: 960px) {
-  .table-orders-item__status {
+  .table-nft-order__status {
     width: 100%;
     padding-top: 0;
     padding-bottom: 0;
   }
-  .table-orders-item__status span {
+  .table-nft-order__status span {
     margin-right: 0;
     width: auto;
   }
 }
-.table-orders-item__price {
+.table-nft-order__price {
   width: 14.5%;
   grid-area: price;
   color: #ffffff;
@@ -2063,7 +1683,7 @@ body {
   padding-right: 10px;
 }
 @media (max-width: 960px) {
-  .table-orders-item__price {
+  .table-nft-order__price {
     width: 100%;
     padding-top: 11px;
     padding-bottom: 15px;
@@ -2071,7 +1691,7 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-  .table-orders-item__price::before {
+  .table-nft-order__price::before {
     content: "Price";
     font-size: 14px;
     font-weight: 400;
@@ -2079,7 +1699,7 @@ body {
     margin-bottom: 5px;
   }
 }
-.table-orders-item__date {
+.table-nft-order__date {
   grid-area: date;
   border-radius: 0px 8px 8px 0px;
   color: #c8d2dc;
@@ -2090,7 +1710,7 @@ body {
   padding-right: 10px;
 }
 @media (max-width: 960px) {
-  .table-orders-item__date {
+  .table-nft-order__date {
     width: 100%;
     font-size: 14px;
     line-height: 1.60714;
