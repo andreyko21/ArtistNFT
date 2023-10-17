@@ -2,13 +2,13 @@
     overflow: hidden;
     font-family: Proxima;
     border-radius: 12px;
-    aspect-ratio:  117 / 138.68; 
+    aspect-ratio:  1 / 1.1853; 
     width: 100%;
     position: relative;
     z-index: 3;
     color: $whiteText;
     @media (max-width: 700px) {   
-        height: 412px;
+        aspect-ratio:  1 / 1.19424; 
     }
     &__bg{
         position: absolute;
@@ -24,11 +24,13 @@
             width: 100%;
         }
     }
+    &__unlock-bg{
+
+    }
     &__unlock {
         height: 100%;
         border-radius: 12px;
         position: relative;
-        display: flex;
         display: none;
         align-items: center;
         justify-content: center;
@@ -173,11 +175,11 @@
         }
     }
     &_big{
-        aspect-ratio:  73 / 40; 
+        aspect-ratio:  1 / 0.5; 
         height: 100%;
         grid-column: span 2;
-        @media (max-width: 700px){   
-            height: 199px;
+            @media (max-width: 700px){   
+                aspect-ratio:  1 / 0.577; 
             }
         }
         @media (max-width: 700px){     
@@ -187,11 +189,6 @@
         .one-card{
             &__unlock {
                 display: flex;
-            }
-            &__bg{
-                &_default{
-                    opacity: 0;
-                }
             }
         }
     }
