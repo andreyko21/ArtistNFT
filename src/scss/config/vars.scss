@@ -27,6 +27,7 @@ $maxWidthContainer: $containerWidth + ($mainOffset * 2); // ширина кон�
 
 // Цвета
 //! ----- переробити -----
+<<<<<<< HEAD
 $gradient: var(
   --primary,
   linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
@@ -36,6 +37,24 @@ $darkGrayGradient:linear-gradient(95deg,rgba(104, 201, 255, 0.1) 9.27%,rgba(209,
 $slateGray:  #1d1f21;
 $deepTeal:  #525960;
 $blue:  #86a8ff;
+=======
+$gradient: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+
+$darkGrayTwo: var(--background, #1d1f21);
+$darkGrayGradient: 
+  linear-gradient(
+    95deg,
+    rgba(104, 201, 255, 0.1) 9.27%,
+    rgba(209, 181, 255, 0.1) 84.06%
+  
+);
+$slateGray: var(--background, #1d1f21);
+$deepTeal: var(--stroke, #525960);
+$blue: var(--color-3, #86a8ff);
+$whiteText: var(--text, #fcffff);
+// !------------------------------------
+//$ ok
+>>>>>>> alex-dev
 $red: rgba(202, 56, 56, 1);
 $whiteText: #fcffff;
 $gradientCard: linear-gradient(
