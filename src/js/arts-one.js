@@ -33,7 +33,7 @@ class ArtsOne {
       $('.active').removeClass('active');
     });
   }
-  prolax(){
+  prolax() {
     $(document).ready(function () {
       $('.arts').mousemove(function (e) {
         var containerWidth = $(this).width();
@@ -42,7 +42,7 @@ class ArtsOne {
         var mouseY = e.pageY - $(this).offset().top;
         var offsetX = 0.5 - mouseX / containerWidth;
         var offsetY = 0.5 - mouseY / containerHeight;
-    
+
         $('.parallax').css({
           transform:
             'translate(-50%,-50%) translate(' +

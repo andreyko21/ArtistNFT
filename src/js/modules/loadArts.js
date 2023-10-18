@@ -44,7 +44,7 @@ export default class LoadArts{
               </div>
             </div>
         </div>
-        <picture class="one-card__bg one-card__bg_default">
+        <picture class="one-card__bg">
           <source srcset="${this.info.imageWebP}" type="image/webp">
           <img src="${this.info.imagePng}" alt="">
         </picture>

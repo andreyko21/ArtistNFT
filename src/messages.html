@@ -8,7 +8,9 @@
         <div data-observ></div>
 
         <div class="page__container">
-          @@include('html/profile/profile-sidebar.html')
+          @@include('html/profile/profile-sidebar.html',{'messageClass':
+          'profile-sidebar__menu-item_active', 'ordersClass': '', 'usersClass':
+          ''})
           <div class="page__main">@@include('html/profile/chat.html')</div>
         </div>
       </main>

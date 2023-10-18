@@ -17,24 +17,13 @@
         left: 0;
         width: 100%;
         height: 100%;
-        transition: all 0.3s ease 0s;
+        transition: all 300ms ease 0s;
         img {
             object-fit: cover;
             height: 100%;
             width: 100%;
         }
-    }
-    &__unlock-bg{
-
-    }
-    &__unlock {
-        height: 100%;
-        border-radius: 12px;
-        position: relative;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        &::after{
+        &::after,&::before{
             content: '';
             position: absolute;
             z-index: 0;
@@ -43,10 +32,23 @@
             width: 100%;
             height: 100%;
             border-radius: 12px;
-            opacity: 0.17;
-            background: lightgray 50% / cover no-repeat;
-            filter: blur(11px);
+            opacity: 0;
+            transition: all 300ms ease 0s;
         }
+        &::after{
+            background: black 50% / cover no-repeat;
+        }
+        &::before{
+            background: $gradientCard;
+        }
+    }
+    &__unlock {
+        height: 100%;
+        border-radius: 12px;
+        position: relative;
+        display: none;
+        align-items: center;
+        justify-content: center;
     }
     &__unlock-main{
         position: relative;
@@ -93,25 +95,12 @@
         }
     }
     &__open {
-        display: grid;
         border-radius: 12px;
         height: 100%;
         align-items: center;
         position: relative;
-        z-index: -2;
-        opacity: 0;
+        display: none;
         transition: opacity 400ms ease 0s;
-        &::after{
-            content: '';
-            position: absolute;
-            z-index: 0;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.8;
-            background: $gradientCard;
-        }
     }
     &__open-main {
         position: relative;
@@ -190,13 +179,23 @@
             &__unlock {
                 display: flex;
             }
+            &__bg{
+                filter: blur(11px);
+                &::after{
+                    opacity: 0.3;
+                }
+            }
         }
     }
     &_open.active{
         .one-card{
             &__open {
-                z-index: 1;
-                opacity: 1;
+                display: grid;
+            }
+            &__bg{
+                &::before{
+                    opacity: 0.8;
+                }
             }
         }
     }

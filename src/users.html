@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', { 'title': 'Profile', 'srcStyle': 'profile' })
+  @@include('html/head.html', { 'title': 'Profile', 'srcStyle': 'users' })
   <body>
     <div class="wrapper-2">
       @@include('html/profile/profile-header.html')
@@ -10,10 +10,10 @@
         <div class="page__container">
           @@include('html/profile/profile-sidebar.html',{'messageClass': '',
           'ordersClass': '', 'usersClass': 'profile-sidebar__menu-item_active'})
-          <div class="page__main"></div>
+          <div class="page__main">@@include('html/profile/users.html')</div>
         </div>
       </main>
     </div>
-    <script src="js/profile.min.js"></script>
+    <script src="js/users.min.js"></script>
   </body>
 </html>

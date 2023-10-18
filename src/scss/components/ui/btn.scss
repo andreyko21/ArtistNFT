@@ -43,7 +43,7 @@
       background-color: $white;
       border-radius: 16px;
       animation-name: btn;
-      animation-duration: 3s;
+      animation-duration: 0.3s;
       animation-timing-function: ease;
       animation-iteration-count: 1; 
     }
@@ -56,6 +56,7 @@
       border-radius: 12px;
     }
   }
+
   &_crown {
     span {
       position: relative;

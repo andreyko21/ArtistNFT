@@ -2,13 +2,30 @@ import $ from "jquery";
 import firebase from './firebase';
 import 'jquery-validation';
 
+
+
+
 export default class CustomBy {
   constructor() {
       this.li = $(".custom-by__dropdown-li");
       this.form = $('.custom-by__form');
+      this.changeItem = $('.custom-by__input-item');
+      this.changeSize = $('.custom-by__input-size');
+      this.question = $('.custom-by__question');
+      this.radioBtn = $('.custom-by__radio-btn')
       this.dropOne = new Dropdown('#dropOne');
       this.dropTwo = new Dropdown('#dropTwo');
       this.validation()
+
+      console.log(this.changeItem.eq(0).html());
+      console.log(this.changeSize.eq(0).html());
+      console.log(this.question.val());
+
+      this.radioBtn.each((index, radio) => {
+        if (radio.checked) {
+          console.log($(radio).data('color'));
+        }
+      });
   }
   validation(){
     this.form.validate({
@@ -48,7 +65,7 @@ export default class CustomBy {
       submitHandler: function(form) {
         //дополнительные действия перед отправкой\\
 
-        alert('ok')
+        alert(this.changeItem.eq(0).html())
         form.submit();
       }
     });

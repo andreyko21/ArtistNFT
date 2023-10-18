@@ -1,15 +1,16 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
+import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyCQdQY3D9G60qB3PCBhtCz-W7YynZJQzSU',
-    authDomain: 'artistnft.firebaseapp.com',
-    projectId: 'artistnft',
-    storageBucket: 'artistnft.appspot.com',
-    messagingSenderId: '1090475560828',
-    appId: '1:1090475560828:web:3ff50b4eb39bbcacd45ef9',
-  };
+  apiKey: 'AIzaSyCQdQY3D9G60qB3PCBhtCz-W7YynZJQzSU',
+  authDomain: 'artistnft.firebaseapp.com',
+  projectId: 'artistnft',
+  storageBucket: 'artistnft.appspot.com',
+  messagingSenderId: '1090475560828',
+  appId: '1:1090475560828:web:3ff50b4eb39bbcacd45ef9',
+};
 
 class Firebase {
   constructor() {
@@ -27,6 +28,10 @@ class Firebase {
 
   getFirestore() {
     return getFirestore(this.app);
+  }
+
+  getDatabase() {
+    return getDatabase(this.app);
   }
 }
 

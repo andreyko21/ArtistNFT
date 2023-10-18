@@ -17,6 +17,8 @@ export const webpackConfig = (isMode) => {
       profile: path.join(paths.src, 'js/profile.js'),
       artsOne: path.join(paths.src, 'js/arts-one.js'),
       artsTwo: path.join(paths.src, 'js/arts-two.js'),
+      school: path.join(paths.src, 'js/school.js'),
+      users: path.join(paths.src, 'js/users.js'),
     },
 
     mode: isMode ? 'development' : 'production',
