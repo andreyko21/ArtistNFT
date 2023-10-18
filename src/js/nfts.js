@@ -52,7 +52,7 @@ function getCardNft(product) {
       item.addEventListener('click', (e) => {
          const id = e.currentTarget.id;
          console.log(id);
-      
+      // для передачі id на іншу сторінку
          // window.location.href = `.html?id=${id}`;
       });
    });
