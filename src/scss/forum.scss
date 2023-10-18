@@ -1,0 +1,603 @@
+@import './style.scss';
+@import 'libs/swiper';
+@import 'libs/icomoon.scss';
+@import './components/ui/input.scss';
+
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url('../fonts/ProximaRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url('../fonts/ProximaBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url('../fonts/ProximaExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url('../fonts/ProximaLight.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url('../fonts/ProximaSemibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url('../fonts/ManropeRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url('../fonts/ManropeBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.forum {
+  &__main {
+    padding-bottom: 50px;
+    padding-top: 58px;
+    display: flex;
+    justify-content: right;
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__topics-list {
+    margin-right: 30px;
+    max-width: 730px;
+
+    &-search {
+      margin-top: -2px;
+      border: 1px solid $steelGray;
+      border-radius: 12px;
+      padding-left: 22px;
+      padding-right: 11px;
+      background-color: $darkGray;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: fit-content;
+      border-radius: 12px;
+      &:focus-within {
+        border: 1px solid $focusColor;
+      }
+      &-icon {
+        font-size: 24px;
+        color: $white;
+      }
+      &-input {
+        flex-grow: 1;
+        padding-left: 13px;
+        padding-right: 13px;
+        margin-top: 0;
+        color: $lightBlueGrey;
+        font-family: 'Manrope';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.35714;
+      }
+      &-button {
+        padding: 14px 22px;
+        border-radius: 12px;
+      }
+    }
+    @media (max-width: $tablet) {
+      margin-top: 16px;
+      max-width: none;
+      width: 100%;
+    }
+  }
+}
+
+.forum-banner {
+  padding-top: 49px;
+  position: relative;
+  color: white;
+  @media (max-width: $mobile) {
+    padding-top: 35px;
+  }
+  &__container {
+    max-width: 1136px;
+  }
+  &__title {
+    color: $white;
+    font-family: 'Proxima';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.375;
+    @media (max-width: $mobile) {
+      font-size: 26px;
+      line-height: 1.3769;
+    }
+  }
+  &__sub-title {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    color: $white;
+    font-family: 'Proxima';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    .icon-star {
+      font-size: 28px;
+      margin-right: 10px;
+      margin-left: -2px;
+      @media (max-width: $mobile) {
+        font-size: 20px;
+        margin-left: 1px;
+        margin-right: 5px;
+      }
+    }
+    @media (max-width: $mobile) {
+      font-size: 18px;
+      line-height: 1.4444;
+      margin-top: 1px;
+    }
+  }
+  &__swiper-container {
+    margin-top: 23px;
+
+    @media (min-width: ($tablet + 0.1px)) {
+      overflow: hidden;
+    }
+  }
+  &__swiper-wrapper {
+    align-items: stretch;
+  }
+  &__background-img {
+    height: 317px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.topic-slide {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  background: $darkGray;
+  padding: 129px 22px 22px 21px;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: $tablet) {
+    padding: 141px 11px 28px 12px;
+  }
+  &__user-info {
+    grid-area: user-info;
+    display: grid;
+    grid-template:
+      'avatar date'
+      'name name';
+  }
+  &__buttons-block {
+    grid-area: buttons-block;
+    display: flex;
+  }
+  &__background-img {
+    position: absolute;
+    grid-area: background-img;
+    z-index: -1;
+    width: 100%;
+    height: 177px;
+    left: 0;
+    top: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+  &__avatar {
+    grid-area: avatar;
+    width: 92px;
+    height: 92px;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    @media (max-width: $tablet) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  &__date {
+    grid-area: date;
+    color: $lightBlueGrey;
+    font-family: 'Manrope';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35714;
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: 11px;
+    @media (max-width: $tablet) {
+      margin-bottom: 0;
+    }
+  }
+  &__user-name {
+    margin-top: 13px;
+    grid-area: name;
+    color: $lightBlueGrey;
+    font-family: 'Manrope';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35714;
+    margin-left: 6px;
+    @media (max-width: $tablet) {
+      margin-left: 0;
+    }
+  }
+  &__question {
+    height: 100%;
+    margin-bottom: 5px;
+    grid-area: question;
+    color: $white;
+    font-family: 'Proxima';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-left: 6px;
+    @media (max-width: $tablet) {
+      font-size: 18px;
+      line-height: 1.44444;
+      margin-left: 0;
+      margin-top: 1px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.page__container {
+  max-width: 1168px;
+}
+
+.forum__sidebar {
+  max-width: 365px;
+  flex-grow: 1;
+
+  @media (max-width: $tablet) {
+    max-width: none;
+  }
+  &-asking {
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px 28px 24px 29px;
+    background: $darkGray;
+    &-sub-title {
+      font-family: 'Proxima';
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.47222;
+      letter-spacing: 1.8px;
+      width: fit-content;
+      @include text-gradient($defaultGradient);
+    }
+    &-title {
+      color: $white;
+      font-family: 'Proxima';
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.28846;
+      @media (max-width: 1120px) {
+        font-size: 23px;
+      }
+    }
+    .input-block__input {
+      background: $gunmetalGrey;
+    }
+  }
+  &-name-block {
+    margin-top: 15px;
+  }
+  &-question-block {
+    margin-top: 15px;
+    .input-block__input {
+      resize: none;
+      height: 196px;
+    }
+  }
+  &-button {
+    padding: 17px 20px;
+    border-radius: 12px;
+    margin-top: 16px;
+  }
+  &-stats {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+    padding: 27px 38px 29px 32px;
+    background: $darkGray;
+    &-title {
+      display: flex;
+      align-items: center;
+      .icon-stats {
+        @include text-gradient($defaultGradient);
+        font-size: 28px;
+      }
+      &-icon-block {
+        border-radius: 12px;
+        margin-right: 13px;
+        padding: 10px;
+        background: linear-gradient(
+          95deg,
+          rgba(104, 201, 255, 0.1) 9.27%,
+          rgba(209, 181, 255, 0.1) 84.06%
+        );
+        width: fit-content;
+      }
+      &-text {
+        margin-bottom: 3px;
+        font-family: 'Proxima';
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.47222;
+        letter-spacing: 1px;
+        @include text-gradient($defaultGradient);
+        width: fit-content;
+      }
+    }
+    &-info {
+      margin-top: 19px;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: 39px;
+      row-gap: 28px;
+      &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-title {
+          color: $lightBlueGrey;
+          font-family: 'Proxima';
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.5;
+        }
+        &-value {
+          color: $white;
+          font-family: 'Proxima';
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 1.375;
+          @media (max-width: 1150px) {
+            font-size: 27px;
+          }
+        }
+      }
+    }
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.topic {
+  margin-top: 16px;
+  border-radius: 12px;
+  padding: 18px 39px 30px 22px;
+  background-color: $darkGray;
+
+  display: grid;
+  grid-template:
+    'rate avatar author-name date'
+    'rate avatar question date'
+    'none none description description'
+    'none none buttons-block buttons-block' auto / min-content 57px auto min-content;
+  @media (max-width: $mobile) {
+    padding: 18px 25px 30px 22px;
+    grid-template:
+      'rate avatar author-name date'
+      'none question question question'
+      'none description description description'
+      'none buttons-block buttons-block buttons-block' auto / min-content 57px auto min-content;
+  }
+  &__rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: $lightBlueGrey;
+    font-family: 'Manrope';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    grid-area: rate;
+    margin-top: auto;
+    margin-bottom: auto;
+    .rate-button-top,
+    .rate-button-bottom {
+      height: fit-content;
+      background: none;
+      color: #525960;
+      font-size: 20px;
+      line-height: 1;
+      &:hover {
+        color: $hoverColor;
+      }
+      &:focus {
+        color: $focusColor;
+      }
+      &:active {
+        color: $activeColor;
+      }
+    }
+    .rate-button-top {
+      margin-bottom: 3px;
+    }
+    .rate-button-bottom {
+      margin-top: 3px;
+    }
+  }
+  &__avatar {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11px;
+    margin-bottom: auto;
+    grid-area: avatar;
+    width: 40px;
+    height: 40px;
+    @media (max-width: $mobile) {
+      width: 32px;
+      height: 32px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__author-name {
+    margin-top: 9px;
+    grid-area: author-name;
+    color: $lightBlueGrey;
+    font-family: 'Manrope';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35714;
+    @media (max-width: $mobile) {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+  &__date {
+    margin-top: 20px;
+    margin-bottom: auto;
+    grid-area: date;
+    color: $lightBlueGrey;
+    font-family: 'Manrope';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35714;
+    @media (max-width: $mobile) {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+  &__question {
+    margin-bottom: 10px;
+    grid-area: question;
+    color: $white;
+    font-family: 'Proxima';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    @media (max-width: $mobile) {
+      font-size: 18px;
+      padding-left: 15px;
+    }
+  }
+
+  &__description {
+    grid-area: description;
+    color: $white;
+    font-family: 'Proxima';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    @media (max-width: $mobile) {
+      padding-left: 15px;
+      font-size: 15px;
+    }
+  }
+  &__buttons-block {
+    margin-top: 16px;
+    grid-area: buttons-block;
+    display: flex;
+    .view-answers {
+      margin-left: 0;
+    }
+    @media (max-width: $mobile) {
+      padding-left: 15px;
+    }
+  }
+}
+
+.view-answers {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: fit-content;
+  width: fit-content;
+  grid-area: view-btn;
+  font-family: 'Proxima';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.42857;
+  padding: 10px 15px 10px 21px;
+  border-radius: 10px;
+  margin-left: 6px;
+  @media (max-width: $tablet) {
+    margin-left: 0;
+  }
+}
+
+.answer {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: fit-content;
+  width: fit-content;
+  margin-left: 20px;
+  margin-right: 10px;
+  grid-area: answer-btn;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  color: $lightLimeGreen;
+  font-family: 'Proxima';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.42857;
+  &:hover {
+    color: $hoverColor;
+  }
+  &:focus {
+    color: $focusColor;
+  }
+  &:active {
+    color: $activeColor;
+  }
+  .icon-enter {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+}

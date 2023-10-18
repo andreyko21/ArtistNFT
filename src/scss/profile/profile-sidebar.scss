@@ -110,6 +110,10 @@
       height: 15px;
       margin-right: 10px;
     }
+    @media (max-width: 1150px) {
+      padding-left: 8px;
+      margin-top: 24px;
+    }
   }
   &__line {
     width: 100%;
