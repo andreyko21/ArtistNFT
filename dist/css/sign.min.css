@@ -218,7 +218,7 @@ body {
   justify-content: center;
   border-radius: 16px;
   border: none;
-  background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   text-decoration: none;
   color: var(--background, #1d1f21);
   width: 100%;
@@ -229,7 +229,7 @@ body {
   background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .btn:hover span {
-  background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -313,13 +313,13 @@ body {
   background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .btn_grey span {
-  background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .btn_grey:hover {
-  background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
 }
 .btn_grey:hover span {
   background: none;
@@ -332,13 +332,13 @@ body {
   background: var(--background, #1d1f21);
 }
 .btn_black span {
-  background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .btn_black:hover {
-  background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
 }
 .btn_black:hover span {
   background: none;
@@ -351,7 +351,7 @@ body {
   background: var(--background, #1d1f21);
 }
 .btn_arrow span {
-  background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -373,7 +373,7 @@ body {
   }
 }
 .btn_arrow:hover {
-  background: var(--primary, linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%));
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
 }
 .btn_arrow:hover span {
   background: none;

@@ -27,10 +27,8 @@ $maxWidthContainer: $containerWidth + ($mainOffset * 2); // ширина кон�
 
 // Цвета
 //! ----- переробити -----
-$gradient: var(
-  --primary,
-  linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%)
-);
+$gradient: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+
 $darkGrayTwo: var(--background, #1d1f21);
 $darkGrayGradient: 
   linear-gradient(
