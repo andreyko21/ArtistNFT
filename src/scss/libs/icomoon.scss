@@ -21,6 +21,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-top-arrow:before {
+  content: '\e912';
+}
+.icon-bottom-arrow:before {
+  content: '\e913';
+}
+.icon-search:before {
+  content: '\e914';
+}
+.icon-enter:before {
+  content: '\e911';
+}
 .icon-nft-orders:before {
   content: '\e910';
 }
@@ -74,7 +86,4 @@
 }
 .icon-users:before {
   content: '\e972';
-}
-.icon-back-arrow:before {
-  content: '\ea40';
 }
