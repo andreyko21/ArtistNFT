@@ -12,8 +12,25 @@ class UsersPage {
   }
 
   async init() {
+    this.getAuthStatus();
     await this.getUsers();
     this.changeOnlineStatus();
+  }
+
+  getAuthStatus() {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            this.uid = user.uid;
+          } else {
+            window.location.href = '/sign.html';
+          }
+        });
+      } else {
+      }
+    });
   }
 
   async getUsers() {
