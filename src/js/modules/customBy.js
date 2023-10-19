@@ -1,18 +1,51 @@
 import $ from "jquery";
+import Dropdown from "./dropdownForm";
 import firebase from './firebase';
+import { collection, getDocs, addDoc} from "firebase/firestore";
 import 'jquery-validation';
 
 export default class CustomBy {
   constructor() {
       this.li = $(".custom-by__dropdown-li");
       this.form = $('.custom-by__form');
+      this.changeItem = $('.custom-by__input-item');
+      this.changeSize = $('.custom-by__input-size');
+      this.question = $('.custom-by__question');
+      this.radioBtn = $('.custom-by__radio-btn');
+      this.formCheckbox = $('#custom-by-checkbox');
       this.dropOne = new Dropdown('#dropOne');
       this.dropTwo = new Dropdown('#dropTwo');
+      this.db = firebase.getFirestore();
+      this.auth = firebase.getAuth();
+      this.color = '';
+      this.changeColor();
+      this.validation();
   }
-  // dropdown() {
-  //   const dropDownOne = new Dropdown('#dropOne');
-  //   const dropDownTwo = new Dropdown('#dropTwo')
-  // }
+  changeColor(){
+    this.radioBtn.each((index, radio) => {
+      if (radio.checked) {
+        this.color = $(radio).data('color');
+      }
+    });
+  }
+  async firebase(){
+      await getDocs(collection(this.db, "users"));
+      if(this.auth.currentUser){
+        addDoc(collection(this.db, "users",this.auth.currentUser.uid, 'orders'),{
+          clothes: this.changeItem.eq(0).html(),
+          size: this.changeSize.eq(0).html(),
+          comment: this.question.val(),
+          color: this.color,
+          deliveryAddress: 'Maidan Nezalezhnosti, 1, Kyiv, 02000'
+        });
+        alert('Замовлення додано');
+        this.question.val('')
+        this.radioBtn.prop('checked', false);
+        this.formCheckbox.prop('checked', false);
+      }else{
+        alert('Користувач не авторизованний')
+      }
+  }
   validation(){
     this.form.validate({
       rules: {
@@ -48,67 +81,15 @@ export default class CustomBy {
           error.appendTo(".custom-by__error-comment");
         }
       },
-      submitHandler: function(form) {
-        //дополнительные действия перед отправкой\\
-
-        alert('ok')
-        form.submit();
-      }
+      submitHandler: () => {
+        this.firebase();
+      },
     });
   }
 }
 
 
-class Dropdown {
-  constructor(thisDrop) {
-      this.drop = $(thisDrop);
-      this.dropdownToggle = this.drop.find('.custom-by__dropdown-btn');
-      this.dropdownMenu = this.drop.find('.custom-by__dropdown-list');
-      this.li = this.drop.find('.custom-by__dropdown-li');
-      this.height = this.dropdownMenu.height();
-      this.dropdown();
-    }
-    dropdown(){
-      const options = {
-        rootMargin: `0px 0px -${this.height + 70}px 0px`,
-        threshold: 0
-      };
-      const observer = new IntersectionObserver(callback, options);
-      const self = this;
 
-      function callback(entries) {
-          entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                  self.dropdownMenu.css('top', '64px');
-              } else {
-                  self.dropdownMenu.css('top', -self.height);
-              }
-          });
-      }
-
-      $(document).ready(function () {
-          const targetElement = self.dropdownToggle[0];
-          observer.observe(targetElement);
-      });
-
-      const classDrop = this.drop;
-      const thisBtn = this.dropdownToggle;
-
-      this.dropdownToggle.on('click', function () {
-          classDrop.toggleClass("custom-by__dropdown-active");
-      });
-
-      $(document).on('click', function (event) {
-          if (!thisBtn.is(event.target) && thisBtn.has(event.target).length === 0) {
-              classDrop.removeClass("custom-by__dropdown-active");
-          }
-      });
-
-      this.li.click(function () {
-          thisBtn.text($(this).html());
-      });
-  }
-}
 
 
 

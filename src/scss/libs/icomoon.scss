@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('/fonts/icomoon.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-top-arrow:before {
+  content: '\e912';
+}
+.icon-bottom-arrow:before {
+  content: '\e913';
+}
+.icon-search:before {
+  content: '\e914';
+}
+.icon-enter:before {
+  content: '\e911';
+}
+.icon-nft-orders:before {
+  content: '\e910';
+}
+.icon-copy:before {
+  content: '\e90f';
+}
+.icon-lock:before {
+  content: '\e902';
+}
+.icon-pinterest:before {
+  content: '\e903';
+}
+.icon-telegram:before {
+  content: '\e904';
+}
+.icon-instagram:before {
+  content: '\e901';
+}
+.icon-twitter-3:before {
+  content: '\e900';
+}
+.icon-diamond:before {
+  content: '\e905';
+}
+.icon-logo:before {
+  content: '\e906';
+}
+.icon-messages:before {
+  content: '\e907';
+}
+.icon-orders:before {
+  content: '\e908';
+}
+.icon-right-arrow:before {
+  content: '\e909';
+}
+.icon-star:before {
+  content: '\e90a';
+}
+.icon-stats:before {
+  content: '\e90b';
+}
+.icon-bag:before {
+  content: '\e90c';
+}
+.icon-coin:before {
+  content: '\e90d';
+}
+.icon-crown:before {
+  content: '\e90e';
+}
+.icon-users:before {
+  content: '\e972';
+}

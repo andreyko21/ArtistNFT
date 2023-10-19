@@ -2,7 +2,6 @@
 @import './components/ui/input.scss';
 @import './components/ui/switch.scss';
 @import './components/ui/radioButton.scss';
-@import './components/ui/button.scss';
 
 @font-face {
   font-family: Proxima;
@@ -58,8 +57,6 @@
   font-weight: 700;
   font-style: normal;
 }
-
-
 
 .page {
   display: flex;

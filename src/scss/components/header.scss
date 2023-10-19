@@ -10,9 +10,12 @@ $active-color-menu: #3e4e77;
     max-width: 145px;
     max-height: 30px;
   }
-  height: 64px;
+  height: 66px;
   z-index: 5;
   background-color: #1d1f21;
+  @media (max-width: $mobile) {
+    height: 72px;
+  }
   &__container {
     display: flex;
     align-items: center;

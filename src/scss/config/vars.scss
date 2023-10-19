@@ -44,6 +44,7 @@ $whiteText: var(--text, #fcffff);
 // !------------------------------------
 //$ ok
 $red: rgba(202, 56, 56, 1);
+$whiteText: #fcffff;
 $gradientCard: linear-gradient(
     141deg,
     rgba(104, 128, 255, 0.9) 3.3%,
@@ -69,4 +70,13 @@ $emeraldGreen: #47cd7d;
 $gunmetalGrey: #2c2f33;
 $royalBlue: #3626ea;
 $burntOrange: #eb8032;
-$whileBlue:#FCFFFF;
+$whileBlue: #fcffff;
+$lightLimeGreen: #c5ff98;
+$borderGradient: linear-gradient(
+  95deg,
+  rgba(104, 201, 255, 0.1) 9.27%,
+  rgba(209, 181, 255, 0.1) 84.06%
+);
+// hello
+$tablet: 960px;
+$mobile: 600px;

@@ -1,0 +1,314 @@
+@import './style.scss';
+@import './components/ui/btn.scss';
+@import './components/ui/input.scss';
+@import './components/ui/checkbox.scss';
+@import './components/one-item.scss';
+@import './components/custom-by.scss';
+
+@font-face {
+	font-family: Proxima;
+	font-display: swap;
+	src: url("../fonts/ProximaRegular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Proxima;
+	font-display: swap;
+	src: url("../fonts/ProximaBold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Proxima;
+	font-display: swap;
+	src: url("../fonts/ProximaSemibold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: Manrope;
+    font-display: swap;
+    src: url('../fonts/ManropeRegular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+.page{
+    padding-top: 62px;
+    @media (max-width: 700px) {
+        padding-top: 26px;
+    }
+}
+.arts-two {
+    position: relative;
+    font-family: Proxima;
+    color: $whiteText;
+    width: 100%;
+    margin-bottom: 19px;
+    @media (max-width: 700px) {
+        margin-bottom: 0px;
+    }
+    &__clothes {
+        display: grid;
+        grid-template: 1fr / 1fr 1.02fr;
+        margin-bottom: 70px;
+        @media (max-width: 1170px) {
+            grid-template: auto 100px auto / 1fr;
+            justify-items: center;
+        }
+        @media (max-width: 700px) {
+            grid-template: auto 55px auto / 1fr;
+            margin-bottom: 48px;
+        }
+    }
+    &__clothes-block-info {
+        grid-column: 1;
+        margin-left: 16px;
+        @media (max-width: 1170px) {
+            text-align: center;
+            grid-row: 1;
+            max-width: 850px;
+        }
+        @media (max-width: 700px) {
+            text-align: left;
+            margin: 0;
+        }
+    }
+    &__clothes-title {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 1.01563;
+        max-width: 455px;
+        margin: 111px 0 16px 0;
+        @media (max-width: 1170px) {
+            max-width: none;
+            margin: 10px 0 16px 0;
+        }
+        @media (max-width: 700px) {
+            font-size: 36px;
+            margin: 37px 0 6px 0;
+            max-width: 70%;
+            line-height: 1.1111;
+        }
+    }
+    &__clothes-info {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.75;
+        max-width: 271px;
+        margin-bottom: 40px;
+        @media (max-width: 1170px) {
+            max-width: none;
+        }
+        @media (max-width: 700px) {
+            max-width: 75%;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 23px;
+        }
+    }
+    &__clothes-btn {
+        width: 209px;
+        height: 64px;
+        @media (max-width: 1170px) {
+            margin: 0 auto;
+        }
+        @media (max-width: 700px) {
+            margin: 0;
+            height: 52px;
+            width: 193px;
+        }
+    }
+    &__clothes-block-image {
+        position: relative;
+        grid-column: 2;
+        @media (max-width: 1170px) {
+            grid-row: 3;
+            grid-column: 1;
+        }
+        @media (max-width: 700px) {
+            transform: translate(19px , 0);
+        }
+    }
+    &__clothes-image {
+        position: relative;
+        z-index: 2;
+        width: 561px;
+        height: 561px;
+        img{
+            border-radius: 24px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: 700px) {
+            max-width: 82.5vw;
+            max-height: 82.5vw;
+        }
+    }
+    &__clothes-bg {
+        z-index: 1;
+        position: absolute;
+        top: -40px;
+        left: -65px;
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+        }
+        @media (max-width: 700px) {
+            
+            top: -22px;
+            left: -37px;
+            max-width: 90vw;
+            max-height: 90vw;
+        }
+    }
+    &__cards{
+        max-width: 1111px;
+        margin: 0 auto;
+        display: grid;
+        grid-auto-flow: dense;
+        gap: 24px;
+        grid-template-columns: repeat(3,1fr) ;
+        justify-content: center;
+        margin-bottom: 65px;
+        @media (max-width: 1170px) {
+            grid-template-columns: repeat(2 ,1fr) ;
+        }
+        @media (max-width: 700px){        
+            grid-template-columns: 1fr ;
+            padding: 0 10px;
+            gap: 19px;
+            margin-bottom: 48px;
+        }
+        @media (max-width: 400px) {
+            padding: 0;
+        }
+    }
+    &__blur{
+        top: -170px;
+        position: absolute;
+        z-index: -2;
+        @media (min-width: 700px) {
+            top: -160px;
+            left: -550px;
+        }
+        @media (min-width: 1170px) {
+            left: -720px;
+        }
+        @media (max-width: 700px) {
+            top: -50px;
+            right: -520px;
+        }
+    }
+    &__circle{
+        position: absolute;
+        z-index: -1;
+        top: 414px;
+        @media (min-width: 700px) {
+            left: 484px;
+        }
+        @media (max-width: 1170px) {
+            top: 220px;
+            left: 50px;
+        }
+        @media (max-width: 700px) {
+            display: none;
+        }
+    }
+    &__star{
+        position: absolute;
+        z-index: -1;
+        transform: rotate(13deg);
+        @media (min-width: 700px) {
+            top: 500px;
+            left: 40px;
+        }
+        @media (min-width: 1170px) {
+            left: 490px;
+            top: 318px;
+        }
+        @media (max-width: 700px) {
+            right: 22px;
+            top: 335px;
+            transform: rotate(0);
+            img{
+                width: 36px;
+                height: 48px;
+            }
+        }
+    }
+    &__star-two{
+        position: absolute;
+        z-index: -1;
+        transform: rotate(-16deg);
+        img{
+            width: 33.187px;
+            height: 44.731px;
+        }
+        @media (min-width: 700px) {
+            right: 30px;
+            top: 700px;
+        }
+        @media (min-width: 1170px) {
+            right: -39px;
+            top: 182px;
+        }
+        @media (max-width: 700px) {
+            left: -13px;
+            top: 344px;
+            transform: rotate(0);
+            img{
+                width: 26px;
+                height: 36px;
+            }
+        }
+    }
+    &__form{
+        margin-bottom: 10px;
+    }
+    &::after, &::before{
+        position: absolute;
+        font-family: Proxima;
+        font-size: 80px;
+        font-weight: 700;
+        color: transparent;
+        -webkit-text-stroke: 0.5px rgba(252, 255, 255, 0.2);
+        top: 23px;
+    }
+    &::before{
+        content: 'CUTOM BY YOUR OWN';
+        top: 25px;
+        letter-spacing: -0.93px;
+        @media (min-width: 1170px) {
+            left: -250px;
+        }
+        @media (max-width: 1170px) {
+            top: 240px;
+            right: -320px;
+        }
+        @media (max-width: 700px) {
+            display: none;
+        }
+    }
+    &::after{
+        content: 'UNIQUE CLOTHES';
+        letter-spacing: -0.16px;
+        right: 233px;
+        top: 550px;
+        @media (max-width: 1170px) {
+            right: 0;
+            top: -55px;
+        }
+        @media (max-width: 700px) {
+            font-size: 50px;
+            top: -15px;
+            right: -146px;
+        }
+    }
+}

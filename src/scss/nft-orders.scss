@@ -1,0 +1,222 @@
+@import './profile/profile.scss';
+
+.nft-orders-section {
+  .table__title {
+    &-name {
+      width: 22%;
+    }
+    &-crypto {
+      width: 34.8%;
+    }
+    &-status {
+      width: 16.5%;
+    }
+    &-price {
+      width: 14.7%;
+    }
+    &-date {
+    }
+  }
+}
+
+.table__body tr td {
+  padding-top: 20px;
+  padding-bottom: 22px;
+  @media (max-width: $tablet) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.table-nft-order {
+  height: min-content;
+  background-color: $jetBlack;
+  @media (max-width: $tablet) {
+    display: grid;
+    padding: 19px 19px 17px 18px;
+    background-color: $gunmetalGrey;
+    border-radius: 14px;
+    grid-template:
+      'img name'
+      'img date'
+      'address address'
+      'price price'
+      'status status' auto/ 46px auto;
+  }
+  &__nft-img {
+    width: 7.8%;
+    grid-area: img;
+    border-radius: 8px 0px 0px 8px;
+
+    padding-left: 25px;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+    @media (max-width: $tablet) {
+      padding-left: 0;
+      width: 50px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__nft-name {
+    width: 14.2%;
+    grid-area: name;
+    color: $white;
+    font-family: 'Proxima';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    margin-top: 1px;
+    padding-right: 10px;
+    @media (max-width: $tablet) {
+      width: 100%;
+      font-weight: 600;
+      line-height: 1.3125;
+    }
+  }
+  &__crypto-address {
+    width: 33.9%;
+    padding-right: 10px;
+
+    grid-area: address;
+    &-copy {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      padding: 14px 17px 14px 18px;
+      border-radius: 13px;
+      background: $darkGray;
+      &-text {
+        color: $white;
+        font-family: 'Proxima';
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.42857;
+        &::before {
+          content: 'EQBSSl0Xlo3...kkHTmFw5YVYOiWJ.';
+        }
+        @media (max-width: $tablet) {
+          font-size: 12px;
+          line-height: 1.66667;
+
+          &::before {
+            content: 'EQBS...5YVYOiWJ.';
+          }
+        }
+      }
+      &-button {
+        background: none;
+        margin-left: 25px;
+        .icon-copy {
+          @include text-gradient($gradient);
+          width: 17.697px;
+          height: 18px;
+        }
+        @media (max-width: $tablet) {
+          margin-left: 10px;
+        }
+      }
+      @media (max-width: $tablet) {
+        padding: 8px 12px 8px 11px;
+        margin-right: 0px;
+        border-radius: 8px;
+      }
+    }
+    @media (max-width: $tablet) {
+      width: 100%;
+      margin-top: 17px;
+      padding-top: 10px;
+      padding-bottom: 11px;
+      border-top: 1px solid;
+      border-image: linear-gradient(
+        95deg,
+        rgba(104, 201, 255, 0.1) 9.27%,
+        rgba(209, 181, 255, 0.1) 84.06%
+      );
+      border-image-slice: 1;
+      border-bottom: 1px solid;
+      &:before {
+        content: 'Adress';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.07143;
+      }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__status {
+    width: 16%;
+    grid-area: status;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 10px;
+    span {
+      width: fit-content;
+      display: block;
+      padding: 6px 22px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    &-success {
+      background-color: rgba(197, 255, 152, 0.1);
+      color: $lightLimeGreen;
+      font-family: 'Proxima';
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.75;
+    }
+    @media (max-width: $tablet) {
+      width: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+      span {
+        margin-right: 0;
+        width: auto;
+      }
+    }
+  }
+  &__price {
+    width: 14.5%;
+    grid-area: price;
+    color: $white;
+    font-family: 'Proxima';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.75;
+    padding-right: 10px;
+    @media (max-width: $tablet) {
+      width: 100%;
+      padding-top: 11px;
+      padding-bottom: 15px;
+      &::before {
+        content: 'Price';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.07143;
+        margin-bottom: 5px;
+      }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__date {
+    grid-area: date;
+    border-radius: 0px 8px 8px 0px;
+    color: $lightBlueGrey;
+    font-family: 'Proxima';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    padding-right: 10px;
+    @media (max-width: $tablet) {
+      width: 100%;
+      font-size: 14px;
+      line-height: 1.60714;
+    }
+  }
+}
