@@ -7,7 +7,7 @@ export default class ContactMe {
       this.form = $('.contact-me__form')
   }
   validation(){
-    //Кастумный метод для проверки почты с доменами на кирилице\\
+    ///Кастумный метод для проверки почты с доменами на кирилице\\
     $.validator.addMethod("castumEmail", function(value, element) {
         var regex = /^[a-zA-Z0-9а-яА-ЯёЁ_.-]+@[a-zA-Z0-9а-яА-ЯёЁ.-]+\.[a-zA-Zа-яА-ЯёЁ]{2,}$/;
         return this.optional(element) || regex.test(value);
