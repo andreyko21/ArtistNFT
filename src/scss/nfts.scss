@@ -1,0 +1,360 @@
+@import "./style.scss";
+@import "./components/name";
+
+@font-face {
+   font-family: ManropeRegular;
+   font-display: swap;
+   src: url("../fonts/ManropeRegular.woff2") format("woff2");
+   font-weight: 400;
+   font-style: normal;
+}
+@font-face {
+   font-family: ProximaBold;
+   font-display: swap;
+   src: url("../fonts/ProximaBold.woff2") format("woff2");
+   font-weight: 700;
+   font-style: normal;
+}
+@font-face {
+   font-family: ProximaExtraBold;
+   font-display: swap;
+   src: url("../fonts/ProximaExtraBold.woff2") format("woff2");
+   font-weight: 800;
+   font-style: normal;
+}
+@font-face {
+   font-family: ProximaLight;
+   font-display: swap;
+   src: url("../fonts/ProximaLight.woff2") format("woff2");
+   font-weight: 300;
+   font-style: normal;
+}
+@font-face {
+   font-family: ProximaRegular;
+   font-display: swap;
+   src: url("../fonts/ProximaRegular.woff2") format("woff2");
+   font-weight: 400;
+   font-style: normal;
+}
+@font-face {
+   font-family: ProximaSemibold;
+   font-display: swap;
+   src: url("../fonts/ProximaSemibold.woff2") format("woff2");
+   font-weight: 600;
+   font-style: normal;
+}
+
+.nfts {
+   position: relative;
+
+   &__container {
+   }
+
+   &__row {
+      margin-top: 49px;
+      @media (max-width: 576px) {
+         margin-top: 26px;
+      }
+   }
+
+   &__name {
+      padding: 0;
+      justify-content: center;
+   }
+   &__make,
+   &__circle,
+   &__war,
+   &__star {
+      @media (max-width: 576px) {
+         display: none;
+      }
+   }
+
+   &__blur {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      @media (max-width: 576px) {
+         display: none;
+      }
+   }
+
+   &__title {
+      font-family: ProximaBold;
+      font-size: clamp(36px, 5vw, 64px);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 65px;
+      max-width: 569px;
+      width: 100%;
+      text-align: center;
+      margin-top: 0px;
+      @media (max-width: 576px) {
+         line-height: 40px;
+         max-width: 331px;
+         margin-bottom: 16px;
+      }
+   }
+
+   &__text {
+      @media (max-width: 576px) {
+         text-align: center;
+      }
+   }
+
+   &__pagination {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 482px;
+      width: 100%;
+      margin: 54px auto 64px;
+
+      @media (max-width: 576px) {
+         margin: 28px auto 56px;
+      }
+
+      &-list {
+         display: flex;
+         justify-content: space-between;
+         max-width: 276px;
+         width: 100%;
+         @media (max-width: 576px) {
+            max-width: 236px;
+         }
+      }
+      &-number {
+         border-radius: 10px;
+         width: 48px;
+         height: 48px;
+         background: $darkGray;
+         color: $whileBlue;
+         font-family: Proxima Nova;
+         font-size: 20px;
+         font-weight: 700;
+         line-height: 30px;
+         padding-top: 10px;
+         text-align: center;
+         &_active {
+            background: $defaultGradient;
+            color: $jetBlack;
+         }
+
+         @media (max-width: 576px) {
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            line-height: 26px;
+            padding-top: 8px;
+         }
+      }
+      &-prev,
+      &-next {
+         border-radius: 10px;
+         background: $darkGray;
+         border: 2px solid $steelGray;
+         width: 48px;
+         height: 48px;
+         @media (max-width: 576px) {
+            width: 40px;
+            height: 40px;
+         }
+      }
+   }
+
+   &__arrow-rigth {
+      &_unlock {
+         pointer-events: none;
+         cursor: default;
+      }
+   }
+}
+
+.card {
+   margin-top: 50px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
+   grid-column-gap: 31px;
+   grid-row-gap: 22px;
+   margin-left: 0px;
+   justify-content: center;
+   @media (max-width: 767.98px) {
+      margin-left: 0px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   }
+   @media (max-width: 576px) {
+      grid-template-columns: repeat(2, minmax(163px, 1fr));
+      grid-column-gap: 20px;
+      grid-row-gap: 16px;
+      margin-top: 44px;
+   }
+   @media (max-width: 374.98px) {
+      grid-template-columns: repeat(1, minmax(163px, 1fr));
+      grid-column-gap: 20px;
+      grid-row-gap: 16px;
+      margin-top: 44px;
+   }
+
+   &__item {
+      max-width: 350px;
+      width: 100%;
+      border-radius: 12px;
+      background: $darkGray;
+      @media (max-width: 767.98px) {
+         max-width: 100%;
+      }
+
+      // @media (max-width: 576px){
+      //    max-width: 163px;
+      // }
+   }
+
+   &__title {
+      font-family: ProximaBold;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 26.5px;
+      letter-spacing: 1.8px;
+      background: $defaultGradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 17px 0 18px 20px;
+      @media (max-width: 576px) {
+         display: none;
+      }
+      &_sub {
+         display: none;
+         @media (max-width: 576px) {
+            margin: 8px 0 0px 11px;
+            display: block;
+            font-size: 12px;
+            line-height: 17px;
+            letter-spacing: 1.2px;
+         }
+      }
+   }
+
+   &__img {
+      background-image: url("../images/school/Frame.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 350px;
+      padding: 40px 53px 70px;
+      @media (max-width: 767.98px) {
+         padding: 20px 35px;
+         height: 163px;
+      }
+      @media (max-width: 576px) {
+         border-radius: 12px;
+         padding: 20px 27px 30px;
+      }
+      @media (max-width: 374.98px) {
+         padding: 5%;
+      }
+
+      display: flex;
+      justify-content: center;
+
+      img {
+         max-width: 264px;
+         width: 100%;
+         height: 100%;
+         border-radius: 50%;
+         object-fit: cover;
+         @media (max-width: 767.98px) {
+            max-width: 200px;
+         }
+      }
+   }
+
+   &__sub-title {
+      font-family: ProximaBold;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 30px;
+      color: $whileBlue;
+      margin: 16px 24px 0;
+      @media (max-width: 767.98px) {
+         margin: 16px 11px 0;
+      }
+      @media (max-width: 576px) {
+         font-size: 13px;
+         line-height: 22px;
+         margin: 0px 11px 0;
+      }
+   }
+   &__text {
+      font-family: ProximaRegular;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      max-width: 257px;
+      width: 100%;
+      margin-left: 24px;
+      color: $secondary;
+      @media (max-width: 767.98px) {
+         margin-left: 11px;
+      }
+      @media (max-width: 576px) {
+         max-width: 136px;
+         font-size: 10px;
+         line-height: 15.5px;
+      }
+   }
+
+   &__line {
+      display: inline-block;
+      max-width: 310px;
+      width: 100%;
+      height: 1px;
+      opacity: 0.05;
+      background: $whileBlue;
+      margin: 20px auto 13px;
+      @media (max-width: 576px) {
+         display: none;
+      }
+   }
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 21px 17px 24px;
+      @media (max-width: 767.98px) {
+         flex-direction: column;
+         align-items: flex-start;
+         margin: 8px 11px 10px;
+      }
+   }
+
+   &__price {
+      font-family: ProximaBold;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 33.5px;
+      color: $whileBlue;
+      @media (max-width: 767.98px) {
+         text-align: left;
+         margin-bottom: 7px;
+      }
+      @media (max-width: 576px) {
+         font-size: 14px;
+         line-height: 24px;
+      }
+   }
+   &__btn {
+      max-width: 116px;
+      width: 100%;
+      height: 48px;
+      button {
+         font-size: 14px;
+      }
+      @media (max-width: 767.98px) {
+         max-width: 100%;
+         height: 34px;
+      }
+   }
+}
