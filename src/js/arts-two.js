@@ -1,33 +1,27 @@
 import $ from 'jquery';
 import Header from './modules/header';
-import { collection, getDocs, doc, setDoc} from "firebase/firestore";
+import { collection, getDocs, doc, setDoc, addDoc} from "firebase/firestore";
 import firebase from './modules/firebase';
 import LoadArts from './modules/loadArts';
 import CustomBy from './modules/customBy';
 
-let obj =  {
-  name: "Losww Angwwwwww334eles",
-  state: "wwCA",
-  country: "USwwwwA"
-}
+
 class ArtsOne {
   constructor() {
     this.header = new Header();
-    this.db = firebase.getFirestore();
     this.customBy = new CustomBy();
-    this.auth = firebase.getAuth();
+    this.db = firebase.getFirestore();
     this.prolax();
     this.firebase();
-    this.oneItem();
+    this.setCardHover();
   }
   async firebase() {
     const querySnapshot = await getDocs(collection(this.db, "arts"));
     querySnapshot.forEach((doc) => {
       const load = new LoadArts(doc.data(), doc.id);
     });
-    await setDoc(doc(this.db, "customBy",this.auth.currentUser.email ),obj);
   }
-  oneItem(){
+  setCardHover(){
     $('.cards').on('click mouseenter', '.one-card', (event) => {
       $('.active').removeClass('active');
       const clickedElement = $(event.currentTarget);
