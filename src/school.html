@@ -8,13 +8,13 @@
       <main class="page">
          <section class="designer">
             <div class="designer__container">
-               <p class="designer__bg-text">CUTOM BY YOUR OWN</p>
+               <p class="designer__bg-text designer__bg-text_top">CUTOM BY YOUR OWN</p>
                <div class="designer__content">
                   <h1 class="designer__content-title">Register to be a designer</h1>
                   <p class="designer__content-text">Indulgence announcing uncommonly met she continuing two unpleasing
                      terminated</p>
                   <div class="designer__content-link">
-                     <a href="#" class="btn"><span>Sign up</span></a>
+                     <a href="sign.html" class="btn"><span>Sign up</span></a>
                   </div>
                </div>
                <div class="designer__box">
@@ -29,7 +29,8 @@
                   <img class="designer__box-star designer__box-star_top" src="images/svg/star.svg" alt="star">
                   <img class="designer__box-star designer__box-star_bottom" src="images/svg/star.svg" alt="star">
                </div>
-               <p class="designer__bg-subtext">UNIQUE CLOTHES</p>
+               <p class="designer__bg-text designer__bg-text_sub">UNIQUE CLOTHES</p>
+
 
             </div>
             <div class="designer__blur">
@@ -89,28 +90,36 @@
             </div>
          </section>
          <section class="artist">
-            <!-- <div class="artist__blur">
+            <div class="artist__blur">
                <img src="images/school/SchoolArtistBlur.svg" alt="blur">
-            </div> -->
+            </div>
             <div class="artist__container">
                <div class="artist__row">
-                  <p class="artist__bg-text artist__bg-text_make">MAKE ART</p>
-                  <div class="artist__star">
-                     <img src="images/svg/star.svg" alt="star">
-                  </div>
-                  <div class="artist__name">
-                     <h2 class="artist__title">Artist School Fees</h2>
-                     <p class="artist__text">Indulgence announcing uncommonly met she continuing two unpleasing
-                        terminated</p>
-                  </div>
-                  <div class="artist__diamante artist__diamante_top">
-                     <picture class="contact-me__bg-picture contact-me__bg-picture_two">
-                        <source srcset="images/main/diamond-two.webp" type="image/webp">
-                        <img src="images/main/diamond-two.png" alt="diamante">
-                     </picture>
-                  </div>
-                  <p class="artist__bg-text artist__bg-text_war">NOT WAR</p>
+                  @@include('html/name.html',{
+                  'make': 'MAKE ART',
+                  'title': 'Artist School Fees',
+                  'text': 'Indulgence announcing uncommonly met she continuing two unpleasing terminated',
+                  'war': ' NOT WAR'
+                  })
                </div>
+               @@include('html/subscription.html', {
+               'btnWeek': 'One week',
+               'btnIndividual': 'Individual',
+               'btnMonth': 'Month',
+               'week': '1 WEEK',
+               'weekImg': 'images/school/accessHand.png',
+               'weekTitle': 'One week access',
+               'weekText': 'Purchasing this access you get',
+               'price': '$250.99',
+               'individual' : 'Individual',
+               'individualImg': 'images/school/hand.png',
+               'individualTitle': 'Individual lesson',
+               'individualText': 'Purchasing this access you get',
+               'month': 'MONTH',
+               'monthImg': 'images/school/monthAccesHand.png',
+               'monthTitle': 'One month access',
+               'monthText': 'Purchasing this access you get',
+               })
 
 
 
@@ -121,7 +130,7 @@
 
 
 
-            
+
 
 
 
@@ -130,7 +139,76 @@
             </div>
 
          </section>
+         <section class="register">
+            <div class="register__container">
+               <div class="contact-me">
+                  <h2 class="contact-me__info">Register to be a designer</h2>
+                  <div class="register__already">
+                     <p class="register__text"><span>5/10</span> already tooken!</p>
+                  </div>
 
+                  <form id="contact-me-form" class="contact-me__form">
+                     <div class="input-block">
+                        <label class="input-block__label" for="input-name">Name</label>
+                        <input class="input-block__input" type="text" id="input-name" name="name"
+                           placeholder="Your name" autocomplete="off" />
+                        <div class="input-block__error contact-me__error-name"></div>
+                     </div>
+                     <div class="input-block">
+                        <label class="input-block__label" for="input-email">Mail</label>
+                        <input class="input-block__input" type="text" id="input-email" name="email"
+                           placeholder="Your mail" autocomplete="off" />
+                        <div class="input-block__error contact-me__error-mail"></div>
+                     </div>
+                     <div class="input-block input-block_textarea">
+                        <label class="input-block__label" for="textarea">Design preferences</label>
+                        <textarea type="text" class="input-block__input contact-me__question" id="textarea"
+                           placeholder="Your comment" name="question" id="" cols="30" rows="10"></textarea>
+                        <div class="input-block__error contact-me__error-question"></div>
+                     </div>
+                     <label class="input-block__label" for="textarea">Choose your plan</label>
+                     <div class="register__plan">
+                        <button class="btn"><span>One week</span></button>
+                        <button class="btn"><span>Individual</span></button>
+                        <button class="btn"><span>One month</span></button>
+                     </div>
+
+                     <button class="btn contact-me__btn"><span>Sign up</span></button>
+                     <div class="contact-me__i-agree">
+                        @@include('html/checkbox.html', {
+                        'class': 'contact-me__i-agree-checkbox',
+                        'id': 'contact-me-checkbox'
+                        })
+                        <label for="contact-me-checkbox">
+                           I agree with
+                           <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
+                           and
+                           <a href="#" class="contact-me__i-agree-link">Terms of use</a>
+                        </label>
+                        <div class="contact-me__error contact-me__i-agree-error"></div>
+                     </div>
+                  </form>
+                  <div class="contact-me__bg-imgage">
+                     <picture class="contact-me__bg-picture contact-me__bg-picture_one">
+                        <source srcset="../images/main/diamond-one.webp" type="image/webp">
+                        <img src="../images/main/diamond-one.png" alt="">
+                     </picture>
+                     <picture class="contact-me__bg-picture contact-me__bg-picture_two">
+                        <source srcset="../images/main/diamond-two.webp" type="image/webp">
+                        <img src="../images/main/diamond-two.png" alt="">
+                     </picture>
+                     <picture class="contact-me__bg-picture contact-me__bg-picture_three">
+                        <source srcset="../images/main/diamond-three.webp" type="image/webp">
+                        <img src="../images/main/diamond-three.png" alt="">
+                     </picture>
+                     <picture class="contact-me__bg-picture contact-me__bg-picture_four">
+                        <source srcset="../images/main/cube.webp" type="image/webp">
+                        <img src="../images/main/cube.png" alt="">
+                     </picture>
+                  </div>
+               </div>
+            </div>
+         </section>
       </main>
       @@include('html/footer.html')
    </div>
