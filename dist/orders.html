@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <style>.loaded { opacity: 1 }</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/orders.min.css">
+  <title>Profile</title>
+</head>
+
+  <body>
+    <div class="wrapper-2">
+      <header class="profile-header">
+  <div class="profile-header__container">
+    <a href="/index.html" class="logo profile-header__logo">
+      <img src="/images/svg/logo.svg" alt="logo">
+    </a>
+    <button class="burger-menu-button profile-header__burger-menu-button">
+      <div class="burger-menu-button__icon">
+        <span></span>
+      </div>
+    </button>
+    <button class="log-out profile-header__log-out">
+      Log out
+      <img src="/images/svg/logOut.svg" alt="Log Out">
+    </button>
+  </div>
+</header>
+
+      <main class="page">
+        <div data-observ></div>
+
+        <div class="page__container">
+          <sidebar class="profile-sidebar">
+  <div class="profile-sidebar__menu">
+    <a class="profile-sidebar__menu-item" href="/messages.html">
+      <span class="icon icon-messages"></span>
+      <p class="profile-sidebar__menu-item-text">Messages</p>
+    </a>
+    <a class="profile-sidebar__menu-item profile-sidebar__menu-item_active" href="/orders.html">
+      <span class="icon icon-orders"></span>
+
+      <p class="profile-sidebar__menu-item-text">Orders</p>
+    </a>
+    <a class="profile-sidebar__menu-item @@nftOrdersClass" href="/nft-orders.html">
+      <span class="icon icon-nft-orders"></span>
+
+      <p class="profile-sidebar__menu-item-text">NFT Orders</p>
+    </a>
+    <a class="profile-sidebar__menu-item" href="/users.html">
+      <span class="icon icon-users"></span>
+      <p class="profile-sidebar__menu-item-text">Users</p>
+    </a>
+  </div>
+  <div class="profile-sidebar__footer">
+    <div class="log-out profile-sidebar__log-out">
+      Log out
+      <img src="/images/svg/logOut.svg" alt="Log Out">
+    </div>
+    <hr class="profile-sidebar__line">
+    <p class="profile-sidebar__all-rights">All rights reserved © 2022</p>
+  </div>
+</sidebar>
+<div class="silider-background"></div>
+
+          <div class="page__main"><section class="orders-section table-section">
+  <div class="table-section__table table">
+    <h1 class="table-section__title">My orders</h1>
+    <table class="table-section__table table-header">
+      <tr class="table__titles">
+        <th class="table__title table__title-type">Type of item</th>
+        <th class="table__title table__title-color">Color</th>
+        <th class="table__title table__title-email">E-mail</th>
+        <th class="table__title table__title-size">Size</th>
+        <th class="table__title table__title-comment">Comment</th>
+        <th class="table__title table__title-address">Delivery address</th>
+        <th class="table__title table__title-action">Action</th>
+      </tr>
+    </table>
+    <div class="table__scroll-container">
+      <table class="table-body table__body">
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+        <tr class="table-order">
+          <td class="table-order__type">T-SHIRT</td>
+          <td class="table-order__color"><span></span></td>
+          <td class="table-order__email">emailofcustomer@gmail.com</td>
+          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__comment">
+            <p class="table-order__comment-text"></p>
+            <button class="show-more-link table-order__comment-button">
+              Show more
+            </button>
+          </td>
+          <td class="table-order__address">
+            <p class="table-order__address-text"></p>
+            <button class="show-more-link">Show more</button>
+          </td>
+          <td class="table-order__action">
+            <button class="btn table-order__action-button">
+              <span>Message</span>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+</div>
+        </div>
+      </main>
+    </div>
+    <script src="js/profile.min.js"></script>
+  </body>
+</html>

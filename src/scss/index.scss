@@ -163,11 +163,13 @@ body {
     @media (max-width: 400px) {
       max-width: none;
     }
-    .button {
-      padding-left: 37px;
-      padding-right: 36px;
+    .btn {
+      padding: 18px 22px 19px 22px;
       @media (max-width: 400px) {
         font-size: 15px;
+      }
+      &_black {
+        padding: 18px 36px 19px 37px;
       }
       &:first-child {
         @media (max-width: 400px) {
@@ -184,6 +186,7 @@ body {
     }
   }
   &__img-container {
+    pointer-events: none;
     position: absolute;
     bottom: 0;
     right: 0;
