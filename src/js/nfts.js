@@ -51,9 +51,8 @@ function getCardNft(product) {
    cardItems.forEach((item) => {
       item.addEventListener('click', (e) => {
          const id = e.currentTarget.id;
-         console.log(id);
-      
-         // window.location.href = `.html?id=${id}`;
+         console.log(id);     
+         window.location.href = `product.html?id=${id}`;
       });
    });
 }

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', { 'title': 'Payment', 'srcStyle': 'payment' })
+
+<body>
+   <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+         <section class="payment">
+            <div class="payment__container">
+               <div class="payment__pay">
+                  <h1 class="payment__pay-title"><span>PURCHASE</span></h1>
+                  <h2 class="payment__pay-subtitle">Payment for <span>Name of NFT or art</span></h2>
+                  <div class="payment__pay-switch">
+                     <button class="payment__pay-btn payment__pay-btn_active">Credit card</button>
+                     <button class="payment__pay-btn ">PayPal</button>
+                     <button class="payment__pay-btn ">Crypto</button>
+                  </div>
+                  <form class="payment__pay-form">
+                     <fieldset class="payment__pay-card">
+                        <div class="payment__pay-number">
+                           <label class="payment__pay-label" for="">Card number</label>
+                           <input class="payment__pay-inp" type="text" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="payment__pay-row">
+                           <div class="payment__pay-data">
+                              <label class="payment__pay-label" for="">Date</label>
+                              <input class="payment__pay-inp" type="text" placeholder="01/01">
+                           </div>
+                           <div class="payment__pay-ccv">
+                              <label class="payment__pay-label" for="">CCV</label>
+                              <input class="payment__pay-inp" type="text" placeholder="000">
+                           </div>
+                        </div>
+                        <div class="payment__pay-name">
+                           <label class="payment__pay-label" for="">Name on card</label>
+                           <input class="payment__pay-inp" type="text" placeholder="Ivan Ivanov">
+                        </div>
+
+                        <div class="payment__pay-subbtn">
+                           <button class="btn"><span>Purchase</span></button>
+                        </div>
+
+                        <div class="contact-me__i-agree">
+                           <div class="checkbox contact-me__i-agree-checkbox">
+                              <input type="checkbox" id="contact-me-checkbox" name="checkbox" class="checkbox__input">
+                              <label for="contact-me-checkbox"></label>
+                           </div>
+                           <label for="contact-me-checkbox">
+                              I agree with
+                              <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
+                              and
+                              <a href="#" class="contact-me__i-agree-link">Terms of use</a>
+                           </label>
+                           <div class="contact-me__error contact-me__i-agree-error"></div>
+                        </div>
+                     </fieldset>
+                     <fieldset class="payment__pay-pal hide">
+                        <div class="payment__pay-number">
+                           <label class="payment__pay-label" for="">Card number</label>
+                           <input class="payment__pay-inp" type="text" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="payment__pay-row">
+                           <div class="payment__pay-data">
+                              <label class="payment__pay-label" for="">Date</label>
+                              <input class="payment__pay-inp" type="text" placeholder="01/01">
+                           </div>
+                           <div class="payment__pay-ccv">
+                              <label class="payment__pay-label" for="">CCV</label>
+                              <input class="payment__pay-inp" type="text" placeholder="000">
+                           </div>
+                        </div>
+                        <div class="payment__pay-name">
+                           <label class="payment__pay-label" for="">Name on card</label>
+                           <input class="payment__pay-inp" type="text" placeholder="Ivan Ivanov">
+                        </div>
+
+                        <div class="payment__pay-subbtn">
+                           <button class="btn"><span>Purchase</span></button>
+                        </div>
+
+                        <div class="contact-me__i-agree">
+                           <div class="checkbox contact-me__i-agree-checkbox">
+                              <input type="checkbox" id="contact-me-checkbox" name="checkbox" class="checkbox__input">
+                              <label for="contact-me-checkbox"></label>
+                           </div>
+                           <label for="contact-me-checkbox">
+                              I agree with
+                              <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
+                              and
+                              <a href="#" class="contact-me__i-agree-link">Terms of use</a>
+                           </label>
+                           <div class="contact-me__error contact-me__i-agree-error"></div>
+                        </div>
+                     </fieldset>
+                     <fieldset class="payment__pay-crypto hide">
+                        <p class="payment__pay-text">
+                           To purchase item by crypto you have to send money to this wallet. After 5 minute result will
+                           sent in your mail
+                        </p>
+                        <div class="payment__pay-code">
+                           <p>EQBSSl0Xlo3...kkHTmFw5YVYOiWJ.</p>
+                           <img src="images/svg/copy-fill.svg" alt="copy">
+                        </div>
+                        <div class="payment__pay-email">
+                           <label class="payment__pay-label" for="">Card number</label>
+                           <input class="payment__pay-inp" type="text" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="payment__pay-subbtn">
+                           <button class="btn"><span>Check</span></button>
+                        </div>
+                        <div class="contact-me__i-agree">
+                           <div class="checkbox contact-me__i-agree-checkbox">
+                              <input type="checkbox" id="contact-me-checkbox" name="checkbox" class="checkbox__input">
+                              <label for="contact-me-checkbox"></label>
+                           </div>
+                           <label for="contact-me-checkbox">
+                              I agree with
+                              <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
+                              and
+                              <a href="#" class="contact-me__i-agree-link">Terms of use</a>
+                           </label>
+                           <div class="contact-me__error contact-me__i-agree-error"></div>
+                        </div>
+                     </fieldset>
+                  </form>
+               </div>
+               <div class="payment__info"></div>
+            </div>
+         </section>
+      </main>
+      @@include('html/footer.html')
+   </div>
+   <script src="js/payment.min.js"></script>
+</body>
+
+</html>
