@@ -1,12 +1,35 @@
-@import './index.scss';
+@import './style.scss';
+@import './components/ui/btn.scss';
 @import './components/one-item.scss';
 
+@font-face {
+	font-family: Proxima;
+	font-display: swap;
+	src: url("../fonts/ProximaRegular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Proxima;
+	font-display: swap;
+	src: url("../fonts/ProximaBold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: Manrope;
+    font-display: swap;
+    src: url('../fonts/ManropeRegular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
 
 .page{
-    padding-top: 62px;
+    padding: 61px 0 0 0;
     height: 100%;
     @media (max-width: 700px) {
-        padding-top: 26px;
+        padding: 18px 0 0 0;
     }
 }
 .arts {
@@ -112,7 +135,7 @@
         line-height: normal;
         color: transparent;
         -webkit-text-stroke: 0.5px rgba(252, 255, 255, 0.2);
-        top: 23px;
+        top: 21px;
         @media (max-width: 700px) {
             display: none;
         }
