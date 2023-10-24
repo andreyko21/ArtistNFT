@@ -445,6 +445,12 @@ body {
   animation-timing-function: ease;
   animation-iteration-count: 1;
 }
+.btn:hover:active {
+  transform: scale(1.01);
+}
+.btn:hover:focus {
+  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
+}
 @media (max-width: 700px) {
   .btn {
     font-size: 15px;
@@ -1330,6 +1336,12 @@ body {
   animation-duration: 0.3s;
   animation-timing-function: ease;
   animation-iteration-count: 1;
+}
+.btn:hover:active {
+  transform: scale(1.01);
+}
+.btn:hover:focus {
+  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
 }
 @media (max-width: 700px) {
   .btn {

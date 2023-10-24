@@ -257,6 +257,12 @@ body {
   animation-timing-function: ease;
   animation-iteration-count: 1;
 }
+.btn:hover:active {
+  transform: scale(1.01);
+}
+.btn:hover:focus {
+  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
+}
 @media (max-width: 700px) {
   .btn {
     font-size: 15px;
@@ -1142,6 +1148,12 @@ body {
   animation-duration: 0.3s;
   animation-timing-function: ease;
   animation-iteration-count: 1;
+}
+.btn:hover:active {
+  transform: scale(1.01);
+}
+.btn:hover:focus {
+  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
 }
 @media (max-width: 700px) {
   .btn {
@@ -2149,11 +2161,11 @@ body {
   font-style: normal;
 }
 .page {
-  padding-top: 62px;
+  padding: 62px 0 0 0;
 }
 @media (max-width: 700px) {
   .page {
-    padding-top: 26px;
+    padding: 18px 0 10px 0;
   }
 }
 
@@ -2320,7 +2332,7 @@ body {
   gap: 24px;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  margin-bottom: 65px;
+  margin-bottom: 63px;
 }
 @media (max-width: 1170px) {
   .arts-two__cards {
@@ -2443,9 +2455,6 @@ body {
     height: 36px;
   }
 }
-.arts-two__form {
-  margin-bottom: 10px;
-}
 .arts-two::after, .arts-two::before {
   position: absolute;
   font-family: Proxima;
@@ -2457,7 +2466,7 @@ body {
 }
 .arts-two::before {
   content: "CUTOM BY YOUR OWN";
-  top: 25px;
+  top: 23px;
   letter-spacing: -0.93px;
 }
 @media (min-width: 1170px) {
@@ -2480,7 +2489,7 @@ body {
   content: "UNIQUE CLOTHES";
   letter-spacing: -0.16px;
   right: 233px;
-  top: 550px;
+  top: 547px;
 }
 @media (max-width: 1170px) {
   .arts-two::after {
