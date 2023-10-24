@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/sign.min.css?_v=20231024160141">
+  <link rel="stylesheet" href="css/sign.min.css">
   <title>Authorization</title>
 </head>
 
@@ -39,19 +39,19 @@
 
             <form class="authorization-section__form signIn-form" id="singInForm" autocomplete="off" onsubmit="event.preventDefault();">
               <div class="input-block">
-                <label class="input-block__label" for="email">E-mail</label>
+                <label class="input-block__label" for="email-signIn">E-mail</label>
                 <input class="input-block__input" type="text" id="email-signIn" name="email" placeholder="Your e-mail" autocomplete="off">
                 <div class="input-block__error"></div>
               </div>
 
               <div class="input-block">
-                <label class="input-block__label" for="password">Password</label>
+                <label class="input-block__label" for="password-signIn">Password</label>
                 <input class="input-block__input" type="password" id="password-signIn" name="password" placeholder="Your password" autocomplete="off">
                 <div class="input-block__error"></div>
               </div>
               <div class="authorization-section__error"></div>
               <button class="btn submit-button" type="submit">
-                <span></span>Sign In
+                <span>Sign In</span>
               </button>
               <div class="authorization-section__text-link text-link">
                 <p class="text-link__text">Don’t have account yet?</p>
@@ -76,12 +76,12 @@
                 </div>
               </div>
               <div class="input-block">
-                <label class="input-block__label" for="email">E-mail</label>
+                <label class="input-block__label" for="email-signUp">E-mail</label>
                 <input class="input-block__input" type="text" id="email-signUp" name="email" placeholder="Your e-mail" autocomplete="off">
                 <div class="input-block__error"></div>
               </div>
               <div class="input-block">
-                <label class="input-block__label" for="password">Password</label>
+                <label class="input-block__label" for="password-signUp">Password</label>
                 <input class="input-block__input" type="password" id="password-signUp" name="password" placeholder="Your password" autocomplete="off">
                 <div class="input-block__error"></div>
               </div>
@@ -104,6 +104,6 @@
         </div>
       </main>
     </div>
-    <script src="js/sign.min.js?_v=20231024160141"></script>
+    <script src="js/sign.min.js"></script>
   </body>
 </html>
