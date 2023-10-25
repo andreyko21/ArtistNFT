@@ -18,18 +18,19 @@ export default class CustomBy {
       this.db = firebase.getFirestore();
       this.auth = firebase.getAuth();
       this.color = '';
-      this.changeColor();
       this.validation();
   }
   changeColor(){
     this.radioBtn.each((index, radio) => {
       if (radio.checked) {
         this.color = $(radio).data('color');
+        console.log(this.color)
       }
     });
   }
   async firebase(){
       await getDocs(collection(this.db, "users"));
+      this.changeColor();
       if(this.auth.currentUser){
         addDoc(collection(this.db, "users",this.auth.currentUser.uid, 'orders'),{
           clothes: this.changeItem.eq(0).html(),
