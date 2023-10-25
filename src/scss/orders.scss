@@ -5,22 +5,34 @@
   .table {
     &__title {
       &-type {
-        width: 10%;
+        width: 11.5%;
+        @media (max-width: 1920px) {
+          width: 10.6%;
+        }
       }
       &-color {
         width: 7.1%;
       }
       &-email {
-        width: 21.1%;
+        width: 21.2%;
+        @media (max-width: 1920px) {
+          width: 21.2%;
+        }
       }
       &-size {
-        width: 13%;
+        width: 13.1%;
+        @media (max-width: 1920px) {
+          width: 13.1%;
+        }
       }
       &-comment {
         width: 16%;
       }
       &-address {
-        width: 15.4%;
+        width: 16%;
+        @media (max-width: 1920px) {
+          width: 16%;
+        }
       }
       &-action {
       }

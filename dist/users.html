@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/users.min.css?_v=20231024181050">
+  <link rel="stylesheet" href="css/users.min.css">
   <title>Profile</title>
 </head>
 
@@ -17,14 +17,16 @@
     <a href="/index.html" class="logo profile-header__logo">
       <img src="/images/svg/logo.svg" alt="logo">
     </a>
-    <button class="burger-menu-button profile-header__burger-menu-button">
+    <button class="burger-menu-button profile-header__burger-menu-button" aria-label="Burger Menu Button">
       <div class="burger-menu-button__icon">
         <span></span>
       </div>
     </button>
     <button class="log-out profile-header__log-out">
       Log out
-      <img src="/images/svg/logOut.svg" alt="Log Out">
+      <svg>
+        <use href="/images/svg/Sprite.svg#logOut"></use>
+      </svg>
     </button>
   </div>
 </header>
@@ -57,7 +59,9 @@
   <div class="profile-sidebar__footer">
     <div class="log-out profile-sidebar__log-out">
       Log out
-      <img src="/images/svg/logOut.svg" alt="Log Out">
+      <svg>
+        <use href="/images/svg/Sprite.svg#logOut"></use>
+      </svg>
     </div>
     <hr class="profile-sidebar__line">
     <p class="profile-sidebar__all-rights">All rights reserved © 2022</p>
@@ -76,242 +80,7 @@
       </tr>
     </table>
     <div class="table__scroll-container">
-      <table class="table-body table__body">
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-        <tr class="table-user">
-          <td class="table-user__img">
-            <div class="table-user__img-block">
-              <img src="/images/profile/avatar.svg" alt="Avatar">
-              <span class="online-status online-status_online"></span>
-            </div>
-          </td>
-          <td class="table-user__name">Ivan Ivanov</td>
-          <td class="table-user__email">emailofcustomer@gmail.com</td>
-          <td class="table-user__active">
-            <button class="btn table-user__action-button">Message</button>
-          </td>
-        </tr>
-      </table>
+      <table class="table-body table__body"></table>
     </div>
   </div>
 </section>
@@ -319,6 +88,6 @@
         </div>
       </main>
     </div>
-    <script src="js/users.min.js?_v=20231024181050"></script>
+    <script src="js/users.min.js"></script>
   </body>
 </html>

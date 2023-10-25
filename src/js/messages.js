@@ -1,10 +1,3 @@
-import Header from './modules/profileHeader';
-import firebase from './modules/firebase';
-import { collection, doc, addDoc, getDocs, getDoc } from 'firebase/firestore';
-import $ from 'jquery';
-
-const header = new Header();
-
 class Chat {
   constructor() {
     this.usersListBlock = $('.chat-list__list-users');
@@ -36,8 +29,6 @@ class Chat {
   }
 }
 
-const chat = new Chat();
-
 class Message {
   constructor() {
     this.db = firebase.getFirestore();
@@ -45,26 +36,7 @@ class Message {
     this.usersCollection = collection(this.db, 'users');
     this.Init();
   }
-  async Init() {
-    this.auth.onAuthStateChanged(async (user) => {
-      if (user) {
-        this.user = user;
-        const chatsRefList = await this.GetChatsRefList();
-        for (const chat of chatsRefList) {
-          const chatData = await this.GetChatDataByRef(chat.reference);
-
-          for (const userId of chatData.uid) {
-            if (userId !== this.user.uid) {
-              const userData = await this.GetUserInfo(userId);
-              this.AddChatHtml(userData);
-            }
-          }
-        }
-      } else {
-        console.log('Користувач не автентифікований.');
-      }
-    });
-  }
+  async Init() {}
 
   async GetChatsRefList() {
     const chatsList = [];
@@ -147,3 +119,5 @@ class Message {
   }
 }
 const message = new Message();
+
+const chat = new Chat();

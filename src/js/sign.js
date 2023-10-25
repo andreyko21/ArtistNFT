@@ -6,6 +6,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from 'firebase/auth';
+import { doc, setDoc } from 'firebase/firestore';
 
 class AuthPage {
   constructor() {
@@ -15,6 +16,7 @@ class AuthPage {
     this.SignUpform = $('#singUpForm');
     this.typeAuth = $('#mySwitch');
     this.formErrorBlock = $('.authorization-section__error');
+    this.db = firebase.getFirestore();
     this.Init();
     this.BindEvents();
     this.ValidationSignIn();
@@ -153,7 +155,13 @@ class AuthPage {
         this.SignUpform.find('#email-signUp').val(),
         this.SignUpform.find('#password-signUp').val()
       );
-      window.location.href = '/index.html';
+      await setDoc(doc(this.db, 'users', this.auth.currentUser.uid), {
+        lastActiveTime: null,
+        email: this.SignUpform.find('#email-signUp').val(),
+        firstName: null,
+        lastName: null,
+      });
+      window.location.href = '/messages.html';
     } catch (error) {
       this.SignUpform.find('.authorization-section__error').html(
         this.getErrorMessage(error)
@@ -168,7 +176,7 @@ class AuthPage {
         this.SignInform.find('#email-signIn').val(),
         this.SignInform.find('#password-signIn').val()
       );
-      window.location.href = '/index.html';
+      window.location.href = '/messages.html';
     } catch (error) {
       this.formErrorBlock.html(this.getErrorMessage(error));
     }
