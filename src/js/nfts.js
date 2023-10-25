@@ -52,7 +52,7 @@ function getCardNft(product) {
       item.addEventListener('click', (e) => {
          const id = e.currentTarget.id;
          console.log(id);     
-         window.location.href = `product.html?id=${id}`;
+         window.location.href = `product-arts.html?id=${id}`;
       });
    });
 }

@@ -1,6 +1,6 @@
 @import "./style.scss";
 @import "./components/contact-me";
-@import "./components/ui/checkbox.scss";
+@import "./components/ui/checkbox";
 
 @font-face {
    font-family: ManropeRegular;
@@ -145,17 +145,22 @@
             font-weight: 700;
             line-height: clamp(20px, 3vw, 24px);
             color: $jetBlack;
-            animation: slide-in-left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: slide-in-left 0.3s linear backwards;
          }
       }
-
       &-form {
          margin-top: 21px;
          max-width: 410px;
          width: 100%;
+         overflow: hidden;
          @media (max-width: 767.98px) {
             margin: 21px auto 0;
          }
+      }
+      &-card,
+      &-pal,
+      &-crypto {
+         animation: slide-in-right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
       }
 
       &-number,
@@ -188,6 +193,7 @@
          font-weight: 400;
          line-height: 21px;
          opacity: 0.6;
+         border: 1px solid transparent;
       }
 
       &-row {
@@ -339,12 +345,27 @@
 
 .hide {
    display: none;
-   animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+   animation: slide-in-right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.error {
+   border: 1px solid red;
+}
+.contact-me__i-agree {
+   @media (max-width: 576px) {
+      label {
+         font-size: 14px;
+         a {
+            font-weight: 600;
+            text-decoration-line: underline;
+         }
+      }
+   }
 }
 
 @keyframes slide-in-left {
    0% {
-      transform: translateX(-10px);
+      transform: translateX(-0px);
       opacity: 0;
    }
    100% {

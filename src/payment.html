@@ -16,29 +16,29 @@
                      <button class="payment__pay-btn ">PayPal</button>
                      <button class="payment__pay-btn ">Crypto</button>
                   </div>
-                  <form class="payment__pay-form">
-                     <fieldset class="payment__pay-card">
+                  <div class="payment__pay-form">
+                     <form class="payment__pay-card payment__form ">
                         <div class="payment__pay-number">
-                           <label class="payment__pay-label" for="">Card number</label>
-                           <input class="payment__pay-inp" type="text" placeholder="0000 0000 0000 0000">
+                           <label class="payment__pay-label" for="number">Card number</label>
+                           <input class="payment__pay-inp number" id="number" type="text" placeholder="0000 0000 0000 0000">
                         </div>
                         <div class="payment__pay-row">
                            <div class="payment__pay-data">
-                              <label class="payment__pay-label" for="">Date</label>
-                              <input class="payment__pay-inp" type="text" placeholder="01/01">
+                              <label class="payment__pay-label" for="data">Date</label>
+                              <input class="payment__pay-inp data" id="data" type="text" placeholder="01/01"  autocomplete="username">
                            </div>
                            <div class="payment__pay-ccv">
-                              <label class="payment__pay-label" for="">CCV</label>
-                              <input class="payment__pay-inp" type="text" placeholder="000">
+                              <label class="payment__pay-label" for="cvc-one">CCV</label>
+                              <input class="payment__pay-inp cvc" id="cvc-one" type="password" placeholder="000" autocomplete="current-password">
                            </div>
                         </div>
                         <div class="payment__pay-name">
-                           <label class="payment__pay-label" for="">Name on card</label>
-                           <input class="payment__pay-inp" type="text" placeholder="Ivan Ivanov">
+                           <label class="payment__pay-label" for="name">Name on card</label>
+                           <input class="payment__pay-inp name" id="name" type="text" placeholder="Ivan Ivanov">
                         </div>
 
                         <div class="payment__pay-subbtn">
-                           <button class="btn"><span>Purchase</span></button>
+                           <button class="btn submit"><span>Purchase</span></button>
                         </div>
 
                         <div class="contact-me__i-agree">
@@ -54,29 +54,29 @@
                            </label>
                            <div class="contact-me__error contact-me__i-agree-error"></div>
                         </div>
-                     </fieldset>
-                     <fieldset class="payment__pay-pal hide">
+                     </form>
+                     <form class="payment__pay-pal hide">
                         <div class="payment__pay-number">
-                           <label class="payment__pay-label" for="">Card number</label>
-                           <input class="payment__pay-inp" type="text" placeholder="0000 0000 0000 0000">
+                           <label class="payment__pay-label" for="number-two">Card number</label>
+                           <input class="payment__pay-inp number" id="number-two" type="text" placeholder="0000 0000 0000 0000">
                         </div>
                         <div class="payment__pay-row">
                            <div class="payment__pay-data">
-                              <label class="payment__pay-label" for="">Date</label>
-                              <input class="payment__pay-inp" type="text" placeholder="01/01">
+                              <label class="payment__pay-label" for="data-two">Date</label>
+                              <input class="payment__pay-inp data" id="data-two" type="text" placeholder="01/01">
                            </div>
                            <div class="payment__pay-ccv">
-                              <label class="payment__pay-label" for="">CCV</label>
-                              <input class="payment__pay-inp" type="text" placeholder="000">
+                              <label class="payment__pay-label" for="cvc-two">CCV</label>
+                              <input class="payment__pay-inp cvc" id="cvc-two" type="text" placeholder="000">
                            </div>
                         </div>
                         <div class="payment__pay-name">
-                           <label class="payment__pay-label" for="">Name on card</label>
-                           <input class="payment__pay-inp" type="text" placeholder="Ivan Ivanov">
+                           <label class="payment__pay-label " for="name-two">Name on card</label>
+                           <input class="payment__pay-inp name" id="name-two" type="text" placeholder="Ivan Ivanov">
                         </div>
 
                         <div class="payment__pay-subbtn">
-                           <button class="btn"><span>Purchase</span></button>
+                           <button class="btn submit"><span>Purchase</span></button>
                         </div>
 
                         <div class="contact-me__i-agree">
@@ -92,8 +92,8 @@
                            </label>
                            <div class="contact-me__error contact-me__i-agree-error"></div>
                         </div>
-                     </fieldset>
-                     <fieldset class="payment__pay-crypto hide">
+                     </form>
+                     <form class="payment__pay-crypto hide payment__form">
                         <p class="payment__pay-text">
                            To purchase item by crypto you have to send money to this wallet. After 5 minute result will
                            sent in your mail
@@ -103,11 +103,11 @@
                            <img src="images/svg/copy-fill.svg" alt="copy">
                         </div>
                         <div class="payment__pay-email">
-                           <label class="payment__pay-label" for="">Card number</label>
-                           <input class="payment__pay-inp" type="text" placeholder="0000 0000 0000 0000">
+                           <label class="payment__pay-label" for="email-one">E-mail</label>
+                           <input class="payment__pay-inp email" id="email-one" type="email" placeholder="Your e-mail">
                         </div>
                         <div class="payment__pay-subbtn">
-                           <button class="btn"><span>Check</span></button>
+                           <button class="btn submit"><span>Check</span></button>
                         </div>
                         <div class="contact-me__i-agree">
                            <div class="checkbox contact-me__i-agree-checkbox">
@@ -122,8 +122,8 @@
                            </label>
                            <div class="contact-me__error contact-me__i-agree-error"></div>
                         </div>
-                     </fieldset>
-                  </form>
+                     </form>
+                  </div>
                </div>
                <div class="payment__info"></div>
             </div>

@@ -1127,6 +1127,14 @@ body {
     left: -17px;
   }
 }
+.name__bg-text_make_pricing {
+  top: 94px;
+}
+@media (max-width: 1024px) {
+  .name__bg-text_make_pricing {
+    display: none;
+  }
+}
 .name__bg-text_war {
   position: absolute;
   top: 47px;
@@ -1139,6 +1147,14 @@ body {
     right: 1px;
   }
 }
+.name__bg-text_war_pricing {
+  top: 94px;
+}
+@media (max-width: 1024px) {
+  .name__bg-text_war_pricing {
+    display: none;
+  }
+}
 .name__star {
   position: absolute;
   left: clamp(280px, 27vw, 390px);
@@ -1147,6 +1163,16 @@ body {
   .name__star {
     top: -16px;
     left: 20px;
+  }
+}
+.name__star_pricing {
+  top: 47px;
+}
+@media (max-width: 576px) {
+  .name__star_pricing {
+    top: 5px;
+    left: auto;
+    right: 0px;
   }
 }
 .name__title {
@@ -1164,6 +1190,18 @@ body {
     text-align: left;
     margin: 22px 0 2px;
     line-height: 34px;
+  }
+}
+.name__title_pricing {
+  font-size: clamp(36px, 5vw, 64px);
+  max-width: 569px;
+  width: 100%;
+  line-height: 65px;
+}
+@media (max-width: 576px) {
+  .name__title_pricing {
+    line-height: 40px;
+    max-width: 270px;
   }
 }
 .name__text {
@@ -1195,12 +1233,20 @@ body {
     right: 80px;
   }
 }
+.name__circle_pricing {
+  top: 192px;
+}
+@media (max-width: 576px) {
+  .name__circle_pricing {
+    top: 192px;
+    right: 20px;
+  }
+}
 
 .subscription {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 360px));
   gap: 20px;
-  margin-top: 52px;
 }
 @media (min-width: 1024px) and (max-width: 1280px) {
   .subscription {
@@ -1217,13 +1263,11 @@ body {
 }
 @media (max-width: 375px) {
   .subscription {
-    margin: 5px auto 0;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   }
 }
 @media (max-width: 374.98px) {
   .subscription {
-    margin: 5px auto 0;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 }
@@ -1258,6 +1302,7 @@ body {
   max-width: 350px;
   width: 100%;
   background: #212426;
+  border-radius: 12px;
   transition: 0.3s ease-in-out;
 }
 .subscription__block_active {

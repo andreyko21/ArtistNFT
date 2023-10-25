@@ -1,0 +1,61 @@
+@import "./style.scss";
+@import "./components/name";
+@import "./components/subscription";
+
+.pricing {
+   position: relative;
+
+   &__blur {
+      &-one {
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: -1;
+         @media (max-width: 576px) {
+            display: none;
+         }
+      }
+      &-two {
+         position: absolute;
+         top: 0;
+         right: 0;
+         z-index: -1;
+      }
+   }
+
+   &__diamond {
+      &-one {
+         position: absolute;
+         top: 115px;
+         left: 0;
+         z-index: -1;
+         @media (max-width: 767.98px) {
+            display: none;
+         }
+      }
+      &-two {
+         position: absolute;
+         top: 145px;
+         right: 0;
+         z-index: -1;
+         @media (max-width: 767.98px) {
+            display: none;
+         }
+      }
+
+   }
+
+   &__name{
+      padding-top: 46px;
+      @media (max-width: 576px) {
+         padding: 0px 0 0;
+      }
+   }
+
+   &__subscription{
+      margin: 34px 0 51px  15px;
+      @media (max-width: 1439.98px) {
+         margin: 34px 0 34px  0;
+      }
+   }
+}

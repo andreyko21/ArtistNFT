@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', { 'title': 'Pricing', 'srcStyle': 'pricing' })
+
+<body>
+   <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+         <section class="pricing">
+            <div class="pricing__container">
+               <div class="pricing__blur">
+                  <div class="pricing__blur-one">
+                     <img src="images/svg/pricingBlur1.svg" alt="blur">
+                  </div>
+                  <div class="pricing__blur-two">
+                     <img src="images/svg/pricingBlur2.svg" alt="blur">
+                  </div>
+               </div>
+               <div class="pricing__name">
+                  @@include('html/name.html',{
+                  'make': 'MAKE ART',
+                  'title': 'Get the premium access',
+                  'text': 'Indulgence announcing uncommonly met she continuing two unpleasing terminated',
+                  'war': ' NOT WAR',
+                  'class': 'name__title_pricing',
+                  'class-make': 'name__bg-text_make_pricing',
+                  'class-text': 'name__text_pricing',
+                  'class-war': 'name__bg-text_war_pricing',
+                  'class-star': 'name__star_pricing',
+                  'class-circle': 'name__circle_pricing',
+
+                  
+
+                  })
+               </div>
+               <div class="pricing__subscription">
+                  @@include('html/subscription.html', {
+                     'btnWeek': 'One week',
+                     'btnIndividual': 'Year',
+                     'btnMonth': 'Month',
+                     'week': '1 WEEK',
+                     'weekImg': 'images/pricing/1.png',
+                     'weekTitle': 'One week access',
+                     'weekText': 'Purchasing this access you get',
+                     'price': '$250.99',
+                     'individual' : 'YEAR',
+                     'individualImg': 'images/pricing/2.png',
+                     'individualTitle': 'One year access',
+                     'individualText': 'Purchasing this access you get',
+                     'month': 'MONTH',
+                     'monthImg': 'images/pricing/3.png',
+                     'monthTitle': 'One month access',
+                     'monthText': 'Purchasing this access you get',
+                     'name-btn': 'Purchase',
+                     })
+               </div>
+               <div class="pricing__diamond">
+                  <div class="pricing__diamond-one">
+                     <picture>
+                        <source srcset="images/pricing/diamond1.webp" type="image/webp">
+                        <img src="images/pricing/diamond1.png" alt="diamond">
+                     </picture>
+                  </div>
+                  <div class="pricing__diamond-two">
+                     <picture>
+                        <source srcset="images/pricing/diamond.webp" type="image/webp">
+                        <img src="images/pricing/diamond.png" alt="diamond">
+                     </picture>
+                  </div>
+               </div>
+               
+            </div>
+         </section>
+      </main>
+      @@include('html/footer.html')
+   </div>
+   <script src="js/school.min.js"></script>
+</body>
+
+</html>

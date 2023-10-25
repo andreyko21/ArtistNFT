@@ -1,27 +1,24 @@
 import $ from 'jquery';
-
-// const paymentPayBtns = document.querySelectorAll('.payment__pay-btn');
-// const paymentPayPal = document.querySelector('.payment__pay-pal');
-// paymentPayBtns.forEach(btn => {
-//    btn.addEventListener('click', () => {
-//       paymentPayBtns.forEach(removeBtn => {
-//          removeBtn.classList.remove('payment__pay-btn_active');
-
-//       });
-
-//       btn.classList.add('payment__pay-btn_active');
-//    });
-// });
-
+import 'jquery-validation';
+import Header from './modules/header';
 class Payment {
    constructor() {
       this.paymentDetails = JSON.parse(localStorage.getItem('info'));
       this.paymentButtons = $('.payment__pay-btn');
-      this.paypalPayment = $('.payment__pay-pal');
-      this.cryptoPayment = $('.payment__pay-crypto');
-
+      this.paymentCard = $('.payment__pay-card');
+      this.paymentPaypal = $('.payment__pay-pal');
+      this.paymentCrypto = $('.payment__pay-crypto');
+      this.paymentError = $('.payment__pay-error');
+      this.submitBtn = $('.submit');
+     
+      console.log(this.form);
       this.getPaymentInfo(this.paymentDetails);
-      this.switchPay();
+      this.switchClickPay();
+      // this.initValidation();
+      this.clickMouse();
+      // this.randomKey();
+      this.checkForm();
+      this.header = new Header();
    }
 
    getPaymentInfo(paymentDetails) {
@@ -52,25 +49,134 @@ class Payment {
       });
    }
 
-   switchPay() {
-      this.paymentButtons.on('click', (e) => {
-         e.preventDefault();
+   switchClickPay() {
+      this.paymentButtons.on('click', (event) => this.switchPay(event));
+   }
 
-         const target = $(e.target);
-         if (!target.hasClass('payment__pay-btn_active')) {
-            this.paymentButtons.removeClass('payment__pay-btn_active');
-            target.addClass('payment__pay-btn_active');
+   switchPay(event) {
+      const targetButton = $(event.target);
+      const index = this.paymentButtons.index(targetButton);
 
-            if (target.hasClass('payment__pay-pal')) {
-               this.paypalPayment.removeClass('hide');
-               this.cryptoPayment.addClass('hide');
-            } else if (target.hasClass('payment__pay-crypto')) {
-               this.cryptoPayment.removeClass('hide');
-               this.paypalPayment.addClass('hide');
-            }
+      this.paymentButtons.removeClass('payment__pay-btn_active');
+      targetButton.addClass('payment__pay-btn_active');
+
+      this.paymentCard.addClass('hide');
+      this.paymentPaypal.addClass('hide');
+      this.paymentCrypto.addClass('hide');
+
+      if (index === 0) {
+         this.paymentCard.removeClass('hide');
+      } else if (index === 1) {
+         this.paymentPaypal.removeClass('hide');
+      } else if (index === 2) {
+         this.paymentCrypto.removeClass('hide');
+      }
+   }
+
+   initValidation() {
+      $('.name').on('input', this.validateName);
+      $('.email').on('input', this.validateEmail);
+      $('.number').on('input', this.formatNumber);
+      $('.data').on('input', this.formatDate);
+      $('.cvc').on('input', this.validateCVC);
+
+
+   }
+   validateName() {
+      let inputValue = $(this).val();
+      let sanitizedValue = inputValue.replace(/\d/g, '');
+
+      if (inputValue !== sanitizedValue || inputValue.length < 2) {
+         $(this).val(sanitizedValue);
+         $(this).addClass('error');
+      } else {
+         $(this).removeClass('error');
+      }
+   }
+
+   validateEmail() {
+      const emailValue = $(this).val();
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+      if (!emailPattern.test(emailValue)) {
+         $(this).addClass('error');
+      } else {
+         $(this).removeClass('error');
+      }
+   }
+
+   formatNumber() {
+      let inputValue = $(this).val();
+      inputValue = inputValue.replace(/[^0-9]/g, '');
+
+      let formattedValue = '';
+      for (let i = 0; i < inputValue.length; i++) {
+         if (i > 0 && i % 4 === 0) {
+            formattedValue += ' ';
          }
+         formattedValue += inputValue[i];
+      }
+      if (inputValue.length <= 15) {
+         $(this).addClass('error');
+      } else {
+         $(this).removeClass('error');
+      }
+
+      formattedValue = formattedValue.substr(0, 19);
+      $(this).val(formattedValue);
+   }
+   formatDate() {
+      let inputValue = $(this).val();
+      inputValue = inputValue.replace(/[^0-9]/g, '');
+
+      if (inputValue.length > 3) {
+         inputValue = inputValue.substr(0, 4);
+
+         $(this).removeClass('error');
+      } else {
+         $(this).addClass('error');
+      }
+
+      if (inputValue.length >= 1) {
+         inputValue = inputValue.substr(0, 2) + '/' + inputValue.substr(2);
+
+      }
+
+      $(this).val(inputValue);
+   }
+   validateCVC() {
+      let inputValue = $(this).val();
+      inputValue = inputValue.replace(/[^0-9]/g, '');
+
+      if (inputValue.length > 2) {
+         inputValue = inputValue.substr(0, 3);
+         $(this).removeClass('error');
+      } else {
+         $(this).addClass('error');
+      }
+
+      $(this).val(inputValue);
+   }
+
+   clickMouse() {
+      this.submitBtn.on('click', function (event) {
+         event.preventDefault();
       });
    }
-}
 
+   checkForm() {
+      // if () {
+      //    this.submitBtn.removeClass('disabled');
+      //    alert('Your payment has been sent');
+      // } else {
+      //    this.submitBtn.addClass('disabled');
+      // }
+   }
+
+
+
+}
 new Payment();
+
+
+
