@@ -38,9 +38,9 @@
 
 
 .page{
-    padding-top: 62px;
+    padding: 62px 0 0 0;
     @media (max-width: 700px) {
-        padding-top: 26px;
+        padding: 18px 0 10px 0;
     }
 }
 .arts-two {
@@ -176,7 +176,7 @@
         gap: 24px;
         grid-template-columns: repeat(3,1fr) ;
         justify-content: center;
-        margin-bottom: 65px;
+        margin-bottom: 63px;
         @media (max-width: 1170px) {
             grid-template-columns: repeat(2 ,1fr) ;
         }
@@ -269,9 +269,6 @@
             }
         }
     }
-    &__form{
-        margin-bottom: 10px;
-    }
     &::after, &::before{
         position: absolute;
         font-family: Proxima;
@@ -283,7 +280,7 @@
     }
     &::before{
         content: 'CUTOM BY YOUR OWN';
-        top: 25px;
+        top: 23px;
         letter-spacing: -0.93px;
         @media (min-width: 1170px) {
             left: -250px;
@@ -300,7 +297,7 @@
         content: 'UNIQUE CLOTHES';
         letter-spacing: -0.16px;
         right: 233px;
-        top: 550px;
+        top: 547px;
         @media (max-width: 1170px) {
             right: 0;
             top: -55px;

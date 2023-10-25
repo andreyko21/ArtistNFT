@@ -13,6 +13,7 @@ class ProductApp {
       this.productId = this.urlParams.get('id');
       this.artsCollection = collection(this.db, 'arts');
       this.nftsCollection = collection(this.db, 'nfts');
+      console.log(this.nftsCollection)
       this.arrProduct = [];
       // this.paymentInfo = [];
       this.upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -53,7 +54,24 @@ class ProductApp {
       this.getProductNfr(this.arrProduct.find((item) => item.id === this.productId));
       this.getProcces(this.arrProduct.find((item) => item.id === this.productId));
  
-      
+      // const data = await getDocs(this.nftsCollection);
+      // console.log(data);
+      // data.forEach((doc) => {
+      //    this.arrProduct.push({
+      //       id: doc.id,
+      //       imagePng: doc.data().imagePng,
+      //       title: doc.data().title,
+      //       titleNft: doc.data().titleNft,
+      //       text: doc.data().text,
+      //       price: doc.data().price,
+      //       textSub: doc.data().textSub,
+      //       type: doc.data().type,
+      //       imageWebP: doc.data().imageWebP,
+      //       details: doc.data().details,
+
+      //    });
+      // });
+      // this.getProductNfr(this.arrProduct.find((item) => item.id === this.productId));
 
    }
    async setProductCollection() {

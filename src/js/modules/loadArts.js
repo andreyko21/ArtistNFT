@@ -52,3 +52,6 @@ export default class LoadArts{
       `);
     }
 }
+
+
+// product-arts.html

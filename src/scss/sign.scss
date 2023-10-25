@@ -2,6 +2,7 @@
 @import './components/ui/input.scss';
 @import './components/ui/switch.scss';
 @import './components/ui/radioButton.scss';
+@import './components/ui/btn.scss';
 
 @font-face {
   font-family: Proxima;
@@ -82,18 +83,19 @@
     position: fixed;
     pointer-events: none;
     top: 0;
-    height: 100vw;
-    width: 100vh;
+    height: 200vw;
+    width: 200vh;
     img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
     }
   }
   &__left-blur {
     left: 0;
-    transform: translate(-35%, -23%);
+    transform: translate(-60%, -36%);
     @media (max-width: 1024px) {
-      transform: translate(-50%, 5%);
+      transform: translate(-70%, -20%);
     }
     @media (max-width: 600px) {
       transform: translate(-30%, -55%);
@@ -107,9 +109,9 @@
   }
   &__right-blur {
     right: 0px;
-    transform: translate(35%, -23%) scale(-1);
+    transform: translate(60%, -36%) scale(-1);
     @media (max-width: 1024px) {
-      transform: translate(50%, 5%) scale(-1);
+      transform: translate(70%, -20%) scale(-1);
     }
     @media (max-width: 600px) {
       transform: translate(30%, -55%) scale(-1);
@@ -118,6 +120,7 @@
       img {
         width: 748px;
         height: 706px;
+        object-fit: contain;
       }
     }
   }
@@ -307,6 +310,7 @@
     margin-top: 10px;
   }
   .submit-button {
-    margin-top: 16px;
+    margin-top: 4px;
+    padding: 21px 18px 21px 18px;
   }
 }
