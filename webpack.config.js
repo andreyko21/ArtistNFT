@@ -14,7 +14,7 @@ export const webpackConfig = (isMode) => {
     entry: {
       main: path.join(paths.src, 'js/main.js'),
       sign: path.join(paths.src, 'js/sign.js'),
-      profile: path.join(paths.src, 'js/profile.js'),
+      messages: path.join(paths.src, 'js/messages.js'),
       artsOne: path.join(paths.src, 'js/arts-one.js'),
       artsTwo: path.join(paths.src, 'js/arts-two.js'),
       school: path.join(paths.src, 'js/school.js'),
@@ -22,6 +22,8 @@ export const webpackConfig = (isMode) => {
       users: path.join(paths.src, 'js/users.js'),
       forum: path.join(paths.src, 'js/forum.js'),
       auction: path.join(paths.src, 'js/auction.js'),
+      profileNftOrders: path.join(paths.src, 'js/profileNftOrders.js'),
+      orders: path.join(paths.src, 'js/orders.js'),
     },
 
     mode: isMode ? 'development' : 'production',

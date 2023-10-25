@@ -4,15 +4,27 @@
   .table__title {
     &-name {
       width: 22%;
+      @media (max-width: 1920px) {
+        width: 21.2%;
+      }
     }
     &-crypto {
-      width: 34.8%;
+      width: 33.9%;
+      @media (max-width: 1920px) {
+        width: 34.3%;
+      }
     }
     &-status {
-      width: 16.5%;
+      width: 15.8%;
+      @media (max-width: 1920px) {
+        width: 16%;
+      }
     }
     &-price {
-      width: 14.7%;
+      width: 14.5%;
+      @media (max-width: 1920px) {
+        width: 14.4%;
+      }
     }
     &-date {
     }
@@ -88,6 +100,10 @@
       padding: 14px 17px 14px 18px;
       border-radius: 13px;
       background: $darkGray;
+      @media (max-width: $tablet) {
+        margin-top: 10px;
+        margin-bottom: 11px;
+      }
       &-text {
         color: $white;
         font-family: 'Proxima';
@@ -190,8 +206,8 @@
     padding-right: 10px;
     @media (max-width: $tablet) {
       width: 100%;
-      padding-top: 11px;
-      padding-bottom: 15px;
+      padding-top: 11px !important;
+      padding-bottom: 15px !important;
       &::before {
         content: 'Price';
         font-size: 14px;

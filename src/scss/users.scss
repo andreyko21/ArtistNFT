@@ -9,6 +9,9 @@ $mobile: 600px;
     &__title {
       &-name {
         width: 40%;
+        @media (max-width: 1920px) {
+          width: 39%;
+        }
       }
       &-email {
         width: 40%;
