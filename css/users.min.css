@@ -224,6 +224,7 @@ body {
   text-decoration: none;
   color: var(--background, #1d1f21);
   background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -256,6 +257,18 @@ body {
   animation-duration: 0.3s;
   animation-timing-function: ease;
   animation-iteration-count: 1;
+}
+.btn:hover:active {
+  transform: scale(0.9);
+}
+.btn:hover:focus {
+  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
+}
+.btn:hover:active {
+  transform: scale(0.95);
+}
+.btn:hover:focus {
+  border: 1px solid rgba(134, 168, 255, 0.6352941176);
 }
 @media (max-width: 700px) {
   .btn {
@@ -1317,6 +1330,7 @@ body {
   text-decoration: none;
   color: var(--background, #1d1f21);
   background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -1349,6 +1363,18 @@ body {
   animation-duration: 0.3s;
   animation-timing-function: ease;
   animation-iteration-count: 1;
+}
+.btn:hover:active {
+  transform: scale(0.9);
+}
+.btn:hover:focus {
+  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
+}
+.btn:hover:active {
+  transform: scale(0.95);
+}
+.btn:hover:focus {
+  border: 1px solid rgba(134, 168, 255, 0.6352941176);
 }
 @media (max-width: 700px) {
   .btn {
@@ -2218,7 +2244,7 @@ body {
   align-items: center;
   margin-right: 12px;
 }
-.profile-header__log-out img {
+.profile-header__log-out svg {
   width: 24px;
   height: 24px;
   margin-left: 8px;
@@ -2337,9 +2363,7 @@ body {
   flex-direction: row-reverse;
   justify-content: start;
 }
-.profile-sidebar__log-out img {
-  width: 15px;
-  height: 15px;
+.profile-sidebar__log-out svg {
   margin-right: 10px;
 }
 @media (max-width: 1150px) {
@@ -2618,7 +2642,7 @@ body {
 }
 .table-header {
   padding-left: 14px;
-  padding-right: 34px;
+  padding-right: 30px;
   width: 100%;
   padding-top: 12px;
   padding-bottom: 10px;
@@ -2711,6 +2735,11 @@ body {
   padding-bottom: 0;
   height: 100%;
 }
+@media (max-width: 600px) {
+  .page__container {
+    padding-left: 0;
+  }
+}
 
 .page__main {
   height: 100%;
@@ -2773,6 +2802,7 @@ body {
 }
 
 .log-out {
+  width: fit-content;
   background: none;
   display: flex;
   align-items: center;
@@ -2784,7 +2814,21 @@ body {
   cursor: pointer;
 }
 .log-out:hover {
-  color: red;
+  color: rgb(119, 0, 0);
+}
+.log-out:hover svg use {
+  stroke: rgb(119, 0, 0);
+}
+.log-out:active {
+  transform: scale(0.9);
+}
+.log-out svg {
+  fill: none;
+  stroke: #c8d2dc;
+  width: 100%;
+  height: 100%;
+  max-width: 20px;
+  max-height: 20px;
 }
 
 .wrapper-2 {
@@ -2853,6 +2897,11 @@ body {
 
 .user-section .table__title-name {
   width: 40%;
+}
+@media (max-width: 1920px) {
+  .user-section .table__title-name {
+    width: 39%;
+  }
 }
 .user-section .table__title-email {
   width: 40%;
