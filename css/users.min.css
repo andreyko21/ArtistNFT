@@ -2855,6 +2855,7 @@ body {
   display: block;
   width: 8px;
   height: 8px;
+  background-color: green;
   border-radius: 50%;
 }
 .online-status_online {
