@@ -11,11 +11,12 @@ class ProductApp {
       this.auth = firebase.getAuth();
       this.urlParams = new URLSearchParams(window.location.search);
       this.productId = this.urlParams.get('id');
+      this.name = this.urlParams.get('name');
       this.artsCollection = collection(this.db, 'arts');
       this.nftsCollection = collection(this.db, 'nfts');
-      console.log(this.nftsCollection)
-      this.arrProduct = [];
-      // this.paymentInfo = [];
+      this.productArts = [];
+      this.productNfts = [];
+      this.paymentInfos = [];
       this.upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       this.lowerCase = "abcdefghijklmnopqrstuvwxyz";
       this.minus = "-";
@@ -30,14 +31,24 @@ class ProductApp {
       this.randomValues = new Uint32Array(64);
       window.crypto.getRandomValues(this.randomValues);
       this.all = this.upperCase + this.lowerCase + this.minus + this.underline + this.special;
-      this.getProductCollection();
+
+      this.loadCollectionArts();
+
       this.randomKey();
 
+      if (this.name) {
+         this.loadCollectionNfts();
+      }
+
+
    }
-   async getProductCollection() {
-      const productData = await getDocs(this.artsCollection);
-      productData.forEach((doc) => {
-         this.arrProduct.push({
+
+   async getProductCollectionArts() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId1 = urlParams.get('id');
+      this.productDataArts = await getDocs(this.artsCollection);
+      this.productDataArts.forEach((doc) => {
+         this.productArts.push({
             id: doc.id,
             imagePng: doc.data().imagePng,
             title: doc.data().title,
@@ -51,57 +62,47 @@ class ProductApp {
 
          });
       });
-      this.getProductNfr(this.arrProduct.find((item) => item.id === this.productId));
-      this.getProcces(this.arrProduct.find((item) => item.id === this.productId));
- 
-      // const data = await getDocs(this.nftsCollection);
-      // console.log(data);
-      // data.forEach((doc) => {
-      //    this.arrProduct.push({
-      //       id: doc.id,
-      //       imagePng: doc.data().imagePng,
-      //       title: doc.data().title,
-      //       titleNft: doc.data().titleNft,
-      //       text: doc.data().text,
-      //       price: doc.data().price,
-      //       textSub: doc.data().textSub,
-      //       type: doc.data().type,
-      //       imageWebP: doc.data().imageWebP,
-      //       details: doc.data().details,
 
-      //    });
-      // });
-      // this.getProductNfr(this.arrProduct.find((item) => item.id === this.productId));
+      this.getProductArts(this.productArts.find((item) => item.id === productId1));
+      this.getProccesArts(this.productArts.find((item) => item.id === productId1));
 
    }
-   async setProductCollection() {
-      await getDocs(collection(this.db, "users"));
-      if (this.auth.currentUser) {
-         addDoc(collection(this.db, "users", this.auth.currentUser.uid, 'nft'), {
-            img: this.arrProduct.find((item) => item.id === this.productId).imagePng,
-            imgWebp: this.arrProduct.find((item) => item.id === this.productId).imageWebP,
-            key: this.arrSecret,
-            title: this.arrProduct.find((item) => item.id === this.productId).title,
-            price: this.arrProduct.find((item) => item.id === this.productId).price,
-            status: 'Success',
-            day: this.day,
-            month: this.month,
-            year: this.year,
-         });
-        
-      }else{
-         console.log('no')
-      }
+
+   async loadCollectionArts() {
+      await this.getProductCollectionArts();
    }
 
-   getProductNfr(product) {
+   async getProductCollectionNfts() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id');
+      const productName = urlParams.get('name');
+
+      getDocs(this.nftsCollection).then((querySnapshot) => {
+         const products = querySnapshot.docs.map((doc) => doc.data());
+         const selectedProduct = products.find((item) => item.id == productId && item.name == productName);
+         this.getProductNfts(selectedProduct);
+         this.getProccesNfts(selectedProduct);
+
+      });
+
+
+   }
+
+
+   async loadCollectionNfts() {
+      await this.getProductCollectionNfts();
+   }
+
+   getProductArts(product) {
+
       const productContent = $('.product__content');
       productContent.html('');
-      const productHtml = `
+      if (product) {
+         const productHtml = `
          <div class="product__image">
             <div class = "product__image-img">
                <picture>
-                  <source srcset="${product.imagePng}" type="image/webp">
+                  <source srcset="${product.imageWebP}" type="image/webp">
                   <img src="${product.imagePng}" alt="nft">
                </picture>
             </div>
@@ -115,7 +116,7 @@ class ProductApp {
                <div class="product__info-item">  
                   <p class="product__info-price">$${product.price}</p>
                   <div class="product__info-btn">
-                     <a class="btn  product__info-link" href="payment.html">
+                      <a class="btn  product__info-link" href="payment.html?id=${product.id}">
                      <img src="images/svg/money.svg" alt="money">
                      <span>Buy now</span>
                      </a>
@@ -126,41 +127,114 @@ class ProductApp {
             </div>
          </div>`;
 
-      productContent.append(productHtml);
+         productContent.append(productHtml);
 
-      $('.product__info-link').on('click', () => {
-         this.setProductCollection();
-         // this.paymentInfo = JSON.parse(localStorage.getItem('info'));
-         // this.paymentInfo.push({
-         //    title: product.title,
-         //    titleNft: product.titleNft,
-         //    price: product.price,
-         //    text: product.text,
-         //    details: product.details,
-         //    imagePng: product.imagePng,
-         //    imageWebP: product.imageWebP,
-         //    key: this.arrSecret
+         $('.product__info-link').on('click', () => {
+            let existingData = localStorage.getItem('info');
+            let paymentInfos = [];
 
-         // });
-         // localStorage.setItem('info', JSON.stringify(this.paymentInfo));
-      });
+            if (existingData) {
+               paymentInfos = JSON.parse(existingData);
+            }
 
+            paymentInfos.push({
+               title: product.title,
+               titleNft: product.titleNft,
+               price: product.price,
+               imagePng: product.imagePng,
+               imageWebP: product.imageWebP,
+               key: this.arrSecret,
+               day: this.day,
+               month: this.month,
+               year: this.year,
+               status: 'Success',
+            });
 
+            localStorage.setItem('info', JSON.stringify(paymentInfos));
+
+            console.log('ok');
+         });
+      }
    }
 
-   getProcces(img) {
+   getProductNfts(products) {
+      console.log(products);
+      const productContent = $('.product__content');
+      productContent.html('');
+      if (products) {
+         const productHtml = `
+        <div class="product__image">
+          <div class="product__image-img">
+            <picture>
+              <source srcset="${products.imgWebp}" type="image/webp">
+              <img src="${products.img}" alt="nft">
+            </picture>
+          </div>
+        </div>
+        <div class="product__info">
+          <h1 class="product__info-title"><span>${products.title}</span></h1>
+          <h2 class="product__info-sub-title">${products.subTitle} or ${products.title}</h2>
+          <p class="product__info-text">${products.info[0]}</p>
+          <p class="product__info-text product__info-text_sub">${products.info[1]}</p>
+          <div class="product__info-row">
+            <div class="product__info-item">
+              <p class="product__info-price">${products.price}</p>
+              <div class="product__info-btn">
+                <a class="btn product__info-links" href="payment.html?id=${products.id}&name=${products.name}">
+                  <img src="images/svg/money.svg" alt="money">
+                  <span>Buy now</span>
+                </a>
+              </div>
+            </div>
+            <hr class="product__info-line">
+            <p class="product__info-sub-text">${products.infoSub}</p>
+          </div>
+        </div>`;
+
+         productContent.append(productHtml);
+
+         $('.product__info-links').on('click', () => {
+            let existingData = localStorage.getItem('info');
+            let paymentInfos = [];
+
+            if (existingData) {
+               paymentInfos = JSON.parse(existingData);
+            }
+
+            paymentInfos.push({
+               title: products.title,
+               titleNft: products.titleNft,
+               price: products.price,
+               imagePng: products.img,
+               imageWebP: products.imgWebp,
+               key: this.arrSecret,
+               day: this.day,
+               month: this.month,
+               year: this.year,
+               status: 'Success',
+            });
+
+            localStorage.setItem('info', JSON.stringify(paymentInfos));
+
+            console.log('ok');
+         });
+
+      }
+   }
+
+   getProccesArts(img) {
       const productProcessImg = $('.product__process-img');
       productProcessImg.html('');
-
-      const productProcessHtml = `
+      if (img) {
+         const productProcessHtml = `
       <div class="product__process-images"> 
          <picture class="">
-         <source srcset="${img.imagePng}" type="image/webp">
+         <source srcset="${img.imageWebP}" type="image/webp">
          <img src="${img.imagePng}" alt="nft">
          </picture>
          </div>`;
-      if (img.type === 'premium') {
-         const productProcessPremium = `
+         if (img.type === 'premium') {
+            const productProcessPremium = `
          <div class="product__process-premium">
          <h4 class="product__process-title product__process-title_sub">
             <span>avalaible for premium</span>
@@ -176,17 +250,58 @@ class ProductApp {
          </div>  
       </div>
          `;
-         productProcessImg.append(productProcessPremium);
-      } else {
-         $(document).ready(function () {
-            $('.product__process-images img').css({
-               'filter': 'blur(0)',
-               'opacity': '1'
+            productProcessImg.append(productProcessPremium);
+         } else {
+            $(document).ready(function () {
+               $('.product__process-images img').css({
+                  'filter': 'blur(0)',
+                  'opacity': '1'
+               });
             });
-         });
+         }
+         productProcessImg.append(productProcessHtml);
       }
-      productProcessImg.append(productProcessHtml);
+   }
+   getProccesNfts(img) {
+      const productProcessImg = $('.product__process-img');
+      productProcessImg.html('');
+      if (img) {
+         const productProcessHtml = `
+      <div class="product__process-images"> 
+         <picture class="">
+         <source srcset="${img.imgWebp}" type="image/webp">
+         <img src="${img.img}" alt="nft">
+         </picture>
+         </div>`;
+         if (img.type === 'premium') {
+            const productProcessPremium = `
+         <div class="product__process-premium">
+         <h4 class="product__process-title product__process-title_sub">
+            <span>avalaible for premium</span>
+         </h4>
+         <p class="product__process-text">
+            <img src="images/svg/lock.svg" alt="lock">
+            CONTENT LOCKED
+         </p>
+         <div class="product__process-btn">
+            <button class="btn btn_arrow">
+               <span>Unlock</span>
+            </button>
+         </div>  
+      </div>
+         `;
+            productProcessImg.append(productProcessPremium);
+         } else {
+            $(document).ready(function () {
+               $('.product__process-images img').css({
+                  'filter': 'blur(0)',
+                  'opacity': '1'
+               });
+            });
+         }
+         productProcessImg.append(productProcessHtml);
 
+      }
    }
 
    randomKey() {
@@ -196,11 +311,18 @@ class ProductApp {
          this.secret += this.all.charAt(this.randomValues[i] % this.all.length);
       }
       this.arrSecret.push(this.secret);
-      console.log(this.arrSecret);
+      // console.log(this.arrSecret);
    }
+
+
 }
 
 new ProductApp();
+
+
+
+
+
 
 
 

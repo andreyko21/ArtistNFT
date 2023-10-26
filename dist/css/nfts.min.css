@@ -1257,42 +1257,42 @@ body {
 }
 
 @font-face {
-  font-family: ManropeRegular;
+  font-family: Manrope;
   font-display: swap;
   src: url("../fonts/ManropeRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: ProximaBold;
+  font-family: Proxima;
   font-display: swap;
   src: url("../fonts/ProximaBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: ProximaExtraBold;
+  font-family: Proxima;
   font-display: swap;
   src: url("../fonts/ProximaExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: ProximaLight;
+  font-family: Proxima;
   font-display: swap;
   src: url("../fonts/ProximaLight.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: ProximaRegular;
+  font-family: Proxima;
   font-display: swap;
   src: url("../fonts/ProximaRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: ProximaSemibold;
+  font-family: Proxima;
   font-display: swap;
   src: url("../fonts/ProximaSemibold.woff2") format("woff2");
   font-weight: 600;
@@ -1331,7 +1331,7 @@ body {
   }
 }
 .nfts__title {
-  font-family: ProximaBold;
+  font-family: Proxima;
   font-size: clamp(36px, 5vw, 64px);
   font-style: normal;
   font-weight: 700;
@@ -1357,7 +1357,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 482px;
+  max-width: 311px;
   width: 100%;
   margin: 54px auto 64px;
 }
@@ -1369,7 +1369,7 @@ body {
 .nfts__pagination-list {
   display: flex;
   justify-content: space-between;
-  max-width: 276px;
+  max-width: 105px;
   width: 100%;
 }
 @media (max-width: 576px) {
@@ -1383,7 +1383,7 @@ body {
   height: 48px;
   background: #212426;
   color: #fcffff;
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
@@ -1464,16 +1464,19 @@ body {
   }
 }
 .card__title {
-  font-family: ProximaBold;
+  font-family: Proxima;
   font-size: 18px;
   font-weight: 700;
   line-height: 26.5px;
   letter-spacing: 1.8px;
+  margin: 17px 0 18px 20px;
+}
+.card__title span {
+  color: #fcffff;
   background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 17px 0 18px 20px;
 }
 @media (max-width: 576px) {
   .card__title {
@@ -1532,7 +1535,7 @@ body {
   }
 }
 .card__sub-title {
-  font-family: ProximaBold;
+  font-family: Proxima;
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
@@ -1552,7 +1555,7 @@ body {
   }
 }
 .card__text {
-  font-family: ProximaRegular;
+  font-family: Proxima;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -1601,7 +1604,7 @@ body {
   }
 }
 .card__price {
-  font-family: ProximaBold;
+  font-family: Proxima;
   font-size: 26px;
   font-weight: 700;
   line-height: 33.5px;

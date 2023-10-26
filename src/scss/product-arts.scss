@@ -3,28 +3,28 @@
 @import "./components/ui/input";
 @import "./components/nav";
 @font-face {
-   font-family: ManropeRegular;
+   font-family: Manrope;
    font-display: swap;
    src: url("../fonts/ManropeRegular.woff2") format("woff2");
    font-weight: 400;
    font-style: normal;
 }
 @font-face {
-   font-family: ProximaBold;
+   font-family: Proxima;
    font-display: swap;
    src: url("../fonts/ProximaBold.woff2") format("woff2");
    font-weight: 700;
    font-style: normal;
 }
 @font-face {
-   font-family: ProximaExtraBold;
+   font-family: Proxima;
    font-display: swap;
    src: url("../fonts/ProximaExtraBold.woff2") format("woff2");
    font-weight: 800;
    font-style: normal;
 }
 @font-face {
-   font-family: ProximaLight;
+   font-family: Proxima;
    font-display: swap;
    src: url("../fonts/ProximaLight.woff2") format("woff2");
    font-weight: 300;
@@ -38,7 +38,7 @@
    font-style: normal;
 }
 @font-face {
-   font-family: ProximaSemibold;
+   font-family: Proxima;
    font-display: swap;
    src: url("../fonts/ProximaSemibold.woff2") format("woff2");
    font-weight: 600;
@@ -122,7 +122,7 @@
          margin-top: 20px;
       }
       &-title {
-         font-family: ProximaBold;
+         font-family: Proxima;
          font-size: clamp(14px, 2vw, 18px);
          font-weight: 700;
          line-height: 26.5px;
@@ -137,7 +137,7 @@
          // margin: 17px 0 18px 20px;
       }
       &-sub-title {
-         font-family: ProximaBold;
+         font-family: Proxima;
          font-size: clamp(26px, 3vw, 36px);
          font-weight: 700;
          line-height: 49.5px;
@@ -184,7 +184,7 @@
          }
       }
       &-price {
-         font-family: ProximaBold;
+         font-family: Proxima;
          font-size: clamp(22px, 2vw, 26px);
          font-weight: 700;
          line-height: 33.5px;
@@ -235,7 +235,7 @@
          margin: 18px 0 35px;
       }
       &-title {
-         font-family: ProximaBold;
+         font-family: Proxima;
          font-size: 18px;
          font-weight: 700;
          line-height: 26.5px;

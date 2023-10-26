@@ -3,7 +3,7 @@
 @import "./components/ui/checkbox";
 
 @font-face {
-   font-family: ManropeRegular;
+   font-family: Manrope;
    font-display: swap;
    src: url("../fonts/ManropeRegular.woff2") format("woff2");
    font-weight: 400;
@@ -346,6 +346,11 @@
 .hide {
    display: none;
    animation: slide-in-right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.disabled{
+   pointer-events: none;
+   opacity: 0.6;
 }
 
 .error {
