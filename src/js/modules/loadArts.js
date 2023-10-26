@@ -18,6 +18,7 @@ export default class LoadArts{
         this.sizeClass = 'one-card_big';
       }
     }
+    //
     loaditem(){
       this.cardBlock.append(`
         <div class="one-card ${this.id} ${this.classInfo} ${this.sizeClass}">
