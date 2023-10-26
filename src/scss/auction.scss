@@ -379,6 +379,25 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 1.75;
+        height: 100%;
+        &_hidden{
+            .auction{
+                &__text-block-paragraphs{
+                    animation: animationOne 1s ease-in-out 1;
+                    height: 60px;
+                } 
+                &__text-block-btn{
+                    span{
+                        &:first-child{
+                            display: none;
+                        }
+                        &:last-child{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
         @media (max-width: 1150px) {
             max-width: 800px;
             margin: 0 auto;
@@ -419,6 +438,8 @@
         }
     }
     &__text-block-paragraphs{
+        animation: animationTwo 1s ease-in-out 1;
+        overflow: hidden;
         @media (max-width: 600px) {
             margin-bottom: 14px;
         }
@@ -440,6 +461,14 @@
         height: 40px;
         @media (max-width: 600px) {
             display: block;
+        }
+        span{
+            &:first-child{
+                display: block;
+            }
+            &:last-child{
+                display: none;
+            }
         }
     }
     &__social-links {
@@ -586,3 +615,5 @@
 .one-card {
     &__bg {}
 }
+
+

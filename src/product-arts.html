@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', { 'title': 'Product', 'srcStyle': 'product-arts' })
+
+<body>
+   <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+         <section class="product">
+            <div class="product__container">
+               <div class="product__blul">
+                  <img src="images//svg/ProductBlur.svg" alt="blur">
+               </div>
+               <div class="product__nav">
+                  @@include('html/nav.html',{
+                  'nav-href': 'index.html',
+                  'nav-name': 'Main page',
+                  'nav-arrow': 'images/svg/navArrow.svg',
+                  'nav-two-href': 'arts-two.html',
+                  'nav-two-name': 'Arts',
+                  'nav-two-arrow': 'images/svg/navArrow.svg',
+                  'nav-three-href': 'product-arts.html',
+                  'nav-three-name': 'Name of product',
+                  })
+               </div>
+               
+               <div class="product__content"></div>
+               <div class="product__process">
+                  <h3 class="product__process-title">
+                     <img src="images/svg/video.svg" alt="video">
+                     <span>PROCCESS</span>
+                  </h3>
+                  <div class="product__process-img">
+                  </div>
+               </div>
+            </div>
+
+         </section>
+         <section class="contact">
+            <div class="contact__container">
+               @@include('html/contact-me.html',{})
+            </div>
+         </section>
+
+      </main>
+      @@include('html/footer.html')
+   </div>
+   <script src="js/productArts.min.js"></script>
+</body>
+
+</html>

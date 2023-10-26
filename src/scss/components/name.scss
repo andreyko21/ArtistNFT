@@ -26,6 +26,12 @@
             top: 166px;
             left: -17px;
          }
+         &_pricing {
+            top: 94px;
+            @media (max-width: 1024px) {
+               display: none;
+            }
+         }
       }
 
       &_war {
@@ -38,6 +44,13 @@
             top: -3px;
             right: 1px;
          }
+
+         &_pricing {
+            top: 94px;
+            @media (max-width: 1024px) {
+               display: none;
+            }
+         }
       }
    }
    &__star {
@@ -46,6 +59,14 @@
       @media (max-width: 1024px) {
          top: -16px;
          left: 20px;
+      }
+      &_pricing {
+         top: 47px;
+         @media (max-width: 576px) {
+            top:5px;
+            left: auto;
+            right: 0px;
+         }
       }
    }
    &__title {
@@ -61,6 +82,17 @@
          text-align: left;
          margin: 22px 0 2px;
          line-height: 34px;
+      }
+
+      &_pricing {
+         font-size: clamp(36px, 5vw, 64px);
+         max-width: 569px;
+         width: 100%;
+         line-height: 65px;
+         @media (max-width: 576px) {
+            line-height: 40px;
+            max-width: 270px;
+         }
       }
    }
    &__text {
@@ -88,6 +120,13 @@
       @media (max-width: 1024px) {
          top: 165px;
          right: 80px;
+      }
+      &_pricing {
+         top: 192px;
+         @media (max-width: 576px) {
+            top: 192px;
+            right: 20px;
+         }
       }
    }
 }

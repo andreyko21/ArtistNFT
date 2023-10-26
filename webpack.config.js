@@ -21,6 +21,8 @@ export const webpackConfig = (isMode) => {
       nfts: path.join(paths.src, 'js/nfts.js'),
       users: path.join(paths.src, 'js/users.js'),
       forum: path.join(paths.src, 'js/forum.js'),
+      productArts: path.join(paths.src, 'js/productArts.js'),
+      payment: path.join(paths.src, 'js/payment.js'),
       auction: path.join(paths.src, 'js/auction.js'),
       profileNftOrders: path.join(paths.src, 'js/profileNftOrders.js'),
       orders: path.join(paths.src, 'js/orders.js'),

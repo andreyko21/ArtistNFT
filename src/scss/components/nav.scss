@@ -1,0 +1,26 @@
+@font-face {
+   font-family: Manrope;
+   font-display: swap;
+   src: url("../fonts/ManropeRegular.woff2") format("woff2");
+   font-weight: 400;
+   font-style: normal;
+}
+.nav {
+   display: flex;
+   align-items: center;
+   a {
+      // display: inline-block;
+      font-family: Manrope;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      color: $lightBlueGrey;
+   }
+   img {
+      // display: inline-block;
+      // width: 16px;
+      // height: 16px;
+      margin: 0 4px;
+   }
+}

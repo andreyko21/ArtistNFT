@@ -39,8 +39,8 @@ export default class LoadArts{
               <div class="one-card__open-info">${this.info.info}</div>
               <div class="one-card__open-price">$${this.info.price}</div>
               <div class="one-card__btn-row">
-                <a href="#?id=${this.id}" class="btn btn_black one-card__btn one-card__open-btn"><span>Buy</span></a>
-                <a href="#?id=${this.id}" class="btn btn_arrow one-card__btn one-card__open-btn"><span>View</span></a>
+                <a href="product-arts.html?id=${this.id}" class="btn btn_black one-card__btn one-card__open-btn"><span>Buy</span></a>
+                <a href="product-arts.html?id=${this.id}" class="btn btn_arrow one-card__btn one-card__open-btn"><span>View</span></a>
               </div>
             </div>
         </div>
