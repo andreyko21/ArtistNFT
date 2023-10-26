@@ -1843,42 +1843,42 @@ body {
 }
 
 @font-face {
-  font-family: ManropeRegular;
+  font-family: Manrope;
   font-display: swap;
   src: url("../fonts/ManropeRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: ProximaBold;
+  font-family: Proxima;
   font-display: swap;
   src: url("../fonts/ProximaBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: ProximaExtraBold;
+  font-family: Proxima;
   font-display: swap;
   src: url("../fonts/ProximaExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: ProximaLight;
+  font-family: Proxima;
   font-display: swap;
   src: url("../fonts/ProximaLight.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: ProximaRegular;
+  font-family: Proxima;
   font-display: swap;
   src: url("../fonts/ProximaRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: ProximaSemibold;
+  font-family: Proxima;
   font-display: swap;
   src: url("../fonts/ProximaSemibold.woff2") format("woff2");
   font-weight: 600;
@@ -1907,7 +1907,7 @@ body {
   }
 }
 .designer__bg-text {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: clamp(50px, 8vw, 80px);
   font-weight: 700;
   line-height: normal;
@@ -1965,7 +1965,7 @@ body {
   }
 }
 .designer__content-title {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: clamp(36px, 5vw, 64px);
   font-weight: 700;
   line-height: 65px;
@@ -1982,7 +1982,7 @@ body {
 .designer__content-text {
   max-width: 271px;
   width: 100%;
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: clamp(15px, 4vw, 16px);
   font-weight: 400;
   line-height: 28px;
@@ -2132,7 +2132,7 @@ body {
   }
 }
 .benefits__text {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: clamp(14px, 3vw, 18px);
   font-weight: 700;
   line-height: 26.5px;
@@ -2151,7 +2151,7 @@ body {
   }
 }
 .benefits__title {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: clamp(26px, 5vw, 36px);
   font-weight: 700;
   line-height: 49.5px;
@@ -2215,7 +2215,7 @@ body {
   }
 }
 .benefits__card-title {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: clamp(14px, 3vw, 20px);
   font-weight: 700;
   line-height: 30px;
@@ -2228,7 +2228,7 @@ body {
   }
 }
 .benefits__card-text {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: clamp(12px, 2vw, 16px);
   font-weight: 400;
   line-height: 28px;
@@ -2256,7 +2256,7 @@ body {
   }
 }
 .artist__bg-text {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: clamp(50px, 8vw, 80px);
   font-weight: 700;
   line-height: normal;
@@ -2299,7 +2299,7 @@ body {
   z-index: -1;
 }
 .artist__title {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: clamp(26px, 5vw, 36px);
   font-style: normal;
   font-weight: 700;
@@ -2309,7 +2309,7 @@ body {
   margin: 14px 0 16px;
 }
 .artist__text {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: clamp(15px, 5vw, 16px);
   font-weight: 400;
   line-height: 28px;
@@ -2353,7 +2353,7 @@ body {
 }
 .register__text {
   text-align: center;
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
