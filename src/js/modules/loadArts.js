@@ -13,6 +13,8 @@ export default class LoadArts{
       this.sizeClass = '';
       if(this.info.type === "premium"){
         this.classInfo = 'one-card_unlock';
+      }else if(this.info.auction){
+        this.classInfo = 'one-card_auction';
       }
       if(this.info.size === 'big'){
         this.sizeClass = 'one-card_big';
@@ -31,7 +33,7 @@ export default class LoadArts{
               </svg>
               <span>CONTENT LOCKED</span>
             </div>
-            <a href="#?id=${this.id}" class="btn btn_arrow one-card__btn one-card__unlock-btn"><span>Unlock</span></a>
+            <a href="product-arts.html?id=${this.id}" class="btn btn_arrow one-card__btn one-card__unlock-btn"><span>Unlock</span></a>
           </div>
         </div>
         <div class="one-card__open ">
@@ -40,10 +42,20 @@ export default class LoadArts{
               <div class="one-card__open-info">${this.info.info}</div>
               <div class="one-card__open-price">$${this.info.price}</div>
               <div class="one-card__btn-row">
-                <a href="#?id=${this.id}" class="btn btn_black one-card__btn one-card__open-btn"><span>Buy</span></a>
-                <a href="#?id=${this.id}" class="btn btn_arrow one-card__btn one-card__open-btn"><span>View</span></a>
+                <a href="product-arts.html?id=${this.id}" class="btn btn_black one-card__btn one-card__open-btn"><span>Buy</span></a>
+                <a href="product-arts.html?id=${this.id}" class="btn btn_arrow one-card__btn one-card__open-btn"><span>View</span></a>
               </div>
             </div>
+        </div>
+        <div class="one-card__auction ">
+          <div class="one-card__open-main">
+            <div class="one-card__open-title">${this.info.title}</div>
+            <div class="one-card__open-info">${this.info.info}</div>
+            <div class="one-card__open-price">$${this.info.price}</div>
+            <div class="one-card__btn-row">
+              <a href="auction.html?id=${this.id}" class="btn btn_black one-card__btn one-card__open-btn"><span>Auction</span></a>
+            </div>
+          </div>
         </div>
         <picture class="one-card__bg">
           <source srcset="${this.info.imageWebP}" type="image/webp">

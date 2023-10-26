@@ -1627,6 +1627,14 @@ body {
     aspect-ratio: 1/0.577;
   }
 }
+.one-card__auction {
+  border-radius: 12px;
+  height: 100%;
+  align-items: center;
+  position: relative;
+  display: none;
+  transition: opacity 400ms ease 0s;
+}
 @media (max-width: 700px) {
   .one-card {
     grid-column: 1;
@@ -1645,6 +1653,12 @@ body {
   display: grid;
 }
 .one-card_open.active .one-card__bg::before {
+  opacity: 0.8;
+}
+.one-card_auction.active .one-card__auction {
+  display: grid;
+}
+.one-card_auction.active .one-card__bg::before {
   opacity: 0.8;
 }
 
