@@ -1749,6 +1749,7 @@ body {
   display: block;
   width: 8px;
   height: 8px;
+  background-color: green;
   border-radius: 50%;
 }
 .online-status_online {
@@ -2152,24 +2153,28 @@ body {
   width: 16%;
 }
 .orders-section .table-order__comment-text {
+  overflow-wrap: break-word;
   color: #ffffff;
   font-family: "Proxima";
   font-size: 12px;
   font-weight: 300;
   line-height: 1.5;
 }
-.orders-section .table-order__comment-text::before {
-  content: "Lorem ipsum dolor sit amet";
-}
 @media (max-width: 960px) {
   .orders-section .table-order__comment-text {
     margin-top: 7px;
-  }
-  .orders-section .table-order__comment-text::before {
-    content: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet";
     font-size: 14px;
     font-weight: 400;
     line-height: 1.07143;
+    display: none;
+  }
+}
+.orders-section .table-order__comment-text_mobile {
+  display: none;
+}
+@media (max-width: 960px) {
+  .orders-section .table-order__comment-text_mobile {
+    display: block;
   }
 }
 @media (max-width: 960px) {
@@ -2189,6 +2194,7 @@ body {
   width: 16%;
 }
 .orders-section .table-order__address-text {
+  text-wrap: wrap;
   color: #ffffff;
   font-family: "Proxima";
   font-size: 12px;

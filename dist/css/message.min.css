@@ -1749,6 +1749,7 @@ body {
   display: block;
   width: 8px;
   height: 8px;
+  background-color: green;
   border-radius: 50%;
 }
 .online-status_online {
@@ -1875,6 +1876,9 @@ body {
   .chat-list__user {
     grid-template: "img";
   }
+}
+.chat-list__user_active {
+  background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .chat-list__user-avatar-block {
   grid-area: img;
