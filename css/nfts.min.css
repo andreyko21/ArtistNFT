@@ -1300,22 +1300,48 @@ body {
 }
 .nfts {
   position: relative;
+  top: 0;
 }
 .nfts__row {
-  margin-top: 49px;
+  padding-top: 49px;
 }
 @media (max-width: 576px) {
   .nfts__row {
-    margin-top: 26px;
+    padding-top: 26px;
   }
 }
 .nfts__name {
   padding: 0;
   justify-content: center;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .nfts__make, .nfts__circle, .nfts__war, .nfts__star {
     display: none;
+  }
+}
+.nfts__star {
+  position: absolute;
+}
+@media (max-width: 1280px) {
+  .nfts__star {
+    top: 20px;
+    left: 200px;
+  }
+}
+@media (max-width: 1024px) {
+  .nfts__star {
+    left: 100px;
+  }
+}
+.nfts__circle {
+  position: absolute;
+  top: 145px;
+  right: 320px;
+}
+@media (max-width: 1280px) {
+  .nfts__circle {
+    top: 145px;
+    right: 200px;
   }
 }
 .nfts__blur {
@@ -1364,6 +1390,7 @@ body {
 @media (max-width: 576px) {
   .nfts__pagination {
     margin: 28px auto 56px;
+    max-width: 199px;
   }
 }
 .nfts__pagination-list {
@@ -1374,7 +1401,7 @@ body {
 }
 @media (max-width: 576px) {
   .nfts__pagination-list {
-    max-width: 236px;
+    max-width: 89px;
   }
 }
 .nfts__pagination-number {
@@ -1525,6 +1552,7 @@ body {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  aspect-ratio: 1/1;
 }
 @media (max-width: 767.98px) {
   .card__img img {
@@ -1533,7 +1561,7 @@ body {
 }
 .card__sub-title {
   font-family: Proxima;
-  font-size: 20px;
+  font-size: clamp(13px, 3vw, 20px);
   font-weight: 700;
   line-height: 30px;
   color: #fcffff;
@@ -1575,9 +1603,8 @@ body {
   }
 }
 .card__line {
-  display: inline-block;
-  max-width: 310px;
-  width: 100%;
+  display: block;
+  width: 90%;
   height: 1px;
   opacity: 0.05;
   background: #fcffff;
@@ -1603,7 +1630,7 @@ body {
 }
 .card__price {
   font-family: Proxima;
-  font-size: 26px;
+  font-size: clamp(14px, 3vw, 26px);
   font-weight: 700;
   line-height: 33.5px;
   color: #fcffff;
@@ -1616,7 +1643,6 @@ body {
 }
 @media (max-width: 576px) {
   .card__price {
-    font-size: 14px;
     line-height: 24px;
   }
 }
