@@ -52,7 +52,7 @@ class NFTApp {
               <img src="${nft.img}" alt="nft">
             </picture>
           </div>
-          <h3 class="card__title card__title_sub">${nft.title}</h3>
+          <h3 class="card__title card__title_sub"><span>${nft.title}</span></h3>
           <h4 class="card__sub-title">${nft.subTitle} or ${nft.title} </h4>
           <p class="card__text">${nft.text}</p>
           <hr class="card__line">
