@@ -3,12 +3,13 @@ import Header from './modules/header';
 import { collection, getDocs} from "firebase/firestore";
 import firebase from './modules/firebase';
 import LoadArts from './modules/loadArts';
+import Parallax from './modules/parallax';
 
 class ArtsOne {
   constructor() {
     this.header = new Header();
     this.db = firebase.getFirestore();
-    this.prolax();
+    this.prolax = new Parallax();
     this.firebase();
     this.oneItem();
   }
@@ -33,27 +34,7 @@ class ArtsOne {
       $('.active').removeClass('active');
     });
   }
-  prolax() {
-    $(document).ready(function () {
-      $('.arts').mousemove(function (e) {
-        var containerWidth = $(this).width();
-        var containerHeight = $(this).height();
-        var mouseX = e.pageX - $(this).offset().left;
-        var mouseY = e.pageY - $(this).offset().top;
-        var offsetX = 0.5 - mouseX / containerWidth;
-        var offsetY = 0.5 - mouseY / containerHeight;
-
-        $('.parallax').css({
-          transform:
-            'translate(-50%,-50%) translate(' +
-            offsetX * 40 +
-            'px,' +
-            offsetY * 40 +
-            'px)',
-        });
-      });
-  });
-}};
+};
 const artsOne = new  ArtsOne();
 
 
