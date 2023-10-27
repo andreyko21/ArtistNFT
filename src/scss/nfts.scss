@@ -241,12 +241,10 @@
    }
 
    &__img {
-      background-image: url("../images/school/Frame.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      background: url("../images/school/Frame.png") no-repeat center/cover;
       height: 350px;
       padding: 40px 53px 70px;
+      // padding: 5%;
       @media (max-width: 767.98px) {
          padding: 20px 35px;
          height: 163px;
@@ -269,7 +267,7 @@
          border-radius: 50%;
          object-fit: cover;
          @media (max-width: 767.98px) {
-            max-width: 200px;
+            max-width: 100%;
          }
       }
    }
@@ -300,6 +298,7 @@
       margin-left: 24px;
       color: $secondary;
       @media (max-width: 767.98px) {
+         max-width: 200px;
          margin-left: 11px;
       }
       @media (max-width: 576px) {

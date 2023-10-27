@@ -80,7 +80,3 @@ class SubscriptionManager {
 }
 
 new SubscriptionManager();
-
-
-
-
