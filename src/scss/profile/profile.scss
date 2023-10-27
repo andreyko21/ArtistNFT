@@ -139,16 +139,16 @@ $mobile: 600px;
     border-spacing: 0px 8px;
     border-collapse: separate;
     width: 100%;
-    tbody {
-      @media (max-width: 960px) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-      }
-      @media (max-width: 600px) {
-        grid-template-columns: repeat(1, 1fr);
-      }
+
+    @media (max-width: 960px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
     }
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     tr {
       background: $jetBlack;
       td {

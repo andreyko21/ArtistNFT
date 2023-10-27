@@ -38,6 +38,7 @@
       }
     }
     &-order {
+      overflow: hidden;
       &__type {
         grid-area: type;
         width: 11.8%;
@@ -114,9 +115,12 @@
         }
       }
       &__comment {
+        height: 100%;
+        overflow: hidden;
         grid-area: text;
         width: 16%;
         &-text {
+          max-width: 250px;
           overflow-wrap: break-word;
           color: $white;
           font-family: 'Proxima';
@@ -149,6 +153,7 @@
         }
       }
       &__address {
+        height: 100%;
         grid-area: text;
         width: 16%;
         &-text {
@@ -184,6 +189,9 @@
         }
       }
       &__action {
+        display: flex;
+        height: min-content;
+        margin-top: auto;
         grid-area: action;
         &-button {
           padding: 10px 30px;
@@ -208,7 +216,7 @@
           'color email'
           'size size'
           'text text'
-          'action action' auto / min-content auto;
+          'action action' 1fr / min-content auto;
       }
     }
   }
