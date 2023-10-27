@@ -30,11 +30,19 @@ class ProfileNftOrders {
   render(data) {
     const newOrder = `<tr class="table-order">
           <td class="table-order__type">${data.clothes}</td>
-          <td class="table-order__color"><span style="background-color:red"></span></td>
+          <td class="table-order__color"><span style="background-color:${
+            data.color
+          }"></span></td>
           <td class="table-order__email">emailofcustomer@gmail.com</td>
-          <td class="table-order__size">XL (99-99-99)</td>
+          <td class="table-order__size">${data.size}</td>
           <td class="table-order__comment">
-            <p class="table-order__comment-text"></p>
+            <p class="table-order__comment-text">${data.comment.slice(
+              0,
+              16
+            )}</p>
+            <p class="table-order__comment-text table-order__comment-text_mobile">${
+              data.comment
+            }</p>
             <button class="table-order__comment-button show-more-link">
               Show more
             </button>

@@ -1,7 +1,16 @@
-import $ from 'jquery';
+import $, { get } from 'jquery';
 import firebase from './modules/firebase';
-import { collection, query, where, onSnapshot } from 'firebase/firestore';
-import { getDatabase, ref, set } from 'firebase/database';
+import {
+  collection,
+  setDoc,
+  addDoc,
+  doc,
+  query,
+  getDoc,
+  where,
+  onSnapshot,
+} from 'firebase/firestore';
+import { ref } from 'firebase/database';
 import Profile from './modules/profile';
 class UsersPage {
   constructor() {
@@ -14,11 +23,62 @@ class UsersPage {
   async init() {
     await this.getUsers();
     this.changeOnlineStatus();
+    this.bindEvents();
+  }
+
+  bindEvents() {
+    this.tableListBlock.on('click', '.table-user__action-button', (e) => {
+      this.createChat(e.currentTarget.id);
+    });
+  }
+
+  async createChat(id) {
+    console.log(id);
+    const db = firebase.getFirestore();
+    const newChatMyRef = doc(
+      collection(db, 'users', this.profile.user.uid, 'chats'),
+      id
+    );
+    const newChatCompanionRef = doc(
+      collection(db, 'users', id, 'chats'),
+      this.profile.user.uid
+    );
+    const newChatRef = collection(db, 'chats');
+    let email = '';
+    await getDoc(newChatMyRef).then(async (docSnapshot) => {
+      if (docSnapshot.exists()) {
+        console.log(docSnapshot.data());
+      } else {
+        await getDoc(doc(collection(db, 'users'), id)).then(
+          async (docSnapshot) => {
+            if (docSnapshot.exists()) {
+              email = docSnapshot.data().email;
+            }
+          }
+        );
+        const MyChat = {
+          email: email,
+        };
+        const CompanionChat = {
+          email: this.profile.user.email,
+        };
+        const Chat = {
+          users: [this.profile.user.uid, id],
+          messages: [],
+        };
+        await addDoc(newChatRef, Chat).then((docRef) => {
+          MyChat.chatId = docRef.id;
+          CompanionChat.chatId = docRef.id;
+        });
+        setDoc(newChatMyRef, MyChat);
+        setDoc(newChatCompanionRef, CompanionChat);
+      }
+    });
   }
 
   async getUsers() {
-    const db = await firebase.getFirestore();
-    const q = query(collection(db, 'users'));
+    this.db = await firebase.getFirestore();
+    const q = query(collection(this.db, 'users'));
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       this.usersList = [];
@@ -30,6 +90,7 @@ class UsersPage {
         newUser.name = doc.data().firstName ? doc.data().firstName : 'None';
         newUser.onlineStatus = doc.data().lastActiveTime == null ? true : false;
         newUser.email = doc.data().email;
+        newUser.id = doc.id;
         this.usersList.push(newUser);
       });
       this.renderUserList();
@@ -73,7 +134,9 @@ class UsersPage {
           <td class="table-user__name">User Name</td>
           <td class="table-user__email">${element.email}</td>
           <td class="table-user__active">
-            <button class="table-user__action-button btn"><span>Message</span></button>
+            <button id="${
+              element.id
+            }" class="table-user__action-button btn"><span>Message</span></button>
           </td>
         </tr>`;
     this.tableListBlock.append(newUser);

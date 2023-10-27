@@ -1,6 +1,7 @@
 @import './style.scss';
 @import './components/ui/btn.scss';
 @import './components/ui/input.scss';
+@import "./components/nav";
 
 @font-face {
 	font-family: Proxima;
@@ -39,18 +40,16 @@
     font-family: Proxima;
     &__links {
         margin: 30px 0 24px;
-
-
-        color: var(--secondary, #C8D2DC);
-        /* 14 regular */
-        font-family: Manrope;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 19px; /* 135.714% */
-
         @media (max-width: 600px) {
             margin: 24px 0 32px;
+        }
+        a{
+            &:nth-child(2){
+                img{
+                    display: none;
+                }
+
+            }
         }
     }
     &__main {
@@ -73,7 +72,6 @@
     &__image {
         width: 538px;
         aspect-ratio: 1/1;
-        background-color: red;
         border-radius: 12px;
         margin: 0 auto;
         @media (max-width: 1150px) {
@@ -83,6 +81,15 @@
         @media (max-width: 600px) {
             border-radius: 7.695px;
         }
+        img{
+            border-radius: 12px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__img {
+
     }
     &__info {
 
@@ -226,8 +233,15 @@
         width: 100%;
         height: 100%;
         display: block;
-        background: $gradient;
+        background: $gunmetalGrey;
         border-radius: 0px 0px 8px 8px;
+        overflow: hidden;
+    }
+    &__progress-status{
+        display: block;
+        background: $gradient;
+        height: 100%;
+        width: 0;
     }
     &__bid-title {
         background: $gradient;
@@ -294,10 +308,18 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
+        display: flex;
+        justify-content: space-between;
+        width: 185px;
+        margin: 0 auto;
         @media (max-width: 600px) {
             font-size: 18px;
             margin-bottom: 2px;
         }
+    }
+    &__data-info{
+        width: 40px;
+        display: block;
     }
     &__live-data {
         font-size: 14px;
@@ -383,8 +405,6 @@
         &_hidden{
             .auction{
                 &__text-block-paragraphs{
-                    animation: animationOne 1s ease-in-out 1;
-                    height: 60px;
                 } 
                 &__text-block-btn{
                     span{
@@ -438,7 +458,7 @@
         }
     }
     &__text-block-paragraphs{
-        animation: animationTwo 1s ease-in-out 1;
+        transition: all 300ms ease 0s;
         overflow: hidden;
         @media (max-width: 600px) {
             margin-bottom: 14px;
@@ -594,13 +614,21 @@
 
 
 .input-block {
+    position: relative;
     &_textarea {}
     &__label {}
     &__input {
         background: $gunmetalGrey;
         margin-top: 5px;
     }
-    &__error {}
+    &__error {
+        position: absolute;
+        bottom: -18px;
+        @media (max-width:600px) {
+            bottom: 73px;
+            right: 0;
+        }
+    }
 }
 .contact-me {
     &__question {}

@@ -44,6 +44,7 @@
     display: flex;
     flex-direction: column;
     padding-right: 29px;
+
     @media (max-width: 850px) {
       padding-right: 10px;
       padding-left: 10px;
@@ -68,6 +69,13 @@
       @media (min-width: (600.1px)) {
         grid-template: 'img';
       }
+    }
+    &_active {
+      background: linear-gradient(
+        95deg,
+        rgba(104, 201, 255, 0.1) 9.27%,
+        rgba(209, 181, 255, 0.1) 84.06%
+      );
     }
     &-avatar-block {
       grid-area: img;
