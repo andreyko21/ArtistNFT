@@ -28,6 +28,8 @@ class ProductApp {
       this.day = this.data.getDate();
       this.month = this.data.getMonth() + 1;
       this.year = this.data.getFullYear();
+      this.newData = this.day + '.' + this.month + '.' + this.year;
+
       this.randomValues = new Uint32Array(64);
       window.crypto.getRandomValues(this.randomValues);
       this.all = this.upperCase + this.lowerCase + this.minus + this.underline + this.special;
@@ -144,9 +146,7 @@ class ProductApp {
                imagePng: product.imagePng,
                imageWebP: product.imageWebP,
                key: this.arrSecret,
-               day: this.day,
-               month: this.month,
-               year: this.year,
+               data: this.newData,
                status: 'Success',
             });
 
@@ -208,9 +208,7 @@ class ProductApp {
                imagePng: products.img,
                imageWebP: products.imgWebp,
                key: this.arrSecret,
-               day: this.day,
-               month: this.month,
-               year: this.year,
+               data: this.newData,
                status: 'Success',
             });
 
@@ -318,6 +316,8 @@ class ProductApp {
 }
 
 new ProductApp();
+
+
 
 
 

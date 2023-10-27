@@ -79,6 +79,7 @@
          position: absolute;
          top: 89px;
          left: -103px;
+         z-index: -1;
          @media (max-width: 576px) {
             top: 11px;
             left: -100px;
@@ -461,7 +462,7 @@
       border-radius: 12px;
       padding: 5px 0;
       @media (max-width: 576px) {
-         margin: 0 0 22px;
+         margin: 0 auto 22px;
       }
    }
 
@@ -474,6 +475,7 @@
       span {
          font-weight: 800;
       }
+
    }
 
    &__plan {

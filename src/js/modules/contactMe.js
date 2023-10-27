@@ -1,4 +1,5 @@
 import $ from "jquery";
+
 import firebase from './firebase';
 import 'jquery-validation';
 

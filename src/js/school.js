@@ -1,109 +1,86 @@
 import Header from './modules/header';
+import ContactMe from './modules/contactMe';
 import firebase from './modules/firebase';
 import $ from 'jquery';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+class SubscriptionManager {
+   constructor() {
+      this.subscriptionBlocks = document.querySelectorAll('.subscription__block');
+      this.subscriptionSwitchBtns = document.querySelectorAll('.subscription__switch button');
+      this.designerContentLink = document.querySelector('.designer__content-link');
+      this.header = new Header();
+      this.contactMe = new ContactMe();
+      this.val = this.contactMe.validation();
+      this.auth = getAuth();
 
-$(document).ready(function () {
-   $('.wrapper').mousemove(function (e) {
-      var containerWidth = $(this).width();
-      var containerHeight = $(this).height();
-      var mouseX = e.pageX - $(this).offset().left;
-      var mouseY = e.pageY - $(this).offset().top;
-      var offsetX = 0.5 - mouseX / containerWidth;
-      var offsetY = 0.5 - mouseY / containerHeight;
+      if (window.innerWidth >= 1024) {
+         this.activeSubscription();
+      }
 
-      $('.designer__box-star_top').css({
-         transform:
-            'translate(' +
-            offsetX * 40 +
-            'px,' +
-            offsetY * 40 +
-            'px)',
-         rotate: '160' + 'deg'
+      this.setupEventListeners();
+   }
 
-      });
-      $('.designer__box-star_bottom').css({
-         transform:
-            'translate(' +
-            offsetX * 40 +
-            'px,' +
-            offsetY * 40 +
-            'px)',
-         rotate: '190' + 'deg'
+   activeSubscription() {
+      this.subscriptionBlocks.forEach(block => {
+         block.addEventListener('click', () => {
+            this.subscriptionBlocks.forEach(otherBlock => {
+               this.deactivateBlock(otherBlock);
+            });
 
-      });
-      $('.parallax').css({
-         transform:
-            'translate(-50%,-50%) translate(' +
-            offsetX * 40 +
-            'px,' +
-            offsetY * 40 +
-            'px)',
-      });
-   });
-});
-
-
-const subscriptionBlocks = document.querySelectorAll('.subscription__block');
-const subscriptionSwitchBtns = document.querySelectorAll('.subscription__switch button');
-const designerContentLink = document.querySelector('.designer__content-link');
-function activeSubscription() {
-   subscriptionBlocks.forEach(block => {
-      block.addEventListener('click', () => {
-         subscriptionBlocks.forEach(otherBlock => {
-            otherBlock.classList.remove('subscription__block_active');
-            otherBlock.querySelector('.subscription__title').classList.remove('subscription__title_active');
-            otherBlock.querySelector('.subscription__text').classList.remove('subscription__text_active');
-            otherBlock.querySelector('.subscription__btn button').classList.remove('btn_black');
+            this.activateBlock(block);
          });
-
-         block.classList.add('subscription__block_active');
-         block.querySelector('.subscription__title').classList.add('subscription__title_active');
-         block.querySelector('.subscription__text').classList.add('subscription__text_active');
-         block.querySelector('.subscription__btn button').classList.add('btn_black');
       });
-   });
-}
-if (window.innerWidth >= 1024) {
-   activeSubscription();
-}
+   }
 
-function switchSubscription(index) {
-   subscriptionBlocks.forEach((block) => {
+   switchSubscription(index) {
+      this.subscriptionBlocks.forEach((block) => {
+         this.deactivateBlock(block);
+         block.classList.add('hide');
+      });
+
+      this.activateBlock(this.subscriptionBlocks[index]);
+      this.subscriptionBlocks[index].classList.remove('hide');
+   }
+
+   setupEventListeners() {
+      this.subscriptionSwitchBtns.forEach((btn, index) => {
+         btn.addEventListener('click', () => {
+            this.subscriptionSwitchBtns.forEach((otherBtn) => {
+               otherBtn.classList.remove('btn_black');
+            });
+
+            this.switchSubscription(index);
+            btn.classList.add('btn_black');
+         });
+      });
+
+      onAuthStateChanged(this.auth, (user) => {
+         console.log(user);
+         if (user !== null) {
+            this.designerContentLink.style.display = 'none';
+         } else {
+            this.designerContentLink.style.display = 'block';
+         }
+      });
+   }
+
+   deactivateBlock(block) {
       block.classList.remove('subscription__block_active');
       block.querySelector('.subscription__title').classList.remove('subscription__title_active');
       block.querySelector('.subscription__text').classList.remove('subscription__text_active');
       block.querySelector('.subscription__btn button').classList.remove('btn_black');
-      block.classList.add('hide');
-   });
+   }
 
-   subscriptionBlocks[index].classList.add('subscription__block_active');
-   subscriptionBlocks[index].querySelector('.subscription__title').classList.add('subscription__title_active');
-   subscriptionBlocks[index].querySelector('.subscription__text').classList.add('subscription__text_active');
-   subscriptionBlocks[index].querySelector('.subscription__btn button').classList.add('btn_black');
-   subscriptionBlocks[index].classList.remove('hide');
+   activateBlock(block) {
+      block.classList.add('subscription__block_active');
+      block.querySelector('.subscription__title').classList.add('subscription__title_active');
+      block.querySelector('.subscription__text').classList.add('subscription__text_active');
+      block.querySelector('.subscription__btn button').classList.add('btn_black');
+   }
 }
 
-subscriptionSwitchBtns.forEach((btn, index) => {
-   btn.addEventListener('click', () => {
-      subscriptionSwitchBtns.forEach((otherBtn) => {
-         otherBtn.classList.remove('btn_black');
-      });
+new SubscriptionManager();
 
-      switchSubscription(index);
-      btn.classList.add('btn_black');
-   });
-});
-
-const auth = getAuth();
-onAuthStateChanged(auth, (user) => {
-   console.log(user);
-   if (user !== null) {
-      designerContentLink.style.display = 'none';
-   } else {
-      designerContentLink.style.display = 'block';
-   }
-});
 
 
 

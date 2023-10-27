@@ -12,7 +12,7 @@ class MainPage {
   }
   init() {
     firebase.getAuth();
-    this.contactMe.validation();
+   this.contactMe.validation(); 
   }
 }
 
