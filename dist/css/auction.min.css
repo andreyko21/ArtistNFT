@@ -1383,6 +1383,29 @@ body {
 }
 
 @font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/ManropeRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav a {
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  color: #c8d2dc;
+}
+.nav img {
+  margin: 0 4px;
+}
+
+@font-face {
   font-family: Proxima;
   font-display: swap;
   src: url("../fonts/ProximaRegular.woff2") format("woff2");
@@ -1417,18 +1440,14 @@ body {
 }
 .auction__links {
   margin: 30px 0 24px;
-  color: var(--secondary, #C8D2DC);
-  /* 14 regular */
-  font-family: Manrope;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 19px; /* 135.714% */
 }
 @media (max-width: 600px) {
   .auction__links {
     margin: 24px 0 32px;
   }
+}
+.auction__links a:nth-child(2) img {
+  display: none;
 }
 .auction__main {
   padding: 0 15px;
@@ -1635,8 +1654,15 @@ body {
   width: 100%;
   height: 100%;
   display: block;
-  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  background: #2c2f33;
   border-radius: 0px 0px 8px 8px;
+  overflow: hidden;
+}
+.auction__progress-status {
+  display: block;
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  height: 100%;
+  width: 0;
 }
 .auction__bid-title {
   background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
@@ -1715,12 +1741,20 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 185px;
+  margin: 0 auto;
 }
 @media (max-width: 600px) {
   .auction__data {
     font-size: 18px;
     margin-bottom: 2px;
   }
+}
+.auction__data-info {
+  width: 40px;
+  display: block;
 }
 .auction__live-data {
   font-size: 14px;
@@ -1818,10 +1852,6 @@ body {
   line-height: 1.75;
   height: 100%;
 }
-.auction__text-block_hidden .auction__text-block-paragraphs {
-  animation: animationOne 1s ease-in-out 1;
-  height: 60px;
-}
 .auction__text-block_hidden .auction__text-block-btn span:first-child {
   display: none;
 }
@@ -1873,7 +1903,7 @@ body {
   }
 }
 .auction__text-block-paragraphs {
-  animation: animationTwo 1s ease-in-out 1;
+  transition: all 300ms ease 0s;
   overflow: hidden;
 }
 @media (max-width: 600px) {
@@ -2047,7 +2077,20 @@ body {
   }
 }
 
+.input-block {
+  position: relative;
+}
 .input-block__input {
   background: #2c2f33;
   margin-top: 5px;
+}
+.input-block__error {
+  position: absolute;
+  bottom: -18px;
+}
+@media (max-width: 600px) {
+  .input-block__error {
+    bottom: 73px;
+    right: 0;
+  }
 }

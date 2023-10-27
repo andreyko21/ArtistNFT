@@ -71,7 +71,14 @@
         <div data-observ></div>
         <div class="page__container">
             <section class="auction">
-                <div class="auction__links">Main page => Auction</div>
+                <div class="auction__links">
+                    <div class="nav">
+   <a href="index.html">Main page <img src="images/svg/navArrow.svg" alt="arrow"></a>
+   <a href="">Auction <img src="images/svg/navArrow.svg" alt="arrow"></a>
+   <a href="#"></a>
+   <!-- <a href="@@nav-four-href">@@nav-other-name <img src="@@nav-four-arrow" alt="arrow"></a> -->
+</div>
+                </div>
                 <section class="auction__main">
                     <div class="auction__image">
                         <picture class="auction__img">
@@ -96,7 +103,9 @@
                         </section>
                         <section class="auction__bid">
                             <div class="auction__main-progress-bar">
-                                <div class="auction__main-progress-bar-line"></div>
+                                <div class="auction__main-progress-bar-line">
+                                    <span class="auction__progress-status"></span>
+                                </div>
                             </div>
                             <h3 class="auction__bid-title">highest price</h3>
                             <div class="auction__this-price">$<span class="auction__price"></span></div>
@@ -104,18 +113,22 @@
                                 <div class="auction__input input-block">
                                     <label class="input-block__label" for="input-place">Place your bid</label>
                                     <input class="input-block__input" type="text" id="input-place" name="place" autocomplete="off">
-                                    <div class="contact-me__error-place input-block__error"></div>
+                                    <div class="auction__error-place input-block__error"></div>
                                 </div>
                                 <div class="btn auction__input-btn"><span>Place bid</span></div>
                             </div>
                             <div class="auction__data">
-                                <span id="days"></span>
-                                <span id="hours"></span>
-                                <span id="minutes"></span>
-                                <span id="seconds"></span>
+                                <span class="auction__data-info" id="days"></span>
+                                <span class="auction__data-info" id="hours"></span>
+                                <span class="auction__data-info" id="minutes"></span>
+                                <span class="auction__data-info" id="seconds"></span>
                             </div>
                             <div class="auction__live-data">
-                                <span>Live</span> <span id="live-mounth"> </span><span id="live-day"></span>, <span id="live-hours"></span>:<span id="live-minutes"></span>pm
+                                <span>Live</span>
+                                <span id="live-mounth"></span>
+                                <span id="live-day"></span>,
+                                <span id="live-hours"></span>:
+                                <span id="live-minutes"></span>pm
                             </div>
                             <div class="auction__pay-info">
                                 You can purchase Art or NFT using popular system of payment. We accepting PayPal, Visa/Mastercard. Any crypto currency
