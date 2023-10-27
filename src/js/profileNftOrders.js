@@ -15,23 +15,25 @@ class ProfileNftOrders {
   }
 
   getOrders() {
-    const db = firebase.getFirestore();
-    const ordersRef = collection(db, 'users', this.profile.user.uid, 'orders');
-    const querySnapshot = getDocs(ordersRef);
-    querySnapshot.then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        console.log(doc.data());
-        this.render(doc.data());
+    firebase.getAuth().onAuthStateChanged((user) => {
+      const db = firebase.getFirestore();
+      const ordersRef = collection(db, 'users', user.uid, 'nft');
+      const querySnapshot = getDocs(ordersRef);
+      querySnapshot.then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          console.log(doc.data());
+          this.render(doc.data());
+        });
       });
     });
   }
 
-  render() {
+  render(data) {
     const newOrder = `<tr class="table-nft-order">
           <td class="table-nft-order__nft-img">
-            <img src="images/nft-img-lite.png" alt="NFT" />
+            <img src="${data.imageWebP}" />
           </td>
-          <td class="table-nft-order__nft-name">NFT #9238239</td>
+          <td class="table-nft-order__nft-name">${data.title}</td>
           <td class="table-nft-order__crypto-address">
             <div class="table-nft-order__crypto-address-copy">
               <span class="table-nft-order__crypto-address-copy-text"></span
@@ -52,3 +54,5 @@ class ProfileNftOrders {
     this.tableListBlock.append(newOrder);
   }
 }
+
+new ProfileNftOrders();
