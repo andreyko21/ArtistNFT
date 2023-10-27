@@ -8,46 +8,68 @@
         <div data-observ></div>
         <div class="page__container">
             <section class="auction" >
-                <div class="auction__links">Main page => Auction</div>
+                <div class="auction__links">
+                    @@include('html/nav.html',{
+                        'nav-href': 'index.html',
+                        'nav-name': 'Main page',
+                        'nav-arrow': 'images/svg/navArrow.svg',
+                        'nav-two-href': '',
+                        'nav-two-name': 'Auction',
+                        'nav-two-arrow': 'images/svg/navArrow.svg',
+                        'nav-three-href': '#',
+                        'nav-three-name': '',
+                    })
+                </div>
                 <section class="auction__main">
-                    <div class="auction__image"></div>
+                    <div class="auction__image">
+                        <picture class="auction__img">
+                            <source srcset="" type="image/webp">
+                            <img src="" alt="">
+                        </picture>
+                    </div>
                     <div class="auction__info">
                         <h1 class="auction__info-title">AUCTION</h1>
-                        <h2 class="auction__name-title">Title of picture or NFT</h2>
+                        <h2 class="auction__name-title"></h2>
                         <section class="auction__inform-columns">
                             <div class="auction__inform-column auction__inform-column_size">
-                                <div class="auction__scale">36 × 27 in</div>
-                                <div class="auction__size">91.4 × 68.6 cm</div>
+                                <div class="auction__size"></div>
                             </div>
                             <hr class="auction__inform-columns-line">
                             <div class="auction__inform-column auction__inform-column_estimated">
                                 <div class="auction__estimated-title">Estimated value</div>
-                                <div class="auction__estimated-price">$6,000</div>
+                                <div class="auction__estimated-price">$<span class="auction__start-price"></span></div>
                             </div>
                             <hr class="auction__inform-columns-line">
-                            <div class="auction__inform-column auction__inform-column_next-inform">
-                                This work is part of a limited edition set.
-                            </div>
+                            <div class="auction__inform-column auction__inform-column_next-inform"></div>
                         </section>
                         <section class="auction__bid">
                             <div class="auction__main-progress-bar">
-                                <div class="auction__main-progress-bar-line"></div>
+                                <div class="auction__main-progress-bar-line">
+                                    <span class="auction__progress-status"></span>
+                                </div>
                             </div>
                             <h3 class="auction__bid-title">highest price</h3>
-                            <div class="auction__this-price">$100 322</div>
+                            <div class="auction__this-price">$<span class="auction__price"></span></div>
                             <div class="auction__input-line">
                                 <div class="input-block auction__input">
                                     <label class="input-block__label" for="input-place">Place your bid</label>
-                                    <input class="input-block__input" type="text" id="input-place" name="place" placeholder="$100 322" autocomplete="off">
-                                    <div class="input-block__error contact-me__error-place"></div>
+                                    <input class="input-block__input" type="text" id="input-place" name="place" autocomplete="off">
+                                    <div class="input-block__error auction__error-place"></div>
                                 </div>
                                 <div class="btn auction__input-btn"><span>Place bid</span></div>
                             </div>
                             <div class="auction__data">
-                                28d  17h  26m  31s
+                                <span class="auction__data-info" id="days"></span>
+                                <span class="auction__data-info" id="hours"></span>
+                                <span class="auction__data-info" id="minutes"></span>
+                                <span class="auction__data-info" id="seconds"></span>
                             </div>
                             <div class="auction__live-data">
-                                Live март 5, 8:00pm
+                                <span>Live</span>
+                                <span id="live-mounth"></span>
+                                <span id="live-day"></span>,
+                                <span id="live-hours"></span>:
+                                <span id="live-minutes"></span>pm
                             </div>
                             <div class="auction__pay-info">
                                 You can purchase Art or NFT using popular system of payment. We accepting PayPal, Visa/Mastercard. Any crypto currency
@@ -65,8 +87,8 @@
                     <div class="auction__text-block">
                         <div class="auction__text-block-title">100% of the proceeds of this sale are donated to LAM.</div>
                         <div class="auction__text-block-paragraphs">
-                            <p class="auction__text-block-paragraph auction__text-block-paragraph_one">Multidisciplinary artist Judy Chicago helped pioneer the feminist art movement in the 1960s and ’70s; for decades, she has made work that celebrates the multiplicity of female identity. Chicago’s practice spans painting, textile arts, sculpture, and installation and has explored the intricacies of childbirth (as seen in her “Birth Project” series, 1980–85), the possibilities of minimalist sculpture, and the relationship between landscape and the female body. Her most famous work, an installation called The Dinner Party (1974–79), is an homage to 39 influential female figures from Eastern and Western mythology and civilization. Chicago studied at the University of California, Los Angeles. She founded a groundbreaking and widely influential feminist art program while on staff at California State University, Fresno. Her work has been exhibited in New York, London, Milan, Chicago, and San Francisco and belongs in the collections of the British Museum, Moderna Museet, the Metropolitan Museum of Art, the Los Angeles County Museum of Art, the Tate, the Art Institute of Chicago, and the National Gallery of Art in Washington, D.C.</p>
-                            <p class="auction__text-block-paragraph auction__text-block-paragraph_two">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui expedita laudantium quo sit placeat error unde nam minima ad dolorem tempora provident, eius culpa velit? Perferendis nemo omnis unde nesciunt! Applicable sales tax will apply to all works shipped to and within the US. Please note, your card will automatically be charged for the Total Purchase Price, buyer’s premium, shipping, and any applicable sales tax, based on your registration address. For transactions over $50,000, you will be given the option to pay via wire transfer.</p>
+                            <p class="auction__text-block-paragraph auction__text-block-paragraph_one"></p>
+                            <p class="auction__text-block-paragraph auction__text-block-paragraph_two"></p>
                         </div>
                         <button class="auction__text-block-btn btn btn_grey"><span>Hide info</span><span>show info</span> </button>
                     </div>
