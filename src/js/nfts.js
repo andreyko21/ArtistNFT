@@ -2,6 +2,8 @@
 import $ from 'jquery';
 import firebase from './modules/firebase';
 import { getFirestore, collection, addDoc, getDocs, updateDoc } from 'firebase/firestore';
+import Parallax from './modules/parallax';
+import Header from './modules/header';
 
 class NFTApp {
    constructor() {
@@ -10,9 +12,11 @@ class NFTApp {
       this.prevButton = $('.nfts__pagination-prev');
       this.nextButton = $('.nfts__pagination-next');
       this.paginationList = $('.nfts__pagination-list');
+      this.paginationNumbers = $('.nfts__pagination-number');
       this.currentPage = 1;
       this.nftArr = [];
-
+      this.header = new Header();
+      this.parallax = new Parallax();
       const urlParams = new URLSearchParams(window.location.search);
       const pageParam = urlParams.get('page');
       this.currentPage = parseInt(pageParam) || 1;
@@ -24,6 +28,12 @@ class NFTApp {
       this.getDocsAndRender();
       this.prevButton.on('click', this.handlePrevClick.bind(this));
       this.nextButton.on('click', this.handleNextClick.bind(this));
+      this.paginationNumbers.each((index, element) => {
+         $(element).on('click', () => {
+            const pageNumber = $(element).data('page');
+            this.changePage(pageNumber);
+         });
+      });
    }
 
    getDocsAndRender() {
@@ -101,8 +111,7 @@ class NFTApp {
       const newURL = `?page=${this.currentPage}`;
       history.pushState({ page: this.currentPage }, null, newURL);
    }
-}
 
-$(document).ready(function () {
-   new NFTApp();
-});
+}
+new NFTApp();
+
