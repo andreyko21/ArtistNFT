@@ -970,6 +970,8 @@ body {
   background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .authorization-button__gradient {
+  text-align: center;
+  display: block;
   font-family: Proxima;
   font-size: 14px;
   font-style: normal;
@@ -1024,10 +1026,35 @@ body {
   margin-left: auto;
   margin-right: 15px;
 }
+.footer .social .icon-pinterest,
+.footer .social .icon-twitter-3,
+.footer .social .icon-telegram,
+.footer .social .icon-instagram,
+.footer .social .icon-pinterest {
+  font-size: 20px;
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 @media (max-width: 650px) {
   .footer .social {
     margin-right: 0;
   }
+}
+.footer .social__link:focus span {
+  background: rgba(134, 168, 255, 0.6352941176);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer .social__link:hover span {
+  background: #86a8ff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer .social__link:active span {
+  background: #3e4e77;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .footer__link {
   color: rgba(200, 210, 220, 0.6);
@@ -1037,14 +1064,14 @@ body {
   font-weight: 400;
   line-height: 21px;
 }
-.footer__link:focus {
-  color: rgba(134, 168, 255, 0.6352941176);
-}
 .footer__link:hover {
   color: #86a8ff;
 }
 .footer__link:active {
   color: #3e4e77;
+}
+.footer__link:focus {
+  color: rgba(134, 168, 255, 0.6352941176);
 }
 .footer__link:not(:first-child) {
   margin-left: 30px;
@@ -1106,6 +1133,11 @@ body {
   .social__link:not(:first-child) {
     margin-left: 6px;
   }
+}
+
+.parallax {
+  z-index: 1;
+  pointer-events: none;
 }
 
 :root {
@@ -2079,6 +2111,8 @@ body {
   background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .authorization-button__gradient {
+  text-align: center;
+  display: block;
   font-family: Proxima;
   font-size: 14px;
   font-style: normal;
@@ -2133,10 +2167,35 @@ body {
   margin-left: auto;
   margin-right: 15px;
 }
+.footer .social .icon-pinterest,
+.footer .social .icon-twitter-3,
+.footer .social .icon-telegram,
+.footer .social .icon-instagram,
+.footer .social .icon-pinterest {
+  font-size: 20px;
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 @media (max-width: 650px) {
   .footer .social {
     margin-right: 0;
   }
+}
+.footer .social__link:focus span {
+  background: rgba(134, 168, 255, 0.6352941176);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer .social__link:hover span {
+  background: #86a8ff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer .social__link:active span {
+  background: #3e4e77;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .footer__link {
   color: rgba(200, 210, 220, 0.6);
@@ -2146,14 +2205,14 @@ body {
   font-weight: 400;
   line-height: 21px;
 }
-.footer__link:focus {
-  color: rgba(134, 168, 255, 0.6352941176);
-}
 .footer__link:hover {
   color: #86a8ff;
 }
 .footer__link:active {
   color: #3e4e77;
+}
+.footer__link:focus {
+  color: rgba(134, 168, 255, 0.6352941176);
 }
 .footer__link:not(:first-child) {
   margin-left: 30px;
@@ -2215,6 +2274,11 @@ body {
   .social__link:not(:first-child) {
     margin-left: 6px;
   }
+}
+
+.parallax {
+  z-index: 1;
+  pointer-events: none;
 }
 
 .burger-menu-button {

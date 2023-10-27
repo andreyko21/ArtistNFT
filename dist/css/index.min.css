@@ -1158,6 +1158,8 @@ body {
   background: linear-gradient(95deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
 }
 .authorization-button__gradient {
+  text-align: center;
+  display: block;
   font-family: Proxima;
   font-size: 14px;
   font-style: normal;
@@ -1212,10 +1214,35 @@ body {
   margin-left: auto;
   margin-right: 15px;
 }
+.footer .social .icon-pinterest,
+.footer .social .icon-twitter-3,
+.footer .social .icon-telegram,
+.footer .social .icon-instagram,
+.footer .social .icon-pinterest {
+  font-size: 20px;
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 @media (max-width: 650px) {
   .footer .social {
     margin-right: 0;
   }
+}
+.footer .social__link:focus span {
+  background: rgba(134, 168, 255, 0.6352941176);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer .social__link:hover span {
+  background: #86a8ff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer .social__link:active span {
+  background: #3e4e77;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .footer__link {
   color: rgba(200, 210, 220, 0.6);
@@ -1225,14 +1252,14 @@ body {
   font-weight: 400;
   line-height: 21px;
 }
-.footer__link:focus {
-  color: rgba(134, 168, 255, 0.6352941176);
-}
 .footer__link:hover {
   color: #86a8ff;
 }
 .footer__link:active {
   color: #3e4e77;
+}
+.footer__link:focus {
+  color: rgba(134, 168, 255, 0.6352941176);
 }
 .footer__link:not(:first-child) {
   margin-left: 30px;
@@ -1294,6 +1321,11 @@ body {
   .social__link:not(:first-child) {
     margin-left: 6px;
   }
+}
+
+.parallax {
+  z-index: 1;
+  pointer-events: none;
 }
 
 .btn {
@@ -1847,7 +1879,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (min-width: 601px) {
+@media (min-width: 941px) {
   .nft-swiper-section .swiper-slide-active {
     bottom: 31px;
   }
@@ -1857,7 +1889,7 @@ body {
     opacity: 1;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 940px) {
   .nft-swiper-section {
     padding-top: 0px;
   }
@@ -2096,6 +2128,7 @@ body {
 }
 .banner-section__button {
   margin-top: 12px;
+  height: fit-content;
   font-family: "Proxima";
   font-size: 18px;
   font-weight: 700;
@@ -2253,6 +2286,7 @@ body {
 
 .page {
   padding-top: 79px;
+  padding-bottom: 91px;
 }
 @media (max-width: 960px) {
   .page {
@@ -2282,6 +2316,36 @@ body {
   padding-top: 63px;
   padding-bottom: 63px;
   margin-left: 13px;
+}
+.we-here-section__text-block .social .icon-pinterest,
+.we-here-section__text-block .social .icon-twitter-3,
+.we-here-section__text-block .social .icon-telegram,
+.we-here-section__text-block .social .icon-instagram,
+.we-here-section__text-block .social .icon-pinterest {
+  font-size: 20px;
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 650px) {
+  .we-here-section__text-block .social {
+    margin-right: 0;
+  }
+}
+.we-here-section__text-block .social__link:focus span {
+  background: rgba(134, 168, 255, 0.6352941176);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.we-here-section__text-block .social__link:hover span {
+  background: #86a8ff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.we-here-section__text-block .social__link:active span {
+  background: #3e4e77;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 400px) {
   .we-here-section__text-block .social {
@@ -2384,9 +2448,6 @@ body {
     font-size: 15px;
   }
 }
-.we-here-section__buttons-block .btn_black {
-  padding: 18px 36px 19px 37px;
-}
 @media (max-width: 400px) {
   .we-here-section__buttons-block .btn:first-child {
     padding: 12px 16px;
@@ -2398,7 +2459,7 @@ body {
 }
 @media (max-width: 400px) {
   .we-here-section__buttons-block .btn:not(:first-child) {
-    padding: 15px 29px;
+    padding: 12px 29px;
   }
 }
 .we-here-section__img-container {
@@ -2640,6 +2701,7 @@ body {
   }
 }
 .biography-section__sub-title {
+  width: fit-content;
   margin-top: 42px;
   max-width: 550px;
   grid-area: sub-title;
@@ -2834,8 +2896,8 @@ body {
   }
 }
 .card__img img {
+  aspect-ratio: 1/1;
   max-width: 264px;
-  width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
@@ -2890,8 +2952,7 @@ body {
 }
 .card__line {
   display: block;
-  max-width: 90%;
-  width: 100%;
+  width: 90%;
   height: 1px;
   opacity: 0.05;
   background: #fcffff;
