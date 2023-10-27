@@ -4,6 +4,7 @@ import { collection, getDocs, doc, setDoc, addDoc} from "firebase/firestore";
 import firebase from './modules/firebase';
 import LoadArts from './modules/loadArts';
 import CustomBy from './modules/customBy';
+import Parallax from './modules/parallax';
 
 
 class ArtsOne {
@@ -11,7 +12,7 @@ class ArtsOne {
     this.header = new Header();
     this.customBy = new CustomBy();
     this.db = firebase.getFirestore();
-    this.prolax();
+    this.prolax = new Parallax();
     this.firebase();
     this.setCardHover();
   }
@@ -36,27 +37,7 @@ class ArtsOne {
       $('.active').removeClass('active');
     });
   }
-  prolax(){
-    $(document).ready(function () {
-      $('.arts-two').mousemove(function (e) {
-        var containerWidth = $(this).width();
-        var containerHeight = $(this).height();
-        var mouseX = e.pageX - $(this).offset().left;
-        var mouseY = e.pageY - $(this).offset().top;
-        var offsetX = 0.5 - mouseX / containerWidth;
-        var offsetY = 0.5 - mouseY / containerHeight;
-    
-        $('.parallax').css({
-          transform:
-            'translate(-50%,-50%) translate(' +
-            offsetX * 40 +
-            'px,' +
-            offsetY * 40 +
-            'px)',
-        });
-      });
-  });
-}};
+};
 const artsOne = new  ArtsOne();
 
 

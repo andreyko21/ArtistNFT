@@ -35,11 +35,12 @@
   }
 
 .auction {
+    position: relative;
     color: $whiteText;
     margin-bottom: 56px;
     font-family: Proxima;
     &__links {
-        margin: 30px 0 24px;
+        margin: 30px 15px 24px;
         @media (max-width: 600px) {
             margin: 24px 0 32px;
         }
@@ -87,12 +88,6 @@
             height: 100%;
             object-fit: cover;
         }
-    }
-    &__img {
-
-    }
-    &__info {
-
     }
     &__inform-columns {
         font-size: 16px;
@@ -173,10 +168,6 @@
             height: 25px;
         }
     }
-    &__scale {
-
-    }
-    &__size {}
     &__inform-columns-line {
         position: relative;
         width: 1px; 
@@ -473,8 +464,6 @@
             margin-bottom: 0;
         }
     }
-    &__text-block-paragraph_one {}
-    &__text-block-paragraph_two {}
     &__text-block-btn{
         display: none;
         width: 107px;
@@ -605,43 +594,73 @@
         display: flex;
         justify-content: space-between;
     }
-    &__social-links-link {}
+    &__background{
+        position: absolute;
+        z-index: -3;
+        @media (max-width: 600px) {
+            display: none;
+        }
+    }
+    &__blur {
+        &_one {
+            top: -150px;
+            left: -650px;
+        }
+        &_two {
+            top: -150px;
+            right: -700px;
+        }
+    }
+    &__circle{
+        top: 551px;
+        left: -16px;
+        img{
+            width: 15px;
+            height: 15px;
+        }
+        @media (max-width: 1150px) {
+            left: 30px; 
+        }
+    }
+    &__star {
+        z-index: -2;
+        &_one {
+            top: 19px;
+            left: -46px;
+            @media (max-width: 1150px) {
+                top: 40px;
+                left: 35px; 
+            }
+        }
+        &_two {
+            top: 17px;
+            right: 84px;
+            img{
+                width: 24px;
+                height: 33px;
+            }
+        }
+    }
     @media (max-width: 600px) {
         margin-bottom: 28px;
-    }
-}
-
-
-
-.input-block {
-    position: relative;
-    &_textarea {}
-    &__label {}
-    &__input {
-        background: $gunmetalGrey;
-        margin-top: 5px;
-    }
-    &__error {
-        position: absolute;
-        bottom: -18px;
-        @media (max-width:600px) {
-            bottom: 73px;
-            right: 0;
+    }    
+    .input-block {
+        position: relative;
+        &__input {
+            background: $gunmetalGrey;
+            margin-top: 5px;
+        }
+        &__error {
+            position: absolute;
+            bottom: -18px;
+            @media (max-width:600px) {
+                bottom: 73px;
+                right: 0;
+            }
         }
     }
 }
-.contact-me {
-    &__question {}
-    &__error-question {}
-}
-.btn {
-}
 
-.auction {
 
-}
-.one-card {
-    &__bg {}
-}
 
 

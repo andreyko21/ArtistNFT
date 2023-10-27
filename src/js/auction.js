@@ -2,12 +2,13 @@ import $ from 'jquery';
 import Header from './modules/header';
 import { collection, getDocs, updateDoc, setDoc, doc} from "firebase/firestore";
 import firebase from './modules/firebase';
-
+import Parallax from './modules/parallax';
 
 class Auction {
     constructor() {
         this.header = new Header();
         this.db = firebase.getFirestore();
+        this.prolax = new Parallax();
         this.firebase();
         this.auth = firebase.getAuth();
         this.inputPrice = $('.input-block__input');
@@ -123,8 +124,6 @@ class Auction {
         $(".auction__progress-procent").css("width", `${progress}%`);
     }
     inputInfo(data){
-        // const priceInfo = '$' +  parseFloat(data.price).toLocaleString('en-US');
-        // const startPrice = parseFloat(data.price).toLocaleString('en-US');
         $('.auction__name-title').html(data.title);
         $('.auction__size').html(data.details[1]);
         $('.auction__start-price').html(parseFloat(data.minPrice).toLocaleString('en-US'));

@@ -1434,12 +1434,17 @@ body {
   font-style: normal;
 }
 .auction {
+  position: relative;
   color: #fcffff;
   margin-bottom: 56px;
   font-family: Proxima;
 }
 .auction__links {
+<<<<<<< HEAD
   margin: 30px 0 24px;
+=======
+  margin: 30px 15px 24px;
+>>>>>>> 85588bff5d39e54f2fd58ea904d1a7ddd6bea66c
 }
 @media (max-width: 600px) {
   .auction__links {
@@ -2071,11 +2076,63 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.auction__background {
+  position: absolute;
+  z-index: -3;
+}
+@media (max-width: 600px) {
+  .auction__background {
+    display: none;
+  }
+}
+.auction__blur_one {
+  top: -150px;
+  left: -650px;
+}
+.auction__blur_two {
+  top: -150px;
+  right: -700px;
+}
+.auction__circle {
+  top: 551px;
+  left: -16px;
+}
+.auction__circle img {
+  width: 15px;
+  height: 15px;
+}
+@media (max-width: 1150px) {
+  .auction__circle {
+    left: 30px;
+  }
+}
+.auction__star {
+  z-index: -2;
+}
+.auction__star_one {
+  top: 19px;
+  left: -46px;
+}
+@media (max-width: 1150px) {
+  .auction__star_one {
+    top: 40px;
+    left: 35px;
+  }
+}
+.auction__star_two {
+  top: 17px;
+  right: 84px;
+}
+.auction__star_two img {
+  width: 24px;
+  height: 33px;
+}
 @media (max-width: 600px) {
   .auction {
     margin-bottom: 28px;
   }
 }
+<<<<<<< HEAD
 
 .input-block {
   position: relative;
@@ -2085,11 +2142,25 @@ body {
   margin-top: 5px;
 }
 .input-block__error {
+=======
+.auction .input-block {
+  position: relative;
+}
+.auction .input-block__input {
+  background: #2c2f33;
+  margin-top: 5px;
+}
+.auction .input-block__error {
+>>>>>>> 85588bff5d39e54f2fd58ea904d1a7ddd6bea66c
   position: absolute;
   bottom: -18px;
 }
 @media (max-width: 600px) {
+<<<<<<< HEAD
   .input-block__error {
+=======
+  .auction .input-block__error {
+>>>>>>> 85588bff5d39e54f2fd58ea904d1a7ddd6bea66c
     bottom: 73px;
     right: 0;
   }
