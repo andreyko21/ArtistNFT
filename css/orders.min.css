@@ -1559,14 +1559,14 @@ body {
   width: 100%;
 }
 @media (max-width: 960px) {
-  .table__body tbody {
+  .table__body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
 }
 @media (max-width: 600px) {
-  .table__body tbody {
+  .table__body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -2065,6 +2065,9 @@ body {
     width: 16%;
   }
 }
+.orders-section .table-order {
+  overflow: hidden;
+}
 .orders-section .table-order__type {
   grid-area: type;
   width: 11.8%;
@@ -2149,10 +2152,13 @@ body {
   }
 }
 .orders-section .table-order__comment {
+  height: 100%;
+  overflow: hidden;
   grid-area: text;
   width: 16%;
 }
 .orders-section .table-order__comment-text {
+  max-width: 250px;
   overflow-wrap: break-word;
   color: #ffffff;
   font-family: "Proxima";
@@ -2190,6 +2196,7 @@ body {
   }
 }
 .orders-section .table-order__address {
+  height: 100%;
   grid-area: text;
   width: 16%;
 }
@@ -2229,6 +2236,9 @@ body {
   }
 }
 .orders-section .table-order__action {
+  display: flex;
+  height: min-content;
+  margin-top: auto;
   grid-area: action;
 }
 .orders-section .table-order__action-button {
@@ -2253,7 +2263,7 @@ body {
 }
 @media (max-width: 960px) {
   .orders-section .table-order {
-    grid-template: "color type" "color email" "size size" "text text" "action action" auto/min-content auto;
+    grid-template: "color type" "color email" "size size" "text text" "action action" 1fr/min-content auto;
   }
 }
 

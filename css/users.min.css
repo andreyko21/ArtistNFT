@@ -2665,14 +2665,14 @@ body {
   width: 100%;
 }
 @media (max-width: 960px) {
-  .table__body tbody {
+  .table__body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
 }
 @media (max-width: 600px) {
-  .table__body tbody {
+  .table__body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
