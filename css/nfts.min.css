@@ -1496,10 +1496,7 @@ body {
   }
 }
 .card__img {
-  background-image: url("../images/school/Frame.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: url("../images/school/Frame.png") no-repeat center/cover;
   height: 350px;
   padding: 40px 53px 70px;
   display: flex;
@@ -1531,7 +1528,7 @@ body {
 }
 @media (max-width: 767.98px) {
   .card__img img {
-    max-width: 200px;
+    max-width: 100%;
   }
 }
 .card__sub-title {
@@ -1566,6 +1563,7 @@ body {
 }
 @media (max-width: 767.98px) {
   .card__text {
+    max-width: 200px;
     margin-left: 11px;
   }
 }
