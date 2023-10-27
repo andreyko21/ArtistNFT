@@ -759,6 +759,9 @@ body {
   fill: #c8d2dc;
   transition: fill 0.3s, transform 0.3s, box-shadow 0.3s;
 }
+.menu__item .icon-lock {
+  margin-right: 5px;
+}
 .menu__item:hover .menu__link {
   color: #86a8ff;
 }
@@ -1864,6 +1867,9 @@ body {
   margin-right: 8px;
   fill: #c8d2dc;
   transition: fill 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.menu__item .icon-lock {
+  margin-right: 5px;
 }
 .menu__item:hover .menu__link {
   color: #86a8ff;
