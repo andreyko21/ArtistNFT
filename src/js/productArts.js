@@ -36,7 +36,7 @@ class ProductApp {
       this.randomValues = new Uint32Array(64);
       window.crypto.getRandomValues(this.randomValues);
       this.all = this.upperCase + this.lowerCase + this.minus + this.underline + this.special;
-
+      this.header = new Header();
       this.loadCollectionArts();
 
       this.randomKey();

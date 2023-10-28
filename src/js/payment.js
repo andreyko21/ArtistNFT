@@ -19,21 +19,23 @@ class Payment {
       this.paymentError = $('.payment__pay-error');
       this.submitBtn = $('.submit');
       this.productArts = [];
-      this.checkbox = $('#contact-me-checkbox');
+      this.checkbox = $('#contact-me-card');
+      this.checkboxPal = $('#contact-me-pay');
+      this.checkboxCrypto = $('#contact-me-crypto');
       // this.getPaymentInfo(this.paymentDetails);
       this.switchClickPay();
-      this.initValidation();
+
       this.clickMouse();
       this.header = new Header();
       this.getProductCollectionArts();
-      let local = JSON.parse(localStorage.getItem('info'));
-
-
+      this.checkValueInp();
+      // this.validateForm();
       if (this.name) {
          this.loadCollectionNfts();
       }
-   }
 
+      this.initValidation();
+   }
 
    async addCollectionArts() {
       await getDocs(collection(this.db, "users"));
@@ -57,12 +59,6 @@ class Payment {
       }
    }
 
-
-
-
-
-
-
    async getProductCollectionArts() {
       const urlParams = new URLSearchParams(window.location.search);
       const productId = urlParams.get('id');
@@ -85,9 +81,6 @@ class Payment {
       });
 
       this.getPaymentInfoArts(this.productArts.find((item) => item.id === productId));
-
-
-
    }
 
    getPaymentInfoArts(item) {
@@ -184,13 +177,11 @@ class Payment {
    }
 
    initValidation() {
-
       $('.name').on('input', this.validateName);
       $('.email').on('input', this.validateEmail);
       $('.number').on('input', this.formatNumber);
       $('.data').on('input', this.formatDate);
       $('.cvc').on('input', this.validateCVC);
-
 
    }
 
@@ -198,9 +189,10 @@ class Payment {
       let inputValue = $(this).val();
       let sanitizedValue = inputValue.replace(/\d/g, '');
 
-      if (inputValue !== sanitizedValue || inputValue.length < 2) {
+      if (inputValue !== sanitizedValue || inputValue.length < 2 || inputValue.length === '') {
          $(this).val(sanitizedValue);
          $(this).addClass('error');
+
       } else {
          $(this).removeClass('error');
       }
@@ -273,6 +265,44 @@ class Payment {
    clickMouse() {
       const self = this;
 
+      this.submitBtn.on('click', function (e) {
+         e.preventDefault();
+
+         $('.name').val('');
+         $('.email').val('');
+         $('.number').val('');
+         $('.data').val('');
+         $('.cvc').val('');
+
+         self.checkbox.prop('checked', false);
+         self.checkboxPal.prop('checked', false);
+         self.checkboxCrypto.prop('checked', false);
+
+         self.submitBtn.addClass('disabled');
+      });
+   }
+
+
+   valueInput() {
+      const nameValue = $('.name').val();
+      const emailValue = $('.email').val();
+      const numberValue = $('.number').val();
+      const dataValue = $('.data').val();
+      const cvcValue = $('.cvc').val();
+
+      return !nameValue || !emailValue || !numberValue || !dataValue || !cvcValue;
+   }
+   checkValueInp() {
+      $('.name, .email, .number, .data, .cvc').on('input', () => {
+         if (this.valueInput()) {
+            this.submitBtn.addClass('disabled');
+         } else {
+            this.submitBtn.removeClass('disabled');
+         }
+      });
+
+      const self = this;
+
       this.checkbox.on('change', function () {
          if ($(this).is(':checked')) {
             self.submitBtn.removeClass('disabled');
@@ -280,18 +310,26 @@ class Payment {
             self.submitBtn.addClass('disabled');
          }
       });
-
-      this.submitBtn.on('click', function (e) {
-         e.preventDefault();
-         self.addCollectionArts();
+      this.checkboxPal.on('change', function () {
+         if ($(this).is(':checked')) {
+            self.submitBtn.removeClass('disabled');
+         } else {
+            self.submitBtn.addClass('disabled');
+         }
       });
-
+      this.checkboxCrypto.on('change', function () {
+         if ($(this).is(':checked')) {
+            self.submitBtn.removeClass('disabled');
+         } else {
+            self.submitBtn.addClass('disabled');
+         }
+      });
    }
-
-
-
 }
 new Payment();
+
+
+
 
 
 
