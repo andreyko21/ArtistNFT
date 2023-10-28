@@ -1420,6 +1420,8 @@ body {
   aspect-ratio: 1/1;
 }
 .card__img img picture {
+  margin-left: auto;
+  margin-right: auto;
   width: fit-content;
 }
 @media (max-width: 767.98px) {
