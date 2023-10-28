@@ -1416,11 +1416,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: fit-content;
 }
 .card__img img {
   max-width: 264px;
   height: 100%;
+  width: fit-content;
   border-radius: 50%;
   object-fit: cover;
   aspect-ratio: 1/1;
