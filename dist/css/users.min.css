@@ -1010,6 +1010,12 @@ body {
   background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: none;
+}
+@media (max-width: 600px) {
+  .premium-access-button .icon-crown {
+    display: block;
+  }
 }
 
 .footer {
@@ -2168,6 +2174,12 @@ body {
   background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: none;
+}
+@media (max-width: 600px) {
+  .premium-access-button .icon-crown {
+    display: block;
+  }
 }
 
 .footer {
