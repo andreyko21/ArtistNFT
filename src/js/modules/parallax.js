@@ -19,9 +19,9 @@ export default function Parallax() {
           $(this).css({
             transform:
               'translate(-50%,-50%) translate(' +
-              offsetX * 40 +
+              offsetX * 10 +
               'px,' +
-              offsetY * 40 +
+              offsetY * 10 +
               'px) rotate(' +
               rotationAngle +
               'deg)',
@@ -30,9 +30,9 @@ export default function Parallax() {
           $(this).css({
             transform:
               'translate(-50%,-50%) translate(' +
-              offsetX * -40 +
+              offsetX * -5 +
               'px,' +
-              offsetY * -40 +
+              offsetY * -5 +
               'px) rotate(' +
               rotationAngle +
               'deg)',

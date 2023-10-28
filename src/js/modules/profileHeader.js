@@ -12,6 +12,15 @@ export default class Header {
   BindEvents() {
     this.burgerMenuButton.click(() => this.ToggleBurgerMenu());
     this.siliderBackground.click(() => this.ToggleBurgerMenu());
+    $(window).on('resize', () => this.CheckScreenSize());
+  }
+
+  CheckScreenSize() {
+    if ($(window).width() < 1024 && this.burgerMenu.hasClass('menu_open')) {
+      this.scrollLock.toggleBodyLock(true);
+    } else {
+      this.scrollLock.toggleBodyLock(false);
+    }
   }
 
   ToggleBurgerMenu() {
