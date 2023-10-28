@@ -1591,6 +1591,10 @@ body {
 .payment__pay-card, .payment__pay-pal, .payment__pay-crypto {
   animation: slide-in-right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
+.payment__pay-crypto {
+  min-height: 441px;
+  height: 100%;
+}
 .payment__pay-number, .payment__pay-data, .payment__pay-ccv, .payment__pay-name, .payment__pay-email {
   min-height: 92px;
   height: 100%;
