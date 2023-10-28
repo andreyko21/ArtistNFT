@@ -22,7 +22,7 @@
       <ul class="menu__list">
         <li class="menu__item"><a href="#" class="menu__link">Main page</a></li>
         <li class="menu__item">
-          <a href="#" class="menu__link">
+          <a href="nfts.html" class="menu__link">
             <span class="icon-lock"></span>
             NFT</a>
         </li>
@@ -84,36 +84,41 @@
                      <button class="payment__pay-btn">Crypto</button>
                   </div>
                   <div class="payment__pay-form">
-                     <form class="payment__form payment__pay-card">
+                     <form class="payment__form-card payment__pay-card">
                         <div class="payment__pay-number">
                            <label class="payment__pay-label" for="number">Card number</label>
-                           <input class="payment__pay-inp number" id="number" type="text" placeholder="0000 0000 0000 0000">
+                           <input class="payment__pay-inp number" id="number" name="number" type="text" placeholder="0000 0000 0000 0000">
                         </div>
                         <div class="payment__pay-row">
                            <div class="payment__pay-data">
                               <label class="payment__pay-label" for="data">Date</label>
-                              <input class="payment__pay-inp data" id="data" type="text" placeholder="01/01" autocomplete="username">
+                              <input class="payment__pay-inp data" id="data" name="data" type="text" placeholder="01/01" autocomplete="username">
                            </div>
                            <div class="payment__pay-ccv">
                               <label class="payment__pay-label" for="cvc-one">CCV</label>
-                              <input class="payment__pay-inp cvc" id="cvc-one" type="password" placeholder="000" autocomplete="current-password">
+                              <input class="payment__pay-inp cvc" id="cvc-one" name="cvc" type="password" placeholder="000" autocomplete="current-password">
                            </div>
                         </div>
                         <div class="payment__pay-name">
                            <label class="payment__pay-label" for="name">Name on card</label>
-                           <input class="payment__pay-inp name" id="name" type="text" placeholder="Ivan Ivanov">
+                           <input class="payment__pay-inp name" id="name" name="name" type="text" placeholder="Ivan Ivanov">
                         </div>
 
                         <div class="payment__pay-subbtn">
-                           <button class="btn disabled submit"><span>Purchase</span></button>
+                           <button class="btn submit"><span>Purchase</span></button>
                         </div>
 
                         <div class="contact-me__i-agree">
                            <div class="checkbox contact-me__i-agree-checkbox">
-                              <input type="checkbox" id="contact-me-checkbox" name="checkbox" class="checkbox__input">
-                              <label for="contact-me-checkbox"></label>
-                           </div>
-                           <label for="contact-me-checkbox">
+    <input type="checkbox" id="contact-me-card" name="checkbox" class="checkbox__input">
+    <label for="checkbox__input">
+    </label>
+    
+</div>
+
+
+
+                           <label for="contact-me-card">
                               I agree with
                               <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
                               and
@@ -122,7 +127,7 @@
                            <div class="contact-me__error contact-me__i-agree-error"></div>
                         </div>
                      </form>
-                     <form class="hide payment__pay-pal">
+                     <form class="hide payment__form payment__pay-pal">
                         <div class="payment__pay-number">
                            <label class="payment__pay-label" for="number-two">Card number</label>
                            <input class="payment__pay-inp number" id="number-two" type="text" placeholder="0000 0000 0000 0000">
@@ -143,15 +148,20 @@
                         </div>
 
                         <div class="payment__pay-subbtn">
-                           <button class="btn disabled submit"><span>Purchase</span></button>
+                           <button class="btn submit"><span>Purchase</span></button>
                         </div>
 
                         <div class="contact-me__i-agree">
                            <div class="checkbox contact-me__i-agree-checkbox">
-                              <input type="checkbox" id="contact-me-checkbox" name="checkbox" class="checkbox__input">
-                              <label for="contact-me-checkbox"></label>
-                           </div>
-                           <label for="contact-me-checkbox">
+    <input type="checkbox" id="contact-me-pay" name="checkbox" class="checkbox__input">
+    <label for="checkbox__input">
+    </label>
+    
+</div>
+
+
+
+                           <label for="contact-me-pay">
                               I agree with
                               <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
                               and
@@ -171,17 +181,22 @@
                         </div>
                         <div class="payment__pay-email">
                            <label class="payment__pay-label" for="email-one">E-mail</label>
-                           <input class="payment__pay-inp email" id="email-one" type="email" placeholder="Your e-mail">
+                           <input class="payment__pay-inp email" id="email-one" name="email" type="email" placeholder="Your e-mail">
                         </div>
                         <div class="payment__pay-subbtn">
-                           <button class="btn disabled submit"><span>Check</span></button>
+                           <button class="btn submit"><span>Check</span></button>
                         </div>
                         <div class="contact-me__i-agree">
                            <div class="checkbox contact-me__i-agree-checkbox">
-                              <input type="checkbox" id="contact-me-checkbox" name="checkbox" class="checkbox__input">
-                              <label for="contact-me-checkbox"></label>
-                           </div>
-                           <label for="contact-me-checkbox">
+    <input type="checkbox" id="contact-me-crypto" name="checkbox" class="checkbox__input">
+    <label for="checkbox__input">
+    </label>
+    
+</div>
+
+
+
+                           <label for="contact-me-crypto">
                               I agree with
                               <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
                               and

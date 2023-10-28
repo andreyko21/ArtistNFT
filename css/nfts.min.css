@@ -1308,198 +1308,6 @@ body {
   }
 }
 
-@font-face {
-  font-family: Manrope;
-  font-display: swap;
-  src: url("../fonts/ManropeRegular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Proxima;
-  font-display: swap;
-  src: url("../fonts/ProximaBold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: Proxima;
-  font-display: swap;
-  src: url("../fonts/ProximaExtraBold.woff2") format("woff2");
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: Proxima;
-  font-display: swap;
-  src: url("../fonts/ProximaLight.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: Proxima;
-  font-display: swap;
-  src: url("../fonts/ProximaRegular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Proxima;
-  font-display: swap;
-  src: url("../fonts/ProximaSemibold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-.nfts {
-  position: relative;
-  top: 0;
-}
-.nfts__row {
-  padding-top: 49px;
-}
-@media (max-width: 576px) {
-  .nfts__row {
-    padding-top: 26px;
-  }
-}
-.nfts__name {
-  padding: 0;
-  justify-content: center;
-}
-@media (max-width: 768px) {
-  .nfts__make, .nfts__circle, .nfts__war, .nfts__star {
-    display: none;
-  }
-}
-.nfts__star {
-  position: absolute;
-}
-@media (max-width: 1280px) {
-  .nfts__star {
-    top: 20px;
-    left: 200px;
-  }
-}
-@media (max-width: 1024px) {
-  .nfts__star {
-    left: 100px;
-  }
-}
-.nfts__circle {
-  position: absolute;
-  top: 145px;
-  right: 320px;
-}
-@media (max-width: 1280px) {
-  .nfts__circle {
-    top: 145px;
-    right: 200px;
-  }
-}
-.nfts__blur {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-}
-@media (max-width: 576px) {
-  .nfts__blur {
-    display: none;
-  }
-}
-.nfts__title {
-  font-family: Proxima;
-  font-size: clamp(36px, 5vw, 64px);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 65px;
-  max-width: 569px;
-  width: 100%;
-  text-align: center;
-  margin-top: 0px;
-}
-@media (max-width: 576px) {
-  .nfts__title {
-    line-height: 40px;
-    max-width: 331px;
-    margin-bottom: 16px;
-  }
-}
-@media (max-width: 576px) {
-  .nfts__text {
-    text-align: center;
-  }
-}
-.nfts__pagination {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 311px;
-  width: 100%;
-  margin: 54px auto 64px;
-}
-@media (max-width: 576px) {
-  .nfts__pagination {
-    margin: 28px auto 56px;
-    max-width: 199px;
-  }
-}
-.nfts__pagination-list {
-  display: flex;
-  justify-content: space-between;
-  max-width: 105px;
-  width: 100%;
-}
-@media (max-width: 576px) {
-  .nfts__pagination-list {
-    max-width: 89px;
-  }
-}
-.nfts__pagination-number {
-  border-radius: 10px;
-  width: 48px;
-  height: 48px;
-  background: #212426;
-  color: #fcffff;
-  font-family: Proxima;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 30px;
-  padding-top: 10px;
-  text-align: center;
-}
-.nfts__pagination-number_active {
-  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
-  color: #1d1f21;
-}
-@media (max-width: 576px) {
-  .nfts__pagination-number {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    line-height: 26px;
-    padding-top: 8px;
-  }
-}
-.nfts__pagination-prev, .nfts__pagination-next {
-  border-radius: 10px;
-  background: #212426;
-  border: 2px solid #525960;
-  width: 48px;
-  height: 48px;
-}
-@media (max-width: 576px) {
-  .nfts__pagination-prev, .nfts__pagination-next {
-    width: 40px;
-    height: 40px;
-  }
-}
-.nfts__arrow-rigth_unlock {
-  pointer-events: none;
-  cursor: default;
-}
-
 .card {
   margin-top: 50px;
   display: grid;
@@ -1711,4 +1519,196 @@ body {
     max-width: 100%;
     height: 34px;
   }
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/ManropeRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url("../fonts/ProximaBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url("../fonts/ProximaExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url("../fonts/ProximaLight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url("../fonts/ProximaRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url("../fonts/ProximaSemibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+.nfts {
+  position: relative;
+  top: 0;
+}
+.nfts__row {
+  padding-top: 49px;
+}
+@media (max-width: 576px) {
+  .nfts__row {
+    padding-top: 26px;
+  }
+}
+.nfts__name {
+  padding: 0;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .nfts__make, .nfts__circle, .nfts__war, .nfts__star {
+    display: none;
+  }
+}
+.nfts__star {
+  position: absolute;
+}
+@media (max-width: 1280px) {
+  .nfts__star {
+    top: 20px;
+    left: 200px;
+  }
+}
+@media (max-width: 1024px) {
+  .nfts__star {
+    left: 100px;
+  }
+}
+.nfts__circle {
+  position: absolute;
+  top: 145px;
+  right: 320px;
+}
+@media (max-width: 1280px) {
+  .nfts__circle {
+    top: 145px;
+    right: 200px;
+  }
+}
+.nfts__blur {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+@media (max-width: 576px) {
+  .nfts__blur {
+    display: none;
+  }
+}
+.nfts__title {
+  font-family: Proxima;
+  font-size: clamp(36px, 5vw, 64px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 65px;
+  max-width: 569px;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+}
+@media (max-width: 576px) {
+  .nfts__title {
+    line-height: 40px;
+    max-width: 331px;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .nfts__text {
+    text-align: center;
+  }
+}
+.nfts__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 311px;
+  width: 100%;
+  margin: 54px auto 64px;
+}
+@media (max-width: 576px) {
+  .nfts__pagination {
+    margin: 28px auto 56px;
+    max-width: 199px;
+  }
+}
+.nfts__pagination-list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 105px;
+  width: 100%;
+}
+@media (max-width: 576px) {
+  .nfts__pagination-list {
+    max-width: 89px;
+  }
+}
+.nfts__pagination-number {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background: #212426;
+  color: #fcffff;
+  font-family: Proxima;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  padding-top: 10px;
+  text-align: center;
+}
+.nfts__pagination-number_active {
+  background: linear-gradient(95deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  color: #1d1f21;
+}
+@media (max-width: 576px) {
+  .nfts__pagination-number {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 26px;
+    padding-top: 8px;
+  }
+}
+.nfts__pagination-prev, .nfts__pagination-next {
+  border-radius: 10px;
+  background: #212426;
+  border: 2px solid #525960;
+  width: 48px;
+  height: 48px;
+}
+@media (max-width: 576px) {
+  .nfts__pagination-prev, .nfts__pagination-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+.nfts__arrow-rigth_unlock {
+  pointer-events: none;
+  cursor: default;
 }
