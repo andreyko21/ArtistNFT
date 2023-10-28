@@ -1962,6 +1962,7 @@ body {
   padding: 40px 53px 70px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 @media (max-width: 767.98px) {
   .card__img {
