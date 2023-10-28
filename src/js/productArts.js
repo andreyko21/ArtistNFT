@@ -2,7 +2,8 @@ import $ from 'jquery';
 import Header from './modules/header';
 import firebase from './modules/firebase';
 import { getFirestore, collection, addDoc, getDocs, } from 'firebase/firestore';
-
+import Parallax from './modules/parallax';
+import ContactMe from './modules/contactMe';
 
 
 class ProductApp {
@@ -29,7 +30,9 @@ class ProductApp {
       this.month = this.data.getMonth() + 1;
       this.year = this.data.getFullYear();
       this.newData = this.day + '.' + this.month + '.' + this.year;
-
+      this.parallax = new Parallax();
+      this.contactMe = new ContactMe();
+      this.val = this.contactMe.validation();
       this.randomValues = new Uint32Array(64);
       window.crypto.getRandomValues(this.randomValues);
       this.all = this.upperCase + this.lowerCase + this.minus + this.underline + this.special;

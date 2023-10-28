@@ -8,6 +8,9 @@
       <main class="page">
          <section class="nfts">
             <div class="nfts__container">
+               <div class="nfts__blur">
+                  <img src="images/svg/nftsBlur.svg" alt="blur">
+               </div>
                <div class="nfts__row">
                   @@include('html/name.html',{
                   'make': 'MAKE ART',
@@ -23,17 +26,15 @@
                   'class-text':'nfts__text'
                   })
                </div>
-               <div class="nfts__blur">
-                  <img src="images/svg/nftsBlur.svg" alt="blur">
-               </div>
+
                <article class="nfts__card card"></article>
                <div class="nfts__pagination">
                   <button class="nfts__pagination-prev">
                      <img src="images/svg/paginationArrowLeft.svg" alt="arrow">
                   </button>
                   <ul class="nfts__pagination-list">
-                     <li class="nfts__pagination-number nfts__pagination-number_active">1</li>
-                     <li class="nfts__pagination-number">2</li>
+                     <li class="nfts__pagination-number  nfts__pagination-number_active" data-page="1">1</li>
+                     <li class="nfts__pagination-number" data-page="1">2</li>
                   </ul>
                   <button class="nfts__pagination-next">
                      <img src="images/svg/paginatonArrowRigth.svg" alt="arrow">

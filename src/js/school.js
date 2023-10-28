@@ -1,6 +1,7 @@
 import Header from './modules/header';
 import ContactMe from './modules/contactMe';
 import firebase from './modules/firebase';
+import Parallax from './modules/parallax';
 import $ from 'jquery';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 class SubscriptionManager {
@@ -12,7 +13,7 @@ class SubscriptionManager {
       this.contactMe = new ContactMe();
       this.val = this.contactMe.validation();
       this.auth = getAuth();
-
+      this.parallax = new Parallax();
       if (window.innerWidth >= 1024) {
          this.activeSubscription();
       }
