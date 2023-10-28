@@ -1,4 +1,4 @@
-export class ScrollLock {
+export default class ScrollLock {
   constructor() {
     this.lockPaddingElements = document.querySelectorAll('.lock-padding');
     this.body = document.body;
@@ -16,5 +16,3 @@ export class ScrollLock {
     });
   }
 }
-
-const scrollLock = new ScrollLock();

@@ -26,6 +26,7 @@ $active-color-menu: #3e4e77;
     padding-bottom: 8px;
   }
   &__logo {
+    order: -2;
     padding: 8px;
     &:focus {
       stroke: $focus-color-menu;
@@ -37,6 +38,7 @@ $active-color-menu: #3e4e77;
     }
   }
   &__language-dropdown {
+    order: 0;
     margin-left: auto;
     width: 74px;
     height: 35px;
@@ -46,7 +48,7 @@ $active-color-menu: #3e4e77;
     @media (max-width: 1110px) {
       margin-left: 8px;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 600px) {
       margin-left: auto;
     }
     @media (max-width: 400px) {
@@ -55,8 +57,8 @@ $active-color-menu: #3e4e77;
   }
   &__authorization-button {
     margin-left: 8px;
-    @media (max-width: 700px) {
-      display: none;
+    @media (max-width: 600px) {
+      display: none !important;
     }
   }
   &__premium-access-button {
@@ -76,7 +78,7 @@ $active-color-menu: #3e4e77;
     &::before {
       content: 'Premium access';
     }
-    @media (max-width: 700px) {
+    @media (max-width: 600px) {
       background: linear-gradient(
         95deg,
         rgba(104, 201, 255, 0.1) 9.27%,
@@ -98,13 +100,14 @@ $active-color-menu: #3e4e77;
     }
   }
   &__burger-menu-button {
+    order: -1;
     display: none;
     background: none;
     @media (max-width: 1110px) {
       display: block;
       margin-left: auto;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 600px) {
       order: 1;
       justify-self: end;
       margin-right: 0;
@@ -183,6 +186,9 @@ $active-color-menu: #3e4e77;
     transition: fill 0.3s, transform 0.3s, box-shadow 0.3s;
   }
   &__item {
+    .icon-lock {
+      margin-right: 5px;
+    }
     &:hover {
       .menu__link {
         color: $hover-color-menu;
@@ -234,9 +240,9 @@ $active-color-menu: #3e4e77;
     }
   }
   &__authorization-button {
-    display: none;
-    @media (max-width: 700px) {
-      display: block;
+    display: none !important;
+    @media (max-width: 600px) {
+      display: block !important;
       margin-top: 20px;
       margin-bottom: 20px;
     }
@@ -276,10 +282,18 @@ $active-color-menu: #3e4e77;
 
 .dropdown {
   position: relative;
+  &.dropdown-active {
+    .dropdown__content {
+      display: flex;
+    }
+    .dropdown__icon {
+      transform: rotate(180deg);
+    }
+  }
   &__icon {
     transition: transform 0.3s ease-in-out;
-    max-width: 18px;
-    max-height: 18px;
+    max-width: 10px;
+    max-height: 10px;
   }
   &__trigger {
     padding: 8px 12px;
@@ -410,6 +424,9 @@ $active-color-menu: #3e4e77;
 .authorization-button {
   padding: 14px 22px;
   height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 130px;
   border-radius: 12px;
   background: linear-gradient(
@@ -418,10 +435,13 @@ $active-color-menu: #3e4e77;
     rgba(209, 181, 255, 0.1) 84.06%
   );
   &__gradient {
+    text-align: center;
+    display: block;
+
     font-family: Proxima;
     font-size: 14px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 20px;
 
     background: #121fcf;
@@ -429,6 +449,7 @@ $active-color-menu: #3e4e77;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   &:focus {
     outline: 1px solid $focus-color-menu;
   }
@@ -438,7 +459,10 @@ $active-color-menu: #3e4e77;
   font-family: Proxima;
   font-size: 14px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 20px;
   border-radius: 12px;
+  .icon-crown {
+    @include text-gradient($defaultGradient);
+  }
 }
