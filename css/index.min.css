@@ -2526,8 +2526,6 @@ body {
     width: 100%;
     height: 500px;
     margin-top: 140px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 @media (max-width: 600px) {
@@ -2683,6 +2681,12 @@ body {
   position: relative;
   margin-top: 29px;
   margin-bottom: 20px;
+}
+@media (max-width: 960px) {
+  .biography-section__img-block {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .biography-section__img-block img {
   width: 100%;
