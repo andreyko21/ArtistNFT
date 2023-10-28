@@ -1308,6 +1308,41 @@ body {
   }
 }
 
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url("../fonts/ProximaBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url("../fonts/ProximaExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url("../fonts/ProximaLight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url("../fonts/ProximaRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Proxima;
+  font-display: swap;
+  src: url("../fonts/ProximaSemibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
 .subscription {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 360px));
@@ -1355,7 +1390,7 @@ body {
 .subscription__switch button {
   width: 111px;
   background: #212426;
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -1442,7 +1477,7 @@ body {
   }
 }
 .subscription__bg-text {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: 80px;
   font-weight: 700;
   line-height: normal;
@@ -1512,7 +1547,7 @@ body {
   }
 }
 .subscription__title {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: 26px;
   font-weight: 700;
   line-height: 33.5px;
@@ -1522,7 +1557,7 @@ body {
   color: #fcffff;
 }
 .subscription__text {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -1548,7 +1583,7 @@ body {
   }
 }
 .subscription__subtext {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -1587,7 +1622,7 @@ body {
   }
 }
 .subscription__price {
-  font-family: Proxima Nova;
+  font-family: Proxima;
   font-size: 22px;
   font-weight: 700;
   line-height: 33.5px;
