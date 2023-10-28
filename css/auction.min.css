@@ -1440,11 +1440,7 @@ body {
   font-family: Proxima;
 }
 .auction__links {
-<<<<<<< HEAD
-  margin: 30px 0 24px;
-=======
   margin: 30px 15px 24px;
->>>>>>> 85588bff5d39e54f2fd58ea904d1a7ddd6bea66c
 }
 @media (max-width: 600px) {
   .auction__links {
@@ -2132,17 +2128,6 @@ body {
     margin-bottom: 28px;
   }
 }
-<<<<<<< HEAD
-
-.input-block {
-  position: relative;
-}
-.input-block__input {
-  background: #2c2f33;
-  margin-top: 5px;
-}
-.input-block__error {
-=======
 .auction .input-block {
   position: relative;
 }
@@ -2151,16 +2136,11 @@ body {
   margin-top: 5px;
 }
 .auction .input-block__error {
->>>>>>> 85588bff5d39e54f2fd58ea904d1a7ddd6bea66c
   position: absolute;
   bottom: -18px;
 }
 @media (max-width: 600px) {
-<<<<<<< HEAD
-  .input-block__error {
-=======
   .auction .input-block__error {
->>>>>>> 85588bff5d39e54f2fd58ea904d1a7ddd6bea66c
     bottom: 73px;
     right: 0;
   }
