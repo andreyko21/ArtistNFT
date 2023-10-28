@@ -1989,11 +1989,7 @@ body {
   aspect-ratio: 1/1;
 }
 .card__img img picture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  aspect-ratio: 1/1;
-  height: 100%;
+  width: fit-content;
 }
 @media (max-width: 767.98px) {
   .card__img img {
