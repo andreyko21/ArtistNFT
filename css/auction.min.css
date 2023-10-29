@@ -288,15 +288,16 @@ body {
   position: absolute;
   width: 24px;
   height: 24px;
-  left: -32px;
-  top: -2px;
+  left: -30px;
+  top: -4px;
   background: url(../../images/svg/Crown.svg) center/cover no-repeat;
 }
 @media (max-width: 700px) {
   .btn_crown span::after {
     width: 18px;
     height: 18px;
-    left: -26px;
+    left: -22px;
+    top: -3px;
   }
 }
 .btn_crown:hover span::after {
@@ -310,15 +311,16 @@ body {
   position: absolute;
   width: 24px;
   height: 24px;
-  left: -32px;
-  top: -2px;
+  left: -27px;
+  top: -4px;
   background: url(../../images/svg/bag.svg) center/cover no-repeat;
 }
 @media (max-width: 700px) {
   .btn_bag span::after {
     width: 18px;
     height: 18px;
-    left: -26px;
+    left: -20px;
+    top: -3px;
   }
 }
 .btn_bag:hover span::after {
@@ -1187,15 +1189,16 @@ body {
   position: absolute;
   width: 24px;
   height: 24px;
-  left: -32px;
-  top: -2px;
+  left: -30px;
+  top: -4px;
   background: url(../../images/svg/Crown.svg) center/cover no-repeat;
 }
 @media (max-width: 700px) {
   .btn_crown span::after {
     width: 18px;
     height: 18px;
-    left: -26px;
+    left: -22px;
+    top: -3px;
   }
 }
 .btn_crown:hover span::after {
@@ -1209,15 +1212,16 @@ body {
   position: absolute;
   width: 24px;
   height: 24px;
-  left: -32px;
-  top: -2px;
+  left: -27px;
+  top: -4px;
   background: url(../../images/svg/bag.svg) center/cover no-repeat;
 }
 @media (max-width: 700px) {
   .btn_bag span::after {
     width: 18px;
     height: 18px;
-    left: -26px;
+    left: -20px;
+    top: -3px;
   }
 }
 .btn_bag:hover span::after {
@@ -1440,11 +1444,7 @@ body {
   font-family: Proxima;
 }
 .auction__links {
-<<<<<<< HEAD
-  margin: 30px 0 24px;
-=======
   margin: 30px 15px 24px;
->>>>>>> 85588bff5d39e54f2fd58ea904d1a7ddd6bea66c
 }
 @media (max-width: 600px) {
   .auction__links {
@@ -1849,13 +1849,13 @@ body {
   }
 }
 .auction__text-block {
+  align-self: start;
   padding: 31px 21px 24px 30px;
   background: #212426;
   border-radius: 12px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.75;
-  height: 100%;
 }
 .auction__text-block_hidden .auction__text-block-btn span:first-child {
   display: none;
@@ -2053,7 +2053,7 @@ body {
 }
 .auction__social-links-main {
   position: relative;
-  z-index: 10;
+  z-index: 2;
   padding: 32px 26px;
 }
 .auction__social-links-crown-icon {
@@ -2132,17 +2132,6 @@ body {
     margin-bottom: 28px;
   }
 }
-<<<<<<< HEAD
-
-.input-block {
-  position: relative;
-}
-.input-block__input {
-  background: #2c2f33;
-  margin-top: 5px;
-}
-.input-block__error {
-=======
 .auction .input-block {
   position: relative;
 }
@@ -2151,16 +2140,11 @@ body {
   margin-top: 5px;
 }
 .auction .input-block__error {
->>>>>>> 85588bff5d39e54f2fd58ea904d1a7ddd6bea66c
   position: absolute;
   bottom: -18px;
 }
 @media (max-width: 600px) {
-<<<<<<< HEAD
-  .input-block__error {
-=======
   .auction .input-block__error {
->>>>>>> 85588bff5d39e54f2fd58ea904d1a7ddd6bea66c
     bottom: 73px;
     right: 0;
   }
