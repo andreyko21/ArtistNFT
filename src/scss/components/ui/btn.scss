@@ -79,13 +79,14 @@
         position: absolute;
         width: 24px;
         height: 24px;
-        left: -32px;
-        top: -2px;
+        left: -30px;
+        top: -4px;
         background: url(../../images/svg/Crown.svg) center/cover no-repeat;
         @media (max-width: 700px) {
           width: 18px;
           height: 18px;
-          left: -26px;
+          left: -22px;
+          top: -3px;
         }
       }
     }
@@ -106,13 +107,14 @@
         position: absolute;
         width: 24px;
         height: 24px;
-        left: -32px;
-        top: -2px;
+        left: -27px;
+        top: -4px;
         background: url(../../images/svg/bag.svg) center/cover no-repeat;
         @media (max-width: 700px) {
           width: 18px;
           height: 18px;
-          left: -26px;
+          left: -20px;
+          top: -3px;
         }
       }
     }

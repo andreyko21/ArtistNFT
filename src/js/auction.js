@@ -15,6 +15,7 @@ class Auction {
         this.inpError = $('.auction__error-place');
         this.urlParams = new URLSearchParams(window.location.search);
         this.id = this.urlParams.get("id");
+        this.currentPrice = 0;
         if(this.id === null){
             this.id = 'arts-3'
         }
@@ -33,35 +34,66 @@ class Auction {
             }
         });
     }
-    async changePrice(price, data){
+    checkMaxPrice(price){
+        if(parseFloat(price) > 1000000000){
+            return 'auction stopped'
+        }else{
+
+            return  parseFloat(price)
+        }
+    }
+    checkPlaceholder(price){
+        if(parseFloat(price) > 1000000000){
+            return 'no bids accepted'
+        }else{
+            return  '$' +  (parseFloat(price) + 5).toLocaleString('ru-RU')
+        }
+    }
+    updatePrice(data){
+        console.log(this.checkMaxPrice(this.currentPrice))
+        $('.auction__price').html('$' + this.checkMaxPrice(this.currentPrice));
+        const minPrice = parseFloat(data.minPrice);
+        const newWidth = (parseFloat(this.currentPrice) / (minPrice / 100)) + "%";
+        $(".auction__progress-status").animate({ width: newWidth }, 1000); 
+        this.inputPrice.val('');
+        $('#input-place').attr('placeholder', this.checkPlaceholder(this.currentPrice));
+    }
+    async changePrice(data){
         if(this.auth.currentUser){
             await setDoc(doc(this.db, "auction", this.id), {
-                price: price,
+                price: this.currentPrice,
                 email: this.auth.currentUser.email,
                 user: this.auth.currentUser.uid,
             });
             await updateDoc(doc(this.db, "arts", this.id), {
-                price: price,
+                price: this.currentPrice,
             });
             alert('Ставку змінено');
-            this.updatePrice(price, data);
+            this.updatePrice(data);
         }else{
             alert('Для того щоб зробити ставку, потрібно авторизуватися')
         }
     }
     priceBtn(data){
         $('.auction__input-btn').on('click', () => {
-            const minBid = parseFloat(data.price) + 5;
+            const minBid = this.currentPrice + 5;
             const inpInfo = parseFloat(this.inputPrice.val());
+            const regexNum = /^\d+$/;
+            const regexMath =/[\+\-\*\/]/;
             if(minBid > inpInfo){
                 this.inpError.html('increase your bet');
             }else if(this.inputPrice.val().length == 0){
                 this.inpError.html('input price');
+            }else if(regexMath.test(this.inputPrice.val())){
+                this.inpError.html('input only number');
+            }else if(!regexNum.test(this.inputPrice.val())){
+                this.inpError.html('input only number2');
             }else if(isNaN(inpInfo)){
                 this.inpError.html('input only number');
             }else{
                 this.inpError.html('');
-                this.changePrice(inpInfo, data);
+                this.currentPrice = Number(inpInfo);
+                this.changePrice(data);
             }
         })
     }
@@ -108,14 +140,6 @@ class Auction {
         const minPrice = parseFloat(data.minPrice);
         $(".auction__progress-status").css("width", `${(thisPrice / (minPrice / 100) )}%`);
     }
-    updatePrice(price, data){
-        $('.auction__price').html(parseFloat(price).toLocaleString('ru-RU'));
-        const minPrice = parseFloat(data.minPrice);
-        const newWidth = (price / (minPrice / 100)) + "%";
-        $(".auction__progress-status").animate({ width: newWidth }, 1000); 
-        this.inputPrice.val('');
-        $('#input-place').attr('placeholder', '$' +  (price + 5).toLocaleString('ru-RU'));
-    }
     dataPrice(data){
         const startData = new Date(data.startData).getTime();
         const liveData = new Date(data.liveData).getTime();
@@ -124,12 +148,13 @@ class Auction {
         $(".auction__progress-procent").css("width", `${progress}%`);
     }
     inputInfo(data){
+        this.currentPrice = this.checkMaxPrice(data.price);
         $('.auction__name-title').html(data.title);
         $('.auction__size').html(data.details[1]);
         $('.auction__start-price').html(parseFloat(data.minPrice).toLocaleString('en-US'));
         $('.auction__inform-column_next-inform').html(data.details[2]);
-        $('.auction__price').html(parseFloat(data.price).toLocaleString('ru-RU'));
-        $('#input-place').attr('placeholder', '$' +  (parseFloat(data.price) + 5).toLocaleString('ru-RU'));
+        $('.auction__price').html( '$' + this.currentPrice);
+        $('#input-place').attr('placeholder', this.checkPlaceholder(data.price));
         $('.auction__text-block-paragraph_one').html(data.text[0]);
         $('.auction__text-block-paragraph_two').html(data.text[1]);
         $(".auction__img source").attr("srcset", data.imageWebP);

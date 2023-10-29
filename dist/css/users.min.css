@@ -288,15 +288,16 @@ body {
   position: absolute;
   width: 24px;
   height: 24px;
-  left: -32px;
-  top: -2px;
+  left: -30px;
+  top: -4px;
   background: url(../../images/svg/Crown.svg) center/cover no-repeat;
 }
 @media (max-width: 700px) {
   .btn_crown span::after {
     width: 18px;
     height: 18px;
-    left: -26px;
+    left: -22px;
+    top: -3px;
   }
 }
 .btn_crown:hover span::after {
@@ -310,15 +311,16 @@ body {
   position: absolute;
   width: 24px;
   height: 24px;
-  left: -32px;
-  top: -2px;
+  left: -27px;
+  top: -4px;
   background: url(../../images/svg/bag.svg) center/cover no-repeat;
 }
 @media (max-width: 700px) {
   .btn_bag span::after {
     width: 18px;
     height: 18px;
-    left: -26px;
+    left: -20px;
+    top: -3px;
   }
 }
 .btn_bag:hover span::after {
@@ -1394,15 +1396,16 @@ body {
   position: absolute;
   width: 24px;
   height: 24px;
-  left: -32px;
-  top: -2px;
+  left: -30px;
+  top: -4px;
   background: url(../../images/svg/Crown.svg) center/cover no-repeat;
 }
 @media (max-width: 700px) {
   .btn_crown span::after {
     width: 18px;
     height: 18px;
-    left: -26px;
+    left: -22px;
+    top: -3px;
   }
 }
 .btn_crown:hover span::after {
@@ -1416,15 +1419,16 @@ body {
   position: absolute;
   width: 24px;
   height: 24px;
-  left: -32px;
-  top: -2px;
+  left: -27px;
+  top: -4px;
   background: url(../../images/svg/bag.svg) center/cover no-repeat;
 }
 @media (max-width: 700px) {
   .btn_bag span::after {
     width: 18px;
     height: 18px;
-    left: -26px;
+    left: -20px;
+    top: -3px;
   }
 }
 .btn_bag:hover span::after {

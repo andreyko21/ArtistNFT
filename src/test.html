@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Arts one', 'srcStyle': 'arts-one' })
+  <style>
+    .page__container{
+        height: 64px;
+        width: 200px;
+        background-color: aqua;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+        <div data-observ></div>
+        <div class="page__container">
+            <div class="btn-conpainer"></div>
+            <a href="" class="btn btn_arrow"><span>Кнопка</span> </a>
+        </div>
+      </main>
+      @@include('html/footer.html')
+    </div>
+    <script src="js/artsOne.min.js"></script>
+  </body>
+</html>
