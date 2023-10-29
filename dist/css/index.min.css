@@ -2586,18 +2586,17 @@ body {
   right: 0;
   width: 168%;
   height: 100%;
-  overflow: hidden;
 }
 @media (max-width: 960px) {
   .we-here-section__img-container {
     width: 100%;
-    height: 150%;
+    height: 100%;
   }
 }
 @media (max-width: 400px) {
   .we-here-section__img-container {
-    width: 100vw;
-    height: 150%;
+    width: 100%;
+    height: 100%;
     right: -15px;
   }
 }
