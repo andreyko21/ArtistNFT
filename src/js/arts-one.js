@@ -4,6 +4,7 @@ import { collection, getDocs} from "firebase/firestore";
 import firebase from './modules/firebase';
 import LoadArts from './modules/loadArts';
 import Parallax from './modules/parallax';
+import Preloader from './modules/preloader';
 
 class ArtsOne {
   constructor() {
@@ -18,6 +19,7 @@ class ArtsOne {
     querySnapshot.forEach((doc) => {
       const load = new LoadArts(doc.data(), doc.id);
     });
+    this.stopPreload = new Preloader('page__container');
   }
   oneItem(){
     $('.arts__cards').on('click mouseenter', '.one-card', (event) => {

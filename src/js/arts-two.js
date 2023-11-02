@@ -5,6 +5,7 @@ import firebase from './modules/firebase';
 import LoadArts from './modules/loadArts';
 import CustomBy from './modules/customBy';
 import Parallax from './modules/parallax';
+import Preloader from './modules/preloader';
 
 
 class ArtsOne {
@@ -21,6 +22,7 @@ class ArtsOne {
     querySnapshot.forEach((doc) => {
       const load = new LoadArts(doc.data(), doc.id);
     });
+    this.stopPreload = new Preloader('page__container');
   }
   setCardHover(){
     $('.cards').on('click mouseenter', '.one-card', (event) => {
