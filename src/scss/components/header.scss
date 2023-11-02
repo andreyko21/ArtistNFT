@@ -464,5 +464,9 @@ $active-color-menu: #3e4e77;
   border-radius: 12px;
   .icon-crown {
     @include text-gradient($defaultGradient);
+    display: none;
+    @media (max-width: 600px) {
+      display: block;
+    }
   }
 }
