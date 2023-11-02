@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <style>.loaded { opacity: 1 }</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/arts-two.min.css">
+  <title>Arts two</title>
+</head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+  <div class="header__container">
+    <a href="/index.html" class="logo header__logo">
+      <img src="/images/svg/logo.svg" alt="logo">
+    </a>
+    <nav class="header__menu menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#" class="menu__link">Main page</a></li>
+        <li class="menu__item">
+          <a href="nfts.html" class="menu__link">
+            <span class="icon-lock"></span>
+            NFT</a>
+        </li>
+        <li class="menu__item">
+          <a href="./arts-one.html" class="menu__link">Pictures</a>
+        </li>
+        <li class="menu__item">
+          <a href="./auction.html" class="menu__link">Auction</a>
+        </li>
+        <li class="menu__item">
+          <a href="./pricing.html" class="menu__link">Pricing</a>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
+      </ul>
+      <div class="menu__footer">
+        <a class="authorization-button menu__authorization-button" href="#">
+          Authorization
+        </a>
+      </div>
+    </nav>
+    <button class="burger-menu-button header__burger-menu-button">
+      <div class="burger-menu-button__icon">
+        <span></span>
+      </div>
+    </button>
+    <button class="dropdown header__language-dropdown">
+      <div class="dropdown__trigger">
+        <div class="dropdown__item">ENG</div>
+        <svg class="dropdown__icon">
+          <use xlink:href="/images/svg/Sprite.svg#arrow"></use>
+        </svg>
+      </div>
+      <ul class="dropdown__content">
+        <li class="dropdown__item">UA</li>
+        <li class="dropdown__item">ES</li>
+        <li class="dropdown__item">FR</li>
+        <li class="dropdown__item">IT</li>
+        <li class="dropdown__item">AM</li>
+      </ul>
+    </button>
+    <a class="authorization-button header__authorization-button" href="#">
+      <span class="authorization-button__gradient">Authorization</span></a>
+    <button class="header__premium-access-button premium-access-button">
+      <span class="icon-crown"></span>
+    </button>
+  </div>
+</header>
+
+      <main class="page">
+        <div data-observ></div>
+        <div class="page__container">
+          <section class="arts-two">
+            <section class="arts-two__clothes">
+              <div class="arts-two__clothes-block-info">
+                <h1 class="arts-two__clothes-title">Are you ready to get custom clothes?</h1>
+                <p class="arts-two__clothes-info">Indulgence announcing uncommonly met she continuing two unpleasing terminated</p>
+                <a href="" class="btn arts-two__clothes-btn btn_bag"><span>Get custom now</span></a>
+              </div>
+              <div class="arts-two__clothes-block-image">
+                <div class="arts-two__clothes-image">
+                  <picture>
+                    <source srcset="./images/arts-two/pictureM.webp" type="image/webp">
+                    <img src="./images/arts-two/picture.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="arts-two__clothes-bg">
+                  <picture>
+                    <source srcset="./images/arts-two/bg.webp" type="image/webp">
+                    <img src="./images/arts-two/bg.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </section>
+            <section class="arts-two__cards cards">
+              <!-- Arts - карточки -->
+            </section>
+            <section class="custom-by">
+    <h2 class="custom-by__title">CUSTOM BY YOUR OWN</h2>
+    <p class="custom-by__info">Want to get your own?</p>
+    <form class="custom-by__form">
+        <div class="custom-by__wrapper-dropdown custom-by__type">
+            <h3 class="custom-by__input-title custom-by__dropdown-title">
+                <span>Type of item</span>
+            </h3>
+            <div id="dropOne" class="custom-by__dropdown">
+                <div class="custom-by__dropdown-btn custom-by__input-item">T-SHIRT</div>
+                <ul class="custom-by__dropdown-list">
+                    <li class="custom-by__dropdown-li">T-SHIRT</li>
+                    <li class="custom-by__dropdown-li">SWEATER</li>
+                    <li class="custom-by__dropdown-li">JACKET</li>
+                </ul>
+            </div>
+        </div>
+        <section class="custom-by__colors">
+            <h3 class="custom-by__input-title custom-by__colors-title">Color</h3>
+            <ul class="custom-by__radio-btn-row">
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#CA3838" type="radio" id="radio-1" aria-label="Fiery Red" name="radioBtn">
+                    <label for="radio-1"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#EB8032" type="radio" id="radio-2" aria-label="Sunset Orange" name="radioBtn">
+                    <label for="radio-2"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#FFDA57" type="radio" id="radio-3" aria-label="Sunflower Yellow" name="radioBtn">
+                    <label for="radio-3"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#79CE60" type="radio" id="radio-4" aria-label="Fresh Green" name="radioBtn">
+                    <label for="radio-4"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#60CEB4" type="radio" id="radio-5" aria-label="Turquoise Blue" name="radioBtn">
+                    <label for="radio-5"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#41D4F4" type="radio" id="radio-6" aria-label="Sky Blue" name="radioBtn">
+                    <label for="radio-6"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#4153F4" type="radio" id="radio-7" aria-label="Royal Blue" name="radioBtn">
+                    <label for="radio-7"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#6541F4" type="radio" id="radio-8" aria-label="Lavender Purple" name="radioBtn">
+                    <label for="radio-8"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#B041F4" type="radio" id="radio-9" aria-label="Orchid Purple" name="radioBtn">
+                    <label for="radio-9"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#C45297" type="radio" id="radio-10" aria-label="Rose Pink" name="radioBtn">
+                    <label for="radio-10"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#A14051" type="radio" id="radio-11" aria-label="Mauve" name="radioBtn">
+                    <label for="radio-11"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#FFF" type="radio" id="radio-12" aria-label="White" name="radioBtn">
+                    <label for="radio-12"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#CFCFCF" type="radio" id="radio-13" aria-label="Silver" name="radioBtn">
+                    <label for="radio-13"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#4A3221" type="radio" id="radio-14" aria-label="Chocolate Brown" name="radioBtn">
+                    <label for="radio-14"></label>
+                </li>
+                <li class="custom-by__radio">
+                    <input class="custom-by__radio-btn" data-color="#000" type="radio" id="radio-15" aria-label="Black" name="radioBtn">
+                    <label for="radio-15"></label>
+                </li>
+            </ul>
+            <div class="custom-by__error custom-by__color-error"></div>
+        </section>
+        <div class="custom-by__wrapper-dropdown custom-by__size">
+            <h3 class="custom-by__input-title custom-by__title-size">
+                <span>Size</span>
+            </h3>
+            <div id="dropTwo" class="custom-by__dropdown custom-by__title-size">
+                <div class="custom-by__dropdown-btn custom-by__input-size">XL (99-99-99)</div>
+                <ul class="custom-by__dropdown-list">
+                    <li class="custom-by__dropdown-li">XL (99-99-99)</li>
+                    <li class="custom-by__dropdown-li">L (66-66-66)</li>
+                    <li class="custom-by__dropdown-li">S (33-33-33)</li>
+                    <li class="custom-by__dropdown-li">XL (99-99-99)</li>
+                    <li class="custom-by__dropdown-li">L (66-66-66)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="custom-by__textarea input-block">
+            <label class="input-block__label" for="textarea">Your comment</label>
+            <textarea class="custom-by__question input-block__input" id="textarea" placeholder="Comment" name="comment" cols="30" rows="10"></textarea>
+            <div class="custom-by__error-comment input-block__error"></div>
+        </div>
+        <button class="btn custom-by__btn"><span>Send message</span></button>
+        <div class="custom-by__i-agree">
+            <div class="checkbox custom-by__i-agree-checkbox">
+    <input type="checkbox" id="custom-by-checkbox" name="checkbox" class="checkbox__input">
+    <label for="checkbox__input">
+    </label>
+    
+</div>
+
+
+
+            <label for="custom-by-checkbox">
+                I agree with
+                <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
+                and
+                <a href="#" class="contact-me__i-agree-link">Terms of use</a>
+            </label>  
+            <div class="custom-by__error custom-by__i-agree-error"></div>
+        </div> 
+    </form>
+    <div class="custom-by__bg-imgage">
+        <picture class="custom-by__bg-picture custom-by__bg-picture_one">
+            <source srcset="../images/main/diamond-one.webp" type="image/webp">
+            <img src="../images/main/diamond-one.png" alt="#">
+        </picture>
+        <picture class="custom-by__bg-picture custom-by__bg-picture_two">
+            <source srcset="../images/main/diamond-two.webp" type="image/webp">
+            <img src="../images/main/diamond-two.png" alt="#">
+        </picture>
+        <picture class="custom-by__bg-picture custom-by__bg-picture_three">
+            <source srcset="../images/main/diamond-three.webp" type="image/webp">
+            <img src="../images/main/diamond-three.png" alt="#">
+        </picture>
+        <picture class="custom-by__bg-picture custom-by__bg-picture_four">
+            <source srcset="../images/main/cube.webp" type="image/webp">
+            <img src="../images/main/cube.png" alt="#">
+        </picture>
+    </div>
+</section>
+
+            <img class="arts-two__blur" src="./images/arts-two/blur.svg" alt="">
+            <div class="parallax arts-two__circle">
+              <img src="/images/svg/circle.svg" alt="circle">
+            </div>
+            <div class="parallax arts-two__star">
+              <img src="/images/svg/Star.svg" alt="star">
+            </div>
+            <div class="parallax arts-two__star-two">
+              <img src="/images/svg/Star.svg" alt="star">
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+  <div class="footer__container">
+    <a href="/index.html" class="logo footer__logo">
+      <img src="/images/svg/logo.svg" alt="logo">
+    </a>
+    <a class="footer__link privacy" href="">Privacy policy</a>
+    <a class="footer__link terms" href="">Terms of use</a>
+    <div class="social">
+  <a class="social__link instagram" href="#">
+    <span class="icon-instagram"></span>
+  </a>
+  <a class="social__link twitter" href="#">
+    <span class="icon-twitter-3"></span>
+  </a>
+  <a class="social__link telegram" href="#">
+    <span class="icon-telegram"></span>
+  </a>
+  <a class="social__link pinterest" href="#">
+    <span class="icon-pinterest"></span>
+  </a>
+</div>
+
+    <hr class="footer__line">
+    <p class="footer__all-rights">All rights reserved © 2022</p>
+  </div>
+</footer>
+
+    </div>
+    <script src="js/artsTwo.min.js"></script>
+  </body>
+</html>
