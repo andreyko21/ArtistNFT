@@ -20,59 +20,77 @@
                      <form class="payment__pay-card payment__form-card ">
                         <div class="payment__pay-number">
                            <label class="payment__pay-label" for="number">Card number</label>
-                           <input class="payment__pay-inp number" id="number" name="number" type="text" placeholder="0000 0000 0000 0000">
+                           <input class="payment__pay-inp number" id="number" name="number" type="text"
+                              data-rule-creditcard="false" data-rule-number="true" placeholder="0000 0000 0000 0000">
+                           <div class="payment__pay-error"></div>
                         </div>
                         <div class="payment__pay-row">
                            <div class="payment__pay-data">
                               <label class="payment__pay-label" for="data">Date</label>
-                              <input class="payment__pay-inp data" id="data" name="data"  type="text" placeholder="01/01"  autocomplete="username">
+                              <input class="payment__pay-inp data" id="data" name="data" type="text" placeholder="01/01"
+                                 autocomplete="username">
+                                 <div class="payment__pay-error"></div>
                            </div>
                            <div class="payment__pay-ccv">
                               <label class="payment__pay-label" for="cvc-one">CCV</label>
-                              <input class="payment__pay-inp cvc" id="cvc-one" name="cvc" type="password" placeholder="000" autocomplete="current-password">
+                              <input class="payment__pay-inp cvc" id="cvc-one" name="cvc" type="password"
+                                 placeholder="000" autocomplete="current-password">
+                                 <div class="payment__pay-error"></div>
                            </div>
                         </div>
-                        <div class="payment__pay-name">
-                           <label class="payment__pay-label" for="name">Name on card</label>
-                           <input class="payment__pay-inp name" id="name" name="name" type="text" placeholder="Ivan Ivanov">
-                        </div>
+                           <div class="payment__pay-name">
+                              <label class="payment__pay-label" for="name">Name on card</label>
+                              <input class="payment__pay-inp name" id="name" name="name" type="text"
+                                 placeholder="Ivan Ivanov">
+                                 <div class="payment__pay-error"></div>
+                           </div>
 
-                        <div class="payment__pay-subbtn">
-                           <button class="btn submit"><span>Purchase</span></button>
-                        </div>
+                           <div class="payment__pay-subbtn">
+                              <button class="btn submit"><span>Purchase</span></button>
+                           </div>
 
-                        <div class="contact-me__i-agree">
-                           @@include('html/checkbox.html', {
+                           <div class="contact-me__i-agree">
+                              @@include('html/checkbox.html', {
                               'class': 'contact-me__i-agree-checkbox',
-                              'id': 'contact-me-card'
-                          })
-                           <label for="contact-me-card">
-                              I agree with
-                              <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
-                              and
-                              <a href="#" class="contact-me__i-agree-link">Terms of use</a>
-                           </label>
-                           <div class="contact-me__error contact-me__i-agree-error"></div>
-                        </div>
+                              'id': 'contact-me-card',
+
+
+                              })
+                              <label for="contact-me-card">
+                                 I agree with
+                                 <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
+                                 and
+                                 <a href="#" class="contact-me__i-agree-link">Terms of use</a>
+                              </label>
+                              <div class="contact-me__error contact-me__i-agree-error"></div>
+                           </div>
                      </form>
                      <form class="payment__pay-pal hide payment__form">
                         <div class="payment__pay-number">
                            <label class="payment__pay-label" for="number-two">Card number</label>
-                           <input class="payment__pay-inp number" id="number-two" type="text" placeholder="0000 0000 0000 0000">
+                           <input class="payment__pay-inp number" id="number-two" name="number" type="text"
+                              placeholder="0000 0000 0000 0000">
+                              <div class="payment__pay-error"></div>
                         </div>
                         <div class="payment__pay-row">
                            <div class="payment__pay-data">
                               <label class="payment__pay-label" for="data-two">Date</label>
-                              <input class="payment__pay-inp data" id="data-two" type="text" placeholder="01/01">
+                              <input class="payment__pay-inp data" id="data-two" name="data" type="text"
+                                 placeholder="01/01">
+                                 <div class="payment__pay-error"></div>
                            </div>
                            <div class="payment__pay-ccv">
                               <label class="payment__pay-label" for="cvc-two">CCV</label>
-                              <input class="payment__pay-inp cvc" id="cvc-two" type="text" placeholder="000">
+                              <input class="payment__pay-inp cvc" id="cvc-two" name="cvc" type="password" placeholder="000">
+                              <div class="payment__pay-error"></div>
                            </div>
                         </div>
+
                         <div class="payment__pay-name">
                            <label class="payment__pay-label " for="name-two">Name on card</label>
-                           <input class="payment__pay-inp name" id="name-two" type="text" placeholder="Ivan Ivanov">
+                           <input class="payment__pay-inp name" id="name-two" name="name" type="text"
+                              placeholder="Ivan Ivanov">
+                              <div class="payment__pay-error"></div>
                         </div>
 
                         <div class="payment__pay-subbtn">
@@ -81,9 +99,9 @@
 
                         <div class="contact-me__i-agree">
                            @@include('html/checkbox.html', {
-                              'class': 'contact-me__i-agree-checkbox',
-                              'id': 'contact-me-pay'
-                          })
+                           'class': 'contact-me__i-agree-checkbox',
+                           'id': 'contact-me-pay'
+                           })
                            <label for="contact-me-pay">
                               I agree with
                               <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
@@ -104,16 +122,18 @@
                         </div>
                         <div class="payment__pay-email">
                            <label class="payment__pay-label" for="email-one">E-mail</label>
-                           <input class="payment__pay-inp email" id="email-one" name="email" type="email" placeholder="Your e-mail">
+                           <input class="payment__pay-inp email" id="email-one" name="email" type="email"
+                              placeholder="Your e-mail">
+                              <div class="payment__pay-error"></div>
                         </div>
                         <div class="payment__pay-subbtn">
                            <button class="btn submit"><span>Check</span></button>
                         </div>
                         <div class="contact-me__i-agree">
                            @@include('html/checkbox.html', {
-                              'class': 'contact-me__i-agree-checkbox',
-                              'id': 'contact-me-crypto'
-                          })
+                           'class': 'contact-me__i-agree-checkbox',
+                           'id': 'contact-me-crypto'
+                           })
                            <label for="contact-me-crypto">
                               I agree with
                               <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
@@ -125,7 +145,8 @@
                      </form>
                   </div>
                </div>
-               <div class="payment__info"></div>
+               <div class="payment__details"></div>
+               
             </div>
          </section>
       </main>

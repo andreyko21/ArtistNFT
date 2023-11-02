@@ -1,3 +1,17 @@
+@font-face {
+   font-family: Manrope;
+   font-display: swap;
+   src: url("../fonts/ManropeRegular.woff2") format("woff2");
+   font-weight: 400;
+   font-style: normal;
+}
+@font-face {
+   font-family: Proxima;
+   font-display: swap;
+   src: url("../fonts/ProximaBold.woff2") format("woff2");
+   font-weight: 700;
+   font-style: normal;
+}
 .name {
    display: flex;
    justify-content: center;
@@ -9,7 +23,7 @@
    }
 
    &__bg-text {
-      font-family: Proxima Nova;
+      font-family: Proxima;
       font-size: clamp(50px, 8vw, 80px);
       font-weight: 700;
       line-height: normal;
@@ -70,7 +84,7 @@
       }
    }
    &__title {
-      font-family: Proxima Nova;
+      font-family: Proxima;
       font-size: clamp(26px, 5vw, 36px);
       font-style: normal;
       font-weight: 700;
@@ -96,7 +110,7 @@
       }
    }
    &__text {
-      font-family: Proxima Nova;
+      font-family: Proxima;
       font-size: clamp(15px, 5vw, 16px);
       font-weight: 400;
       line-height: 28px;

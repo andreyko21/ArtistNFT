@@ -21,10 +21,10 @@ class NFTApp {
       const pageParam = urlParams.get('page');
       this.currentPage = parseInt(pageParam) || 1;
 
-      this.init();
+      this.initPagination();
    }
 
-   init() {
+   initPagination() {
       this.getDocsAndRender();
       this.prevButton.on('click', this.handlePrevClick.bind(this));
       this.nextButton.on('click', this.handleNextClick.bind(this));
@@ -72,7 +72,8 @@ class NFTApp {
             <a href="product-arts.html?id=${nft.id}&name=${nft.name}" class="btn"><span>Buy now</span></a>
             </div>
           </div>
-        </div>`;
+        </div>
+        `;
 
          card.append(cardHtml);
       });
@@ -94,13 +95,22 @@ class NFTApp {
       }
    }
 
+   changePage(newPage) {
+      if (newPage >= 1 && newPage <= 2) { 
+         this.currentPage = newPage;
+         this.updateActiveClass();
+         this.updateURL();
+      }
+   }
+
    updateActiveClass() {
       const paginationNumbers = this.paginationList.find('.nfts__pagination-number');
       paginationNumbers.each((index, number) => {
          const $number = $(number);
          if (index === this.currentPage - 1) {
             $number.addClass('nfts__pagination-number_active');
-            this.renderNFTs(this.nftArr.slice(index * 12, (index * 12) + 12));
+            this.renderNFTs(this.nftArr.slice(index * 12, (index * 12) + 12));     
+            window.scrollTo({ top: 0, behavior: 'smooth' });
          } else {
             $number.removeClass('nfts__pagination-number_active');
          }
@@ -111,7 +121,8 @@ class NFTApp {
       const newURL = `?page=${this.currentPage}`;
       history.pushState({ page: this.currentPage }, null, newURL);
    }
-
 }
+
 new NFTApp();
+
 

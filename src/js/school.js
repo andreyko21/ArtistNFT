@@ -2,9 +2,8 @@ import Header from './modules/header';
 import ContactMe from './modules/contactMe';
 import firebase from './modules/firebase';
 import Parallax from './modules/parallax';
-import $ from 'jquery';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-class SubscriptionManager {
+class School {
    constructor() {
       this.subscriptionBlocks = document.querySelectorAll('.subscription__block');
       this.subscriptionSwitchBtns = document.querySelectorAll('.subscription__switch button');
@@ -14,6 +13,8 @@ class SubscriptionManager {
       this.val = this.contactMe.validation();
       this.auth = getAuth();
       this.parallax = new Parallax();
+
+
       if (window.innerWidth >= 1024) {
          this.activeSubscription();
       }
@@ -80,4 +81,5 @@ class SubscriptionManager {
    }
 }
 
-new SubscriptionManager();
+new School();
+
