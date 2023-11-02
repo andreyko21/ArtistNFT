@@ -261,14 +261,11 @@ body {
 .btn:hover:active {
   transform: scale(0.9);
 }
-.btn:hover:focus {
-  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
-}
 .btn:hover:active {
   transform: scale(0.95);
 }
 .btn:hover:focus {
-  border: 1px solid rgba(134, 168, 255, 0.6352941176);
+  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
 }
 @media (max-width: 700px) {
   .btn {
@@ -993,6 +990,8 @@ body {
 }
 
 .footer {
+  position: relative;
+  z-index: 10;
   padding-top: 11px;
   padding-bottom: 9px;
   background-color: #212426;
@@ -1107,6 +1106,60 @@ body {
   }
 }
 
+.preloader {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preloader::after {
+  content: "";
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 1;
+  filter: blur(11px);
+  top: 0;
+  left: 0;
+  background: linear-gradient(141deg, rgba(104, 128, 255, 0.9) 3.3%, rgba(60, 167, 244, 0.9) 52.35%, rgba(140, 69, 255, 0.9) 92.15%), url(<path-to-image>), lightgray 50%/cover no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.preloader-spinner {
+  border: 4px solid #86a8ff;
+  border-top: 4px solid #c8d2dc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.page__container {
+  overflow: hidden;
+  height: 0;
+}
+.page__container_preloader-off {
+  overflow: visible;
+  height: auto;
+}
+.page__container_preloader-off .preloader {
+  display: none;
+}
+
 .btn {
   overflow: hidden;
   position: relative;
@@ -1162,14 +1215,11 @@ body {
 .btn:hover:active {
   transform: scale(0.9);
 }
-.btn:hover:focus {
-  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
-}
 .btn:hover:active {
   transform: scale(0.95);
 }
 .btn:hover:focus {
-  border: 1px solid rgba(134, 168, 255, 0.6352941176);
+  outline: 1px solid rgba(134, 168, 255, 0.6352941176);
 }
 @media (max-width: 700px) {
   .btn {
@@ -2148,4 +2198,23 @@ body {
     bottom: 73px;
     right: 0;
   }
+}
+
+.svgIcon {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  display: inline-block;
+  vertical-align: middle;
+  fill: inherit;
+  stroke: inherit;
+}
+
+.iconSearch {
+  width: 14px;
+  height: 14px;
+  margin-bottom: 2px;
+  margin-right: 6px;
+  fill: var(--main-white);
 }
