@@ -3,6 +3,8 @@ import Header from './modules/header';
 import { collection, getDocs, updateDoc, setDoc, doc} from "firebase/firestore";
 import firebase from './modules/firebase';
 import Parallax from './modules/parallax';
+import 'jquery-validation';
+import Preloader from './modules/preloader';
 
 class Auction {
     constructor() {
@@ -16,6 +18,9 @@ class Auction {
         this.urlParams = new URLSearchParams(window.location.search);
         this.id = this.urlParams.get("id");
         this.currentPrice = 0;
+        this.minPrice = 0;
+        this.liveData = 0;
+        this.form = $('.auction__input-line');
         if(this.id === null){
             this.id = 'arts-3'
         }
@@ -24,41 +29,43 @@ class Auction {
         const querySnapshot = await getDocs(collection(this.db, "arts"));
         querySnapshot.forEach((doc) => {
             if(doc.id === this.id){
+                this.liveData = new Date(doc.data().liveData);
                 this.inputInfo(doc.data());
-                this.timer(doc.data().liveData);
-                this.liveData(doc.data().liveData);
+                this.timer(this.liveData);
+                this.startLiveData();
                 this.progressPrice(doc.data());
                 this.dataPrice(doc.data());
-                this.priceBtn(doc.data());
+                this.validation();
                 this.hiddenBtn();
+                this.minPrice = doc.data().minPrice;
+                this.stopPreload = new Preloader('page__container');
             }
         });
     }
     checkMaxPrice(price){
-        if(parseFloat(price) > 1000000000){
+        if(+price > 1000000000){
             return 'auction stopped'
         }else{
-
-            return  parseFloat(price)
+            return +price
         }
     }
     checkPlaceholder(price){
-        if(parseFloat(price) > 1000000000){
+        if(+price > 1000000000){
             return 'no bids accepted'
         }else{
-            return  '$' +  (parseFloat(price) + 5).toLocaleString('ru-RU')
+            return  '$' +  (+price + 5).toLocaleString('ru-RU')
         }
     }
-    updatePrice(data){
+    updatePrice(){
         console.log(this.checkMaxPrice(this.currentPrice))
         $('.auction__price').html('$' + this.checkMaxPrice(this.currentPrice));
-        const minPrice = parseFloat(data.minPrice);
-        const newWidth = (parseFloat(this.currentPrice) / (minPrice / 100)) + "%";
+        const newWidth = ( +this.currentPrice / ( +this.minPrice / 100)) + "%";
         $(".auction__progress-status").animate({ width: newWidth }, 1000); 
         this.inputPrice.val('');
         $('#input-place').attr('placeholder', this.checkPlaceholder(this.currentPrice));
     }
-    async changePrice(data){
+    async changePrice(newPrice){
+        this.currentPrice =  +newPrice;
         if(this.auth.currentUser){
             await setDoc(doc(this.db, "auction", this.id), {
                 price: this.currentPrice,
@@ -69,76 +76,87 @@ class Auction {
                 price: this.currentPrice,
             });
             alert('Ставку змінено');
-            this.updatePrice(data);
+            this.updatePrice();
         }else{
             alert('Для того щоб зробити ставку, потрібно авторизуватися')
         }
     }
-    priceBtn(data){
-        $('.auction__input-btn').on('click', () => {
-            const minBid = this.currentPrice + 5;
-            const inpInfo = parseFloat(this.inputPrice.val());
-            const regexNum = /^\d+$/;
-            const regexMath =/[\+\-\*\/]/;
-            if(minBid > inpInfo){
-                this.inpError.html('increase your bet');
-            }else if(this.inputPrice.val().length == 0){
-                this.inpError.html('input price');
-            }else if(regexMath.test(this.inputPrice.val())){
-                this.inpError.html('input only number');
-            }else if(!regexNum.test(this.inputPrice.val())){
-                this.inpError.html('input only number2');
-            }else if(isNaN(inpInfo)){
-                this.inpError.html('input only number');
-            }else{
-                this.inpError.html('');
-                this.currentPrice = Number(inpInfo);
-                this.changePrice(data);
+    validation() {
+        this.form.on('submit', function(event) {
+            event.preventDefault(); 
+        });
+        this.inputPrice.on('keydown', (e) => {
+            let key = e.key;
+            if(key === 'e' || key === 'E' || key === '+'|| key === '-'){
+                e.preventDefault();
             }
-        })
-    }
+        });
+        this.form.validate({
+          rules: {
+            pay: {
+              digits: true,  
+              customValidation: true, 
+              required: true,
+            },
+          },
+          messages: {
+            pay: {
+              digits: "Only number",
+              customValidation: `Increase Bid`,
+              required: 'Input Bid',
+            },
+          },
+          errorPlacement: (error, element) => {
+            if (element.attr("name") === "pay") {
+              error.appendTo(".auction__error-place");
+            }
+          },
+          submitHandler: () => {
+            this.changePrice($('[name="pay"]').val());
+          },
+
+        });      
+        $.validator.addMethod(
+          "customValidation",
+          (value) => {
+            return !isNaN(+value) && +value >= this.currentPrice + 5;
+          },
+        );
+      }
     timer(data){
-        const countdownDate = new Date(data).getTime();
         const timer = setInterval(function() {
             const now = new Date().getTime();
-            const distance = countdownDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
+            const distan = data.getTime() - now;
+            const days = Math.floor(distan / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distan % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distan % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distan % (1000 * 60)) / 1000);
             $('#days').html(days + 'd') ;
             $('#hours').html(hours + 'h');
             $('#minutes').html(minutes + 'm');
             $('#seconds').html(seconds + 's');
-
-            if (distance < 0) {
+            if (distan < 0) {
                 clearInterval(timer);
-                document.getElementById('timer').innerHTML = 'Время истекло!';
+                document.getElementById('timer').innerHTML = 'Finished time!';
             }
         }, 1000);
     }
-    liveData(data){
-        const downData = new Date(data);
-        const month = downData.toLocaleString('en-US', {month: 'short'});
-        let minutes = ''
-        let hours = ''
-        if(downData.getMinutes() < 10){
-            minutes = '0' + downData.getHours();
+    changeData(num){
+        if(+num < 10){
+            return '0' + num; 
+        }else{
+            return num;
         }
-        if(downData.getHours() < 10){
-            hours = '0' + downData.getMinutes();
-        }
+    }
+    startLiveData(){
+        const month = this.liveData.toLocaleString('en-US', {month: 'short'});
         $('#live-mounth').html(month);
-        $('#live-day').html(downData.getDate());
-        $('#live-hours').html(minutes);
-        $('#live-minutes').html(hours);
+        $('#live-day').html(this.liveData.getDate());
+        $('#live-hours').html(this.changeData(this.liveData.getHours()));
+        $('#live-minutes').html(this.changeData(this.liveData.getMinutes()));
     }
     progressPrice(data){
-        const thisPrice = parseFloat(data.price);
-        const minPrice = parseFloat(data.minPrice);
-        $(".auction__progress-status").css("width", `${(thisPrice / (minPrice / 100) )}%`);
+        $(".auction__progress-status").css("width", `${(+data.price / (+data.minPrice / 100) )}%`);
     }
     dataPrice(data){
         const startData = new Date(data.startData).getTime();

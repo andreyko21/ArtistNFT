@@ -51,14 +51,11 @@
     &:active {
       transform: scale(0.9);
     }
-    &:focus {
-      outline: 1px solid $focusColor;
-    }
     &:active{
       transform: scale(0.95);
     }
     &:focus{
-      border: 1px solid $focusColor;
+      outline: 1px solid $focusColor;
     }
   }
 

@@ -20,6 +20,13 @@ export default class LoadArts{
         this.sizeClass = 'one-card_big';
       }
     }
+    checkMaxPrice(price){
+      if(+price > 1000000000){
+          return 'auction stopped'
+      }else{
+          return  '$' + price
+      }
+    }
     loaditem(){
       this.cardBlock.append(`
         <div class="one-card ${this.id} ${this.classInfo} ${this.sizeClass}">
@@ -50,7 +57,7 @@ export default class LoadArts{
           <div class="one-card__open-main">
             <div class="one-card__open-title">${this.info.title}</div>
             <div class="one-card__open-info">${this.info.info}</div>
-            <div class="one-card__open-price">$${this.info.price}</div>
+            <div class="one-card__open-price">${this.checkMaxPrice(this.info.price)}</div>
             <div class="one-card__btn-row">
               <a href="auction.html?id=${this.id}" class="btn btn_black one-card__btn one-card__open-btn"><span>Auction</span></a>
             </div>

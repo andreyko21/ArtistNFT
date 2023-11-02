@@ -7,6 +7,9 @@
       <main class="page">
         <div data-observ></div>
         <div class="page__container">
+            <div class="preloader">
+                <div class="preloader-spinner"></div>
+            </div>
             <section class="auction" >
                 <div class="auction__links">
                     @@include('html/nav.html',{
@@ -36,7 +39,7 @@
                             </div>
                             <hr class="auction__inform-columns-line">
                             <div class="auction__inform-column auction__inform-column_estimated">
-                                <div class="auction__estimated-title">Estimated value</div>
+                                <div class="auction__estimated-title">Estimated value</div>    
                                 <div class="auction__estimated-price">$<span class="auction__start-price"></span></div>
                             </div>
                             <hr class="auction__inform-columns-line">
@@ -50,14 +53,14 @@
                             </div>
                             <h3 class="auction__bid-title">highest price</h3>
                             <div class="auction__this-price"><span class="auction__price"></span></div>
-                            <div class="auction__input-line">
+                            <form class="auction__input-line">
                                 <div class="input-block auction__input">
                                     <label class="input-block__label" for="input-place">Place your bid</label>
-                                    <input class="input-block__input" type="text" id="input-place" name="place" autocomplete="off">
+                                    <input class="input-block__input" type="number" id="input-place" name="pay" autocomplete="off">
                                     <div class="input-block__error auction__error-place"></div>
                                 </div>
-                                <div class="btn auction__input-btn"><span>Place bid</span></div>
-                            </div>
+                                <button class="btn auction__input-btn"><span>Place bid</span></button>
+                            </form>
                             <div class="auction__data">
                                 <span class="auction__data-info" id="days"></span>
                                 <span class="auction__data-info" id="hours"></span>
