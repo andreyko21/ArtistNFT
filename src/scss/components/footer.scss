@@ -34,8 +34,34 @@
     grid-area: social;
     margin-left: auto;
     margin-right: 15px;
+    .icon-pinterest,
+    .icon-twitter-3,
+    .icon-telegram,
+    .icon-instagram,
+    .icon-pinterest {
+      font-size: 20px;
+      @include text-gradient($defaultGradient);
+    }
     @media (max-width: 650px) {
       margin-right: 0;
+    }
+
+    &__link {
+      &:focus {
+        span {
+          @include text-gradient($focusColor);
+        }
+      }
+      &:hover {
+        span {
+          @include text-gradient($hoverColor);
+        }
+      }
+      &:active {
+        span {
+          @include text-gradient($activeColor);
+        }
+      }
     }
   }
 
@@ -46,14 +72,14 @@
     font-style: normal;
     font-weight: 400;
     line-height: 21px;
-    &:focus {
-      color: $focusColor;
-    }
     &:hover {
       color: $hoverColor;
     }
     &:active {
       color: $activeColor;
+    }
+    &:focus {
+      color: $focusColor;
     }
     &:not(:first-child) {
       margin-left: 30px;

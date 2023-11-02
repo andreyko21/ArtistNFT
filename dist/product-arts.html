@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <style>.loaded { opacity: 1 }</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/product-arts.min.css">
+  <title>Product</title>
+</head>
+
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+  <div class="header__container">
+    <a href="/index.html" class="logo header__logo">
+      <img src="/images/svg/logo.svg" alt="logo">
+    </a>
+    <nav class="header__menu menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#" class="menu__link">Main page</a></li>
+        <li class="menu__item">
+          <a href="nfts.html" class="menu__link">
+            <span class="icon-lock"></span>
+            NFT</a>
+        </li>
+        <li class="menu__item">
+          <a href="./arts-one.html" class="menu__link">Pictures</a>
+        </li>
+        <li class="menu__item">
+          <a href="./auction.html" class="menu__link">Auction</a>
+        </li>
+        <li class="menu__item">
+          <a href="./pricing.html" class="menu__link">Pricing</a>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
+      </ul>
+      <div class="menu__footer">
+        <a class="authorization-button menu__authorization-button" href="#">
+          Authorization
+        </a>
+      </div>
+    </nav>
+    <button class="burger-menu-button header__burger-menu-button">
+      <div class="burger-menu-button__icon">
+        <span></span>
+      </div>
+    </button>
+    <button class="dropdown header__language-dropdown">
+      <div class="dropdown__trigger">
+        <div class="dropdown__item">ENG</div>
+        <svg class="dropdown__icon">
+          <use xlink:href="/images/svg/Sprite.svg#arrow"></use>
+        </svg>
+      </div>
+      <ul class="dropdown__content">
+        <li class="dropdown__item">UA</li>
+        <li class="dropdown__item">ES</li>
+        <li class="dropdown__item">FR</li>
+        <li class="dropdown__item">IT</li>
+        <li class="dropdown__item">AM</li>
+      </ul>
+    </button>
+    <a class="authorization-button header__authorization-button" href="#">
+      <span class="authorization-button__gradient">Authorization</span></a>
+    <button class="header__premium-access-button premium-access-button">
+      <span class="icon-crown"></span>
+    </button>
+  </div>
+</header>
+
+      <main class="page">
+         <section class="product">
+            <div class="product__container">
+               <div class="product__blul">
+                  <img src="images//svg/ProductBlur.svg" alt="blur">
+               </div>
+               <div class="product__nav">
+                  <div class="nav">
+   <a href="index.html">Main page <img src="images/svg/navArrow.svg" alt="arrow"></a>
+   <a href="arts-two.html">Arts <img src="images/svg/navArrow.svg" alt="arrow"></a>
+   <a href="#">Name of product</a>
+   <!-- <a href="@@nav-four-href">@@nav-other-name <img src="@@nav-four-arrow" alt="arrow"></a> -->
+</div>
+               </div>
+               
+               <div class="product__content"></div>
+               <div class="product__process">
+                  <h3 class="product__process-title">
+                     <img src="images/svg/video.svg" alt="video">
+                     <span>PROCCESS</span>
+                  </h3>
+                  <div class="product__process-img">
+                  </div>
+               </div>
+            </div>
+
+         </section>
+         <section class="contact">
+            <div class="contact__container">
+               <section class="contact-me">
+    <h2 class="contact-me__title">CONTACT ME</h2>
+    <p class="contact-me__info">Want to apply your work or an question appeared? </p>
+    <form id="contact-me-form" class="contact-me__form">
+        <div class="input-block">
+            <label class="input-block__label" for="input-name">Name</label>
+            <input class="input-block__input" type="text" id="input-name" name="name" placeholder="Your name" autocomplete="off">
+            <div class="input-block__error contact-me__error-name"></div>
+        </div>
+        <div class="input-block">
+            <label class="input-block__label" for="input-email">Mail</label>
+            <input class="input-block__input" type="text" id="input-email" name="email" placeholder="Your mail" autocomplete="off">
+            <div class="input-block__error contact-me__error-mail"></div>
+        </div>
+        <div class="input-block input-block_textarea">
+            <label class="input-block__label" for="textarea">Your question</label>
+            <textarea class="input-block__input contact-me__question" id="textarea" placeholder="Your question" name="question" cols="30" rows="10"></textarea>
+            <div class="input-block__error contact-me__error-question"></div>
+        </div>
+        <button class="btn contact-me__btn"><span>Send message</span></button>
+        <div class="contact-me__i-agree">
+            <div class="checkbox contact-me__i-agree-checkbox">
+    <input type="checkbox" id="contact-me-checkbox" name="checkbox" class="checkbox__input">
+    <label for="checkbox__input">
+    </label>
+    
+</div>
+
+
+
+            <label for="contact-me-checkbox">
+                I agree with
+                <a href="#" class="contact-me__i-agree-link">Privacy Policy</a>
+                and
+                <a href="#" class="contact-me__i-agree-link">Terms of use</a>
+            </label>  
+            <div class="contact-me__error contact-me__i-agree-error"></div>
+        </div> 
+    </form>
+    <div class="contact-me__bg-imgage">
+        <picture class="contact-me__bg-picture contact-me__bg-picture_one">
+            <source srcset="../images/main/diamond-one.webp" type="image/webp">
+            <img src="../images/main/diamond-one.png" alt="">
+        </picture>
+        <picture class="contact-me__bg-picture contact-me__bg-picture_two">
+            <source srcset="../images/main/diamond-two.webp" type="image/webp">
+            <img src="../images/main/diamond-two.png" alt="">
+        </picture>
+        <picture class="contact-me__bg-picture contact-me__bg-picture_three">
+            <source srcset="../images/main/diamond-three.webp" type="image/webp">
+            <img src="../images/main/diamond-three.png" alt="">
+        </picture>
+        <picture class="contact-me__bg-picture contact-me__bg-picture_four">
+            <source srcset="../images/main/cube.webp" type="image/webp">
+            <img src="../images/main/cube.png" alt="">
+        </picture>
+    </div>
+</section>
+
+            </div>
+         </section>
+
+      </main>
+      <footer class="footer">
+  <div class="footer__container">
+    <a href="/index.html" class="logo footer__logo">
+      <img src="/images/svg/logo.svg" alt="logo">
+    </a>
+    <a class="footer__link privacy" href="">Privacy policy</a>
+    <a class="footer__link terms" href="">Terms of use</a>
+    <div class="social">
+  <a class="social__link instagram" href="#">
+    <span class="icon-instagram"></span>
+  </a>
+  <a class="social__link twitter" href="#">
+    <span class="icon-twitter-3"></span>
+  </a>
+  <a class="social__link telegram" href="#">
+    <span class="icon-telegram"></span>
+  </a>
+  <a class="social__link pinterest" href="#">
+    <span class="icon-pinterest"></span>
+  </a>
+</div>
+
+    <hr class="footer__line">
+    <p class="footer__all-rights">All rights reserved © 2022</p>
+  </div>
+</footer>
+
+   </div>
+   <script src="js/productArts.min.js"></script>
+</body>
+
+</html>
